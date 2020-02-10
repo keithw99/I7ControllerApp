@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="ruLvLY" name="I7ControllerApp" projectType="guiapp" jucerVersion="5.4.5">
+  <MAINGROUP id="WapNQr" name="I7ControllerApp">
+    <GROUP id="{1BA53D68-5B75-F0C5-DCB0-B1BC9D7FC2B1}" name="Source">
+      <FILE id="dWk0lQ" name="Utils.cpp" compile="1" resource="0" file="Source/Utils.cpp"/>
+      <FILE id="Y6jlBf" name="Utils.h" compile="0" resource="0" file="Source/Utils.h"/>
+      <FILE id="ERgqe6" name="Constants.cpp" compile="1" resource="0" file="Source/Constants.cpp"/>
+      <FILE id="FeAerT" name="ParamBase.cpp" compile="1" resource="0" file="Source/ParamBase.cpp"/>
+      <FILE id="b2H8qo" name="ParamBase.h" compile="0" resource="0" file="Source/ParamBase.h"/>
+      <FILE id="YDvn6o" name="Param.cpp" compile="1" resource="0" file="Source/Param.cpp"/>
+      <FILE id="vgBnnP" name="Param.h" compile="0" resource="0" file="Source/Param.h"/>
+      <FILE id="eeI5xd" name="ParamAddress.cpp" compile="1" resource="0"
+            file="Source/ParamAddress.cpp"/>
+      <FILE id="vYRzH6" name="ParamAddress.h" compile="0" resource="0" file="Source/ParamAddress.h"/>
+      <FILE id="y3xVqu" name="ParamAddressTree.cpp" compile="1" resource="0"
+            file="Source/ParamAddressTree.cpp"/>
+      <FILE id="SJ2O3k" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
+      <FILE id="HTMoL0" name="ParamTreeTemplate.cpp" compile="1" resource="0"
+            file="Source/ParamTreeTemplate.cpp"/>
+      <FILE id="qfjFmY" name="ParamTreeTemplate.h" compile="0" resource="0"
+            file="Source/ParamTreeTemplate.h"/>
+      <FILE id="lDOGkX" name="ParamTree.cpp" compile="1" resource="0" file="Source/ParamTree.cpp"/>
+      <FILE id="FH2f3w" name="ParamTree.h" compile="0" resource="0" file="Source/ParamTree.h"/>
+      <FILE id="goGXZq" name="RolandSysexCommunicator.h" compile="0" resource="0"
+            file="Source/RolandSysexCommunicator.h"/>
+      <FILE id="lkMde9" name="RolandSysexCommunicator.cpp" compile="1" resource="0"
+            file="Source/RolandSysexCommunicator.cpp"/>
+      <FILE id="Jdc32N" name="ParamAddressTree.h" compile="0" resource="0"
+            file="Source/ParamAddressTree.h"/>
+      <FILE id="czMgZX" name="ParamTreeTest.h" compile="0" resource="0" file="Source/ParamTreeTest.h"/>
+      <FILE id="wFWJWG" name="MidiMonitorComponent.h" compile="0" resource="0"
+            file="Source/MidiMonitorComponent.h"/>
+      <FILE id="iszZzr" name="MidiMonitorComponent.cpp" compile="1" resource="0"
+            file="Source/MidiMonitorComponent.cpp"/>
+      <FILE id="xCFj6Z" name="I7SysexCommunicator.cpp" compile="1" resource="0"
+            file="Source/I7SysexCommunicator.cpp"/>
+      <FILE id="pxFssA" name="I7SysexCommunicator.h" compile="0" resource="0"
+            file="Source/I7SysexCommunicator.h"/>
+      <FILE id="LOBVuc" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="E23nAv" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="osKfKi" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <LINUX/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>
