@@ -27,6 +27,7 @@ getTreeTypeIndexMap() {
     {tree::GroupRange, TreeType::GROUP_RANGE},
     {tree::Parameter, TreeType::PARAM},
     {tree::ParameterRange, TreeType::PARAM_RANGE},
+    {tree::TextParameter, TreeType::PARAM_RANGE},
   };
   return m;
 }
@@ -62,10 +63,15 @@ void parseGroupNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
 void parseGroupRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
 void parseParamNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
 void parseParamRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
+void parseTextParam(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
 ParamAddr extractAddr(ValueTree t);
 ParamAddr extractParamAddr(ValueTree t);
 ParamAddrRange extractAddrRange(ValueTree t);
 ParamAddrRange extractParamAddrRange(ValueTree t);
+ParamAddrRange extractIntParamProperties(ValueTree t);
+ParamAddrRange extractFloatParamProperties(ValueTree t);
+ParamAddrRange extractChoiceParamProperties(ValueTree t);
+ParamAddrRange extractAsciiParamProperties(ValueTree t);
 String extractNodeDescription(ValueTree t);
 
 PTree AddressTreeBuilder::getAddressTree() {
@@ -93,8 +99,12 @@ void parseTemplateNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr
   case TreeType::PARAM_RANGE:
     parseParamRange(t, addr_tree, base_addr);
     break;
+  case TreeType::PARAM_TEXT:
+    parseTextParam(t, addr_tree, base_addr);
+    break;
   default:
     // TODO: Throw error.
+    DBG("ERROR: Unknown Template type: " << int(tt));
     return;
   }
 }
@@ -105,6 +115,7 @@ TreeType getType(ValueTree t) {
   const auto found = tIndex.find(tType);
   if (found == tIndex.end()) {
     // TODO: Throw error
+    DBG("ERROR: Unknown Template type: " << tType);
     return TreeType::INVALID;
   }
   return found->second;
@@ -185,6 +196,11 @@ void extractFloatParamProperties(ValueTree t, ParamProperties* props) {
     props->step = getProperty(t, prop::param::step);
 }
 
+void extractAsciiParamProperties(ValueTree t, ParamProperties* props) {
+  props->display_min = props->min = 32;
+  props->display_max = props->max = 127;
+}
+
 ParamProperties extractParamProperties(ValueTree t) {
   ParamProperties props;
   extractBaseParamProperties(t, &props);
@@ -198,6 +214,9 @@ ParamProperties extractParamProperties(ValueTree t) {
     case ParamType::FLOAT:
       extractIntParamProperties(t, &props);
       extractFloatParamProperties(t, &props);
+      break;
+    case ParamType::ASCII:
+      extractAsciiParamProperties(t, &props);
       break;
     default:
       DBG("ERROR: Cannot extract param props yet");
@@ -232,6 +251,10 @@ void parseParamRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) 
   ParamProperties props = extractParamProperties(t);
   ParamAddr range_base_addr = addr_tree.InsertParamRangeOffset(
     base_addr, prange, desc, fmt, props);
+}
+
+void parseTextParam(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+  return;
 }
 
 void parseTemplateChildren(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {

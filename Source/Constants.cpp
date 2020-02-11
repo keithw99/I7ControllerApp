@@ -65,13 +65,28 @@ const StringArray midiControlSource =
     makeRange(1, 31, "CC%02d"), makeRange(33, 95, "CC%02d"),
     StringArray{"BEND", "AFT"}
   );
-  
+
+const StringArray controlSource = {
+  "SYSTEM", "STUDIO SET"
+};
+
+const StringArray clockSource = {
+  "MIDI", "USB"
+};
+
+const StringArray audioOutput = {
+  "SPEAKER", "PHONES"
+};
+
 static ChoiceListMap buildChoiceMap() {
   return {
     {choice::SoundMode, std::make_shared<StringArray>(soundMode)},
     {choice::OffOn, std::make_shared<StringArray>(offOn)},
     {choice::MidiChannelPlusOff, std::make_shared<StringArray>(midiChannelPlusOff)},
     {choice::MidiControlSource, std::make_shared<StringArray>(midiControlSource)},
+    {choice::ControlSource, std::make_shared<StringArray>(controlSource)},
+    {choice::ClockSource, std::make_shared<StringArray>(clockSource)},
+    {choice::AudioOutput, std::make_shared<StringArray>(audioOutput)},
   };
 }
 

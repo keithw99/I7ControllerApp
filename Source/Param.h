@@ -151,6 +151,15 @@ class IntParamTranslator : public ParamTranslator {
    int skew_;
 };
 
+class AsciiParamTranslator : public ParamTranslator {
+ public:
+  AsciiParamTranslator() {}
+  ~AsciiParamTranslator() {}
+
+  String getDisplayValue(const int int_value) override;
+  int getNormalizedInt(const int display_value) { return display_value; }
+};
+
 class FloatParamTranslator : public ParamTranslator {
   public:
    FloatParamTranslator(int min, int max,
@@ -191,7 +200,7 @@ class ChoiceParamTranslator : public IntParamTranslator {
   std::shared_ptr<StringArray> choices_ = nullptr;
 };
 
-enum class ParamType {INT, FLOAT, CHOICE, INVALID};
+enum class ParamType {INT, FLOAT, CHOICE, ASCII, INVALID};
 
 ParamType GetParamType(String name);
 
@@ -236,6 +245,7 @@ class ParamInfo {
   static void makeIntParamInfo(const ParamProperties& props, ParamInfo* pinfo);
   static void makeFloatParamInfo(const ParamProperties& props, ParamInfo* pinfo);
   static void makeChoiceParamInfo(const ParamProperties& props, ParamInfo* pinfo);
+  static void makeAsciiParamInfo(const ParamProperties& props, ParamInfo* pinfo);
 
   ParamType type_;
   std::shared_ptr<RangedParamDecoder> decoder_ = nullptr;
