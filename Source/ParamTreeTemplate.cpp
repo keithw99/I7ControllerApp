@@ -55,7 +55,8 @@ inline ValueTree ParamTreeTemplateBuilder::studioSetTemplate() {
     { "Template", {{ "name", "Studio Set" }},
       {
         { "Group",
-          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "Studio Set Common" }}
+          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "Studio Set Common" }},
+          {studioSetCommonTemplate()}
         },
         { "Group",
           {{ "addr", 0x00040000 }, { "len", 6 }, { "desc", "Studio Set Common Chorus" }}
@@ -290,6 +291,64 @@ ValueTree ParamTreeTemplateBuilder::systemCommonTemplate() {
           { "desc", "System Control Source" }, { "fmt", "System Control %d Source" },
           { "min", 0 }, { "max", 97 },
           { "type", "choice" }, { "choice_list", "MidiControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000024 }, { "size", 1 }, { "desc", "Control Source" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000025 }, { "size", 1 }, { "desc", "System Clock Source" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ClockSource" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000026 }, { "size", 2 }, { "desc", "System Tempo" },
+          { "min", 20 }, { "max", 250 }, { "type", "int" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000028 }, { "size", 1 }, { "desc", "Tempo Assign Source" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000029 }, { "size", 1 }, { "desc", "Receive Program Change" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002A }, { "size", 1 }, { "desc", "Receive Bank Select" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002B }, { "size", 1 }, { "desc", "5.1CH Center Speaker Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002C }, { "size", 1 }, { "desc", "5.1CH Sub Woofer Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002D }, { "size", 1 }, { "desc", "2CH Output Mode" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "AudioOutput" },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::studioSetCommonTemplate() {
+  return
+    { "Template", {{ "name", "Studio Set Common" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000F }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 16 },
+          { "desc", "Studio Set Name" }, { "fmt", "Studio Set Name %d" },
+          { "type", "ascii" },
         }},
       }
     };

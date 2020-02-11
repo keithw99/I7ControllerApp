@@ -24,7 +24,6 @@ class ParamTreeTemplateBuilder {
   static ValueTree rootTemplate();
   static ValueTree systemTemplate();
   static ValueTree setupTemplate();
-  static ValueTree systemCommonTemplate();
   static ValueTree studioSetTemplate();
   static ValueTree temporaryToneTemplate();
   static ValueTree pcmSynthToneTemplate();
@@ -32,5 +31,7 @@ class ParamTreeTemplateBuilder {
   static ValueTree superNATURALSynthToneTemplate();
   static ValueTree superNATURALAcousticToneTemplate();
   static ValueTree superNATURALDrumKitTemplate();
+  static ValueTree systemCommonTemplate();
+  static ValueTree studioSetCommonTemplate();
 };
 

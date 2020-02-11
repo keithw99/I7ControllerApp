@@ -215,6 +215,12 @@ class PTreeTest : public UnitTest {
     updates = addrTree.GetParamUpdates(sc_addr, sc_val, 1);
     expectEquals(updates[0].toString(),
                  String("//System/System Common/System Control Source[3] -> CC42"));
-  
+
+    beginTest("Reading TextParam updates");
+    uint8 text[16] = {0x4D, 0x79, 0x20, 0x64, 0x6F, 0x67, 0x20, 0x68, 0x61, 0x73, 0x20, 0x66, 0x6C, 0x65, 0x61, 0x73};
+    uint8 ssn_addr[4] = {0x18, 0x00, 0x00, 0x00};
+    updates = addrTree.GetParamUpdates(ssn_addr, text, 16);
+    expectEquals(int(updates.size()), 16);
+    expectEquals(updates[0].toString(), String("//Temporary Studio Set/Studio Set Common/Studio Set Name[1] -> M"));
   }
 };

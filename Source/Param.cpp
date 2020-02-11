@@ -18,6 +18,7 @@ getParamTypeIndexMap() {
     {paramtype::int_type, ParamType::INT},
     {paramtype::float_type, ParamType::FLOAT},
     {paramtype::choice, ParamType::CHOICE},
+    {paramtype::ascii, ParamType::ASCII},
   };
   return m;
 }
@@ -131,6 +132,10 @@ float FloatParamTranslator::getSkew() {
   return skew_;
 }
 
+String AsciiParamTranslator::getDisplayValue(const int int_value) {
+  return String((char*)&int_value, 1);
+}
+  
 ParamInfo ParamInfo::makeBaseParamInfo(const ParamProperties& props) {
   ParamInfo pinfo;
   pinfo.type_ = props.param_type;
@@ -153,11 +158,14 @@ void ParamInfo::makeChoiceParamInfo(const ParamProperties& props, ParamInfo* pin
   pinfo->translator_ = std::make_shared<ChoiceParamTranslator>(props.choices);
 }
 
+void ParamInfo::makeAsciiParamInfo(const ParamProperties& props, ParamInfo* pinfo) {
+  pinfo->translator_ = std::make_shared<AsciiParamTranslator>();
+}
+
 ParamInfo ParamInfo::makeParamInfo(const ParamProperties& props) {
   ParamInfo pinfo = makeBaseParamInfo(props);
   switch (pinfo.type_) {
     case ParamType::INT:
-      //return makeIntParamInfo(props);
       makeIntParamInfo(props, &pinfo);
       break;
     case ParamType::CHOICE:
@@ -165,6 +173,9 @@ ParamInfo ParamInfo::makeParamInfo(const ParamProperties& props) {
       break;
     case ParamType::FLOAT:
       makeFloatParamInfo(props, &pinfo);
+      break;
+    case ParamType::ASCII:
+      makeAsciiParamInfo(props, &pinfo);
       break;
     default:
       DBG("ERROR: Adding parameter type Not yet supported");
