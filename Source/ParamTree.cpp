@@ -27,7 +27,7 @@ getTreeTypeIndexMap() {
     {tree::GroupRange, TreeType::GROUP_RANGE},
     {tree::Parameter, TreeType::PARAM},
     {tree::ParameterRange, TreeType::PARAM_RANGE},
-    {tree::TextParameter, TreeType::PARAM_RANGE},
+    {tree::TextParameter, TreeType::PARAM_TEXT},
   };
   return m;
 }
@@ -96,11 +96,11 @@ void parseTemplateNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr
   case TreeType::PARAM:
     parseParamNode(t, addr_tree, base_addr);
     break;
-  case TreeType::PARAM_RANGE:
-    parseParamRange(t, addr_tree, base_addr);
-    break;
   case TreeType::PARAM_TEXT:
     parseTextParam(t, addr_tree, base_addr);
+    // Fallthrough intentional.
+  case TreeType::PARAM_RANGE:
+    parseParamRange(t, addr_tree, base_addr);
     break;
   default:
     // TODO: Throw error.

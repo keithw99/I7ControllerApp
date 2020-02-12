@@ -33,5 +33,12 @@ class ParamTreeTemplateBuilder {
   static ValueTree superNATURALDrumKitTemplate();
   static ValueTree systemCommonTemplate();
   static ValueTree studioSetCommonTemplate();
+  static ValueTree studioSetCommonChorusTemplate();
+  static ValueTree studioSetCommonReverbTemplate();
+  static ValueTree studioSetCommonMotionalSurroundTemplate();
+  static ValueTree studioSetMasterEqTemplate();
+  static ValueTree studioSetMidiTemplate();
+  static ValueTree studioSetPartTemplate();
+  static ValueTree studioSetPartEqTemplate();
 };
 
