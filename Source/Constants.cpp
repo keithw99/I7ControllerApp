@@ -78,6 +78,117 @@ const StringArray audioOutput = {
   "SPEAKER", "PHONES"
 };
 
+const StringArray voiceReserve =
+  addArrays<StringArray>(makeRange(0, 63), StringArray{"FULL"});
+  
+const StringArray offPartNumber =
+  addArrays<StringArray>(StringArray{"OFF"}, makeRange(1, 16));
+
+const StringArray letteredOutputs = {
+  "A", "B", "C", "D"
+};
+
+const StringArray outputAssign =
+  addArrays<StringArray>(letteredOutputs, makeRange(1, 8));
+
+const StringArray partOutputAssign =
+  addArrays<StringArray>(StringArray{"PART"}, outputAssign);
+
+const StringArray chorusType = {
+  "OFF", "Chorus", "Delay", "GM2 Chorus"
+};
+
+const StringArray chorusOutputSelect = {
+  "MAIN", "REV", "MAIN+REV"
+};
+
+const StringArray reverbType = {
+  "OFF", "Room 1", "Room 2", "Hall 1", "Hall 2", "Plate", "GM2 Reverb"
+};
+
+const StringArray roomType = {
+  "ROOM1", "ROOM2", "HALL1", "HALL2",
+};
+
+const StringArray roomSize = {
+  "SMALL", "MEDIUM", "LARGE"
+};
+
+const StringArray eqLowFreq = {
+  "200", "400"
+};
+
+const StringArray eqMidFreq = {
+  "200", "250", "315", "400", "500", "630",
+  "800", "1000", "1250", "1600", "2000",
+  "2500", "3150", "4000", "5000", "6300",
+  "8000"
+};
+
+const StringArray eqHighFreq = {
+  "2000", "4000", "8000"
+};
+
+const StringArray eqQ = {
+  "0.5", "1.0", "2.0", "4.0", "8.0"
+};
+
+const StringArray monoPolyTone = {
+  "MONO", "POLY", "TONE"
+};
+
+const StringArray offOnTone = {
+  "OFF", "ON", "TONE"
+};
+
+const StringArray pitchBendRangeTone =
+  addArrays<StringArray>(makeRange(0, 24), StringArray{"TONE"});
+
+const StringArray midiByte = makeRange(0, 127);
+
+const StringArray midiByteTone =
+  addArrays<StringArray>(midiByte, StringArray{"TONE"});
+
+const StringArray keyScale = {
+  "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
+};
+
+/*
+StringArray fullKeyboardRange() {
+  int i = 0;
+  int octave = -1;
+  StringArray keyRange;
+  for (int octave = -1; octave <= 9; ++octave) {
+    for (const String& key : keyScale) {
+      keyRange.add(key + String(octave));
+      if (i >= 127) break;
+    }
+  }
+  return keyRange;
+}
+*/
+
+StringArray fullKeyboardRange() {
+  StringArray keyRange;
+  for (int i = 0; i < 128; ++i) {
+    keyRange.add(MidiMessage::getMidiNoteName(i, true, true, 4));
+  }
+  return keyRange;
+}
+const StringArray keyboardRange = fullKeyboardRange();
+
+const StringArray offMute = {
+  "OFF", "MUTE"
+};
+
+const StringArray scaleType = {
+  "CUSTOM", "EQUAL", "JUST-MAJ", "JUST-MIN", "PYTHAGORE",
+  "KIRNBERGE", "MEANTONE", "WERCKMEIS", "ARABIC"
+};
+
+const StringArray velocityCurve =
+  addArrays<StringArray>(StringArray{"OFF"}, makeRange(1, 4));
+  
 static ChoiceListMap buildChoiceMap() {
   return {
     {choice::SoundMode, std::make_shared<StringArray>(soundMode)},
@@ -87,6 +198,29 @@ static ChoiceListMap buildChoiceMap() {
     {choice::ControlSource, std::make_shared<StringArray>(controlSource)},
     {choice::ClockSource, std::make_shared<StringArray>(clockSource)},
     {choice::AudioOutput, std::make_shared<StringArray>(audioOutput)},
+    {choice::VoiceReserve, std::make_shared<StringArray>(voiceReserve)},
+    {choice::OffPartNumber, std::make_shared<StringArray>(offPartNumber)},
+    {choice::OutputAssign, std::make_shared<StringArray>(outputAssign)},
+    {choice::PartOutputAssign, std::make_shared<StringArray>(partOutputAssign)},
+    {choice::ChorusType, std::make_shared<StringArray>(chorusType)},
+    {choice::ChorusOutputSelect, std::make_shared<StringArray>(chorusOutputSelect)},
+    {choice::ReverbType, std::make_shared<StringArray>(reverbType)},
+    {choice::LetteredOutputs, std::make_shared<StringArray>(letteredOutputs)},
+    {choice::RoomType, std::make_shared<StringArray>(roomType)},
+    {choice::RoomSize, std::make_shared<StringArray>(roomSize)},
+    {choice::EqLowFreq, std::make_shared<StringArray>(eqLowFreq)},
+    {choice::EqMidFreq, std::make_shared<StringArray>(eqMidFreq)},
+    {choice::EqHighFreq, std::make_shared<StringArray>(eqHighFreq)},
+    {choice::EqQ, std::make_shared<StringArray>(eqQ)},
+    {choice::MonoPolyTone, std::make_shared<StringArray>(monoPolyTone)},
+    {choice::OffOnTone, std::make_shared<StringArray>(offOnTone)},
+    {choice::PitchBendRangeTone, std::make_shared<StringArray>(pitchBendRangeTone)},
+    {choice::MidiByteTone, std::make_shared<StringArray>(midiByteTone)},
+    {choice::KeyScale, std::make_shared<StringArray>(keyScale)},
+    {choice::KeyboardRange, std::make_shared<StringArray>(keyboardRange)},
+    {choice::OffMute, std::make_shared<StringArray>(offMute)},
+    {choice::ScaleType, std::make_shared<StringArray>(scaleType)},
+    {choice::VelocityCurve, std::make_shared<StringArray>(velocityCurve)},
   };
 }
 

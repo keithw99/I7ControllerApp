@@ -62,6 +62,30 @@ const String MidiControlSource { "MidiControlSource" };
 const String ControlSource { "ControlSource" };
 const String ClockSource { "ClockSource" };
 const String AudioOutput { "AudioOutput" };
+const String VoiceReserve { "VoiceReserve" };
+const String OffPartNumber { "OffPartNumber" };
+const String OutputAssign { "OutputAssign" };
+const String PartOutputAssign { "PartOutputAssign" };
+const String ChorusType { "ChorusType" };
+const String ChorusOutputSelect { "ChorusOutputSelect" };
+const String ReverbType { "ReverbType" };
+const String LetteredOutputs { "LetteredOutputs" };
+const String RoomType { "RoomType" };
+const String RoomSize { "RoomSize" };
+const String EqLowFreq { "EqLowFreq" };
+const String EqMidFreq { "EqMidFreq" };
+const String EqHighFreq { "EqHighFreq" };
+const String EqQ { "EqQ" };
+const String MonoPolyTone { "MonoPolyTone" };
+const String OffOnTone { "OffOnTone" };
+const String PitchBendRangeTone { "PitchBendRangeTone" };
+const String MidiByteTone { "MidiByteTone" };
+const String KeyScale { "KeyScale" };
+const String KeyboardRange { "KeyboardRange" };
+const String OffMute { "OffMute" };
+const String ScaleType { "ScaleType" };
+const String VelocityCurve { "VelocityCurve" };
+
 
 extern std::shared_ptr<StringArray> getChoicesFor(const String& choiceListName);
 }  // namespace choice
