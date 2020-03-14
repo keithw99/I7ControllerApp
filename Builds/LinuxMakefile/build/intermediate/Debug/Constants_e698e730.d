@@ -471,4 +471,4 @@ build/intermediate/Debug/Constants_e698e730.o: ../../Source/Constants.cpp \
  /home/keith/dev/JUCE/modules/juce_opengl/opengl/juce_OpenGLShaderProgram.h \
  /home/keith/dev/JUCE/modules/juce_opengl/opengl/juce_OpenGLTexture.h \
  /home/keith/dev/JUCE/modules/juce_opengl/utils/juce_OpenGLAppComponent.h \
- ../../Source/Utils.h
+ ../../Source/Utils.h ../../Source/I7Waveforms.h

@@ -33,6 +33,7 @@ const String display_min { "display_min" };
 const String display_max { "display_max" };
 const String type { "type" };
 const String choice_list { "choice_list" };
+const String param_template { "template" };
 }  // namespace param
 }  // namespace prop
 
@@ -42,6 +43,17 @@ const String float_type { "float" };
 const String choice { "choice" };
 const String ascii { "ascii" };
 }
+
+namespace paramtemplate {
+const String MidiByte { "MidiByte" };  // int 0-127, size 1
+const String SignedMidiByte { "SignedMidiByte" };  // int 1-127 (-63-63), size 1
+const String Pan { "Pan" };  // int -64-63, size 1
+const String CoarseTune { "CoarseTune" };  // int 16-112 (-48-48), size 1
+const String FineTune { "FineTune" };  // int 14-114 (-50-50), size 1
+const String OctaveShift { "OctaveShift" };  // int 61-67 (-3-3), size 1
+const String KeyFollow { "KeyFollow" };  // int 54-74 (-100-100), size 1
+
+}  // namespace paramtemplate
 
 namespace tree {
 const String Template { "Template" };
@@ -84,8 +96,33 @@ const String KeyScale { "KeyScale" };
 const String KeyboardRange { "KeyboardRange" };
 const String OffMute { "OffMute" };
 const String ScaleType { "ScaleType" };
+const String VelocityCurveType { "VelocityCurveType" };
+const String Priority { "Priority" };
+const String StretchTuneDepth { "StretchTuneDepth" };
+const String MonoPoly { "MonoPoly" };
+const String PortamentoMode { "PortamentoMode" };
+const String PortamentoType { "PortamentoType" };
+const String PortamentoStart { "PortamentoStart" };
+const String MatrixControlSource { "MatrixControlSource"};
+const String MatrixControlDestination { "MatrixControlDestination" };
+const String MFXType { "MFXType" };
+const String MFXControlSource { "MFXControlSource" };
+const String Booster { "Booster" };
+const String VelocityControl { "VelocityControl" };
+const String RandomPitchDepth { "RandomPitchDepth" };
+const String EnvMode { "EnvMode" };
+const String DelayMode { "DelayMode" };
+const String NoteDuration { "NoteDuration" };
+const String DelayTime { "DelayTime" };
+const String ControlSwitch { "ControlSwitch" };
+const String WaveGroupType { "WaveGroupType" };
+const String WaveGain { "WaveGain" };
+const String FilterType { "FilterType" };
 const String VelocityCurve { "VelocityCurve" };
-
+const String BiasDirection { "BiasDirection" };
+const String LFOWaveform { "LFOWaveform" };
+const String FadeMode { "FadeMode" };
+const String ToneCategory { "ToneCategory" };
 
 extern std::shared_ptr<StringArray> getChoicesFor(const String& choiceListName);
 }  // namespace choice

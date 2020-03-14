@@ -43,8 +43,6 @@ getNodeTypeMap() {
   return m;
 }
 
-
-
 var getProperty(ValueTree t, String prop_name) {
  var prop = t.getProperty(prop_name);
   if (prop.isVoid()) {
@@ -53,6 +51,10 @@ var getProperty(ValueTree t, String prop_name) {
     return var();
   }
  return prop;
+}
+
+bool hasParamTemplate(ValueTree t) {
+  return t.hasProperty(prop::param::param_template);
 }
 
 // Forward declarations.
@@ -73,6 +75,8 @@ ParamAddrRange extractFloatParamProperties(ValueTree t);
 ParamAddrRange extractChoiceParamProperties(ValueTree t);
 ParamAddrRange extractAsciiParamProperties(ValueTree t);
 String extractNodeDescription(ValueTree t);
+bool hasParamTemplate(ValueTree t);
+ParamProperties makeParamPropertiesFromTemplate(const String& param_template);
 
 PTree AddressTreeBuilder::getAddressTree() {
   PTree addr_tree;
@@ -141,6 +145,10 @@ void parseGroupNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
   parseTemplateChildren(t, addr_tree, abs_addr);
 }
 
+ParamProperties makeParamPropertiesFromTemplate(const String& param_template) {
+  return ParamProperties::fromTemplate(param_template);
+}
+
 void extractBaseParamProperties(ValueTree t, ParamProperties* props) {
   props->param_type = GetParamType(getProperty(t, prop::param::type));
   props->size = getProperty(t, prop::param::size);
@@ -202,6 +210,10 @@ void extractAsciiParamProperties(ValueTree t, ParamProperties* props) {
 }
 
 ParamProperties extractParamProperties(ValueTree t) {
+  if (hasParamTemplate(t)) {
+    return makeParamPropertiesFromTemplate(getProperty(t, prop::param::param_template));
+  }
+
   ParamProperties props;
   extractBaseParamProperties(t, &props);
   switch (props.param_type) {

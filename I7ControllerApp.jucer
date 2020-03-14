@@ -3,6 +3,7 @@
 <JUCERPROJECT id="ruLvLY" name="I7ControllerApp" projectType="guiapp" jucerVersion="5.4.5">
   <MAINGROUP id="WapNQr" name="I7ControllerApp">
     <GROUP id="{1BA53D68-5B75-F0C5-DCB0-B1BC9D7FC2B1}" name="Source">
+      <FILE id="w7GLGP" name="ParamTemplate.h" compile="0" resource="0" file="Source/ParamTemplate.h"/>
       <FILE id="dWk0lQ" name="Utils.cpp" compile="1" resource="0" file="Source/Utils.cpp"/>
       <FILE id="Y6jlBf" name="Utils.h" compile="0" resource="0" file="Source/Utils.h"/>
       <FILE id="ERgqe6" name="Constants.cpp" compile="1" resource="0" file="Source/Constants.cpp"/>

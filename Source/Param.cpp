@@ -23,6 +23,20 @@ getParamTypeIndexMap() {
   return m;
 }
 
+static const std::unordered_map<String, ParamTemplateType>
+getParamTemplateMap() {
+  std::unordered_map<String, ParamTemplateType> m = {
+    {paramtemplate::MidiByte, ParamTemplateType::MIDI_BYTE},
+    {paramtemplate::SignedMidiByte, ParamTemplateType::SIGNED_MIDI_BYTE},        
+    {paramtemplate::Pan, ParamTemplateType::PAN},
+    {paramtemplate::CoarseTune, ParamTemplateType::COARSE_TUNE},
+    {paramtemplate::FineTune, ParamTemplateType::FINE_TUNE},
+    {paramtemplate::OctaveShift, ParamTemplateType::OCTAVE_SHIFT},
+    {paramtemplate::KeyFollow, ParamTemplateType::KEYFOLLOW},
+  };
+  return m;
+}
+
 ParamType GetParamType(String name) {
   const auto& m = getParamTypeIndexMap();
   const auto found = m.find(name);
@@ -30,6 +44,17 @@ ParamType GetParamType(String name) {
     // TODO: Throw error
     DBG("ERROR: invalid ParamType: " << name);
     return ParamType::INVALID;
+  }
+  return found->second;
+}
+
+ParamTemplateType GetParamTemplateType(String name) {
+  const auto& m = getParamTemplateMap();
+  const auto found = m.find(name);
+  if (found == m.end()) {
+    // TODO: Throw error
+    DBG("ERROR: invalid ParamTemplateType: " << name);
+    return ParamTemplateType::INVALID;
   }
   return found->second;
 }
@@ -135,7 +160,30 @@ float FloatParamTranslator::getSkew() {
 String AsciiParamTranslator::getDisplayValue(const int int_value) {
   return String((char*)&int_value, 1);
 }
-  
+
+ParamProperties ParamProperties::fromTemplate(const String& param_template) {
+  ParamTemplateType pt_type = GetParamTemplateType(param_template);
+  switch (pt_type) {
+    case ParamTemplateType::MIDI_BYTE:
+      return intParam(1, 0, 127);
+    case ParamTemplateType::SIGNED_MIDI_BYTE:
+      return intParam(1, 1, 127, -63, 63);
+    case ParamTemplateType::PAN:
+      return intParam(1, 0, 127, -64, 63);
+    case ParamTemplateType::COARSE_TUNE:
+      return intParam(1, 16, 112, -48, 48);
+    case ParamTemplateType::FINE_TUNE:
+      return intParam(1, 14, 114, -50, 50);
+    case ParamTemplateType::OCTAVE_SHIFT:
+      return intParam(1, 61, 67, -3, 3);
+    case ParamTemplateType::KEYFOLLOW:
+      return intParam(1, 54, 74, -100, 100);
+    default:
+      DBG("ERROR: invalid ParamTemplateType: " << int(pt_type));
+      return ParamProperties();
+  };
+}
+
 ParamInfo ParamInfo::makeBaseParamInfo(const ParamProperties& props) {
   ParamInfo pinfo;
   pinfo.type_ = props.param_type;
