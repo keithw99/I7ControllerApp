@@ -1,0 +1,7441 @@
+INT,1,StGrand pA L
+INT,2,StGrand pA R
+INT,3,StGrand pB L
+INT,4,StGrand pB R
+INT,5,StGrand pC L
+INT,6,StGrand pC R
+INT,7,StGrand fA L
+INT,8,StGrand fA R
+INT,9,StGrand fB L
+INT,10,StGrand fB R
+INT,11,StGrand fC L
+INT,12,StGrand fC R
+INT,13,Ac Piano2 pA
+INT,14,Ac Piano2 pB
+INT,15,Ac Piano2 pC
+INT,16,Ac Piano2 fA
+INT,17,Ac Piano2 fB
+INT,18,Ac Piano2 fC
+INT,19,Ac Piano1 A
+INT,20,Ac Piano1 B
+INT,21,Ac Piano1 C
+INT,22,Piano Thump
+INT,23,Piano Up TH
+INT,24,Piano Atk
+INT,25,MKS-20 P3 A
+INT,26,MKS-20 P3 B
+INT,27,MKS-20 P3 C
+INT,28,SA Rhodes 1A
+INT,29,SA Rhodes 1B
+INT,30,SA Rhodes 1C
+INT,31,SA Rhodes 2A
+INT,32,SA Rhodes 2B
+INT,33,SA Rhodes 2C
+INT,34,Dyn Rhd mp A
+INT,35,Dyn Rhd mp B
+INT,36,Dyn Rhd mp C
+INT,37,Dyn Rhd mf A
+INT,38,Dyn Rhd mf B
+INT,39,Dyn Rhd mf C
+INT,40,Dyn Rhd ff A
+INT,41,Dyn Rhd ff B
+INT,42,Dyn Rhd ff C
+INT,43,Wurly soft A
+INT,44,Wurly soft B
+INT,45,Wurly soft C
+INT,46,Wurly hard A
+INT,47,Wurly hard B
+INT,48,Wurly hard C
+INT,49,E.Piano 1A
+INT,50,E.Piano 1B
+INT,51,E.Piano 1C
+INT,52,E.Piano 2A
+INT,53,E.Piano 2B
+INT,54,E.Piano 2C
+INT,55,E.Piano 3A
+INT,56,E.Piano 3B
+INT,57,E.Piano 3C
+INT,58,MK-80 EP A
+INT,59,MK-80 EP B
+INT,60,MK-80 EP C
+INT,61,EP Hard
+INT,62,EP Distone
+INT,63,Clear Keys
+INT,64,D-50 EP A
+INT,65,D-50 EP B
+INT,66,D-50 EP C
+INT,67,Celesta
+INT,68,Music Box
+INT,69,Music Box 2
+INT,70,Clav 1A
+INT,71,Clav 1B
+INT,72,Clav 1C
+INT,73,Clav 2A
+INT,74,Clav 2B
+INT,75,Clav 2C
+INT,76,Clav 3A
+INT,77,Clav 3B
+INT,78,Clav 3C
+INT,79,Clav 4A
+INT,80,Clav 4B
+INT,81,Clav 4C
+INT,82,Clav Wave
+INT,83,MIDI Clav
+INT,84,HarpsiWave A
+INT,85,HarpsiWave B
+INT,86,HarpsiWave C
+INT,87,Jazz Organ 1
+INT,88,Jazz Organ 2
+INT,89,Organ 1
+INT,90,Organ 2
+INT,91,Organ 3
+INT,92,Organ 4
+INT,93,60's Organ1
+INT,94,60's Organ2
+INT,95,60's Organ3
+INT,96,60's Organ4
+INT,97,Full Organ
+INT,98,Full Draw
+INT,99,Rock Organ
+INT,100,RockOrg1 A L
+INT,101,RockOrg1 A R
+INT,102,RockOrg1 B L
+INT,103,RockOrg1 B R
+INT,104,RockOrg1 C L
+INT,105,RockOrg1 C R
+INT,106,RockOrg2 A L
+INT,107,RockOrg2 A R
+INT,108,RockOrg2 B L
+INT,109,RockOrg2 B R
+INT,110,RockOrg2 C L
+INT,111,RockOrg2 C R
+INT,112,RockOrg3 A L
+INT,113,RockOrg3 A R
+INT,114,RockOrg3 B L
+INT,115,RockOrg3 B R
+INT,116,RockOrg3 C L
+INT,117,RockOrg3 C R
+INT,118,Dist. Organ
+INT,119,Rot.Org Slw
+INT,120,Rot.Org Fst
+INT,121,Pipe Organ
+INT,122,Soft Nylon A
+INT,123,Soft Nylon B
+INT,124,Soft Nylon C
+INT,125,Nylon Gtr A
+INT,126,Nylon Gtr B
+INT,127,Nylon Gtr C
+INT,128,Nylon Str
+INT,129,6-Str Gtr A
+INT,130,6-Str Gtr B
+INT,131,6-Str Gtr C
+INT,132,StlGtr mp A
+INT,133,StlGtr mp B
+INT,134,StlGtr mp C
+INT,135,StlGtr mf A
+INT,136,StlGtr mf B
+INT,137,StlGtr mf C
+INT,138,StlGtr ff A
+INT,139,StlGtr ff B
+INT,140,StlGtr ff C
+INT,141,StlGtr sld A
+INT,142,StlGtr sld B
+INT,143,StlGtr sld C
+INT,144,StlGtr Hrm A
+INT,145,StlGtr Hrm B
+INT,146,StlGtr Hrm C
+INT,147,Gtr Harm A
+INT,148,Gtr Harm B
+INT,149,Gtr Harm C
+INT,150,Jazz Gtr A
+INT,151,Jazz Gtr B
+INT,152,Jazz Gtr C
+INT,153,LP Rear A
+INT,154,LP Rear B
+INT,155,LP Rear C
+INT,156,Rock lead 1
+INT,157,Rock lead 2
+INT,158,Comp Gtr A
+INT,159,Comp Gtr B
+INT,160,Comp Gtr C
+INT,161,Comp Gtr A+
+INT,162,Mute Gtr 1
+INT,163,Mute Gtr 2A
+INT,164,Mute Gtr 2B
+INT,165,Mute Gtr 2C
+INT,166,Muters
+INT,167,Pop Strat A
+INT,168,Pop Strat B
+INT,169,Pop Strat C
+INT,170,JC Strat A
+INT,171,JC Strat B
+INT,172,JC Strat C
+INT,173,JC Strat A+
+INT,174,JC Strat B+
+INT,175,JC Strat C+
+INT,176,Clean Gtr A
+INT,177,Clean Gtr B
+INT,178,Clean Gtr C
+INT,179,Stratus A
+INT,180,Stratus B
+INT,181,Stratus C
+INT,182,Scrape Gut
+INT,183,Strat Sust
+INT,184,Strat Atk
+INT,185,OD Gtr A
+INT,186,OD Gtr B
+INT,187,OD Gtr C
+INT,188,OD Gtr A+
+INT,189,Heavy Gtr A
+INT,190,Heavy Gtr B
+INT,191,Heavy Gtr C
+INT,192,Heavy Gtr A+
+INT,193,Heavy Gtr B+
+INT,194,Heavy Gtr C+
+INT,195,PowerChord A
+INT,196,PowerChord B
+INT,197,PowerChord C
+INT,198,EG Harm
+INT,199,Gt.FretNoise
+INT,200,Syn Gtr A
+INT,201,Syn Gtr B
+INT,202,Syn Gtr C
+INT,203,Harp 1A
+INT,204,Harp 1B
+INT,205,Harp 1C
+INT,206,Harp Harm
+INT,207,Pluck Harp
+INT,208,Banjo A
+INT,209,Banjo B
+INT,210,Banjo C
+INT,211,Sitar A
+INT,212,Sitar B
+INT,213,Sitar C
+INT,214,E.Sitar A
+INT,215,E.Sitar B
+INT,216,E.Sitar C
+INT,217,Santur A
+INT,218,Santur B
+INT,219,Santur C
+INT,220,Dulcimer A
+INT,221,Dulcimer B
+INT,222,Dulcimer C
+INT,223,Shamisen A
+INT,224,Shamisen B
+INT,225,Shamisen C
+INT,226,Koto A
+INT,227,Koto B
+INT,228,Koto C
+INT,229,Taishokoto A
+INT,230,Taishokoto B
+INT,231,Taishokoto C
+INT,232,Pick Bass A
+INT,233,Pick Bass B
+INT,234,Pick Bass C
+INT,235,Fingerd Bs A
+INT,236,Fingerd Bs B
+INT,237,Fingerd Bs C
+INT,238,E.Bass
+INT,239,P.Bass 1
+INT,240,P.Bass 2
+INT,241,Stick
+INT,242,Fretless A
+INT,243,Fretless B
+INT,244,Fretless C
+INT,245,Fretless 2A
+INT,246,Fretless 2B
+INT,247,Fretless 2C
+INT,248,UprightBs 1
+INT,249,UprightBs 2A
+INT,250,UprightBs 2B
+INT,251,UprightBs 2C
+INT,252,Ac.Bass A
+INT,253,Ac.Bass B
+INT,254,Ac.Bass C
+INT,255,Slap Bass 1
+INT,256,Slap & Pop
+INT,257,Slap Bass 2
+INT,258,Slap Bass 3
+INT,259,Jz.Bs Thumb
+INT,260,Jz.Bs Slap 1
+INT,261,Jz.Bs Slap 2
+INT,262,Jz.Bs Slap 3
+INT,263,Jz.Bs Pop
+INT,264,Funk Bass1
+INT,265,Funk Bass2
+INT,266,Syn Bass A
+INT,267,Syn Bass C
+INT,268,Syn Bass
+INT,269,Syn Bass 2 A
+INT,270,Syn Bass 2 B
+INT,271,Syn Bass 2 C
+INT,272,Mini Bs 1A
+INT,273,Mini Bs 1B
+INT,274,Mini Bs 1C
+INT,275,Mini Bs 2
+INT,276,Mini Bs 2+
+INT,277,MC-202 Bs A
+INT,278,MC-202 Bs B
+INT,279,MC-202 Bs C
+INT,280,Hollow Bs
+INT,281,Flute 1A
+INT,282,Flute 1B
+INT,283,Flute 1C
+INT,284,Jazz Flute A
+INT,285,Jazz Flute B
+INT,286,Jazz Flute C
+INT,287,Flute Tone
+INT,288,Piccolo A
+INT,289,Piccolo B
+INT,290,Piccolo C
+INT,291,Blow Pipe
+INT,292,Pan Pipe
+INT,293,BottleBlow
+INT,294,Rad Hose
+INT,295,Shakuhachi
+INT,296,Shaku Atk
+INT,297,Flute Push
+INT,298,Clarinet A
+INT,299,Clarinet B
+INT,300,Clarinet C
+INT,301,Oboe mf A
+INT,302,Oboe mf B
+INT,303,Oboe mf C
+INT,304,Oboe f A
+INT,305,Oboe f B
+INT,306,Oboe f C
+INT,307,E.Horn A
+INT,308,E.Horn B
+INT,309,E.Horn C
+INT,310,Bassoon A
+INT,311,Bassoon B
+INT,312,Bassoon C
+INT,313,T_Recorder A
+INT,314,T_Recorder B
+INT,315,T_Recorder C
+INT,316,Sop.Sax A
+INT,317,Sop.Sax B
+INT,318,Sop.Sax C
+INT,319,Sop.Sax mf A
+INT,320,Sop.Sax mf B
+INT,321,Sop.Sax mf C
+INT,322,Alto mp A
+INT,323,Alto mp B
+INT,324,Alto mp C
+INT,325,Alto Sax 1A
+INT,326,Alto Sax 1B
+INT,327,Alto Sax 1C
+INT,328,T.Breathy A
+INT,329,T.Breathy B
+INT,330,T.Breathy C
+INT,331,SoloSax A
+INT,332,SoloSax B
+INT,333,SoloSax C
+INT,334,Tenor Sax A
+INT,335,Tenor Sax B
+INT,336,Tenor Sax C
+INT,337,T.Sax mf A
+INT,338,T.Sax mf B
+INT,339,T.Sax mf C
+INT,340,Bari.Sax f A
+INT,341,Bari.Sax f B
+INT,342,Bari.Sax f C
+INT,343,Bari.Sax A
+INT,344,Bari.Sax B
+INT,345,Bari.Sax C
+INT,346,Syn Sax
+INT,347,Chanter
+INT,348,Harmonica A
+INT,349,Harmonica B
+INT,350,Harmonica C
+INT,351,OrcUnisonA L
+INT,352,OrcUnisonA R
+INT,353,OrcUnisonB L
+INT,354,OrcUnisonB R
+INT,355,OrcUnisonC L
+INT,356,OrcUnisonC R
+INT,357,BrassSectA L
+INT,358,BrassSectA R
+INT,359,BrassSectB L
+INT,360,BrassSectB R
+INT,361,BrassSectC L
+INT,362,BrassSectC R
+INT,363,Tpt Sect. A
+INT,364,Tpt Sect. B
+INT,365,Tpt Sect. C
+INT,366,Tb Sect A
+INT,367,Tb Sect B
+INT,368,Tb Sect C
+INT,369,T.Sax Sect A
+INT,370,T.Sax Sect B
+INT,371,T.Sax Sect C
+INT,372,Flugel A
+INT,373,Flugel B
+INT,374,Flugel C
+INT,375,FlugelWave
+INT,376,Trumpet 1A
+INT,377,Trumpet 1B
+INT,378,Trumpet 1C
+INT,379,Trumpet 2A
+INT,380,Trumpet 2B
+INT,381,Trumpet 2C
+INT,382,HarmonMute1A
+INT,383,HarmonMute1B
+INT,384,HarmonMute1C
+INT,385,Trombone 1
+INT,386,Trombone 2 A
+INT,387,Trombone 2 B
+INT,388,Trombone 2 C
+INT,389,Tuba A
+INT,390,Tuba B
+INT,391,Tuba C
+INT,392,French 1A
+INT,393,French 1C
+INT,394,F.Horns A
+INT,395,F.Horns B
+INT,396,F.Horns C
+INT,397,Violin A
+INT,398,Violin B
+INT,399,Violin C
+INT,400,Violin 2 A
+INT,401,Violin 2 B
+INT,402,Violin 2 C
+INT,403,Cello A
+INT,404,Cello B
+INT,405,Cello C
+INT,406,Cello 2 A
+INT,407,Cello 2 B
+INT,408,Cello 2 C
+INT,409,Cello Wave
+INT,410,Pizz
+INT,411,STR Attack A
+INT,412,STR Attack B
+INT,413,STR Attack C
+INT,414,DolceStr.A L
+INT,415,DolceStr.A R
+INT,416,DolceStr.B L
+INT,417,DolceStr.B R
+INT,418,DolceStr.C L
+INT,419,DolceStr.C R
+INT,420,JV Strings L
+INT,421,JV Strings R
+INT,422,JV Strings A
+INT,423,JV Strings C
+INT,424,JP Strings1A
+INT,425,JP Strings1B
+INT,426,JP Strings1C
+INT,427,JP Strings2A
+INT,428,JP Strings2B
+INT,429,JP Strings2C
+INT,430,PWM
+INT,431,Pulse Mod
+INT,432,Soft Pad A
+INT,433,Soft Pad B
+INT,434,Soft Pad C
+INT,435,Fantasynth A
+INT,436,Fantasynth B
+INT,437,Fantasynth C
+INT,438,D-50 HeavenA
+INT,439,D-50 HeavenB
+INT,440,D-50 HeavenC
+INT,441,Fine Wine
+INT,442,D-50 Brass A
+INT,443,D-50 Brass B
+INT,444,D-50 Brass C
+INT,445,D-50 BrassA+
+INT,446,Doo
+INT,447,Pop Voice
+INT,448,Syn Vox 1
+INT,449,Syn Vox 2
+INT,450,Voice Aahs A
+INT,451,Voice Aahs B
+INT,452,Voice Aahs C
+INT,453,Voice Oohs1A
+INT,454,Voice Oohs1B
+INT,455,Voice Oohs1C
+INT,456,Voice Oohs2A
+INT,457,Voice Oohs2B
+INT,458,Voice Oohs2C
+INT,459,Choir 1A
+INT,460,Choir 1B
+INT,461,Choir 1C
+INT,462,Oohs Chord L
+INT,463,Oohs Chord R
+INT,464,Male Ooh A
+INT,465,Male Ooh B
+INT,466,Male Ooh C
+INT,467,Org Vox A
+INT,468,Org Vox B
+INT,469,Org Vox C
+INT,470,Org Vox
+INT,471,ZZZ Vox
+INT,472,Bell VOX
+INT,473,Kalimba
+INT,474,JD Kalimba
+INT,475,Klmba Atk
+INT,476,Wood Crak
+INT,477,Block
+INT,478,Gamelan 1
+INT,479,Gamelan 2
+INT,480,Gamelan 3
+INT,481,Log Drum
+INT,482,Hooky
+INT,483,Tabla
+INT,484,Marimba Wave
+INT,485,Xylo
+INT,486,Xylophone
+INT,487,Vibes
+INT,488,Bottle Hit
+INT,489,Glockenspiel
+INT,490,Tubular
+INT,491,Steel Drums
+INT,492,Pole lp
+INT,493,Fanta Bell A
+INT,494,Fanta Bell B
+INT,495,Fanta Bell C
+INT,496,FantaBell A+
+INT,497,Org Bell
+INT,498,AgogoBells
+INT,499,FingerBell
+INT,500,DIGI Bell 1
+INT,501,DIGI Bell 1+
+INT,502,JD Cowbell
+INT,503,Bell Wave
+INT,504,Chime
+INT,505,Crystal
+INT,506,2.2 Bellwave
+INT,507,2.2 Vibwave
+INT,508,Digiwave
+INT,509,DIGI Chime
+INT,510,JD DIGIChime
+INT,511,BrightDigi
+INT,512,Can Wave 1
+INT,513,Can Wave 2
+INT,514,Vocal Wave
+INT,515,Wally Wave
+INT,516,Brusky lp
+INT,517,Wave Scan
+INT,518,Wire String
+INT,519,Nasty
+INT,520,Wave Table
+INT,521,Klack Wave
+INT,522,Spark VOX
+INT,523,JD Spark VOX
+INT,524,Cutters
+INT,525,EML 5th
+INT,526,MMM VOX
+INT,527,Lead Wave
+INT,528,Synth Reed
+INT,529,Synth Saw 1
+INT,530,Synth Saw 2
+INT,531,Syn Saw 2inv
+INT,532,Synth Saw 3
+INT,533,JD Syn Saw 2
+INT,534,FAT Saw
+INT,535,JP-8 Saw A
+INT,536,JP-8 Saw B
+INT,537,JP-8 Saw C
+INT,538,P5 Saw A
+INT,539,P5 Saw B
+INT,540,P5 Saw C
+INT,541,P5 Saw2 A
+INT,542,P5 Saw2 B
+INT,543,P5 Saw2 C
+INT,544,D-50 Saw A
+INT,545,D-50 Saw B
+INT,546,D-50 Saw C
+INT,547,Synth Square
+INT,548,JP-8 SquareA
+INT,549,JP-8 SquareB
+INT,550,JP-8 SquareC
+INT,551,DualSquare A
+INT,552,DualSquare C
+INT,553,DualSquareA+
+INT,554,JD SynPulse1
+INT,555,JD SynPulse2
+INT,556,JD SynPulse3
+INT,557,JD SynPulse4
+INT,558,Synth Pulse1
+INT,559,Synth Pulse2
+INT,560,JD SynPulse5
+INT,561,Sync Sweep
+INT,562,Triangle
+INT,563,JD Triangle
+INT,564,Sine
+INT,565,Metal Wind
+INT,566,Wind Agogo
+INT,567,Feedbackwave
+INT,568,Spectrum
+INT,569,CrunchWind
+INT,570,ThroatWind
+INT,571,Pitch Wind
+INT,572,JD Vox Noise
+INT,573,Vox Noise
+INT,574,BreathNoise
+INT,575,Voice Breath
+INT,576,White Noise
+INT,577,Pink Noise
+INT,578,Rattles
+INT,579,Ice Rain
+INT,580,Tin Wave
+INT,581,Anklungs
+INT,582,Wind Chimes
+INT,583,Orch. Hit
+INT,584,Tekno Hit
+INT,585,Back Hit
+INT,586,Philly Hit
+INT,587,Scratch 1
+INT,588,Scratch 2
+INT,589,Scratch 3
+INT,590,Shami
+INT,591,Org Atk 1
+INT,592,Org Atk 2
+INT,593,Sm Metal
+INT,594,StrikePole
+INT,595,Thrill
+INT,596,Switch
+INT,597,Tuba Slap
+INT,598,Plink
+INT,599,Plunk
+INT,600,EP Atk
+INT,601,TVF_Trig
+INT,602,Org Click
+INT,603,Cut Noiz
+INT,604,Bass Body
+INT,605,Flute Click
+INT,606,Gt&BsNz MENU
+INT,607,Ac.BassNz 1
+INT,608,Ac.BassNz 2
+INT,609,El.BassNz 1
+INT,610,El.BassNz 2
+INT,611,DistGtrNz 1
+INT,612,DistGtrNz 2
+INT,613,DistGtrNz 3
+INT,614,DistGtrNz 4
+INT,615,SteelGtrNz 1
+INT,616,SteelGtrNz 2
+INT,617,SteelGtrNz 3
+INT,618,SteelGtrNz 4
+INT,619,SteelGtrNz 5
+INT,620,SteelGtrNz 6
+INT,621,SteelGtrNz 7
+INT,622,Sea
+INT,623,Thunder
+INT,624,Windy
+INT,625,Stream
+INT,626,Bubble
+INT,627,Bird
+INT,628,Dog Bark
+INT,629,Horse
+INT,630,Telephone 1
+INT,631,Telephone 2
+INT,632,Creak
+INT,633,Door Slam
+INT,634,Engine
+INT,635,Car Stop
+INT,636,Car Pass
+INT,637,Crash
+INT,638,Gun Shot
+INT,639,Siren
+INT,640,Train
+INT,641,Jetplane
+INT,642,Starship
+INT,643,Breath
+INT,644,Laugh
+INT,645,Scream
+INT,646,Punch
+INT,647,Heart
+INT,648,Steps
+INT,649,Machine Gun
+INT,650,Laser
+INT,651,Thunder 2
+INT,652,AmbientSN pL
+INT,653,AmbientSN pR
+INT,654,AmbientSN fL
+INT,655,AmbientSN fR
+INT,656,Wet SN p L
+INT,657,Wet SN p R
+INT,658,Wet SN f L
+INT,659,Wet SN f R
+INT,660,Dry SN p
+INT,661,Dry SN f
+INT,662,Sharp SN
+INT,663,Piccolo SN
+INT,664,Maple SN
+INT,665,Old Fill SN
+INT,666,70s SN
+INT,667,SN Roll
+INT,668,Natural SN1
+INT,669,Natural SN2
+INT,670,Ballad SN
+INT,671,Rock SN p L
+INT,672,Rock SN p R
+INT,673,Rock SN mf L
+INT,674,Rock SN mf R
+INT,675,Rock SN f L
+INT,676,Rock SN f R
+INT,677,Rock Rim p L
+INT,678,Rock Rim p R
+INT,679,Rock Rim mfL
+INT,680,Rock Rim mfR
+INT,681,Rock Rim f L
+INT,682,Rock Rim f R
+INT,683,Rock Gst L
+INT,684,Rock Gst R
+INT,685,Snare Ghost
+INT,686,Jazz SN p L
+INT,687,Jazz SN p R
+INT,688,Jazz SN mf L
+INT,689,Jazz SN mf R
+INT,690,Jazz SN f L
+INT,691,Jazz SN f R
+INT,692,Jazz SN ff L
+INT,693,Jazz SN ff R
+INT,694,Jazz Rim p L
+INT,695,Jazz Rim p R
+INT,696,Jazz Rim mfL
+INT,697,Jazz Rim mfR
+INT,698,Jazz Rim f L
+INT,699,Jazz Rim f R
+INT,700,Jazz Rim ffL
+INT,701,Jazz Rim ffR
+INT,702,Brush Slap
+INT,703,Brush Swish
+INT,704,Jazz Swish p
+INT,705,Jazz Swish f
+INT,706,909 SN 1
+INT,707,909 SN 2
+INT,708,808 SN
+INT,709,Rock Roll L
+INT,710,Rock Roll R
+INT,711,Jazz Roll
+INT,712,Brush Roll
+INT,713,Dry Stick
+INT,714,Dry Stick 2
+INT,715,Side Stick
+INT,716,Woody Stick
+INT,717,RockStick pL
+INT,718,RockStick pR
+INT,719,RockStick fL
+INT,720,RockStick fR
+INT,721,Dry Kick
+INT,722,Maple Kick
+INT,723,Rock Kick p
+INT,724,Rock Kick mf
+INT,725,Rock Kick f
+INT,726,Jazz Kick p
+INT,727,Jazz Kick mf
+INT,728,Jazz Kick f
+INT,729,Jazz Kick
+INT,730,Pillow Kick
+INT,731,JazzDry Kick
+INT,732,Lite Kick
+INT,733,Old Kick
+INT,734,Hybrid Kick
+INT,735,Hybrid Kick2
+INT,736,Verb Kick
+INT,737,Round Kick
+INT,738,MplLmtr Kick
+INT,739,70s Kick 1
+INT,740,70s Kick 2
+INT,741,Dance Kick
+INT,742,808 Kick
+INT,743,909 Kick 1
+INT,744,909 Kick 2
+INT,745,Rock TomL1 p
+INT,746,Rock TomL2 p
+INT,747,Rock Tom M p
+INT,748,Rock Tom H p
+INT,749,Rock TomL1 f
+INT,750,Rock TomL2 f
+INT,751,Rock Tom M f
+INT,752,Rock Tom H f
+INT,753,Rock Flm L1
+INT,754,Rock Flm L2
+INT,755,Rock Flm M
+INT,756,Rock Flm H
+INT,757,Jazz Tom L p
+INT,758,Jazz Tom M p
+INT,759,Jazz Tom H p
+INT,760,Jazz Tom L f
+INT,761,Jazz Tom M f
+INT,762,Jazz Tom H f
+INT,763,Jazz Flm L
+INT,764,Jazz Flm M
+INT,765,Jazz Flm H
+INT,766,Maple Tom 1
+INT,767,Maple Tom 2
+INT,768,Maple Tom 3
+INT,769,Maple Tom 4
+INT,770,808 Tom
+INT,771,Verb Tom Hi
+INT,772,Verb Tom Lo
+INT,773,Dry Tom Hi
+INT,774,Dry Tom Lo
+INT,775,Rock ClHH1 p
+INT,776,Rock ClHH1mf
+INT,777,Rock ClHH1 f
+INT,778,Rock ClHH2 p
+INT,779,Rock ClHH2mf
+INT,780,Rock ClHH2 f
+INT,781,Jazz ClHH1 p
+INT,782,Jazz ClHH1mf
+INT,783,Jazz ClHH1 f
+INT,784,Jazz ClHH2 p
+INT,785,Jazz ClHH2mf
+INT,786,Jazz ClHH2 f
+INT,787,Cl HiHat 1
+INT,788,Cl HiHat 2
+INT,789,Cl HiHat 3
+INT,790,Cl HiHat 4
+INT,791,Cl HiHat 5
+INT,792,Rock OpHH p
+INT,793,Rock OpHH f
+INT,794,Jazz OpHH p
+INT,795,Jazz OpHH mf
+INT,796,Jazz OpHH f
+INT,797,Op HiHat
+INT,798,Op HiHat 2
+INT,799,Rock PdHH p
+INT,800,Rock PdHH f
+INT,801,Jazz PdHH p
+INT,802,Jazz PdHH f
+INT,803,Pedal HiHat
+INT,804,Pedal HiHat2
+INT,805,Dance Cl HH
+INT,806,909 NZ HiHat
+INT,807,70s Cl HiHat
+INT,808,70s Op HiHat
+INT,809,606 Cl HiHat
+INT,810,606 Op HiHat
+INT,811,909 Cl HiHat
+INT,812,909 Op HiHat
+INT,813,808 Claps
+INT,814,HumanClapsEQ
+INT,815,Tight Claps
+INT,816,Hand Claps
+INT,817,Finger Snaps
+INT,818,Rock RdCym1p
+INT,819,Rock RdCym1f
+INT,820,Rock RdCym2p
+INT,821,Rock RdCym2f
+INT,822,Jazz RdCym p
+INT,823,Jazz RdCymmf
+INT,824,Jazz RdCym f
+INT,825,Ride 1
+INT,826,Ride 2
+INT,827,Ride Bell
+INT,828,Rock CrCym1p
+INT,829,Rock CrCym1f
+INT,830,Rock CrCym2p
+INT,831,Rock CrCym2f
+INT,832,Rock Splash
+INT,833,Jazz CrCym p
+INT,834,Jazz CrCym f
+INT,835,Crash Cymbal
+INT,836,Crash 1
+INT,837,Rock China
+INT,838,China Cym
+INT,839,Cowbell
+INT,840,Wood Block
+INT,841,Claves
+INT,842,Bongo Hi
+INT,843,Bongo Lo
+INT,844,Cga Open Hi
+INT,845,Cga Open Lo
+INT,846,Cga Mute Hi
+INT,847,Cga Mute Lo
+INT,848,Cga Slap
+INT,849,Timbale
+INT,850,Cabasa Up
+INT,851,Cabasa Down
+INT,852,Cabasa Cut
+INT,853,Maracas
+INT,854,Long Guiro
+INT,855,Tambourine 1
+INT,856,Tambourine 2
+INT,857,Open Triangl
+INT,858,Cuica
+INT,859,Vibraslap
+INT,860,Timpani
+INT,861,Timp3 pp
+INT,862,Timp3 mp
+INT,863,Applause
+INT,864,Syn FX Loop
+INT,865,Loop 1
+INT,866,Loop 2
+INT,867,Loop 3
+INT,868,Loop 4
+INT,869,Loop 5
+INT,870,Loop 6
+INT,871,Loop 7
+INT,872,R8 Click
+INT,873,Metronome 1
+INT,874,Metronome 2
+INT,875,MC500 Beep 1
+INT,876,MC500 Beep 2
+INT,877,Low Saw
+INT,878,Low Saw inv
+INT,879,Low P5 Saw
+INT,880,Low Pulse 1
+INT,881,Low Pulse 2
+INT,882,Low Square
+INT,883,Low Sine
+INT,884,Low Triangle
+INT,885,Low White NZ
+INT,886,Low Pink NZ
+INT,887,DC
+INT,888,REV Orch.Hit
+INT,889,REV TeknoHit
+INT,890,REV Back Hit
+INT,891,REV PhillHit
+INT,892,REV Steel DR
+INT,893,REV Tin Wave
+INT,894,REV AmbiSNpL
+INT,895,REV AmbiSNpR
+INT,896,REV AmbiSNfL
+INT,897,REV AmbiSNfR
+INT,898,REV Wet SNpL
+INT,899,REV Wet SNpR
+INT,900,REV Wet SNfL
+INT,901,REV Wet SNfR
+INT,902,REV Dry SN
+INT,903,REV PiccloSN
+INT,904,REV Maple SN
+INT,905,REV OldFilSN
+INT,906,REV 70s SN
+INT,907,REV SN Roll
+INT,908,REV NatrlSN1
+INT,909,REV NatrlSN2
+INT,910,REV BalladSN
+INT,911,REV RkSNpL
+INT,912,REV RkSNpR
+INT,913,REV RkSNmfL
+INT,914,REV RkSNmfR
+INT,915,REV RkSNfL
+INT,916,REV RkSNfR
+INT,917,REV RkRimpL
+INT,918,REV RkRimpR
+INT,919,REV RkRimmfL
+INT,920,REV RkRimmfR
+INT,921,REV RkRimfL
+INT,922,REV RkRimfR
+INT,923,REV RkGstL
+INT,924,REV RkGstR
+INT,925,REV SnareGst
+INT,926,REV JzSNpL
+INT,927,REV JzSNpR
+INT,928,REV JzSNmfL
+INT,929,REV JzSNmfR
+INT,930,REV JzSNfL
+INT,931,REV JzSNfR
+INT,932,REV JzSNffL
+INT,933,REV JzSNffR
+INT,934,REV JzRimpL
+INT,935,REV JzRimpR
+INT,936,REV JzRimmfL
+INT,937,REV JzRimmfR
+INT,938,REV JzRimfL
+INT,939,REV JzRimfR
+INT,940,REV JzRimffL
+INT,941,REV JzRimffR
+INT,942,REV Brush 1
+INT,943,REV Brush 2
+INT,944,REV Brush 3
+INT,945,REV JzSwish1
+INT,946,REV JzSwish2
+INT,947,REV 909 SN 1
+INT,948,REV 909 SN 2
+INT,949,REV RkRoll L
+INT,950,REV RkRoll R
+INT,951,REV JzRoll
+INT,952,REV Dry Stk
+INT,953,REV DrySick
+INT,954,REV Side Stk
+INT,955,REV Wdy Stk
+INT,956,REV RkStk1L
+INT,957,REV RkStk1R
+INT,958,REV RkStk2L
+INT,959,REV RkStk2R
+INT,960,REV Thrill
+INT,961,REV Dry Kick
+INT,962,REV Mpl Kick
+INT,963,REV RkKik p
+INT,964,REV RkKik mf
+INT,965,REV RkKik f
+INT,966,REV JzKik p
+INT,967,REV JzKik mf
+INT,968,REV JzKik f
+INT,969,REV Jaz Kick
+INT,970,REV Pillow K
+INT,971,REV Jz Dry K
+INT,972,REV LiteKick
+INT,973,REV Old Kick
+INT,974,REV Hybrid K
+INT,975,REV HybridK2
+INT,976,REV 70s K 1
+INT,977,REV 70s K 2
+INT,978,REV Dance K
+INT,979,REV 909 K 2
+INT,980,REV RkTomL1p
+INT,981,REV RkTomL2p
+INT,982,REV RkTomM p
+INT,983,REV RkTomH p
+INT,984,REV RkTomL1f
+INT,985,REV RkTomL2f
+INT,986,REV RkTomM f
+INT,987,REV RkTomH f
+INT,988,REV RkFlmL1
+INT,989,REV RkFlmL2
+INT,990,REV RkFlm M
+INT,991,REV RkFlm H
+INT,992,REV JzTomL p
+INT,993,REV JzTomM p
+INT,994,REV JzTomH p
+INT,995,REV JzTomL f
+INT,996,REV JzTomM f
+INT,997,REV JzTomH f
+INT,998,REV JzFlm L
+INT,999,REV JzFlm M
+INT,1000,REV JzFlm H
+INT,1001,REV MplTom2
+INT,1002,REV MplTom4
+INT,1003,REV 808Tom
+INT,1004,REV VerbTomH
+INT,1005,REV VerbTomL
+INT,1006,REV DryTom H
+INT,1007,REV DryTom M
+INT,1008,REV RkClH1 p
+INT,1009,REV RkClH1mf
+INT,1010,REV RkClH1 f
+INT,1011,REV RkClH2 p
+INT,1012,REV RkClH2mf
+INT,1013,REV RkClH2 f
+INT,1014,REV JzClH1 p
+INT,1015,REV JzClH1mf
+INT,1016,REV JzClH1 f
+INT,1017,REV JzClH2 p
+INT,1018,REV JzClH2mf
+INT,1019,REV JzClH2 f
+INT,1020,REV Cl HH 1
+INT,1021,REV Cl HH 2
+INT,1022,REV Cl HH 3
+INT,1023,REV Cl HH 4
+INT,1024,REV Cl HH 5
+SRX01,1,Kick 1 Menu
+SRX01,2,Kick 2 MenuL
+SRX01,3,Kick 2 MenuR
+SRX01,4,Kick 3 MenuL
+SRX01,5,Kick 3 MenuR
+SRX01,6,Kick 4 Menu
+SRX01,7,Latin K sft
+SRX01,8,Latin K med
+SRX01,9,Latin K hrd
+SRX01,10,ColDwnK sft
+SRX01,11,ColDwnK med
+SRX01,12,ColDwnK hrd
+SRX01,13,70NtrlK sft
+SRX01,14,70NtrlK hrd
+SRX01,15,70PhnqK sft
+SRX01,16,70PhnqK hrd
+SRX01,17,Disco K sft
+SRX01,18,Disco K hrd
+SRX01,19,OldFnkK sft
+SRX01,20,OldFnkK hrd
+SRX01,21,StudioK sftL
+SRX01,22,StudioK sftR
+SRX01,23,StudioK medL
+SRX01,24,StudioK medR
+SRX01,25,StudioK hrdL
+SRX01,26,StudioK hrdR
+SRX01,27,StdRckK sftL
+SRX01,28,StdRckK sftR
+SRX01,29,StdRckK hrdL
+SRX01,30,StdRckK hrdR
+SRX01,31,StreetK sftL
+SRX01,32,StreetK sftR
+SRX01,33,StreetK hrdL
+SRX01,34,StreetK hrdR
+SRX01,35,OhBabyK sftL
+SRX01,36,OhBabyK sftR
+SRX01,37,OhBabyK hrdL
+SRX01,38,OhBabyK hrdR
+SRX01,39,PwrBldK sftL
+SRX01,40,PwrBldK sftR
+SRX01,41,PwrBldK medL
+SRX01,42,PwrBldK medR
+SRX01,43,PwrBldK hrdL
+SRX01,44,PwrBldK hrdR
+SRX01,45,B.DeepK sftL
+SRX01,46,B.DeepK sftR
+SRX01,47,B.DeepK hrdL
+SRX01,48,B.DeepK hrdR
+SRX01,49,BigRckK sftL
+SRX01,50,BigRckK sftR
+SRX01,51,BigRckK hrdL
+SRX01,52,BigRckK hrdR
+SRX01,53,WhamBmK sftL
+SRX01,54,WhamBmK sftR
+SRX01,55,WhamBmK hrdL
+SRX01,56,WhamBmK hrdR
+SRX01,57,StdJazK sft
+SRX01,58,StdJazK hrd
+SRX01,59,OldJazK sft
+SRX01,60,OldJazK hrd
+SRX01,61,RoomJzK sft
+SRX01,62,RoomJzK hrd
+SRX01,63,JzSoulK sft
+SRX01,64,JzSoulK hrd
+SRX01,65,OldFnkSMenu
+SRX01,66,Latin SMenu
+SRX01,67,HiPiccSMenuL
+SRX01,68,HiPiccSMenuR
+SRX01,69,Tight SMenuL
+SRX01,70,Tight SMenuR
+SRX01,71,StdRk1SMenuL
+SRX01,72,StdRk1SMenuR
+SRX01,73,StdRk2SMenuL
+SRX01,74,StdRk2SMenuR
+SRX01,75,OhBabySMenuL
+SRX01,76,OhBabySMenuR
+SRX01,77,PoppinSMenuL
+SRX01,78,PoppinSMenuR
+SRX01,79,StdFatSMenuL
+SRX01,80,StdFatSMenuR
+SRX01,81,JazStkSMenuL
+SRX01,82,JazStkSMenuR
+SRX01,83,StdJazSMenuL
+SRX01,84,StdJazSMenuR
+SRX01,85,BalladSMenuL
+SRX01,86,BalladSMenuR
+SRX01,87,PwrBldSMenuL
+SRX01,88,PwrBldSMenuR
+SRX01,89,AlBeefSMenuL
+SRX01,90,AlBeefSMenuR
+SRX01,91,BigRckSMenuL
+SRX01,92,BigRckSMenuR
+SRX01,93,70BrshSMenu
+SRX01,94,JzBrshSMenuL
+SRX01,95,JzBrshSMenuR
+SRX01,96,CrsStk MenuL
+SRX01,97,CrsStk MenuR
+SRX01,98,OldFnkS sft
+SRX01,99,OldFnkS hrd
+SRX01,100,OldFnkS rim1
+SRX01,101,OldFnkS rim2
+SRX01,102,OldFnkS flm
+SRX01,103,OldFnkS buz
+SRX01,104,OldFnkS stk1
+SRX01,105,OldFnkS stk2
+SRX01,106,Latin S sft
+SRX01,107,Latin S med
+SRX01,108,Latin S hrd1
+SRX01,109,Latin S hrd2
+SRX01,110,Latin S rim1
+SRX01,111,Latin S rim2
+SRX01,112,Latin S flm
+SRX01,113,Latin S buz
+SRX01,114,Latin S stk1
+SRX01,115,Latin S stk2
+SRX01,116,HiPiccSsft1L
+SRX01,117,HiPiccSsft1R
+SRX01,118,HiPiccSsft2L
+SRX01,119,HiPiccSsft2R
+SRX01,120,HiPiccShrd1L
+SRX01,121,HiPiccShrd1R
+SRX01,122,HiPiccShrd2L
+SRX01,123,HiPiccShrd2R
+SRX01,124,HiPiccSrim1L
+SRX01,125,HiPiccSrim1R
+SRX01,126,HiPiccSrim2L
+SRX01,127,HiPiccSrim2R
+SRX01,128,HiPiccSrim3L
+SRX01,129,HiPiccSrim3R
+SRX01,130,HiPiccSrim4L
+SRX01,131,HiPiccSrim4R
+SRX01,132,HiPiccSflm L
+SRX01,133,HiPiccSflm R
+SRX01,134,HiPiccSbuz1L
+SRX01,135,HiPiccSbuz1R
+SRX01,136,HiPiccSbuz2L
+SRX01,137,HiPiccSbuz2R
+SRX01,138,HiPiccSstk1L
+SRX01,139,HiPiccSstk1R
+SRX01,140,HiPiccSstk2L
+SRX01,141,HiPiccSstk2R
+SRX01,142,Tight Ssft L
+SRX01,143,Tight Ssft R
+SRX01,144,Tight Smed L
+SRX01,145,Tight Smed R
+SRX01,146,Tight Shrd1L
+SRX01,147,Tight Shrd1R
+SRX01,148,Tight Shrd2L
+SRX01,149,Tight Shrd2R
+SRX01,150,Tight Srim1L
+SRX01,151,Tight Srim1R
+SRX01,152,Tight Srim2L
+SRX01,153,Tight Srim2R
+SRX01,154,Tight Sflm1L
+SRX01,155,Tight Sflm1R
+SRX01,156,Tight Sflm2L
+SRX01,157,Tight Sflm2R
+SRX01,158,StdRk1Ssft L
+SRX01,159,StdRk1Ssft R
+SRX01,160,StdRk1Smed L
+SRX01,161,StdRk1Smed R
+SRX01,162,StdRk1Shrd1L
+SRX01,163,StdRk1Shrd1R
+SRX01,164,StdRk1Shrd2L
+SRX01,165,StdRk1Shrd2R
+SRX01,166,StdRk1Srim L
+SRX01,167,StdRk1Srim R
+SRX01,168,StdRk1Sflm L
+SRX01,169,StdRk1Sflm R
+SRX01,170,StdRk1Sbuz1L
+SRX01,171,StdRk1Sbuz1R
+SRX01,172,StdRk1Sbuz2L
+SRX01,173,StdRk1Sbuz2R
+SRX01,174,StdRk2Ssft L
+SRX01,175,StdRk2Ssft R
+SRX01,176,StdRk2Smed L
+SRX01,177,StdRk2Smed R
+SRX01,178,StdRk2Shrd L
+SRX01,179,StdRk2Shrd R
+SRX01,180,StdRk2Srim1L
+SRX01,181,StdRk2Srim1R
+SRX01,182,StdRk2Srim2L
+SRX01,183,StdRk2Srim2R
+SRX01,184,StdRk2Sflm L
+SRX01,185,StdRk2Sflm R
+SRX01,186,StdRk2Sbuz1L
+SRX01,187,StdRk2Sbuz1R
+SRX01,188,StdRk2Sbuz2L
+SRX01,189,StdRk2Sbuz2R
+SRX01,190,StdRk2Sstk L
+SRX01,191,StdRk2Sstk R
+SRX01,192,OhBabySsft L
+SRX01,193,OhBabySsft R
+SRX01,194,OhBabySmed1L
+SRX01,195,OhBabySmed1R
+SRX01,196,OhBabySmed2L
+SRX01,197,OhBabySmed2R
+SRX01,198,OhBabyShrd1L
+SRX01,199,OhBabyShrd1R
+SRX01,200,OhBabyShrd2L
+SRX01,201,OhBabyShrd2R
+SRX01,202,OhBabySrim L
+SRX01,203,OhBabySrim R
+SRX01,204,OhBabySflm L
+SRX01,205,OhBabySflm R
+SRX01,206,OhBabySbuz1L
+SRX01,207,OhBabySbuz1R
+SRX01,208,OhBabySbuz2L
+SRX01,209,OhBabySbuz2R
+SRX01,210,OhBabySstk1L
+SRX01,211,OhBabySstk1R
+SRX01,212,OhBabySstk2L
+SRX01,213,OhBabySstk2R
+SRX01,214,PoppinSsft L
+SRX01,215,PoppinSsft R
+SRX01,216,PoppinSmed L
+SRX01,217,PoppinSmed R
+SRX01,218,PoppinShrd L
+SRX01,219,PoppinShrd R
+SRX01,220,PoppinSrim1L
+SRX01,221,PoppinSrim1R
+SRX01,222,PoppinSrim2L
+SRX01,223,PoppinSrim2R
+SRX01,224,PoppinSflm L
+SRX01,225,PoppinSflm R
+SRX01,226,PoppinSbuz1L
+SRX01,227,PoppinSbuz1R
+SRX01,228,PoppinSbuz2L
+SRX01,229,PoppinSbuz2R
+SRX01,230,PoppinSstk1L
+SRX01,231,PoppinSstk1R
+SRX01,232,PoppinSstk2L
+SRX01,233,PoppinSstk2R
+SRX01,234,StdFatSsft L
+SRX01,235,StdFatSsft R
+SRX01,236,StdFatSmed1L
+SRX01,237,StdFatSmed1R
+SRX01,238,StdFatSmed2L
+SRX01,239,StdFatSmed2R
+SRX01,240,StdFatShrd1L
+SRX01,241,StdFatShrd1R
+SRX01,242,StdFatShrd2L
+SRX01,243,StdFatShrd2R
+SRX01,244,StdFatSrim1L
+SRX01,245,StdFatSrim1R
+SRX01,246,StdFatSrim2L
+SRX01,247,StdFatSrim2R
+SRX01,248,StdFatSflm L
+SRX01,249,StdFatSflm R
+SRX01,250,StdFatSbuz1L
+SRX01,251,StdFatSbuz1R
+SRX01,252,StdFatSbuz2L
+SRX01,253,StdFatSbuz2R
+SRX01,254,StdFatSstk1L
+SRX01,255,StdFatSstk1R
+SRX01,256,StdFatSstk2L
+SRX01,257,StdFatSstk2R
+SRX01,258,JazStkSsft L
+SRX01,259,JazStkSsft R
+SRX01,260,JazStkSmed1L
+SRX01,261,JazStkSmed1R
+SRX01,262,JazStkSmed2L
+SRX01,263,JazStkSmed2R
+SRX01,264,JazStkShrd1L
+SRX01,265,JazStkShrd1R
+SRX01,266,JazStkShrd2L
+SRX01,267,JazStkShrd2R
+SRX01,268,JazStkSrim L
+SRX01,269,JazStkSrim R
+SRX01,270,JazStkSflm L
+SRX01,271,JazStkSflm R
+SRX01,272,JazStkSbuz1L
+SRX01,273,JazStkSbuz1R
+SRX01,274,JazStkSbuz2L
+SRX01,275,JazStkSbuz2R
+SRX01,276,JazStkSstk1L
+SRX01,277,JazStkSstk1R
+SRX01,278,JazStkSstk2L
+SRX01,279,JazStkSstk2R
+SRX01,280,StdJazSsft L
+SRX01,281,StdJazSsft R
+SRX01,282,StdJazSmed1L
+SRX01,283,StdJazSmed1R
+SRX01,284,StdJazSmed2L
+SRX01,285,StdJazSmed2R
+SRX01,286,StdJazShrd L
+SRX01,287,StdJazShrd R
+SRX01,288,StdJazSrim L
+SRX01,289,StdJazSrim R
+SRX01,290,StdJazSflm L
+SRX01,291,StdJazSflm R
+SRX01,292,StdJazSbuz1L
+SRX01,293,StdJazSbuz1R
+SRX01,294,StdJazSbuz2L
+SRX01,295,StdJazSbuz2R
+SRX01,296,StdJazSstk1L
+SRX01,297,StdJazSstk1R
+SRX01,298,StdJazSstk2L
+SRX01,299,StdJazSstk2R
+SRX01,300,BalladSsft L
+SRX01,301,BalladSsft R
+SRX01,302,BalladSmed1L
+SRX01,303,BalladSmed1R
+SRX01,304,BalladSmed2L
+SRX01,305,BalladSmed2R
+SRX01,306,BalladShrd L
+SRX01,307,BalladShrd R
+SRX01,308,BalladSrim1L
+SRX01,309,BalladSrim1R
+SRX01,310,BalladSrim2L
+SRX01,311,BalladSrim2R
+SRX01,312,BalladSflm L
+SRX01,313,BalladSflm R
+SRX01,314,BalladSbuz1L
+SRX01,315,BalladSbuz1R
+SRX01,316,BalladSbuz2L
+SRX01,317,BalladSbuz2R
+SRX01,318,BalladSstk1L
+SRX01,319,BalladSstk1R
+SRX01,320,BalladSstk2L
+SRX01,321,BalladSstk2R
+SRX01,322,PwrBldSsft1L
+SRX01,323,PwrBldSsft1R
+SRX01,324,PwrBldSsft2L
+SRX01,325,PwrBldSsft2R
+SRX01,326,PwrBldSmed1L
+SRX01,327,PwrBldSmed1R
+SRX01,328,PwrBldSmed2L
+SRX01,329,PwrBldSmed2R
+SRX01,330,PwrBldShrd1L
+SRX01,331,PwrBldShrd1R
+SRX01,332,PwrBldShrd2L
+SRX01,333,PwrBldShrd2R
+SRX01,334,PwrBldSflm L
+SRX01,335,PwrBldSflm R
+SRX01,336,PwrBldSbuz1L
+SRX01,337,PwrBldSbuz1R
+SRX01,338,PwrBldSbuz2L
+SRX01,339,PwrBldSbuz2R
+SRX01,340,PwrBldSstk1L
+SRX01,341,PwrBldSstk1R
+SRX01,342,PwrBldSstk2L
+SRX01,343,PwrBldSstk2R
+SRX01,344,AlBeefSsft L
+SRX01,345,AlBeefSsft R
+SRX01,346,AlBeefShrd L
+SRX01,347,AlBeefShrd R
+SRX01,348,AlBeefSrim1L
+SRX01,349,AlBeefSrim1R
+SRX01,350,AlBeefSrim2L
+SRX01,351,AlBeefSrim2R
+SRX01,352,AlBeefSflm L
+SRX01,353,AlBeefSflm R
+SRX01,354,AlBeefSbuz1L
+SRX01,355,AlBeefSbuz1R
+SRX01,356,AlBeefSbuz2L
+SRX01,357,AlBeefSbuz2R
+SRX01,358,AlBeefSstk1L
+SRX01,359,AlBeefSstk1R
+SRX01,360,AlBeefSstk2L
+SRX01,361,AlBeefSstk2R
+SRX01,362,BigRckSsft L
+SRX01,363,BigRckSsft R
+SRX01,364,BigRckSmed L
+SRX01,365,BigRckSmed R
+SRX01,366,BigRckShrd L
+SRX01,367,BigRckShrd R
+SRX01,368,BigRckSflm1L
+SRX01,369,BigRckSflm1R
+SRX01,370,BigRckSflm2L
+SRX01,371,BigRckSflm2R
+SRX01,372,BigRckSbuz L
+SRX01,373,BigRckSbuz R
+SRX01,374,BigRckSstk L
+SRX01,375,BigRckSstk R
+SRX01,376,70BrshS tap1
+SRX01,377,70BrshS tap2
+SRX01,378,70BrshS tap3
+SRX01,379,70BrshS tap4
+SRX01,380,70BrshSswsh1
+SRX01,381,70BrshSswsh2
+SRX01,382,70BrshSswsh3
+SRX01,383,70BrshSsweep
+SRX01,384,JzBrshStap1L
+SRX01,385,JzBrshStap1R
+SRX01,386,JzBrshStap2L
+SRX01,387,JzBrshStap2R
+SRX01,388,JzBrshStap3L
+SRX01,389,JzBrshStap3R
+SRX01,390,JzBrshStap4L
+SRX01,391,JzBrshStap4R
+SRX01,392,JzBrshSsws1L
+SRX01,393,JzBrshSsws1R
+SRX01,394,JzBrshSsws2L
+SRX01,395,JzBrshSsws2R
+SRX01,396,JzBrshSsws3L
+SRX01,397,JzBrshSsws3R
+SRX01,398,JzBrshSswepL
+SRX01,399,JzBrshSswepR
+SRX01,400,70PhunqStk L
+SRX01,401,70PhunqStk R
+SRX01,402,PwrAmb Stk1L
+SRX01,403,PwrAmb Stk1R
+SRX01,404,PwrAmb Stk2L
+SRX01,405,PwrAmb Stk2R
+SRX01,406,Latin TMenuL
+SRX01,407,Latin TMenuR
+SRX01,408,Tight TMenuL
+SRX01,409,Tight TMenuR
+SRX01,410,JazStkTMenuL
+SRX01,411,JazStkTMenuR
+SRX01,412,OldFnkTMenu
+SRX01,413,OhBabyTMenuL
+SRX01,414,OhBabyTMenuR
+SRX01,415,PwrBldTMenuL
+SRX01,416,PwrBldTMenuR
+SRX01,417,BigRckTMenuL
+SRX01,418,BigRckTMenuR
+SRX01,419,OldBrsTMenu
+SRX01,420,Latin T1sftL
+SRX01,421,Latin T1sftR
+SRX01,422,Latin T1medL
+SRX01,423,Latin T1medR
+SRX01,424,Latin T1hrdL
+SRX01,425,Latin T1hrdR
+SRX01,426,Latin T1flmL
+SRX01,427,Latin T1flmR
+SRX01,428,Latin T2sftL
+SRX01,429,Latin T2sftR
+SRX01,430,Latin T2medL
+SRX01,431,Latin T2medR
+SRX01,432,Latin T2hrdL
+SRX01,433,Latin T2hrdR
+SRX01,434,Latin T2flmL
+SRX01,435,Latin T2flmR
+SRX01,436,Latin T3sftL
+SRX01,437,Latin T3sftR
+SRX01,438,Latin T3medL
+SRX01,439,Latin T3medR
+SRX01,440,Latin T3hrdL
+SRX01,441,Latin T3hrdR
+SRX01,442,Latin T3flmL
+SRX01,443,Latin T3flmR
+SRX01,444,Latin T4sftL
+SRX01,445,Latin T4sftR
+SRX01,446,Latin T4medL
+SRX01,447,Latin T4medR
+SRX01,448,Latin T4hrdL
+SRX01,449,Latin T4hrdR
+SRX01,450,Latin T4flmL
+SRX01,451,Latin T4flmR
+SRX01,452,Tight T1sftL
+SRX01,453,Tight T1sftR
+SRX01,454,Tight T1hrdL
+SRX01,455,Tight T1hrdR
+SRX01,456,Tight T1flmL
+SRX01,457,Tight T1flmR
+SRX01,458,Tight T2sftL
+SRX01,459,Tight T2sftR
+SRX01,460,Tight T2hrdL
+SRX01,461,Tight T2hrdR
+SRX01,462,Tight T2flmL
+SRX01,463,Tight T2flmR
+SRX01,464,Tight T3sftL
+SRX01,465,Tight T3sftR
+SRX01,466,Tight T3hrdL
+SRX01,467,Tight T3hrdR
+SRX01,468,Tight T3flmL
+SRX01,469,Tight T3flmR
+SRX01,470,Tight T4sftL
+SRX01,471,Tight T4sftR
+SRX01,472,Tight T4hrdL
+SRX01,473,Tight T4hrdR
+SRX01,474,Tight T4flmL
+SRX01,475,Tight T4flmR
+SRX01,476,JazStkT1sftL
+SRX01,477,JazStkT1sftR
+SRX01,478,JazStkT1medL
+SRX01,479,JazStkT1medR
+SRX01,480,JazStkT1hrdL
+SRX01,481,JazStkT1hrdR
+SRX01,482,JazStkT1flmL
+SRX01,483,JazStkT1flmR
+SRX01,484,JazStkT2sftL
+SRX01,485,JazStkT2sftR
+SRX01,486,JazStkT2medL
+SRX01,487,JazStkT2medR
+SRX01,488,JazStkT2hrdL
+SRX01,489,JazStkT2hrdR
+SRX01,490,JazStkT2flmL
+SRX01,491,JazStkT2flmR
+SRX01,492,JazStkT3sftL
+SRX01,493,JazStkT3sftR
+SRX01,494,JazStkT3medL
+SRX01,495,JazStkT3medR
+SRX01,496,JazStkT3hrdL
+SRX01,497,JazStkT3hrdR
+SRX01,498,JazStkT3flmL
+SRX01,499,JazStkT3flmR
+SRX01,500,OldFnkT1sft
+SRX01,501,OldFnkT1hrd
+SRX01,502,OldFnkT2sft
+SRX01,503,OldFnkT2hrd
+SRX01,504,OldFnkT3sft
+SRX01,505,OldFnkT3hrd
+SRX01,506,OhBabyT1sftL
+SRX01,507,OhBabyT1sftR
+SRX01,508,OhBabyT1hrdL
+SRX01,509,OhBabyT1hrdR
+SRX01,510,OhBabyT1flmL
+SRX01,511,OhBabyT1flmR
+SRX01,512,OhBabyT2sftL
+SRX01,513,OhBabyT2sftR
+SRX01,514,OhBabyT2hrdL
+SRX01,515,OhBabyT2hrdR
+SRX01,516,OhBabyT2flmL
+SRX01,517,OhBabyT2flmR
+SRX01,518,OhBabyT3sftL
+SRX01,519,OhBabyT3sftR
+SRX01,520,OhBabyT3hrdL
+SRX01,521,OhBabyT3hrdR
+SRX01,522,OhBabyT3flmL
+SRX01,523,OhBabyT3flmR
+SRX01,524,OhBabyT4sftL
+SRX01,525,OhBabyT4sftR
+SRX01,526,OhBabyT4hrdL
+SRX01,527,OhBabyT4hrdR
+SRX01,528,OhBabyT4flmL
+SRX01,529,OhBabyT4flmR
+SRX01,530,PwrBldT1sftL
+SRX01,531,PwrBldT1sftR
+SRX01,532,PwrBldT1hrdL
+SRX01,533,PwrBldT1hrdR
+SRX01,534,PwrBldT1flmL
+SRX01,535,PwrBldT1flmR
+SRX01,536,PwrBldT2sftL
+SRX01,537,PwrBldT2sftR
+SRX01,538,PwrBldT2hrdL
+SRX01,539,PwrBldT2hrdR
+SRX01,540,PwrBldT2flmL
+SRX01,541,PwrBldT2flmR
+SRX01,542,PwrBldT3sftL
+SRX01,543,PwrBldT3sftR
+SRX01,544,PwrBldT3hrdL
+SRX01,545,PwrBldT3hrdR
+SRX01,546,PwrBldT3flmL
+SRX01,547,PwrBldT3flmR
+SRX01,548,PwrBldT4sftL
+SRX01,549,PwrBldT4sftR
+SRX01,550,PwrBldT4hrdL
+SRX01,551,PwrBldT4hrdR
+SRX01,552,PwrBldT4flmL
+SRX01,553,PwrBldT4flmR
+SRX01,554,BigRckT1sftL
+SRX01,555,BigRckT1sftR
+SRX01,556,BigRckT1medL
+SRX01,557,BigRckT1medR
+SRX01,558,BigRckT1hrdL
+SRX01,559,BigRckT1hrdR
+SRX01,560,BigRckT1flmL
+SRX01,561,BigRckT1flmR
+SRX01,562,BigRckT2sftL
+SRX01,563,BigRckT2sftR
+SRX01,564,BigRckT2medL
+SRX01,565,BigRckT2medR
+SRX01,566,BigRckT2hrdL
+SRX01,567,BigRckT2hrdR
+SRX01,568,BigRckT2flmL
+SRX01,569,BigRckT2flmR
+SRX01,570,BigRckT3sftL
+SRX01,571,BigRckT3sftR
+SRX01,572,BigRckT3medL
+SRX01,573,BigRckT3medR
+SRX01,574,BigRckT3hrdL
+SRX01,575,BigRckT3hrdR
+SRX01,576,BigRckT3flmL
+SRX01,577,BigRckT3flmR
+SRX01,578,OldBrsT1sft
+SRX01,579,OldBrsT1med
+SRX01,580,OldBrsT1hrd
+SRX01,581,OldBrsT2sft
+SRX01,582,OldBrsT2med
+SRX01,583,OldBrsT2hrd
+SRX01,584,OhBabyHMenu
+SRX01,585,JazStkHMenu
+SRX01,586,Latin HMenu
+SRX01,587,Disco HMenu
+SRX01,588,OldFnkHMenu
+SRX01,589,StreetHMenuL
+SRX01,590,StreetHMenuR
+SRX01,591,BigRckHMenuL
+SRX01,592,BigRckHMenuR
+SRX01,593,OldBrsHMenu
+SRX01,594,OhBabyH cl1
+SRX01,595,OhBabyH cl2
+SRX01,596,OhBabyH cl3
+SRX01,597,OhBabyH cl4
+SRX01,598,OhBabyH cl5
+SRX01,599,OhBabyH cl6
+SRX01,600,OhBabyHhcl1
+SRX01,601,OhBabyHhcl2
+SRX01,602,OhBabyHhcl3
+SRX01,603,OhBabyHhop
+SRX01,604,OhBabyH op
+SRX01,605,OhBabyHpdl1
+SRX01,606,OhBabyHpdl2
+SRX01,607,JazStkH cl1
+SRX01,608,JazStkH cl2
+SRX01,609,JazStkHhcl1
+SRX01,610,JazStkHhcl2
+SRX01,611,JazStkHhop
+SRX01,612,JazStkH op
+SRX01,613,JazStkHpdl
+SRX01,614,Latin H cl1
+SRX01,615,Latin H cl2
+SRX01,616,Latin Hhcl
+SRX01,617,Latin Hhop
+SRX01,618,Latin H op
+SRX01,619,Latin Hpdl
+SRX01,620,Disco H cl1
+SRX01,621,Disco H cl2
+SRX01,622,Disco Hhcl
+SRX01,623,Disco H op
+SRX01,624,Disco Hpdl
+SRX01,625,OldFnkH cl1
+SRX01,626,OldFnkH cl2
+SRX01,627,OldFnkHhcl
+SRX01,628,OldFnkHhop
+SRX01,629,OldFnkH op
+SRX01,630,OldFnkHpdl
+SRX01,631,StreetH cl1L
+SRX01,632,StreetH cl1R
+SRX01,633,StreetH cl2L
+SRX01,634,StreetH cl2R
+SRX01,635,StreetHhcl L
+SRX01,636,StreetHhcl R
+SRX01,637,StreetHhop L
+SRX01,638,StreetHhop R
+SRX01,639,StreetH op L
+SRX01,640,StreetH op R
+SRX01,641,StreetHpdl L
+SRX01,642,StreetHpdl R
+SRX01,643,BigRckH cl1L
+SRX01,644,BigRckH cl1R
+SRX01,645,BigRckH cl2L
+SRX01,646,BigRckH cl2R
+SRX01,647,BigRckHhcl L
+SRX01,648,BigRckHhcl R
+SRX01,649,BigRckHhop L
+SRX01,650,BigRckHhop R
+SRX01,651,BigRckH op L
+SRX01,652,BigRckH op R
+SRX01,653,OldBrsH cl1
+SRX01,654,OldBrsH cl2
+SRX01,655,OldBrsH cl3
+SRX01,656,OldBrsH cl4
+SRX01,657,OldBrsHhop
+SRX01,658,OldBrsH op
+SRX01,659,OldBrsHpdl
+SRX01,660,Crash MenuL
+SRX01,661,Crash MenuR
+SRX01,662,Ride MenuL
+SRX01,663,Ride MenuR
+SRX01,664,OthrCymMenuL
+SRX01,665,OthrCymMenuR
+SRX01,666,StreetCr L
+SRX01,667,StreetCr R
+SRX01,668,BalladCrSftL
+SRX01,669,BalladCrSftR
+SRX01,670,BalladCrHrdL
+SRX01,671,BalladCrHrdR
+SRX01,672,BigRckCrSftL
+SRX01,673,BigRckCrSftR
+SRX01,674,BigRckCrHrdL
+SRX01,675,BigRckCrHrdR
+SRX01,676,JazStkCrSftL
+SRX01,677,JazStkCrSftR
+SRX01,678,JazStkCrHrdL
+SRX01,679,JazStkCrHrdR
+SRX01,680,OldBrsh Cr L
+SRX01,681,OldBrsh Cr R
+SRX01,682,Latin RdSftL
+SRX01,683,Latin RdSftR
+SRX01,684,Latin RdMedL
+SRX01,685,Latin RdMedR
+SRX01,686,Latin RdHrdL
+SRX01,687,Latin RdHrdR
+SRX01,688,Latin RdBelL
+SRX01,689,Latin RdBelR
+SRX01,690,BalladRdSftL
+SRX01,691,BalladRdSftR
+SRX01,692,BalladRdHrdL
+SRX01,693,BalladRdHrdR
+SRX01,694,BalladRdBelL
+SRX01,695,BalladRdBelR
+SRX01,696,BigRckRdSftL
+SRX01,697,BigRckRdSftR
+SRX01,698,BigRckRdHrdL
+SRX01,699,BigRckRdHrdR
+SRX01,700,BigRckRdBelL
+SRX01,701,BigRckRdBelR
+SRX01,702,JazStkRd L
+SRX01,703,JazStkRd R
+SRX01,704,JazStkRdBelL
+SRX01,705,JazStkRdBelR
+SRX01,706,SizzleRd L
+SRX01,707,SizzleRd R
+SRX01,708,SizzleRdBelL
+SRX01,709,SizzleRdBelR
+SRX01,710,OldBrsRd L
+SRX01,711,OldBrsRd R
+SRX01,712,OldBrsRdBelL
+SRX01,713,OldBrsRdBelR
+SRX01,714,Light SplshL
+SRX01,715,Light SplshR
+SRX01,716,BalladSplshL
+SRX01,717,BalladSplshR
+SRX01,718,YoMamaChinaL
+SRX01,719,YoMamaChinaR
+SRX02,1,Grand1 L p A
+SRX02,2,Grand1 R p A
+SRX02,3,Grand1 L p B
+SRX02,4,Grand1 R p B
+SRX02,5,Grand1 L p C
+SRX02,6,Grand1 R p C
+SRX02,7,Grand2 L p A
+SRX02,8,Grand2 R p A
+SRX02,9,Grand2 L p B
+SRX02,10,Grand2 R p B
+SRX02,11,Grand2 L p C
+SRX02,12,Grand2 R p C
+SRX02,13,Grand1 L mpA
+SRX02,14,Grand1 R mpA
+SRX02,15,Grand1 L mpB
+SRX02,16,Grand1 R mpB
+SRX02,17,Grand1 L mpC
+SRX02,18,Grand1 R mpC
+SRX02,19,Grand2 L mpA
+SRX02,20,Grand2 R mpA
+SRX02,21,Grand2 L mpB
+SRX02,22,Grand2 R mpB
+SRX02,23,Grand2 L mpC
+SRX02,24,Grand2 R mpC
+SRX02,25,Grand1 L f A
+SRX02,26,Grand1 R f A
+SRX02,27,Grand1 L f B
+SRX02,28,Grand1 R f B
+SRX02,29,Grand1 L f C
+SRX02,30,Grand1 R f C
+SRX02,31,Grand2 L f A
+SRX02,32,Grand2 R f A
+SRX02,33,Grand2 L f B
+SRX02,34,Grand2 R f B
+SRX02,35,Grand2 L f C
+SRX02,36,Grand2 R f C
+SRX02,37,Grand1 L ffA
+SRX02,38,Grand1 R ffA
+SRX02,39,Grand1 L ffB
+SRX02,40,Grand1 R ffB
+SRX02,41,Grand1 L ffC
+SRX02,42,Grand1 R ffC
+SRX02,43,Grand2 L ffA
+SRX02,44,Grand2 R ffA
+SRX02,45,Grand2 L ffB
+SRX02,46,Grand2 R ffB
+SRX02,47,Grand2 L ffC
+SRX02,48,Grand2 R ffC
+SRX03,1,AcPiano3pA L
+SRX03,2,AcPiano3pA R
+SRX03,3,AcPiano3pB L
+SRX03,4,AcPiano3pB R
+SRX03,5,AcPiano3pC L
+SRX03,6,AcPiano3pC R
+SRX03,7,AcPiano3fA L
+SRX03,8,AcPiano3fA R
+SRX03,9,AcPiano3fB L
+SRX03,10,AcPiano3fB R
+SRX03,11,AcPiano3fC L
+SRX03,12,AcPiano3fC R
+SRX03,13,Dyn EP 2 p A
+SRX03,14,Dyn EP 2 p B
+SRX03,15,Dyn EP 2 p C
+SRX03,16,Dyn EP 2 f A
+SRX03,17,Dyn EP 2 f B
+SRX03,18,Dyn EP 2 f C
+SRX03,19,BrightB3 A L
+SRX03,20,BrightB3 A R
+SRX03,21,BrightB3 B L
+SRX03,22,BrightB3 B R
+SRX03,23,BrightB3 C L
+SRX03,24,BrightB3 C R
+SRX03,25,NylonGt4 p A
+SRX03,26,NylonGt4 p B
+SRX03,27,NylonGt4 p C
+SRX03,28,NylonGt4 f A
+SRX03,29,NylonGt4 f B
+SRX03,30,NylonGt4 f C
+SRX03,31,NylnGt4Sld A
+SRX03,32,NylnGt4Sld B
+SRX03,33,NylnGt4Sld C
+SRX03,34,NylnGt4Noiz1
+SRX03,35,NylnGt4Noiz2
+SRX03,36,FlamncGt p A
+SRX03,37,FlamncGt p B
+SRX03,38,FlamncGt p C
+SRX03,39,FlamncGt f A
+SRX03,40,FlamncGt f B
+SRX03,41,FlamncGt f C
+SRX03,42,FlamncGtRoll
+SRX03,43,12StrGt A L
+SRX03,44,12StrGt A R
+SRX03,45,12StrGt B L
+SRX03,46,12StrGt B R
+SRX03,47,12StrGt C L
+SRX03,48,12StrGt C R
+SRX03,49,335Gt p A
+SRX03,50,335Gt p B
+SRX03,51,335Gt p C
+SRX03,52,335Gt f A
+SRX03,53,335Gt f B
+SRX03,54,335Gt f C
+SRX03,55,JazzGt2 p A
+SRX03,56,JazzGt2 p B
+SRX03,57,JazzGt2 p C
+SRX03,58,JazzGt2 f A
+SRX03,59,JazzGt2 f B
+SRX03,60,JazzGt2 f C
+SRX03,61,JzGt3HrmncsA
+SRX03,62,JzGt3HrmncsB
+SRX03,63,JzGt3HrmncsC
+SRX03,64,JzGt3OctaveA
+SRX03,65,JzGt3OctaveB
+SRX03,66,JzGt3OctaveC
+SRX03,67,JzGt3OctSldA
+SRX03,68,JzGt3OctSldB
+SRX03,69,JzGt3OctSldC
+SRX03,70,CleanGt2 A
+SRX03,71,CleanGt2 B
+SRX03,72,CleanGt2 C
+SRX03,73,CleanGt3 A
+SRX03,74,CleanGt3 B
+SRX03,75,CleanGt3 C
+SRX03,76,CrunchGt A
+SRX03,77,CrunchGt B
+SRX03,78,CrunchGt C
+SRX03,79,6StrBs2 p A
+SRX03,80,6StrBs2 p B
+SRX03,81,6StrBs2 p C
+SRX03,82,6StrBs2 f A
+SRX03,83,6StrBs2 f B
+SRX03,84,6StrBs2 f C
+SRX03,85,6StrBs2ThumA
+SRX03,86,6StrBs2ThumB
+SRX03,87,6StrBs2ThumC
+SRX03,88,6StrBs2PullA
+SRX03,89,6StrBs2PullB
+SRX03,90,6StrBs2PullC
+SRX03,91,JazzBs3 p A
+SRX03,92,JazzBs3 p B
+SRX03,93,JazzBs3 p C
+SRX03,94,JazzBs3 f A
+SRX03,95,JazzBs3 f B
+SRX03,96,JazzBs3 f C
+SRX03,97,JzBs3PckMt A
+SRX03,98,JzBs3PckMt B
+SRX03,99,JzBs3PckMt C
+SRX03,100,JzBs3Pops A
+SRX03,101,JzBs3Pops B
+SRX03,102,JzBs3Pops C
+SRX03,103,JzBs3Noise1
+SRX03,104,JzBs3Noise2
+SRX03,105,AcBass2 p A
+SRX03,106,AcBass2 p B
+SRX03,107,AcBass2 p C
+SRX03,108,AcBass2 f A
+SRX03,109,AcBass2 f B
+SRX03,110,AcBass2 f C
+SRX03,111,AcBass2Noiz1
+SRX03,112,AcBass2Noiz2
+SRX03,113,AcBass2Noiz3
+SRX03,114,Gt/BsNz Menu
+SRX03,115,Flute Vib3 A
+SRX03,116,Flute Vib3 B
+SRX03,117,Flute Vib3 C
+SRX03,118,Alto Flute A
+SRX03,119,Alto Flute B
+SRX03,120,Alto Flute C
+SRX03,121,Afro Flute A
+SRX03,122,Afro Flute B
+SRX03,123,Afro Flute C
+SRX03,124,Vox Flute A
+SRX03,125,Vox Flute B
+SRX03,126,Vox Flute C
+SRX03,127,Flute Atk A
+SRX03,128,Flute Atk B
+SRX03,129,Flute Atk C
+SRX03,130,Pan Pipe 2 A
+SRX03,131,Pan Pipe 2 B
+SRX03,132,Pan Pipe 2 C
+SRX03,133,PanPipeBrthA
+SRX03,134,PanPipeBrthB
+SRX03,135,PanPipeBrthC
+SRX03,136,Moceno A
+SRX03,137,Moceno B
+SRX03,138,Moceno C
+SRX03,139,AltoSax2 p A
+SRX03,140,AltoSax2 p B
+SRX03,141,AltoSax2 p C
+SRX03,142,AltoSax2 f A
+SRX03,143,AltoSax2 f B
+SRX03,144,AltoSax2 f C
+SRX03,145,TenrSax2 p A
+SRX03,146,TenrSax2 p B
+SRX03,147,TenrSax2 p C
+SRX03,148,TenrSax2 f A
+SRX03,149,TenrSax2 f B
+SRX03,150,TenrSax2 f C
+SRX03,151,BariSax2 p A
+SRX03,152,BariSax2 p B
+SRX03,153,BariSax2 p C
+SRX03,154,BariSax2 f A
+SRX03,155,BariSax2 f B
+SRX03,156,BariSax2 f C
+SRX03,157,WindsFX Menu
+SRX03,158,Perc.Flute 1
+SRX03,159,Perc.Flute 2
+SRX03,160,Perc.Flute 3
+SRX03,161,Perc.Flute 4
+SRX03,162,Perc.Flute 5
+SRX03,163,Perc.Flute 6
+SRX03,164,Perc.Flute 7
+SRX03,165,AltFlOvrTone
+SRX03,166,AltoSax EFX
+SRX03,167,StudioTp p A
+SRX03,168,StudioTp p B
+SRX03,169,StudioTp p C
+SRX03,170,StudioTp f A
+SRX03,171,StudioTp f B
+SRX03,172,StudioTp f C
+SRX03,173,TpHrmnMt p A
+SRX03,174,TpHrmnMt p B
+SRX03,175,TpHrmnMt p C
+SRX03,176,TpHrmnMt f A
+SRX03,177,TpHrmnMt f B
+SRX03,178,TpHrmnMt f C
+SRX03,179,S-BoreTb p A
+SRX03,180,S-BoreTb p B
+SRX03,181,S-BoreTb p C
+SRX03,182,S-BoreTb f A
+SRX03,183,S-BoreTb f B
+SRX03,184,S-BoreTb f C
+SRX03,185,Brs2K mf A L
+SRX03,186,Brs2K mf A R
+SRX03,187,Brs2K mf B L
+SRX03,188,Brs2K mf B R
+SRX03,189,Brs2K mf C L
+SRX03,190,Brs2K mf C R
+SRX03,191,Brs2K ff A L
+SRX03,192,Brs2K ff A R
+SRX03,193,Brs2K ff B L
+SRX03,194,Brs2K ff B R
+SRX03,195,Brs2K ff C L
+SRX03,196,Brs2K ff C R
+SRX03,197,SoftPad2 A L
+SRX03,198,SoftPad2 A R
+SRX03,199,SoftPad2 B L
+SRX03,200,SoftPad2 B R
+SRX03,201,SoftPad2 C L
+SRX03,202,SoftPad2 C R
+SRX03,203,MG Stringz A
+SRX03,204,MG Stringz B
+SRX03,205,MG Stringz C
+SRX03,206,OB Stringz A
+SRX03,207,OB Stringz B
+SRX03,208,OB Stringz C
+SRX03,209,KidsChoirA L
+SRX03,210,KidsChoirA R
+SRX03,211,KidsChoirB L
+SRX03,212,KidsChoirB R
+SRX03,213,KidsChoirC L
+SRX03,214,KidsChoirC R
+SRX03,215,M+F Ahs A L
+SRX03,216,M+F Ahs A R
+SRX03,217,M+F Ahs B L
+SRX03,218,M+F Ahs B R
+SRX03,219,M+F Ahs C L
+SRX03,220,M+F Ahs C R
+SRX03,221,JazzOoo A
+SRX03,222,JazzOoo B
+SRX03,223,JazzOoo C
+SRX03,224,SteelDrm3p A
+SRX03,225,SteelDrm3p B
+SRX03,226,SteelDrm3p C
+SRX03,227,SteelDrm3f A
+SRX03,228,SteelDrm3f B
+SRX03,229,SteelDrm3f C
+SRX03,230,Kick Menu L
+SRX03,231,Kick Menu R
+SRX03,232,Stdio1K sftL
+SRX03,233,Stdio1K sftR
+SRX03,234,Stdio1K medL
+SRX03,235,Stdio1K medR
+SRX03,236,Stdio1K hrdL
+SRX03,237,Stdio1K hrdR
+SRX03,238,Stdio2K sftL
+SRX03,239,Stdio2K sftR
+SRX03,240,Stdio2K medL
+SRX03,241,Stdio2K medR
+SRX03,242,Stdio2K hrdL
+SRX03,243,Stdio2K hrdR
+SRX03,244,Stdio1SMenuL
+SRX03,245,Stdio1SMenuR
+SRX03,246,Stdio2SMenuL
+SRX03,247,Stdio2SMenuR
+SRX03,248,Stdio3SMenuL
+SRX03,249,Stdio3SMenuR
+SRX03,250,Stdio4SMenuL
+SRX03,251,Stdio4SMenuR
+SRX03,252,CymbalSMenuL
+SRX03,253,CymbalSMenuR
+SRX03,254,Stdio1Ssft1L
+SRX03,255,Stdio1Ssft1R
+SRX03,256,Stdio1Ssft2L
+SRX03,257,Stdio1Ssft2R
+SRX03,258,Stdio1Smed1L
+SRX03,259,Stdio1Smed1R
+SRX03,260,Stdio1Smed2L
+SRX03,261,Stdio1Smed2R
+SRX03,262,Stdio1Shrd1L
+SRX03,263,Stdio1Shrd1R
+SRX03,264,Stdio1Shrd2L
+SRX03,265,Stdio1Shrd2R
+SRX03,266,Stdio1Srim1L
+SRX03,267,Stdio1Srim1R
+SRX03,268,Stdio1Srim2L
+SRX03,269,Stdio1Srim2R
+SRX03,270,Stdio1Sbuz1L
+SRX03,271,Stdio1Sbuz1R
+SRX03,272,Stdio1Sbuz2L
+SRX03,273,Stdio1Sbuz2R
+SRX03,274,Stdio1Sflm L
+SRX03,275,Stdio1Sflm R
+SRX03,276,Stdio1Sstk1L
+SRX03,277,Stdio1Sstk1R
+SRX03,278,Stdio1Sstk2L
+SRX03,279,Stdio1Sstk2R
+SRX03,280,Stdio2Ssft1L
+SRX03,281,Stdio2Ssft1R
+SRX03,282,Stdio2Ssft2L
+SRX03,283,Stdio2Ssft2R
+SRX03,284,Stdio2Smed1L
+SRX03,285,Stdio2Smed1R
+SRX03,286,Stdio2Smed2L
+SRX03,287,Stdio2Smed2R
+SRX03,288,Stdio2Shrd1L
+SRX03,289,Stdio2Shrd1R
+SRX03,290,Stdio2Shrd2L
+SRX03,291,Stdio2Shrd2R
+SRX03,292,Stdio2Srim1L
+SRX03,293,Stdio2Srim1R
+SRX03,294,Stdio2Srim2L
+SRX03,295,Stdio2Srim2R
+SRX03,296,Stdio2Sbuz1L
+SRX03,297,Stdio2Sbuz1R
+SRX03,298,Stdio2Sbuz2L
+SRX03,299,Stdio2Sbuz2R
+SRX03,300,Stdio2Sflm L
+SRX03,301,Stdio2Sflm R
+SRX03,302,Stdio2Sstk1L
+SRX03,303,Stdio2Sstk1R
+SRX03,304,Stdio2Sstk2L
+SRX03,305,Stdio2Sstk2R
+SRX03,306,Stdio3Ssft1L
+SRX03,307,Stdio3Ssft1R
+SRX03,308,Stdio3Ssft2L
+SRX03,309,Stdio3Ssft2R
+SRX03,310,Stdio3Smed1L
+SRX03,311,Stdio3Smed1R
+SRX03,312,Stdio3Smed2L
+SRX03,313,Stdio3Smed2R
+SRX03,314,Stdio3Shrd1L
+SRX03,315,Stdio3Shrd1R
+SRX03,316,Stdio3Shrd2L
+SRX03,317,Stdio3Shrd2R
+SRX03,318,Stdio3Srim1L
+SRX03,319,Stdio3Srim1R
+SRX03,320,Stdio3Srim2L
+SRX03,321,Stdio3Srim2R
+SRX03,322,Stdio3Sbuz1L
+SRX03,323,Stdio3Sbuz1R
+SRX03,324,Stdio3Sbuz2L
+SRX03,325,Stdio3Sbuz2R
+SRX03,326,Stdio3Sflm L
+SRX03,327,Stdio3Sflm R
+SRX03,328,Stdio3Sstk1L
+SRX03,329,Stdio3Sstk1R
+SRX03,330,Stdio3Sstk2L
+SRX03,331,Stdio3Sstk2R
+SRX03,332,Stdio4Ssft1L
+SRX03,333,Stdio4Ssft1R
+SRX03,334,Stdio4Ssft2L
+SRX03,335,Stdio4Ssft2R
+SRX03,336,Stdio4Smed1L
+SRX03,337,Stdio4Smed1R
+SRX03,338,Stdio4Smed2L
+SRX03,339,Stdio4Smed2R
+SRX03,340,Stdio4Shrd1L
+SRX03,341,Stdio4Shrd1R
+SRX03,342,Stdio4Shrd2L
+SRX03,343,Stdio4Shrd2R
+SRX03,344,Stdio4Srim1L
+SRX03,345,Stdio4Srim1R
+SRX03,346,Stdio4Srim2L
+SRX03,347,Stdio4Srim2R
+SRX03,348,Stdio4Sbuz1L
+SRX03,349,Stdio4Sbuz1R
+SRX03,350,Stdio4Sbuz2L
+SRX03,351,Stdio4Sbuz2R
+SRX03,352,Stdio4Sflm L
+SRX03,353,Stdio4Sflm R
+SRX03,354,Sn w/Cym 1 L
+SRX03,355,Sn w/Cym 1 R
+SRX03,356,Sn w/Cym 2 L
+SRX03,357,Sn w/Cym 2 R
+SRX03,358,Sn w/Cym 3 L
+SRX03,359,Sn w/Cym 3 R
+SRX03,360,Sn w/Cym 4 L
+SRX03,361,Sn w/Cym 4 R
+SRX03,362,StdioT MenuL
+SRX03,363,StdioT MenuR
+SRX03,364,StdioT1sft L
+SRX03,365,StdioT1sft R
+SRX03,366,StdioT1med L
+SRX03,367,StdioT1med R
+SRX03,368,StdioT1hrd L
+SRX03,369,StdioT1hrd R
+SRX03,370,StdioT1flm1L
+SRX03,371,StdioT1flm1R
+SRX03,372,StdioT1flm2L
+SRX03,373,StdioT1flm2R
+SRX03,374,StdioT2sft L
+SRX03,375,StdioT2sft R
+SRX03,376,StdioT2med L
+SRX03,377,StdioT2med R
+SRX03,378,StdioT2hrd L
+SRX03,379,StdioT2hrd R
+SRX03,380,StdioT2flm1L
+SRX03,381,StdioT2flm1R
+SRX03,382,StdioT2flm2L
+SRX03,383,StdioT2flm2R
+SRX03,384,StdioT3sft L
+SRX03,385,StdioT3sft R
+SRX03,386,StdioT3med L
+SRX03,387,StdioT3med R
+SRX03,388,StdioT3hrd L
+SRX03,389,StdioT3hrd R
+SRX03,390,StdioT3flm1L
+SRX03,391,StdioT3flm1R
+SRX03,392,StdioT3flm2L
+SRX03,393,StdioT3flm2R
+SRX03,394,StdioT4sft L
+SRX03,395,StdioT4sft R
+SRX03,396,StdioT4med L
+SRX03,397,StdioT4med R
+SRX03,398,StdioT4hrd L
+SRX03,399,StdioT4hrd R
+SRX03,400,StdioT4flm1L
+SRX03,401,StdioT4flm1R
+SRX03,402,StdioT4flm2L
+SRX03,403,StdioT4flm2R
+SRX03,404,StdioH MenuL
+SRX03,405,StdioH MenuR
+SRX03,406,StdioH cl1 L
+SRX03,407,StdioH cl1 R
+SRX03,408,StdioH cl2 L
+SRX03,409,StdioH cl2 R
+SRX03,410,StdioH cl3 L
+SRX03,411,StdioH cl3 R
+SRX03,412,StdioH cl4 L
+SRX03,413,StdioH cl4 R
+SRX03,414,StdioH cl5 L
+SRX03,415,StdioH cl5 R
+SRX03,416,StdioH hcl L
+SRX03,417,StdioH hcl R
+SRX03,418,StdioH op1 L
+SRX03,419,StdioH op1 R
+SRX03,420,StdioH op2 L
+SRX03,421,StdioH op2 R
+SRX03,422,StdioH op3 L
+SRX03,423,StdioH op3 R
+SRX03,424,StdioH pdl1L
+SRX03,425,StdioH pdl1R
+SRX03,426,StdioH pdl2L
+SRX03,427,StdioH pdl2R
+SRX03,428,Conga2 MenuL
+SRX03,429,Conga2 MenuR
+SRX03,430,Cng2LoMtSftL
+SRX03,431,Cng2LoMtSftR
+SRX03,432,Cng2LoMtHrdL
+SRX03,433,Cng2LoMtHrdR
+SRX03,434,Cng2LoOpSftL
+SRX03,435,Cng2LoOpSftR
+SRX03,436,Cng2LoOpHrdL
+SRX03,437,Cng2LoOpHrdR
+SRX03,438,Cng2LoRoll L
+SRX03,439,Cng2LoRoll R
+SRX03,440,Cng2HiMtSftL
+SRX03,441,Cng2HiMtSftR
+SRX03,442,Cng2HiMtHrdL
+SRX03,443,Cng2HiMtHrdR
+SRX03,444,Cng2HiOpSftL
+SRX03,445,Cng2HiOpSftR
+SRX03,446,Cng2HiOpHrdL
+SRX03,447,Cng2HiOpHrdR
+SRX03,448,Cng2SlClSftL
+SRX03,449,Cng2SlClSftR
+SRX03,450,Cng2SlClHrdL
+SRX03,451,Cng2SlClHrdR
+SRX03,452,Cng2SlOpSftL
+SRX03,453,Cng2SlOpSftR
+SRX03,454,Cng2SlOpHrdL
+SRX03,455,Cng2SlOpHrdR
+SRX03,456,Cng2HiFlam L
+SRX03,457,Cng2HiFlam R
+SRX03,458,Cng2HiRoll L
+SRX03,459,Cng2HiRoll R
+SRX03,460,Bngo4LoMenuL
+SRX03,461,Bngo4LoMenuR
+SRX03,462,Bg4LFngrSftL
+SRX03,463,Bg4LFngrSftR
+SRX03,464,Bg4LFngrHrdL
+SRX03,465,Bg4LFngrHrdR
+SRX03,466,Bg4LFngsSftL
+SRX03,467,Bg4LFngsSftR
+SRX03,468,Bg4LFngsHrdL
+SRX03,469,Bg4LFngsHrdR
+SRX03,470,Bg4LMuteSftL
+SRX03,471,Bg4LMuteSftR
+SRX03,472,Bg4LMuteHrdL
+SRX03,473,Bg4LMuteHrdR
+SRX03,474,Bg4LSlapSftL
+SRX03,475,Bg4LSlapSftR
+SRX03,476,Bg4LSlapHrdL
+SRX03,477,Bg4LSlapHrdR
+SRX03,478,Bg4LOpenSftL
+SRX03,479,Bg4LOpenSftR
+SRX03,480,Bg4LOpenHrdL
+SRX03,481,Bg4LOpenHrdR
+SRX03,482,Bngo4HiMenuL
+SRX03,483,Bngo4HiMenuR
+SRX03,484,Bg4HFgMtSftL
+SRX03,485,Bg4HFgMtSftR
+SRX03,486,Bg4HFgMtHrdL
+SRX03,487,Bg4HFgMtHrdR
+SRX03,488,Bg4HFgOpSftL
+SRX03,489,Bg4HFgOpSftR
+SRX03,490,Bg4HFgOpHrdL
+SRX03,491,Bg4HFgOpHrdR
+SRX03,492,Bg4HFngsSftL
+SRX03,493,Bg4HFngsSftR
+SRX03,494,Bg4HFngsHrdL
+SRX03,495,Bg4HFngsHrdR
+SRX03,496,Bg4H Heel L
+SRX03,497,Bg4H Heel R
+SRX03,498,Bg4HSlapSftL
+SRX03,499,Bg4HSlapSftR
+SRX03,500,Bg4HSlapHrdL
+SRX03,501,Bg4HSlapHrdR
+SRX03,502,Bg4HOpenSftL
+SRX03,503,Bg4HOpenSftR
+SRX03,504,Bg4HOpenHrdL
+SRX03,505,Bg4HOpenHrdR
+SRX03,506,Bg4H Flam L
+SRX03,507,Bg4H Flam R
+SRX03,508,Bg4H Roll L
+SRX03,509,Bg4H Roll R
+SRX03,510,Timbals3Menu
+SRX03,511,Timbl3HiHead
+SRX03,512,Timbl3HiRim
+SRX03,513,Timbl3LoHead
+SRX03,514,Timbl3LoRim
+SRX03,515,Timbl3HPaila
+SRX03,516,Timb3lLPaila
+SRX03,517,Synth Saw 2
+SRX03,518,Syn Saw 2inv
+SRX03,519,Synth Square
+SRX03,520,Synth Pulse1
+SRX03,521,Triangle
+SRX03,522,Sine
+SRX04,1,F.Str mp A L
+SRX04,2,F.Str mp A R
+SRX04,3,F.Str mp B L
+SRX04,4,F.Str mp B R
+SRX04,5,F.Str mp C L
+SRX04,6,F.Str mp C R
+SRX04,7,F.Str mp + L
+SRX04,8,F.Str mp + R
+SRX04,9,Mrct A L
+SRX04,10,Mrct A R
+SRX04,11,Mrct B L
+SRX04,12,Mrct B R
+SRX04,13,Mrct C L
+SRX04,14,Mrct C R
+SRX04,15,Mrct + L
+SRX04,16,Mrct + R
+SRX04,17,Spcct A L
+SRX04,18,Spcct A R
+SRX04,19,Spcct B L
+SRX04,20,Spcct B R
+SRX04,21,Spcct C L
+SRX04,22,Spcct C R
+SRX04,23,Trem mp A L
+SRX04,24,Trem mp A R
+SRX04,25,Trem mp B L
+SRX04,26,Trem mp B R
+SRX04,27,Trem mp C L
+SRX04,28,Trem mp C R
+SRX04,29,Trem mp + L
+SRX04,30,Trem mp + R
+SRX04,31,Vn mp A L
+SRX04,32,Vn mp A R
+SRX04,33,Vn mp B L
+SRX04,34,Vn mp B R
+SRX04,35,Vn mp C L
+SRX04,36,Vn mp C R
+SRX04,37,Vn mp + L
+SRX04,38,Vn mp + R
+SRX04,39,Va mp A L
+SRX04,40,Va mp A R
+SRX04,41,Va mp B L
+SRX04,42,Va mp B R
+SRX04,43,Va mp C L
+SRX04,44,Va mp C R
+SRX04,45,Va mp + L
+SRX04,46,Va mp + R
+SRX04,47,Vc mp A L
+SRX04,48,Vc mp A R
+SRX04,49,Vc mp B L
+SRX04,50,Vc mp B R
+SRX04,51,Vc mp C L
+SRX04,52,Vc mp C R
+SRX04,53,Vc mp + L
+SRX04,54,Vc mp + R
+SRX04,55,Cb mp A L
+SRX04,56,Cb mp A R
+SRX04,57,Cb mp B L
+SRX04,58,Cb mp B R
+SRX04,59,Cb mp C L
+SRX04,60,Cb mp C R
+SRX04,61,Cb mp + L
+SRX04,62,Cb mp + R
+SRX04,63,Vn mltV A L
+SRX04,64,Vn mltV A R
+SRX04,65,Vn mltV B L
+SRX04,66,Vn mltV B R
+SRX04,67,Vn mltV C L
+SRX04,68,Vn mltV C R
+SRX04,69,Vn mltV + L
+SRX04,70,Vn mltV + R
+SRX04,71,Va mltV A L
+SRX04,72,Va mltV A R
+SRX04,73,Va mltV B L
+SRX04,74,Va mltV B R
+SRX04,75,Va mltV C L
+SRX04,76,Va mltV C R
+SRX04,77,Va mltV + L
+SRX04,78,Va mltV + R
+SRX04,79,Vc mltV A L
+SRX04,80,Vc mltV A R
+SRX04,81,Vc mltV B L
+SRX04,82,Vc mltV B R
+SRX04,83,Vc mltV C L
+SRX04,84,Vc mltV C R
+SRX04,85,Vc mltV + L
+SRX04,86,Vc mltV + R
+SRX04,87,Cb f A L
+SRX04,88,Cb f A R
+SRX04,89,Cb f B L
+SRX04,90,Cb f B R
+SRX04,91,Cb f C L
+SRX04,92,Cb f C R
+SRX04,93,Cb f + L
+SRX04,94,Cb f + R
+SRX04,95,Vn mltV^ A L
+SRX04,96,Vn mltV^ A R
+SRX04,97,Vn mltV^ B L
+SRX04,98,Vn mltV^ B R
+SRX04,99,Vn mltV^ C L
+SRX04,100,Vn mltV^ C R
+SRX04,101,Vn mltV^ + L
+SRX04,102,Vn mltV^ + R
+SRX04,103,Va mltV^ A L
+SRX04,104,Va mltV^ A R
+SRX04,105,Va mltV^ B L
+SRX04,106,Va mltV^ B R
+SRX04,107,Va mltV^ C L
+SRX04,108,Va mltV^ C R
+SRX04,109,Va mltV^ + L
+SRX04,110,Va mltV^ + R
+SRX04,111,Vc mltV^ A L
+SRX04,112,Vc mltV^ A R
+SRX04,113,Vc mltV^ B L
+SRX04,114,Vc mltV^ B R
+SRX04,115,Vc mltV^ C L
+SRX04,116,Vc mltV^ C R
+SRX04,117,Vc mltV^ + L
+SRX04,118,Vc mltV^ + R
+SRX04,119,Vn Stc A L
+SRX04,120,Vn Stc A R
+SRX04,121,Vn Stc B L
+SRX04,122,Vn Stc B R
+SRX04,123,Vn Stc C L
+SRX04,124,Vn Stc C R
+SRX04,125,Va Stc A L
+SRX04,126,Va Stc A R
+SRX04,127,Va Stc B L
+SRX04,128,Va Stc B R
+SRX04,129,Va Stc C L
+SRX04,130,Va Stc C R
+SRX04,131,Vc Stc A L
+SRX04,132,Vc Stc A R
+SRX04,133,Vc Stc B L
+SRX04,134,Vc Stc B R
+SRX04,135,Vc Stc C L
+SRX04,136,Vc Stc C R
+SRX04,137,Cb Stc A L
+SRX04,138,Cb Stc A R
+SRX04,139,Cb Stc B L
+SRX04,140,Cb Stc B R
+SRX04,141,Cb Stc C L
+SRX04,142,Cb Stc C R
+SRX04,143,All Stc L
+SRX04,144,All Stc R
+SRX04,145,Vn Pz mf A L
+SRX04,146,Vn Pz mf A R
+SRX04,147,Vn Pz mf B L
+SRX04,148,Vn Pz mf B R
+SRX04,149,Vn Pz mf C L
+SRX04,150,Vn Pz mf C R
+SRX04,151,Va Pz mf A L
+SRX04,152,Va Pz mf A R
+SRX04,153,Va Pz mf B L
+SRX04,154,Va Pz mf B R
+SRX04,155,Va Pz mf C L
+SRX04,156,Va Pz mf C R
+SRX04,157,Vc Pz mf A L
+SRX04,158,Vc Pz mf A R
+SRX04,159,Vc Pz mf B L
+SRX04,160,Vc Pz mf B R
+SRX04,161,Vc Pz mf C L
+SRX04,162,Vc Pz mf C R
+SRX04,163,Cb Pz mf A L
+SRX04,164,Cb Pz mf A R
+SRX04,165,Cb Pz mf B L
+SRX04,166,Cb Pz mf B R
+SRX04,167,Cb Pz mf C L
+SRX04,168,Cb Pz mf C R
+SRX04,169,All Pz mf L
+SRX04,170,All Pz mf R
+SRX04,171,Vn Pz ff A L
+SRX04,172,Vn Pz ff A R
+SRX04,173,Vn Pz ff B L
+SRX04,174,Vn Pz ff B R
+SRX04,175,Vn Pz ff C L
+SRX04,176,Vn Pz ff C R
+SRX04,177,Va Pz ff A L
+SRX04,178,Va Pz ff A R
+SRX04,179,Va Pz ff B L
+SRX04,180,Va Pz ff B R
+SRX04,181,Va Pz ff C L
+SRX04,182,Va Pz ff C R
+SRX04,183,Vc Pz ff A L
+SRX04,184,Vc Pz ff A R
+SRX04,185,Vc Pz ff B L
+SRX04,186,Vc Pz ff B R
+SRX04,187,Vc Pz ff C L
+SRX04,188,Vc Pz ff C R
+SRX04,189,Cb Pz ff A L
+SRX04,190,Cb Pz ff A R
+SRX04,191,Cb Pz ff B L
+SRX04,192,Cb Pz ff B R
+SRX04,193,Cb Pz ff C L
+SRX04,194,Cb Pz ff C R
+SRX04,195,All Pz ff L
+SRX04,196,All Pz ff R
+SRX05,1,PhraseMenuL
+SRX05,2,PhraseMenuR
+SRX05,3,080:BladeBtL
+SRX05,4,080:BladeBtR
+SRX05,5,093:R&Bees
+SRX05,6,096:RugBurnL
+SRX05,7,096:RugBurnR
+SRX05,8,120:BossClbL
+SRX05,9,120:BossClbR
+SRX05,10,120:ClubbinL
+SRX05,11,120:ClubbinR
+SRX05,12,135:XRacer L
+SRX05,13,135:XRacer R
+SRX05,14,Drain-O L
+SRX05,15,Drain-O R
+SRX05,16,RocketBrs L
+SRX05,17,RocketBrs R
+SRX05,18,Resound L
+SRX05,19,Resound R
+SRX05,20,StrikeWhstle
+SRX05,21,Blowout L
+SRX05,22,Blowout R
+SRX05,23,MGSAW HQ
+SRX05,24,P5SAW HQ
+SRX05,25,106 Saw HQ
+SRX05,26,SH101SAW HQ
+SRX05,27,TB303SAW HQ
+SRX05,28,CustomSawA2
+SRX05,29,JU2SpSaw2
+SRX05,30,JU2SpSaw3
+SRX05,31,JU2SpSaw4
+SRX05,32,OB2 Pat7
+SRX05,33,JPSuperSaw
+SRX05,34,JP8SQU HQ
+SRX05,35,MGSQU HQ
+SRX05,36,P5SQU HQ
+SRX05,37,CustomSquA2
+SRX05,38,TB303SQU HQ
+SRX05,39,106 SubOsc
+SRX05,40,JU2SpSub1
+SRX05,41,JU2SpSub2
+SRX05,42,JP8PLS05 HQ
+SRX05,43,JP8PLS15 HQ
+SRX05,44,JP8PLS20 HQ
+SRX05,45,JP8PLS30 HQ
+SRX05,46,JP8PLS40 HQ
+SRX05,47,JP8PLS45 HQ
+SRX05,48,SyncPlsInv
+SRX05,49,JUNO Pls Bd
+SRX05,50,JUNO Pls Rls
+SRX05,51,JP6 DynPLS P
+SRX05,52,JP6 DynPLS N
+SRX05,53,JUNO106 Rave
+SRX05,54,MGTRI HQ
+SRX05,55,JP8TRI HQ
+SRX05,56,Variant Sin
+SRX05,57,ARP SIN
+SRX05,58,CalcSIN2
+SRX05,59,106 Bs56
+SRX05,60,Spct11
+SRX05,61,Sprk vx2
+SRX05,62,Spct2 20
+SRX05,63,MG WhteNz HQ
+SRX05,64,MG PinkNz HQ
+SRX05,65,Spect Noise
+SRX05,66,JD PnoEQ
+SRX05,67,EP Chd Menu
+SRX05,68,EP Maj 9th
+SRX05,69,EP Maj 11th
+SRX05,70,EP Min 11th
+SRX05,71,FM Clavi mf
+SRX05,72,Old Hous Org
+SRX05,73,FM Prc Organ
+SRX05,74,Fing E.Bs mf
+SRX05,75,Fing E.Bs ff
+SRX05,76,Baby Bass f2
+SRX05,77,Baby Bassff2
+SRX05,78,GuitarrnWarm
+SRX05,79,GuitarrnOct2
+SRX05,80,HouseBass mf
+SRX05,81,HouseBass ff
+SRX05,82,Brs Stab L
+SRX05,83,Brs Stab R
+SRX05,84,Brs Fall L
+SRX05,85,Brs Fall R
+SRX05,86,WindsFX Menu
+SRX05,87,Flute Fx 1
+SRX05,88,Flute Fx 2
+SRX05,89,Flute Fx 3
+SRX05,90,Sax Fx 1
+SRX05,91,Sax Fx 2
+SRX05,92,Sax Fx 3
+SRX05,93,Gregorian2 L
+SRX05,94,Gregorian2 R
+SRX05,95,Dance Str L
+SRX05,96,Dance Str R
+SRX05,97,D50Pizzagogo
+SRX05,98,Str Fall L
+SRX05,99,Str Fall R
+SRX05,100,StrScaleMajL
+SRX05,101,StrScaleMajR
+SRX05,102,StrChd MenuL
+SRX05,103,StrChd MenuR
+SRX05,104,StrChdMin9L
+SRX05,105,StrChdMin9R
+SRX05,106,StrChdMn11L
+SRX05,107,StrChdMn11R
+SRX05,108,StrSprdMaj L
+SRX05,109,StrSprdMaj R
+SRX05,110,StrSprdMin L
+SRX05,111,StrSprdMin R
+SRX05,112,E.Gtr Menu L
+SRX05,113,E.Gtr Menu R
+SRX05,114,ShredFuzzGtr
+SRX05,115,ClnGtrRif1 L
+SRX05,116,ClnGtrRif1 R
+SRX05,117,ClnGtrRif2 L
+SRX05,118,ClnGtrRif2 R
+SRX05,119,TrmDwnGtr1 L
+SRX05,120,TrmDwnGtr1 R
+SRX05,121,TrmDwnGtr2 L
+SRX05,122,TrmDwnGtr2 R
+SRX05,123,WahGtrChord
+SRX05,124,WahGtrCt1 L
+SRX05,125,WahGtrCt1 R
+SRX05,126,WahGtrCt2 L
+SRX05,127,WahGtrCt2 R
+SRX05,128,WahGtrCt3 L
+SRX05,129,WahGtrCt3 R
+SRX05,130,WahGtrCt4 L
+SRX05,131,WahGtrCt4 R
+SRX05,132,WahGtrCt5 L
+SRX05,133,WahGtrCt5 R
+SRX05,134,WahGtrCt6 L
+SRX05,135,WahGtrCt6 R
+SRX05,136,WahGtrRif1 L
+SRX05,137,WahGtrRif1 R
+SRX05,138,WahGtrRif2 L
+SRX05,139,WahGtrRif2 R
+SRX05,140,Hit SpecialL
+SRX05,141,Hit SpecialR
+SRX05,142,Hit OneShotL
+SRX05,143,Hit OneShotR
+SRX05,144,BrassHit 1
+SRX05,145,BrassHit 2
+SRX05,146,BrassHit 3
+SRX05,147,BrassHit 4
+SRX05,148,BrassHit 5
+SRX05,149,BrassHit 6 L
+SRX05,150,BrassHit 6 R
+SRX05,151,BrassHit 7 L
+SRX05,152,BrassHit 7 R
+SRX05,153,BrassHit 8
+SRX05,154,BrassHit 9 L
+SRX05,155,BrassHit 9 R
+SRX05,156,BrassHit 10L
+SRX05,157,BrassHit 10R
+SRX05,158,BrassHit 11L
+SRX05,159,BrassHit 11R
+SRX05,160,BrassHit 12L
+SRX05,161,BrassHit 12R
+SRX05,162,BrassHit 13L
+SRX05,163,BrassHit 13R
+SRX05,164,BrassHit 14L
+SRX05,165,BrassHit 14R
+SRX05,166,BrassHit 15
+SRX05,167,BrassHit 16L
+SRX05,168,BrassHit 16R
+SRX05,169,BrassHit 17L
+SRX05,170,BrassHit 17R
+SRX05,171,BrassHit 18
+SRX05,172,BrassHit 19L
+SRX05,173,BrassHit 19R
+SRX05,174,BrassHit 20
+SRX05,175,BrassHit 21L
+SRX05,176,BrassHit 21R
+SRX05,177,BrassHit 22L
+SRX05,178,BrassHit 22R
+SRX05,179,BrassHit 23L
+SRX05,180,BrassHit 23R
+SRX05,181,BrassHit 24
+SRX05,182,SymphHit 1 L
+SRX05,183,SymphHit 1 R
+SRX05,184,SymphHit 2 L
+SRX05,185,SymphHit 2 R
+SRX05,186,SymphHit 3 L
+SRX05,187,SymphHit 3 R
+SRX05,188,SymphHit 4 L
+SRX05,189,SymphHit 4 R
+SRX05,190,SymphHit 5 L
+SRX05,191,SymphHit 5 R
+SRX05,192,SymphHit 6 L
+SRX05,193,SymphHit 6 R
+SRX05,194,SymphHit 7 L
+SRX05,195,SymphHit 7 R
+SRX05,196,Organ Hit 1
+SRX05,197,OrgTrnsplntL
+SRX05,198,OrgTrnsplntR
+SRX05,199,Organ Hit 2L
+SRX05,200,Organ Hit 2R
+SRX05,201,Chord Hit 1
+SRX05,202,Chord Hit 2L
+SRX05,203,Chord Hit 2R
+SRX05,204,Chord Hit 3L
+SRX05,205,Chord Hit 3R
+SRX05,206,Chord Hit 4
+SRX05,207,Altr Hit L
+SRX05,208,Altr Hit R
+SRX05,209,Crystal HitL
+SRX05,210,Crystal HitR
+SRX05,211,Dirty Hit 2
+SRX05,212,Exhaust HitL
+SRX05,213,Exhaust HitR
+SRX05,214,Scoop Hit L
+SRX05,215,Scoop Hit R
+SRX05,216,Stamp Hit L
+SRX05,217,Stamp Hit R
+SRX05,218,ThousandHitL
+SRX05,219,ThousandHitR
+SRX05,220,9th Hit L
+SRX05,221,9th Hit R
+SRX05,222,Slap Hit 1 L
+SRX05,223,Slap Hit 1 R
+SRX05,224,Slap Hit 2 L
+SRX05,225,Slap Hit 2 R
+SRX05,226,Slap Hit 3 L
+SRX05,227,Slap Hit 3 R
+SRX05,228,Dust Hit L
+SRX05,229,Dust Hit R
+SRX05,230,Dist Hit 1 L
+SRX05,231,Dist Hit 1 R
+SRX05,232,Dist Hit 2 L
+SRX05,233,Dist Hit 2 R
+SRX05,234,Slide Hit L
+SRX05,235,Slide Hit R
+SRX05,236,Wah Hit
+SRX05,237,Slide Hit 2L
+SRX05,238,Slide Hit 2R
+SRX05,239,Tremble Hit
+SRX05,240,Sweep Hit
+SRX05,241,ParabolaHitL
+SRX05,242,ParabolaHitR
+SRX05,243,Daw Hit L
+SRX05,244,Daw Hit R
+SRX05,245,Dah Hit L
+SRX05,246,Dah Hit R
+SRX05,247,Aah Hit
+SRX05,248,Mixed Hit L
+SRX05,249,Mixed Hit R
+SRX05,250,Showy Hit
+SRX05,251,Pretty Hit L
+SRX05,252,Pretty Hit R
+SRX05,253,Smoky Hit L
+SRX05,254,Smoky Hit R
+SRX05,255,Fist Hit
+SRX05,256,Iron Hit 2
+SRX05,257,Clavy Hit L
+SRX05,258,Clavy Hit R
+SRX05,259,Warp Hit 1L
+SRX05,260,Warp Hit 1R
+SRX05,261,Warp Hit 2L
+SRX05,262,Warp Hit 2R
+SRX05,263,Warp Hit 3L
+SRX05,264,Warp Hit 3R
+SRX05,265,Warp Hit 4
+SRX05,266,Tread Hit
+SRX05,267,Old Org Hit
+SRX05,268,Sand Hit
+SRX05,269,Bounce Hit1
+SRX05,270,Bounce Hit2L
+SRX05,271,Bounce Hit2R
+SRX05,272,Bounce Hit3
+SRX05,273,Warp Hit 5L
+SRX05,274,Warp Hit 5R
+SRX05,275,Bounce Hit4
+SRX05,276,Scratch Menu
+SRX05,277,Scratch 4
+SRX05,278,Scratch 5
+SRX05,279,Scratch 6
+SRX05,280,Scratch 7
+SRX05,281,Scratch 8
+SRX05,282,Scratch 9
+SRX05,283,Scratch 10
+SRX05,284,Scratch 11
+SRX05,285,Scratch 12
+SRX05,286,Scratch 13
+SRX05,287,Scratch 14
+SRX05,288,Scratch 15
+SRX05,289,Vinyl NzLp 1
+SRX05,290,Vinyl NzLp 2
+SRX05,291,Vox Menu
+SRX05,292,Whoo! M
+SRX05,293,You’re DJ M
+SRX05,294,Groove M
+SRX05,295,Com’on M
+SRX05,296,Yeah M
+SRX05,297,Wow Yeah F
+SRX05,298,Yeah F
+SRX05,299,Ho F
+SRX05,300,Aow F
+SRX05,301,Oh F
+SRX05,302,R&B Kick 1
+SRX05,303,LoBit Kick 1
+SRX05,304,LoBit Kick 2
+SRX05,305,Old Kick 1
+SRX05,306,Old Kick 2
+SRX05,307,Metal Kick
+SRX05,308,Old Kick 3
+SRX05,309,Rebo Kick 1
+SRX05,310,Abuz Kick
+SRX05,311,Cool Kick 1
+SRX05,312,Dyna Kick
+SRX05,313,Floor Kick
+SRX05,314,Gan Kick
+SRX05,315,GoGo Kick
+SRX05,316,Livn Kick
+SRX05,317,Old Kick 4
+SRX05,318,Mellow Kick
+SRX05,319,Two Kick
+SRX05,320,Gummo Kick 1
+SRX05,321,Gummo Kick 2
+SRX05,322,R&B Kick 2
+SRX05,323,Narrow Kick
+SRX05,324,Alley Kick 1
+SRX05,325,Alley Kick 2
+SRX05,326,FunkB Kick
+SRX05,327,Light Kick 1
+SRX05,328,Light Kick 2
+SRX05,329,Light Kick 3
+SRX05,330,L-RiderKick1
+SRX05,331,Light Kick 4
+SRX05,332,Light Kick 5
+SRX05,333,Light Kick 6
+SRX05,334,H-Rider Kick
+SRX05,335,Light Kick 7
+SRX05,336,L-RiderKick2
+SRX05,337,Light Kick 8
+SRX05,338,ChickenKick1
+SRX05,339,Edge Kick
+SRX05,340,Buck Kick
+SRX05,341,Layer Kick 1
+SRX05,342,Layer Kick 2
+SRX05,343,Layer Kick 3
+SRX05,344,Layer Kick 4
+SRX05,345,Retro Kick 1
+SRX05,346,Ambi Kick
+SRX05,347,Cbell Kick
+SRX05,348,Tamb Kick
+SRX05,349,Retro Kick 2
+SRX05,350,Pump Kick
+SRX05,351,Heavy Kick 1
+SRX05,352,Heavy Kick 2
+SRX05,353,Heavy Kick 3
+SRX05,354,Heavy Kick 4
+SRX05,355,Layer Kick 5
+SRX05,356,Shake Kick
+SRX05,357,Rebo Kick 2
+SRX05,358,Chop Kick
+SRX05,359,Cool Kick 2
+SRX05,360,Light Kick 9
+SRX05,361,Seiz Kick
+SRX05,362,Soul Kick
+SRX05,363,Trip Kick
+SRX05,364,Lo-Tek Kick
+SRX05,365,Filter Kick
+SRX05,366,Vinyl Kick
+SRX05,367,Blade Kick
+SRX05,368,Club Kick
+SRX05,369,Dinky Kick 1
+SRX05,370,Dinky Kick 2
+SRX05,371,Dinky Kick 3
+SRX05,372,Dinky Kick 4
+SRX05,373,Old Kick 5
+SRX05,374,Hybrid Kick3
+SRX05,375,Slopey Kick1
+SRX05,376,Junk Kick
+SRX05,377,707 DryKick1
+SRX05,378,707 DryKick2
+SRX05,379,808 DryKick1
+SRX05,380,808 DryKick2
+SRX05,381,808 DryKick3
+SRX05,382,808 DryKick4
+SRX05,383,808 DryKick5
+SRX05,384,Analog Kick1
+SRX05,385,Analog Kick2
+SRX05,386,909 DryKick1
+SRX05,387,909 DryKick2
+SRX05,388,909 DryKick3
+SRX05,389,Craze Kick 1
+SRX05,390,Craze Kick 2
+SRX05,391,106 Kick 1
+SRX05,392,106 Kick 2
+SRX05,393,MG Kick 1
+SRX05,394,MG Kick 2
+SRX05,395,Fat Kick
+SRX05,396,Croak Kick 1
+SRX05,397,Fuzz Kick
+SRX05,398,ChickenKick2
+SRX05,399,Motor Kick
+SRX05,400,Craze Kick 3
+SRX05,401,Craze Kick 4
+SRX05,402,Layer Kick 6
+SRX05,403,Plump Kick
+SRX05,404,Deviant Kick
+SRX05,405,Dance Kick 5
+SRX05,406,Dance Kick 6
+SRX05,407,Dance Kick 7
+SRX05,408,Dance Kick 8
+SRX05,409,BigDrds Kick
+SRX05,410,Slopey Kick2
+SRX05,411,Swanky Kick
+SRX05,412,SnugBugaKick
+SRX05,413,Synth Kick
+SRX05,414,DeeBee Kick
+SRX05,415,HipHop SD 1
+SRX05,416,R&B SD 1
+SRX05,417,Lo-Bit SD 1
+SRX05,418,Blade SD
+SRX05,419,Basis SD 1
+SRX05,420,Gruntoid SD
+SRX05,421,L-Rider SD
+SRX05,422,Craze SD 1
+SRX05,423,R&B SD 2
+SRX05,424,Lo-Bit SD 2
+SRX05,425,Metalic SD
+SRX05,426,Noisy SD
+SRX05,427,Pump SD
+SRX05,428,Dinky SD 1
+SRX05,429,Dinky SD 2
+SRX05,430,Dinky SD 3
+SRX05,431,Basis SD 2
+SRX05,432,Basis SD 3
+SRX05,433,Basis SD 4
+SRX05,434,Retro SD 1
+SRX05,435,HiTune SD
+SRX05,436,Snapy SD
+SRX05,437,Thin SD
+SRX05,438,Thin SD mb
+SRX05,439,Slim SD
+SRX05,440,Rocky SD1
+SRX05,441,Rocky SD1 mb
+SRX05,442,Rocky SD2 mb
+SRX05,443,Rocky SD3 mb
+SRX05,444,Club SD1
+SRX05,445,Club SD2 mb
+SRX05,446,Club SD3
+SRX05,447,Club SD3 mb
+SRX05,448,Comp SD1 mb
+SRX05,449,Comp SD2 mb
+SRX05,450,Rev SD mb
+SRX05,451,LoBtHf SD1mb
+SRX05,452,LoBtHf SD2mb
+SRX05,453,LoBtHf SD3mb
+SRX05,454,LoBtHf SD4mb
+SRX05,455,LoBtHf SD5mb
+SRX05,456,LoBtHf SD6mb
+SRX05,457,Light SD1
+SRX05,458,Light SD1 mb
+SRX05,459,Light SD2
+SRX05,460,Light SD2 mb
+SRX05,461,Alley SD1
+SRX05,462,Alley SD1mb
+SRX05,463,BigDreds SD
+SRX05,464,H-Rider SD
+SRX05,465,PFunkSD mb
+SRX05,466,Slopey SD
+SRX05,467,Gan SD mb
+SRX05,468,GoGo SD mb
+SRX05,469,MellowSD mb
+SRX05,470,Metal SD mb
+SRX05,471,Old SD1 mb
+SRX05,472,Old SD2 mb
+SRX05,473,Old SD3 mb
+SRX05,474,Old SD4 mb
+SRX05,475,Old SD5 mb
+SRX05,476,Attack SD1
+SRX05,477,Retro SD1
+SRX05,478,Retro SD2 mb
+SRX05,479,Retro SD3
+SRX05,480,Retro SD4
+SRX05,481,Retro SD5
+SRX05,482,Retro SD6
+SRX05,483,Hybrid SD mb
+SRX05,484,DeeBee SD
+SRX05,485,Old SD6 mb
+SRX05,486,Layer SD1 mb
+SRX05,487,Layer SD2 mb
+SRX05,488,Filter SD1
+SRX05,489,Filter SD2
+SRX05,490,Attack SD2
+SRX05,491,Attack SD3
+SRX05,492,Attack SD4
+SRX05,493,Lo-Tek SD
+SRX05,494,Chicken SD
+SRX05,495,Filter SD3
+SRX05,496,Filter SD4
+SRX05,497,Retro SD7
+SRX05,498,Retro SD8
+SRX05,499,Ultra SD 1
+SRX05,500,Ultra SD 2
+SRX05,501,Funky SD
+SRX05,502,Layer SD3
+SRX05,503,Layer SD4 mb
+SRX05,504,Alley SD2
+SRX05,505,Alley SD2 mb
+SRX05,506,Fella SD1 mb
+SRX05,507,Fella SD2
+SRX05,508,Fella SD2 mb
+SRX05,509,Rebo SD1
+SRX05,510,Rebo SD1 mb
+SRX05,511,Rebo SD2
+SRX05,512,Swush SD mb
+SRX05,513,Heat SD mb
+SRX05,514,Layer SD5 mb
+SRX05,515,Cool SD
+SRX05,516,GoGo SD
+SRX05,517,Soul SD mb
+SRX05,518,Layer SD6
+SRX05,519,Funk SD1
+SRX05,520,Funk SD2
+SRX05,521,Dinky SD4 mb
+SRX05,522,Layer SD7 mb
+SRX05,523,Layer SD8 mb
+SRX05,524,Layer SD9 mb
+SRX05,525,Vynil SD mb
+SRX05,526,FilterSD5 mb
+SRX05,527,Junk SD mb
+SRX05,528,707 Dry SD1
+SRX05,529,707 Dry SD2
+SRX05,530,808 Dry SD1
+SRX05,531,808 Dry SD2
+SRX05,532,808 Dry SD3
+SRX05,533,909 Dry SD1
+SRX05,534,909 Dry SD2
+SRX05,535,909 Dry SD3
+SRX05,536,909 Dry SD4
+SRX05,537,909 Dry SD5
+SRX05,538,909 SD&CLP
+SRX05,539,106 SD1
+SRX05,540,106 SD2
+SRX05,541,Clappy SD
+SRX05,542,Cranky SD
+SRX05,543,Grim SD
+SRX05,544,Sparkle SD
+SRX05,545,SparkleSD mb
+SRX05,546,Hush SD mb
+SRX05,547,R&B Crs Stk1
+SRX05,548,R&B Crs Stk2
+SRX05,549,Lo-Bit CStk
+SRX05,550,707 Dry RSht
+SRX05,551,808 Dry RSht
+SRX05,552,909 Dry RSht
+SRX05,553,Basis Rim
+SRX05,554,Basis Rim mb
+SRX05,555,Deviant RM1
+SRX05,556,Devi RM1mb
+SRX05,557,Deviant RM2
+SRX05,558,Deviant RM3
+SRX05,559,Devi RM3mb
+SRX05,560,Hop RimShot1
+SRX05,561,Hop RimShot2
+SRX05,562,Hop RimShot3
+SRX05,563,Old HTom A1
+SRX05,564,Old HTom A2
+SRX05,565,Old HTom A3
+SRX05,566,Old LTom A1
+SRX05,567,Old LTom A2
+SRX05,568,Old HTom B1
+SRX05,569,Old HTom B2
+SRX05,570,Old HTom B3
+SRX05,571,Old LTom B1
+SRX05,572,Old LTom B2
+SRX05,573,Retro Tom1
+SRX05,574,Retro Tom2
+SRX05,575,Sim5 Tom1S
+SRX05,576,Sim5 Tom1F
+SRX05,577,Sim5 Tom2S
+SRX05,578,Sim5 Tom2F
+SRX05,579,Sim5 Tom3S
+SRX05,580,Sim5 Tom3F
+SRX05,581,Sim5 Tom4S
+SRX05,582,Sim5 Tom4F
+SRX05,583,707 Dry HTom
+SRX05,584,707 Dry MTom
+SRX05,585,707 Dry LTom
+SRX05,586,808 Dry HTom
+SRX05,587,808 Dry MTom
+SRX05,588,808 Dry LTom
+SRX05,589,909 Dry HTom
+SRX05,590,909 Dry MTom
+SRX05,591,909 Dry LTom
+SRX05,592,Lo-Tek HH1
+SRX05,593,Lo-Tek HH2
+SRX05,594,Lo-Tek HH3
+SRX05,595,Lo-Tek HH4
+SRX05,596,Lo-Bit CHH
+SRX05,597,Dry CHH 1
+SRX05,598,Dry CHH 2
+SRX05,599,Dry CHH 3
+SRX05,600,Comp CHH 1
+SRX05,601,Comp CHH 2
+SRX05,602,Comp CHH 3
+SRX05,603,Lo-Fi CHH 1
+SRX05,604,Lo-Fi CHH 2
+SRX05,605,Lo-Fi CHH 3
+SRX05,606,Timba CHH
+SRX05,607,Chill CHH
+SRX05,608,Mosaic CHH 1
+SRX05,609,Mosaic CHH 2
+SRX05,610,Mosaic CHH 3
+SRX05,611,UltrafunkCH1
+SRX05,612,UltrafunkCH2
+SRX05,613,Miami CHH
+SRX05,614,Lulu CHH
+SRX05,615,707 Dry CHH
+SRX05,616,808 Dry CHH
+SRX05,617,808 Cl&OpHH
+SRX05,618,909 Dry CHH1
+SRX05,619,909 Dry CHH2
+SRX05,620,909 Dry CHH3
+SRX05,621,Miami OHH
+SRX05,622,Time OHH
+SRX05,623,UltrafunkOHH
+SRX05,624,Jiggle OHH
+SRX05,625,Lo-Bit OHH
+SRX05,626,Dry OHH
+SRX05,627,Comp OHH
+SRX05,628,Lo-Fi OHH
+SRX05,629,707 Dry OHH
+SRX05,630,808 Dry OHH1
+SRX05,631,808 Dry OHH2
+SRX05,632,808 Dry OHH3
+SRX05,633,909 Dry OHH1
+SRX05,634,909 Dry OHH2
+SRX05,635,Single HClp1
+SRX05,636,Single HClp2
+SRX05,637,Single HClp3
+SRX05,638,Real Clap L
+SRX05,639,Real Clap R
+SRX05,640,Lofi Clap1mb
+SRX05,641,Lofi Clap2mb
+SRX05,642,Lofi Clap3mb
+SRX05,643,Buck Clap
+SRX05,644,Head Knd Clp
+SRX05,645,Royal Clap
+SRX05,646,Clap Tail 2
+SRX05,647,GospelClap L
+SRX05,648,GospelClap R
+SRX05,649,707 Dry Clap
+SRX05,650,808 Dry Clap
+SRX05,651,909 Dry Clap
+SRX05,652,Pop Crash1
+SRX05,653,Pop Crash2
+SRX05,654,Pop SprshCym
+SRX05,655,Pop ChinaCym
+SRX05,656,Pop Cym Roll
+SRX05,657,707 Dry CR
+SRX05,658,909 Dry CR 1
+SRX05,659,909 Dry CR 2
+SRX05,660,909 Dry CR 3
+SRX05,661,PopRideCym 1
+SRX05,662,PopRideCym 2
+SRX05,663,PopRideCym 3
+SRX05,664,PopRideCym 4
+SRX05,665,707 Dry RD
+SRX05,666,808 Dry Cym1
+SRX05,667,808 Dry Cym2
+SRX05,668,808 Dry Cym3
+SRX05,669,808 Dry Cym4
+SRX05,670,909 Dry RD1
+SRX05,671,909 Dry RD2
+SRX05,672,909 Dry RD3
+SRX05,673,MG Nz Cym
+SRX05,674,US Nz Cym
+SRX05,675,WindChime Up
+SRX05,676,WindChime Dn
+SRX05,677,Cwbl Lo
+SRX05,678,Cwbl Hi
+SRX05,679,Cwbl Mute
+SRX05,680,707 Dry Cwbl
+SRX05,681,808 Dry Cwbl
+SRX05,682,808 Dry Clvs
+SRX05,683,Clvs Hi
+SRX05,684,Clvs Lo
+SRX05,685,HiBongo Opn
+SRX05,686,HiBongo Mfld
+SRX05,687,HiBongo 2
+SRX05,688,HiBongo Slp1
+SRX05,689,HiBongo Slp2
+SRX05,690,HiBongo Mute
+SRX05,691,LoBongo Opn
+SRX05,692,LoBongo Slap
+SRX05,693,808 Dry HCng
+SRX05,694,808 Dry MCng
+SRX05,695,808 Dry LCng
+SRX05,696,LTBit CgH L
+SRX05,697,LTBit CgH R
+SRX05,698,LTBit CgL L
+SRX05,699,LTBit CgL R
+SRX05,700,HiConga Opn
+SRX05,701,HiConga Slap
+SRX05,702,HiConga Cls
+SRX05,703,LoConga Opn
+SRX05,704,Tmbl Hi p
+SRX05,705,Tmbl Hi f
+SRX05,706,Tmbl Hi Rim
+SRX05,707,Tmbl Hi Flm
+SRX05,708,Tmbl Hi Roll
+SRX05,709,Tmbl HiPaila
+SRX05,710,Tmbl Lo p
+SRX05,711,Tmbl Lo Flm
+SRX05,712,Latin Hit
+SRX05,713,Chekele 1
+SRX05,714,Chekele 2
+SRX05,715,Real Shaker1
+SRX05,716,Real Shaker2
+SRX05,717,Real Shaker3
+SRX05,718,Real Cabasa3
+SRX05,719,808 Dry Mrcs
+SRX05,720,Short Guiro2
+SRX05,721,Long Guiro2
+SRX05,722,Long Tamb
+SRX05,723,707 Dry Tamb
+SRX05,724,Long Triangl
+SRX05,725,Short FgSnap
+SRX05,726,St. FgSnap L
+SRX05,727,St. FgSnap R
+SRX05,728,Bobs Slide
+SRX05,729,Cave Hit L
+SRX05,730,Cave Hit R
+SRX05,731,Warp Hit 6
+SRX05,732,Thru Hit 1
+SRX05,733,Thru Hit 2
+SRX05,734,Mull Hit
+SRX05,735,Warp Hit 7
+SRX05,736,Warp Hit 8
+SRX05,737,Electronica
+SRX05,738,Ripper L
+SRX05,739,Ripper R
+SRX05,740,Warp Hit 9
+SRX05,741,Tickle Hit
+SRX05,742,PercolateHit
+SRX05,743,Tramp Hit L
+SRX05,744,Tramp Hit R
+SRX05,745,LoFi Moan
+SRX05,746,Sonar Hit
+SRX05,747,Electric Saw
+SRX05,748,Cartn Fall L
+SRX05,749,Cartn Fall R
+SRX05,750,Cartn Boing1
+SRX05,751,Cartn Boing2
+SRX05,752,LoTek Bit L
+SRX05,753,LoTek Bit R
+SRX05,754,LoFi Hole
+SRX05,755,LoFi Coo
+SRX05,756,LoFi Bit 1
+SRX05,757,LoFi Bit 2
+SRX05,758,Nz Pass L
+SRX05,759,Nz Pass R
+SRX05,760,Thumpkin L
+SRX05,761,Thumpkin R
+SRX05,762,Dist Slide L
+SRX05,763,Dist Slide R
+SRX05,764,Howl Sync
+SRX05,765,Slipper Hit
+SRX05,766,Spoon Hit
+SRX05,767,Pod Hit
+SRX05,768,LoFi Shaker
+SRX05,769,Box Hit 1
+SRX05,770,Hard Shaker
+SRX05,771,LoFi Pod Hit
+SRX05,772,Press Hit
+SRX05,773,Swish Hit
+SRX05,774,Rumble Hit
+SRX05,775,Cym Slide
+SRX05,776,Knock Hit 1
+SRX05,777,Knock Hit 2
+SRX05,778,Swish Rope 1
+SRX05,779,Swish Rope 2
+SRX05,780,Swish Rope 3
+SRX05,781,Swish Rope 4
+SRX05,782,Metal Atk Lo
+SRX05,783,Metal Atk Hi
+SRX05,784,Fl Press Hit
+SRX05,785,Dump Hit
+SRX05,786,Vice Hit 1
+SRX05,787,Vice Hit 2
+SRX05,788,Vice Hit 3
+SRX05,789,Box Hit 2
+SRX05,790,US Metal 1
+SRX05,791,US Metal 2
+SRX05,792,MG NoiseHit
+SRX05,793,SH2 S Zap 1
+SRX05,794,SH2 S Zap 2
+SRX05,795,SH2 S Zap 3
+SRX05,796,SH2 S Zap 4
+SRX05,797,SH2 S Zap 5
+SRX05,798,MG S Zap 1
+SRX05,799,MG S Zap 2
+SRX05,800,MG S Zap 3
+SRX05,801,SH2 U Zap 1
+SRX05,802,SH2 U Zap 2
+SRX05,803,SH2 U Zap 3
+SRX05,804,SH2 U Zap 4
+SRX05,805,SH2 U Zap 5
+SRX05,806,SH2 U Zap 6
+SRX05,807,Ring FX 1
+SRX05,808,Ring FX 2
+SRX05,809,OSC Perc 1
+SRX05,810,OSC Perc 2
+SRX05,811,US SweepD L1
+SRX05,812,US SweepD S1
+SRX05,813,US SweepD L2
+SRX05,814,US SweepD S2
+SRX05,815,US SweepD L3
+SRX05,816,MG SweepDn
+SRX05,817,US SweepU L1
+SRX05,818,US SweepU L2
+SRX06,1,Strings L pA
+SRX06,2,Strings R pA
+SRX06,3,Strings L pB
+SRX06,4,Strings R pB
+SRX06,5,Strings L pC
+SRX06,6,Strings R pC
+SRX06,7,Strs L pA Lp
+SRX06,8,Strs R pA Lp
+SRX06,9,Strs L pB Lp
+SRX06,10,Strs R pB Lp
+SRX06,11,Strs L pC Lp
+SRX06,12,Strs R pC Lp
+SRX06,13,Strings L fA
+SRX06,14,Strings R fA
+SRX06,15,Strings L fB
+SRX06,16,Strings R fB
+SRX06,17,Strings L fC
+SRX06,18,Strings R fC
+SRX06,19,Strs L fA Lp
+SRX06,20,Strs R fA Lp
+SRX06,21,Strs L fB Lp
+SRX06,22,Strs R fB Lp
+SRX06,23,Strs L fC Lp
+SRX06,24,Strs R fC Lp
+SRX06,25,Multi STR A
+SRX06,26,Multi STR B
+SRX06,27,Multi STR C
+SRX06,28,Multi STR Lp
+SRX06,29,Vl Sect A
+SRX06,30,Vl Sect B
+SRX06,31,Vl Sect C
+SRX06,32,Vl Sect Lp
+SRX06,33,Va Sect A
+SRX06,34,Va Sect B
+SRX06,35,Va Sect C
+SRX06,36,Va Sect Lp
+SRX06,37,Vc Sect A
+SRX06,38,Vc Sect B
+SRX06,39,Vc Sect C
+SRX06,40,Vc Sect Lp
+SRX06,41,Cb Sect
+SRX06,42,Cb Sect Lp
+SRX06,43,Vl Solo A
+SRX06,44,Vl Solo B
+SRX06,45,Vl Solo C
+SRX06,46,Va Solo A
+SRX06,47,Va Solo B
+SRX06,48,Va Solo C
+SRX06,49,Vc Solo A
+SRX06,50,Vc Solo B
+SRX06,51,Vc Solo C
+SRX06,52,Cb Solo
+SRX06,53,Violin&Cello
+SRX06,54,Multi Solo 1
+SRX06,55,Multi Solo 2
+SRX06,56,VlSolo Vib A
+SRX06,57,VlSolo Vib B
+SRX06,58,VlSolo Vib C
+SRX06,59,VcSolo Vib A
+SRX06,60,VcSolo Vib B
+SRX06,61,VcSolo Vib C
+SRX06,62,Vls Spicc A
+SRX06,63,Vls Spicc B
+SRX06,64,Vls Spicc C
+SRX06,65,Vas Spicc A
+SRX06,66,Vas Spicc B
+SRX06,67,Vas Spicc C
+SRX06,68,Vcs Spicc A
+SRX06,69,Vcs Spicc B
+SRX06,70,Vcs Spicc C
+SRX06,71,Cbs Spicc A
+SRX06,72,Cbs Spicc B
+SRX06,73,Cbs Spicc C
+SRX06,74,Multi Spicc
+SRX06,75,VlSolo Spicc
+SRX06,76,VlSlSpicc2 A
+SRX06,77,VlSlSpicc2 B
+SRX06,78,VlSlSpicc2 C
+SRX06,79,VcSolo Spicc
+SRX06,80,MultSl Spicc
+SRX06,81,Pizzicato 1
+SRX06,82,Pizzicato 2
+SRX06,83,STR Attack
+SRX06,84,StrAttack 2A
+SRX06,85,StrAttack 2B
+SRX06,86,StrAttack 2C
+SRX06,87,OrchUnisonLA
+SRX06,88,OrchUnisonRA
+SRX06,89,OrchUnisonLB
+SRX06,90,OrchUnisonRB
+SRX06,91,OrchUnisonLC
+SRX06,92,OrchUnisonRC
+SRX06,93,Full Orch.
+SRX06,94,Full Orch Lp
+SRX06,95,JV Strings L
+SRX06,96,JV Strings R
+SRX06,97,JV Strings A
+SRX06,98,JP Strings1A
+SRX06,99,JP Strings2A
+SRX06,100,Soft Pad A
+SRX06,101,Piccolo
+SRX06,102,Piccolo 2 A
+SRX06,103,Piccolo 2 B
+SRX06,104,Piccolo 2 C
+SRX06,105,Flute 1A
+SRX06,106,FluteVib2 A
+SRX06,107,FluteVib2 B
+SRX06,108,FluteVib2 C
+SRX06,109,Celtic Flt A
+SRX06,110,Celtic Flt B
+SRX06,111,Celtic Flt C
+SRX06,112,ORG_Flute A
+SRX06,113,ORG_Flute B
+SRX06,114,ORG_Flute C
+SRX06,115,Clarinet
+SRX06,116,Clarinet 2 A
+SRX06,117,Clarinet 2 B
+SRX06,118,Clarinet 2 C
+SRX06,119,Multi Cla
+SRX06,120,Bs Clarinet
+SRX06,121,Oboe 1
+SRX06,122,Oboe 1A
+SRX06,123,Oboe 1B
+SRX06,124,Oboe 1C
+SRX06,125,Oboe 2A
+SRX06,126,Oboe 2B
+SRX06,127,Oboe 2C
+SRX06,128,Oboe 3 A
+SRX06,129,Oboe 3 B
+SRX06,130,Oboe 3 C
+SRX06,131,Eng.Horn A
+SRX06,132,Eng.Horn B
+SRX06,133,Eng.Horn C
+SRX06,134,Eng.Horn 2 A
+SRX06,135,Eng.Horn 2 B
+SRX06,136,Eng.Horn 2 C
+SRX06,137,Bassoon
+SRX06,138,Bassoon 1
+SRX06,139,Bassoon 2 A
+SRX06,140,Bassoon 2 B
+SRX06,141,Bassoon 2 C
+SRX06,142,Bassoon&Oboe
+SRX06,143,S_Recorder A
+SRX06,144,S_Recorder B
+SRX06,145,S_Recorder C
+SRX06,146,T_Recorder A
+SRX06,147,T_Recorder B
+SRX06,148,T_Recorder C
+SRX06,149,Tnr.Recorder
+SRX06,150,TinWhistle A
+SRX06,151,TinWhistle B
+SRX06,152,TinWhistle C
+SRX06,153,TinWhisOrn A
+SRX06,154,TinWhisOrn B
+SRX06,155,TinWhisOrn C
+SRX06,156,Whistle 1
+SRX06,157,Multi Sax 1
+SRX06,158,Multi Sax 2
+SRX06,159,BRS Ensemble
+SRX06,160,BRS Ens Lp
+SRX06,161,Brass ff
+SRX06,162,ff Brass Lp
+SRX06,163,Trumpet 1A
+SRX06,164,Trumpet 2
+SRX06,165,Trumpet 3 A
+SRX06,166,Trumpet 3 B
+SRX06,167,Trumpet 3 C
+SRX06,168,Cornet
+SRX06,169,Tpt Sect. A
+SRX06,170,Flugelhorn
+SRX06,171,HarmonMute2A
+SRX06,172,HarmonMute2B
+SRX06,173,HarmonMute2C
+SRX06,174,Solo Tb A
+SRX06,175,Solo Tb B
+SRX06,176,Solo Tb C
+SRX06,177,Trombone 1
+SRX06,178,Trombone 2 A
+SRX06,179,Trombone 2 B
+SRX06,180,Trombone 2 C
+SRX06,181,Trombone mfA
+SRX06,182,Trombone mfB
+SRX06,183,Trombone mfC
+SRX06,184,Trombone f A
+SRX06,185,Trombone f B
+SRX06,186,Trombone f C
+SRX06,187,Bass Tb
+SRX06,188,Tb Sect
+SRX06,189,Tb Sect Lp
+SRX06,190,Multi Reed
+SRX06,191,Uill.Pipe1 A
+SRX06,192,Uill.Pipe1 B
+SRX06,193,Uill.Pipe1 C
+SRX06,194,Uill.Pipe2 A
+SRX06,195,Uill.Pipe2 B
+SRX06,196,Uill.Pipe2 C
+SRX06,197,U.Pipe Orn A
+SRX06,198,U.Pipe Orn B
+SRX06,199,U.Pipe Orn C
+SRX06,200,F.Horn Solo
+SRX06,201,F.HornSolo2A
+SRX06,202,F.HornSolo2B
+SRX06,203,F.HornSolo2C
+SRX06,204,F.Horn Sect1
+SRX06,205,F.Horn Sect2
+SRX06,206,F.Hrn Sc1 Lp
+SRX06,207,F.Hrn Sc2 Lp
+SRX06,208,French 1A
+SRX06,209,F.Horns2 pA
+SRX06,210,F.Horns2 pB
+SRX06,211,F.Horns2 pC
+SRX06,212,F.Horns2 pA+
+SRX06,213,F.Horns2 pB+
+SRX06,214,F.Horns2 pC+
+SRX06,215,F.Horns2 fA
+SRX06,216,F.Horns2 fB
+SRX06,217,F.Horns2 fC
+SRX06,218,F.Horns2 fA+
+SRX06,219,F.Horns2 fB+
+SRX06,220,F.Horns2 fC+
+SRX06,221,F.Horn Mute
+SRX06,222,F.Hrn MuteLp
+SRX06,223,Tuba
+SRX06,224,Tuba 1
+SRX06,225,Harp A
+SRX06,226,Harp B
+SRX06,227,Harp C
+SRX06,228,Harp 2 A
+SRX06,229,Harp 2 B
+SRX06,230,Harp 2 C
+SRX06,231,ClarsahHarpA
+SRX06,232,ClarsahHarpB
+SRX06,233,ClarsahHarpC
+SRX06,234,Harp Maj Up
+SRX06,235,Harp Maj Dn
+SRX06,236,Harp m7 Up
+SRX06,237,Harp m7 Dwn
+SRX06,238,Harp 9th Up
+SRX06,239,Harp 9th Dwn
+SRX06,240,Harp +7 Up
+SRX06,241,Harp +7 Dwn
+SRX06,242,Harp b9 Up
+SRX06,243,Harp b9 Dwn
+SRX06,244,Harp m7 UpLp
+SRX06,245,Harp m7 DnLp
+SRX06,246,Harp 9thUpLp
+SRX06,247,Harp 9thDnLp
+SRX06,248,Harp +7 UpLp
+SRX06,249,Harp +7 DnLp
+SRX06,250,Harp b9 UpLp
+SRX06,251,Harp b9 DnLp
+SRX06,252,EuroPiano pA
+SRX06,253,EuroPiano pB
+SRX06,254,EuroPiano pC
+SRX06,255,EuroPiano fA
+SRX06,256,EuroPiano fB
+SRX06,257,EuroPiano fC
+SRX06,258,Ac Piano1 A
+SRX06,259,Piano Thump
+SRX06,260,Piano Up TH
+SRX06,261,Harpsichord
+SRX06,262,HPS_Front A
+SRX06,263,HPS_Front B
+SRX06,264,HPS_Front C
+SRX06,265,HPS_Back A
+SRX06,266,HPS_Back B
+SRX06,267,HPS_Back C
+SRX06,268,HPS_Lute A
+SRX06,269,HPS_Lute B
+SRX06,270,HPS_Lute C
+SRX06,271,HPS_Click
+SRX06,272,Celesta A
+SRX06,273,Celesta B
+SRX06,274,Celesta C
+SRX06,275,MusicBox 2 A
+SRX06,276,MusicBox 2 B
+SRX06,277,MusicBox 2 C
+SRX06,278,Bass Marimba
+SRX06,279,Xylophone
+SRX06,280,Glockenspiel
+SRX06,281,Glocken 2 A
+SRX06,282,Glocken 2 B
+SRX06,283,Glocken 2 C
+SRX06,284,TubularBells
+SRX06,285,Tubular 2 A
+SRX06,286,Tubular 2 B
+SRX06,287,Tubular 2 C
+SRX06,288,Wind Chime 2
+SRX06,289,Wind Chime 3
+SRX06,290,Church Bells
+SRX06,291,ChurchBell 2
+SRX06,292,JingleBell 2
+SRX06,293,Sleigh Bell
+SRX06,294,Bousouki A
+SRX06,295,Bousouki B
+SRX06,296,Bousouki C
+SRX06,297,OrchPrc Hit
+SRX06,298,OrchestraHit
+SRX06,299,Orch Hit f
+SRX06,300,Orch Hit Maj
+SRX06,301,Orch Hit Min
+SRX06,302,Orch Hit Dim
+SRX06,303,OrchHit2 Maj
+SRX06,304,OrchHit2 Min
+SRX06,305,OrchHit2 Dim
+SRX06,306,Gliss Maj
+SRX06,307,Gliss Min
+SRX06,308,Gliss Maj Lp
+SRX06,309,Gliss Min Lp
+SRX06,310,Tremolo p
+SRX06,311,Tremolo f
+SRX06,312,Tremolo sfz
+SRX06,313,Tremolo p Lp
+SRX06,314,Tremolo f Lp
+SRX06,315,Tremolo sfLp
+SRX06,316,Cluster
+SRX06,317,Cluster Lp
+SRX06,318,Pentatonic
+SRX06,319,PentatonicLp
+SRX06,320,Staccato p
+SRX06,321,Staccato f
+SRX06,322,Brass Stacc
+SRX06,323,Brass Fall
+SRX06,324,Tps Fall
+SRX06,325,F.Horn Rip
+SRX06,326,Choir A
+SRX06,327,Choir B
+SRX06,328,Choir C
+SRX06,329,F.Chor Aah A
+SRX06,330,F.Chor Aah B
+SRX06,331,F.Chor Aah C
+SRX06,332,F.Chor Mmh A
+SRX06,333,F.Chor Mmh B
+SRX06,334,F.Chor Mmh C
+SRX06,335,LargeChrL pA
+SRX06,336,LargeChrR pA
+SRX06,337,LargeChrL pB
+SRX06,338,LargeChrR pB
+SRX06,339,LargeChrL pC
+SRX06,340,LargeChrR pC
+SRX06,341,LargeChrL fA
+SRX06,342,LargeChrR fA
+SRX06,343,LargeChrL fB
+SRX06,344,LargeChrR fB
+SRX06,345,LargeChrL fC
+SRX06,346,LargeChrR fC
+SRX06,347,Boys Choir A
+SRX06,348,Boys Choir B
+SRX06,349,Boys Choir C
+SRX06,350,Gregorian LA
+SRX06,351,Gregorian RA
+SRX06,352,Gregorian LB
+SRX06,353,Gregorian RB
+SRX06,354,Gregorian LC
+SRX06,355,Gregorian RC
+SRX06,356,Sop Chr Mono
+SRX06,357,SopranoChr L
+SRX06,358,SopranoChr R
+SRX06,359,Tenor Solo
+SRX06,360,Jazz Doo L A
+SRX06,361,Jazz Doo R A
+SRX06,362,Jazz Doo L B
+SRX06,363,Jazz Doo R B
+SRX06,364,Jazz Doo L C
+SRX06,365,Jazz Doo R C
+SRX06,366,Jazz Doot LA
+SRX06,367,Jazz Doot RA
+SRX06,368,Jazz Doot LB
+SRX06,369,Jazz Doot RB
+SRX06,370,Jazz Doot LC
+SRX06,371,Jazz Doot RC
+SRX06,372,Jazz Dat L A
+SRX06,373,Jazz Dat R A
+SRX06,374,Jazz Dat L B
+SRX06,375,Jazz Dat R B
+SRX06,376,Jazz Dat L C
+SRX06,377,Jazz Dat R C
+SRX06,378,Jazz Bap L A
+SRX06,379,Jazz Bap R A
+SRX06,380,Jazz Bap L B
+SRX06,381,Jazz Bap R B
+SRX06,382,Jazz Bap L C
+SRX06,383,Jazz Bap R C
+SRX06,384,Dow fall L A
+SRX06,385,Dow fall R A
+SRX06,386,Dow fall L B
+SRX06,387,Dow fall R B
+SRX06,388,Dow fall L C
+SRX06,389,Dow fall R C
+SRX06,390,Bass Thum A
+SRX06,391,Bass Thum B
+SRX06,392,Bass Thum C
+SRX06,393,Vocal Menu L
+SRX06,394,Vocal Menu R
+SRX06,395,BoysAleluiaL
+SRX06,396,BoysAleluiaR
+SRX06,397,Boys Amen1 L
+SRX06,398,Boys Amen1 R
+SRX06,399,Boys Amen2 L
+SRX06,400,Boys Amen2 R
+SRX06,401,Amen L
+SRX06,402,Amen R
+SRX06,403,Aleluia L
+SRX06,404,Aleluia R
+SRX06,405,Breath Wind
+SRX06,406,Breath Atack
+SRX06,407,Breath Whisl
+SRX06,408,Breath Hrmon
+SRX06,409,Whistle Nz
+SRX06,410,Flute Breath
+SRX06,411,Vocal Breath
+SRX06,412,Timpani
+SRX06,413,Timpani p
+SRX06,414,Timpani f
+SRX06,415,Timpani 2 p
+SRX06,416,Timpani 2 f
+SRX06,417,Timpani Roll
+SRX06,418,Timp Roll p
+SRX06,419,Timp Roll f
+SRX06,420,Concert SNR1
+SRX06,421,Concert SNR2
+SRX06,422,Concert SNR3
+SRX06,423,Orch SNR
+SRX06,424,OrchSNR Roll
+SRX06,425,SNR Roll
+SRX06,426,SNR Set
+SRX06,427,Concert BD 1
+SRX06,428,Concert BD 2
+SRX06,429,Concert BD 3
+SRX06,430,Orch BD
+SRX06,431,BD Roll
+SRX06,432,Tam Tam
+SRX06,433,Crash Cymbal
+SRX06,434,Crash Cym Lp
+SRX06,435,Cymbal Hit
+SRX06,436,Finger Cym 2
+SRX06,437,MalletCymbal
+SRX06,438,CymbalScrape
+SRX06,439,Gong
+SRX06,440,Grongkas
+SRX06,441,Castanets 1
+SRX06,442,Castanets 2
+SRX06,443,Tambourine
+SRX06,444,Triangle
+SRX06,445,Slapstick
+SRX06,446,Ratchet
+SRX06,447,TunedBlock A
+SRX06,448,TunedBlock B
+SRX06,449,TunedBlock C
+SRX06,450,Bodhran MENU
+SRX06,451,Bodhran 1
+SRX06,452,Bodhran 2
+SRX06,453,Bodhran 3
+SRX06,454,Bodhran 4
+SRX06,455,Bodhran 5
+SRX06,456,Bodhran 6
+SRX06,457,Bodhran 7
+SRX06,458,Perc Hit 1
+SRX06,459,Perc Hit 2
+SRX06,460,Perc Set 1
+SRX06,461,Perc Set 2
+SRX06,462,Perc Set 3
+SRX06,463,REV Hrp m7Up
+SRX06,464,REV Hrp m7Dn
+SRX06,465,REV Hrp9thUp
+SRX06,466,REV Hrp9thDn
+SRX06,467,REV Hrp +7Up
+SRX06,468,REV Hrp +7Dn
+SRX06,469,REV Hrp b9Up
+SRX06,470,REV Hrp b9Dn
+SRX06,471,REV Hit f
+SRX06,472,REV Hit Maj
+SRX06,473,REV Hit Min
+SRX06,474,REV Hit Dim
+SRX06,475,REV Hit2 Maj
+SRX06,476,REV Hit2 Min
+SRX06,477,REV Hit2 Dim
+SRX06,478,REV Stacc p
+SRX06,479,REV Stacc f
+SRX06,480,REV Bell
+SRX06,481,REV Cym Hit
+SRX06,482,REV PercHit1
+SRX06,483,REV PercHit2
+SRX06,484,REV BD 1
+SRX06,485,REV BD 2
+SRX06,486,REV BD 3
+SRX06,487,REV BD Roll
+SRX06,488,REV SNR 1
+SRX06,489,REV SNR 2
+SRX06,490,REV SNR 3
+SRX06,491,REV Tam Tam
+SRX06,492,REV Crash
+SRX06,493,REV Gong
+SRX06,494,REV Tamb
+SRX06,495,REV Timp 1
+SRX06,496,REV Timp 2
+SRX06,497,REV Casta 1
+SRX06,498,REV Casta 2
+SRX06,499,REV S.Stick
+SRX06,500,REV Sleigh
+SRX06,501,REV VoMenu L
+SRX06,502,REV VoMenu R
+SRX06,503,REV ByAleluL
+SRX06,504,REV ByAleluR
+SRX06,505,REV ByAmen1L
+SRX06,506,REV ByAmen1R
+SRX06,507,REV ByAmen2L
+SRX06,508,REV ByAmen2R
+SRX06,509,REV Amen L
+SRX06,510,REV Amen R
+SRX06,511,REV AleluiaL
+SRX06,512,REV AleluiaR
+SRX07,1,StGrand L pA
+SRX07,2,StGrand R pA
+SRX07,3,StGrand L pB
+SRX07,4,StGrand R pB
+SRX07,5,StGrand L pC
+SRX07,6,StGrand R pC
+SRX07,7,StGrand L fA
+SRX07,8,StGrand R fA
+SRX07,9,StGrand L fB
+SRX07,10,StGrand R fB
+SRX07,11,StGrand L fC
+SRX07,12,StGrand R fC
+SRX07,13,SApiano 3
+SRX07,14,E.Grand BdyA
+SRX07,15,E.Grand BdyB
+SRX07,16,E.Grand BdyC
+SRX07,17,E.Grand 1A
+SRX07,18,E.Grand 1B
+SRX07,19,E.Grand 1C
+SRX07,20,Suitcase p A
+SRX07,21,Suitcase p B
+SRX07,22,Suitcase p C
+SRX07,23,Suitcase mfA
+SRX07,24,Suitcase mfB
+SRX07,25,Suitcase mfC
+SRX07,26,Suitcase f A
+SRX07,27,Suitcase f B
+SRX07,28,Suitcase f C
+SRX07,29,Stage p A
+SRX07,30,Stage p B
+SRX07,31,Stage p C
+SRX07,32,Stage f A
+SRX07,33,Stage f B
+SRX07,34,Stage f C
+SRX07,35,70'EP 5 A p
+SRX07,36,70'EP 5 B p
+SRX07,37,70'EP 5 C p
+SRX07,38,70'EP 5 A f
+SRX07,39,70'EP 5 B f
+SRX07,40,70'EP 5 C f
+SRX07,41,70'EP Bs p A
+SRX07,42,70'EP Bs p B
+SRX07,43,70'EP Bs p C
+SRX07,44,70'EP Bs f A
+SRX07,45,70'EP Bs f B
+SRX07,46,70'EP Bs f C
+SRX07,47,Wurly 1 p A
+SRX07,48,Wurly 1 p B
+SRX07,49,Wurly 1 p C
+SRX07,50,Wurly 1 mf A
+SRX07,51,Wurly 1 mf B
+SRX07,52,Wurly 1 mf C
+SRX07,53,Wurly 1 f A
+SRX07,54,Wurly 1 f B
+SRX07,55,Wurly 1 f C
+SRX07,56,Wurly 2 p A
+SRX07,57,Wurly 2 p B
+SRX07,58,Wurly 2 p C
+SRX07,59,Wurly 2 mf A
+SRX07,60,Wurly 2 mf B
+SRX07,61,Wurly 2 mf C
+SRX07,62,Wurly 2 f A
+SRX07,63,Wurly 2 f B
+SRX07,64,Wurly 2 f C
+SRX07,65,Pnet p A
+SRX07,66,Pnet p B
+SRX07,67,Pnet p C
+SRX07,68,Pnet f A
+SRX07,69,Pnet f B
+SRX07,70,Pnet f C
+SRX07,71,R.Chord A
+SRX07,72,R.Chord B
+SRX07,73,R.Chord C
+SRX07,74,'70s Piano A
+SRX07,75,'70s Piano B
+SRX07,76,'70s PianoLp
+SRX07,77,'70s Lute A
+SRX07,78,'70s Lute B
+SRX07,79,'70s Lute Lp
+SRX07,80,Vibraphone A
+SRX07,81,Vibraphone B
+SRX07,82,Vibraphone C
+SRX07,83,Clav Pluck A
+SRX07,84,Clav Pluck B
+SRX07,85,Clav Pluck C
+SRX07,86,Ch.Clav A
+SRX07,87,Ch.Clav B
+SRX07,88,Ch.Clav C
+SRX07,89,Clav 1 A
+SRX07,90,Clav 1 B
+SRX07,91,Clav 1 C
+SRX07,92,Clav 2 A
+SRX07,93,Clav 2 B
+SRX07,94,Clav 2 C
+SRX07,95,Clav 3 p A
+SRX07,96,Clav 3 p B
+SRX07,97,Clav 3 p C
+SRX07,98,Clav 3 f A
+SRX07,99,Clav 3 f B
+SRX07,100,Clav 3 f C
+SRX07,101,Clav 4 p A
+SRX07,102,Clav 4 p B
+SRX07,103,Clav 4 p C
+SRX07,104,Clav 4 mf A
+SRX07,105,Clav 4 mf B
+SRX07,106,Clav 4 mf C
+SRX07,107,Clav 4 f A
+SRX07,108,Clav 4 f B
+SRX07,109,Clav 4 f C
+SRX07,110,Clav 5 p A
+SRX07,111,Clav 5 p B
+SRX07,112,Clav 5 p C
+SRX07,113,Clav 5 f A
+SRX07,114,Clav 5 f B
+SRX07,115,Clav 5 f C
+SRX07,116,Clav 6 p A
+SRX07,117,Clav 6 p B
+SRX07,118,Clav 6 p C
+SRX07,119,Clav 6 f A
+SRX07,120,Clav 6 f B
+SRX07,121,Clav 6 f C
+SRX07,122,Clav 7 A
+SRX07,123,Clav 7 B
+SRX07,124,Clav 7 C
+SRX07,125,Clav Mute 1A
+SRX07,126,Clav Mute 1B
+SRX07,127,Clav Mute 1C
+SRX07,128,Clav Mute 2A
+SRX07,129,Clav Mute 2B
+SRX07,130,Clav Mute 2C
+SRX07,131,Clav Attack
+SRX07,132,B3 1 A
+SRX07,133,B3 1 B
+SRX07,134,B3 1 C
+SRX07,135,B3 2 A
+SRX07,136,B3 2 B
+SRX07,137,B3 2 C
+SRX07,138,B3 2 Ch A
+SRX07,139,B3 2 Ch B
+SRX07,140,B3 2 Ch C
+SRX07,141,B3 2 FL A
+SRX07,142,B3 2 FL B
+SRX07,143,B3 2 FL C
+SRX07,144,B3 3 A
+SRX07,145,B3 3 B
+SRX07,146,B3 3 C
+SRX07,147,B3 3 FL A
+SRX07,148,B3 3 FL B
+SRX07,149,B3 3 FL C
+SRX07,150,B3 4
+SRX07,151,B3 5 A
+SRX07,152,B3 5 B
+SRX07,153,B3 5 C
+SRX07,154,B3 6 A
+SRX07,155,B3 6 B
+SRX07,156,B3 6 C
+SRX07,157,B3 7 A
+SRX07,158,B3 7 B
+SRX07,159,B3 7 C
+SRX07,160,B3 7 FL A
+SRX07,161,B3 7 FL B
+SRX07,162,B3 7 FL C
+SRX07,163,B3 8 A
+SRX07,164,B3 8 B
+SRX07,165,B3 8 C
+SRX07,166,B3 8 Ch A
+SRX07,167,B3 8 Ch B
+SRX07,168,B3 8 Ch C
+SRX07,169,B3 8 FL A
+SRX07,170,B3 8 FL B
+SRX07,171,B3 8 FL C
+SRX07,172,B3 9
+SRX07,173,B3 10 A
+SRX07,174,B3 10 B
+SRX07,175,B3 10 C
+SRX07,176,B3 10 Ch A
+SRX07,177,B3 10 Ch B
+SRX07,178,B3 10 Ch C
+SRX07,179,B3 10 FL A
+SRX07,180,B3 10 FL B
+SRX07,181,B3 10 FL C
+SRX07,182,B3 11
+SRX07,183,B3 12
+SRX07,184,B3 13
+SRX07,185,B3 14 A
+SRX07,186,B3 14 B
+SRX07,187,B3 14 C
+SRX07,188,B3 14 Ch A
+SRX07,189,B3 14 Ch B
+SRX07,190,B3 14 Ch C
+SRX07,191,B3 14 FL A
+SRX07,192,B3 14 FL B
+SRX07,193,B3 14 FL C
+SRX07,194,B3 15 A
+SRX07,195,B3 15 B
+SRX07,196,B3 15 C
+SRX07,197,B3 15 Ch A
+SRX07,198,B3 15 Ch B
+SRX07,199,B3 15 Ch C
+SRX07,200,B3 15 FL A
+SRX07,201,B3 15 FL B
+SRX07,202,B3 15 FL C
+SRX07,203,B3 16
+SRX07,204,B3 17
+SRX07,205,B3 18
+SRX07,206,B3 19 A
+SRX07,207,B3 19 B
+SRX07,208,B3 19 C
+SRX07,209,B3 Perc 1 A
+SRX07,210,B3 Perc 1 B
+SRX07,211,B3 Perc 1 C
+SRX07,212,B3 Perc 2 A
+SRX07,213,B3 Perc 2 B
+SRX07,214,B3 Perc 2 C
+SRX07,215,B3 Perc 3 A
+SRX07,216,B3 Perc 3 B
+SRX07,217,B3 Perc 3 C
+SRX07,218,B3 Perc3FL A
+SRX07,219,B3 Perc3FL B
+SRX07,220,B3 Perc3FL C
+SRX07,221,B3 Harm 1
+SRX07,222,B3 Harm 2 A
+SRX07,223,B3 Harm 2 B
+SRX07,224,B3 Harm 2 C
+SRX07,225,B3 Harm 3 A
+SRX07,226,B3 Harm 3 B
+SRX07,227,B3 Harm 3 C
+SRX07,228,B3 Harm3FL A
+SRX07,229,B3 Harm3FL B
+SRX07,230,B3 Harm3FL C
+SRX07,231,Power B slwA
+SRX07,232,Power B slwB
+SRX07,233,Power B slwC
+SRX07,234,Power B fstA
+SRX07,235,Power B fstB
+SRX07,236,Power B fstC
+SRX07,237,B3 Click
+SRX07,238,VX Organ 1 A
+SRX07,239,VX Organ 1 B
+SRX07,240,VX Organ 1 C
+SRX07,241,VX Organ 2 A
+SRX07,242,VX Organ 2 B
+SRX07,243,VX Organ 2 C
+SRX07,244,VX Organ 3 A
+SRX07,245,VX Organ 3 B
+SRX07,246,VX Organ 3 C
+SRX07,247,VX Organ 4 A
+SRX07,248,VX Organ 4 B
+SRX07,249,VX Organ 4 C
+SRX07,250,VX Harpsi A
+SRX07,251,VX Harpsi B
+SRX07,252,VX Harpsi C
+SRX07,253,VX Org Bs A
+SRX07,254,VX Org Bs B
+SRX07,255,VX Org Bs C
+SRX07,256,Farf Organ 1
+SRX07,257,Farf Organ 2
+SRX07,258,Farf Organ 3
+SRX07,259,Farf Organ 4
+SRX07,260,Farf Organ 5
+SRX07,261,Farf Organ 6
+SRX07,262,Farf Organ 7
+SRX07,263,Farf Organ 8
+SRX07,264,FarfClar16'A
+SRX07,265,FarfClar16'B
+SRX07,266,FarfClar16'C
+SRX07,267,FarfFlut8' A
+SRX07,268,FarfFlut8' B
+SRX07,269,FarfFlut8' C
+SRX07,270,Farf 8'+2'
+SRX07,271,Farf 8'+4'
+SRX07,272,Farf 8'+5th
+SRX07,273,Farf Noise
+SRX07,274,Tron Str A
+SRX07,275,Tron Str B
+SRX07,276,Tron Str C
+SRX07,277,Tron Str2 A
+SRX07,278,Tron Str2 B
+SRX07,279,Tron Str2 C
+SRX07,280,Tron Vlns A
+SRX07,281,Tron Vlns B
+SRX07,282,Tron Vlns C
+SRX07,283,Tron Cello A
+SRX07,284,Tron Cello B
+SRX07,285,Tron Cello C
+SRX07,286,Tron Flute A
+SRX07,287,Tron Flute B
+SRX07,288,Tron Flute C
+SRX07,289,Tron Choir A
+SRX07,290,Tron Choir B
+SRX07,291,Tron Choir C
+SRX07,292,Tron Cho.1 A
+SRX07,293,Tron Cho.1 B
+SRX07,294,Tron Cho.1 C
+SRX07,295,Tron Cho.2 A
+SRX07,296,Tron Cho.2 B
+SRX07,297,Tron Cho.2 C
+SRX07,298,Blow Sax A
+SRX07,299,Blow Sax B
+SRX07,300,Blow Sax C
+SRX07,301,T.Sax hrd A
+SRX07,302,T.Sax hrd B
+SRX07,303,T.Sax hrd C
+SRX07,304,Solo Tpt. A
+SRX07,305,Solo Tpt. B
+SRX07,306,Solo Tpt. C
+SRX07,307,R&R Horns A
+SRX07,308,R&R Horns B
+SRX07,309,R&R Horns C
+SRX07,310,Flute Vib A
+SRX07,311,Flute Vib B
+SRX07,312,Flute Vib C
+SRX07,313,Clean TC2 pA
+SRX07,314,Clean TC2 pB
+SRX07,315,Clean TC2 pC
+SRX07,316,Clean TC2 fA
+SRX07,317,Clean TC2 fB
+SRX07,318,Clean TC2 fC
+SRX07,319,NylonGt2 p A
+SRX07,320,NylonGt2 p B
+SRX07,321,NylonGt2 p C
+SRX07,322,NylonGt2 mfA
+SRX07,323,NylonGt2 mfB
+SRX07,324,NylonGt2 mfC
+SRX07,325,NylonGt2 f A
+SRX07,326,NylonGt2 f B
+SRX07,327,NylonGt2 f C
+SRX07,328,D.MuteGt p A
+SRX07,329,D.MuteGt p B
+SRX07,330,D.MuteGt p C
+SRX07,331,D.MuteGt mpA
+SRX07,332,D.MuteGt mpB
+SRX07,333,D.MuteGt mpC
+SRX07,334,D.MuteGt mfA
+SRX07,335,D.MuteGt mfB
+SRX07,336,D.MuteGt mfC
+SRX07,337,Wah Gtr MENU
+SRX07,338,Wah Down 1
+SRX07,339,Wah Up 1
+SRX07,340,Wah Down 2
+SRX07,341,Wah Up 2
+SRX07,342,Gtr FX MENU
+SRX07,343,Gtr Feedback
+SRX07,344,Gtr Scrap
+SRX07,345,Gtr Slid Nz
+SRX07,346,Gtr Cut Nz
+SRX07,347,Gtr Slap
+SRX07,348,MM Slap Bs A
+SRX07,349,MM Slap Bs B
+SRX07,350,MM Slap Bs C
+SRX07,351,MM Pop Bs A
+SRX07,352,MM Pop Bs B
+SRX07,353,MM Pop Bs C
+SRX07,354,MM Frls Bs A
+SRX07,355,MM Frls Bs B
+SRX07,356,MM Frls Bs C
+SRX07,357,MM Jazz Bs A
+SRX07,358,MM Jazz Bs B
+SRX07,359,MM Jazz Bs C
+SRX07,360,MM Pick Bs A
+SRX07,361,MM Pick Bs B
+SRX07,362,MM Pick Bs C
+SRX07,363,MM Harm Bs A
+SRX07,364,MM Harm Bs B
+SRX07,365,MM Harm Bs C
+SRX07,366,AL Funk Bs A
+SRX07,367,AL Funk Bs B
+SRX07,368,AL Funk Bs C
+SRX07,369,AL Pop Bs A
+SRX07,370,AL Pop Bs B
+SRX07,371,AL Pop Bs C
+SRX07,372,AL Frls Bs A
+SRX07,373,AL Frls Bs B
+SRX07,374,AL Frls Bs C
+SRX07,375,AL LatinBs A
+SRX07,376,AL LatinBs B
+SRX07,377,AL LatinBs C
+SRX07,378,AL Old Bs A
+SRX07,379,AL Old Bs B
+SRX07,380,AL Old Bs C
+SRX07,381,AL P.Bass A
+SRX07,382,AL P.Bass B
+SRX07,383,AL P.Bass C
+SRX07,384,JP Funk Bs A
+SRX07,385,JP Funk Bs B
+SRX07,386,JP Funk Bs C
+SRX07,387,JP Pop Bs A
+SRX07,388,JP Pop Bs B
+SRX07,389,JP Pop Bs C
+SRX07,390,JP Frls Bs A
+SRX07,391,JP Frls Bs B
+SRX07,392,JP Frls Bs C
+SRX07,393,JP Pick Bs A
+SRX07,394,JP Pick Bs B
+SRX07,395,JP Pick Bs C
+SRX07,396,JP Rock Bs A
+SRX07,397,JP Rock Bs B
+SRX07,398,JP Rock Bs C
+SRX07,399,JP 6StrBs pA
+SRX07,400,JP 6StrBs pB
+SRX07,401,JP 6StrBs pC
+SRX07,402,JP 6StrBs fA
+SRX07,403,JP 6StrBs fB
+SRX07,404,JP 6StrBs fC
+SRX07,405,JP Ac.Bs p A
+SRX07,406,JP Ac.Bs p B
+SRX07,407,JP Ac.Bs p C
+SRX07,408,JP Ac.Bs f A
+SRX07,409,JP Ac.Bs f B
+SRX07,410,JP Ac.Bs f C
+SRX07,411,Sld&Nz MENU
+SRX07,412,Slides MENU
+SRX07,413,E.Bs Nz MENU
+SRX07,414,A.Bs Nz MENU
+SRX07,415,MM Slide 1
+SRX07,416,MM Slide 2
+SRX07,417,AL Slide
+SRX07,418,JP Slide 1
+SRX07,419,JP Slide 2
+SRX07,420,JP Slide 3
+SRX07,421,AL Nz 1
+SRX07,422,AL Nz 2
+SRX07,423,AL Nz 3
+SRX07,424,AL Nz 4
+SRX07,425,AL Nz 5
+SRX07,426,AL Nz 6
+SRX07,427,AL Nz 7
+SRX07,428,AL Nz 8
+SRX07,429,AL Nz 9
+SRX07,430,JP Frls Nz 1
+SRX07,431,JP Frls Nz 2
+SRX07,432,JP Frls Nz 3
+SRX07,433,JP Frls Nz 4
+SRX07,434,JP Ac.Nz 1
+SRX07,435,JP Ac.Nz 2
+SRX07,436,JP Ac.Nz 3
+SRX07,437,JP Ac.Nz 4
+SRX07,438,OB Bass
+SRX07,439,OB Bass Lp A
+SRX07,440,OB Bass Lp B
+SRX07,441,OB Bass Lp C
+SRX07,442,MG BsPedal
+SRX07,443,MG BsPdl LpA
+SRX07,444,MG BsPdl LpC
+SRX07,445,MG Fat Bs
+SRX07,446,MG Sharp Bs1
+SRX07,447,MG Big Bs
+SRX07,448,MG ClassicBs
+SRX07,449,MG Sharp Bs2
+SRX07,450,TB-303 Bass
+SRX07,451,JP-4 Bass 1
+SRX07,452,JP-4 Bass 2
+SRX07,453,SH-101 Bs 1
+SRX07,454,SH-101 Bs 2
+SRX07,455,SH-101 Bs 3
+SRX07,456,SH-101 Bs 4
+SRX07,457,SH-101 Bs 5
+SRX07,458,Sys700 Bs 1
+SRX07,459,Sys700 Bs 2
+SRX07,460,FM Super Bs
+SRX07,461,KG Poly Bs
+SRX07,462,KG Poly BsLp
+SRX07,463,Muted Bass A
+SRX07,464,Muted Bass B
+SRX07,465,Muted Bass C
+SRX07,466,JP-8 Saw A
+SRX07,467,JP-8 Saw C
+SRX07,468,Sys700 Saw
+SRX07,469,JX-10 Saw
+SRX07,470,D-50 Saw 1
+SRX07,471,D-50 Saw 2
+SRX07,472,SH-5 Saw
+SRX07,473,SH-2 Saw
+SRX07,474,SH-101 Saw
+SRX07,475,SH-1000 Saw
+SRX07,476,GR-300 Saw 1
+SRX07,477,GR-300 Saw 2
+SRX07,478,JU-2 Saw
+SRX07,479,MG Saw 1A
+SRX07,480,MG Saw 1C
+SRX07,481,MG Saw 2
+SRX07,482,OB Saw 1A
+SRX07,483,OB Saw 1C
+SRX07,484,OB Saw 2
+SRX07,485,P5 Saw 1A
+SRX07,486,P5 Saw 1C
+SRX07,487,2600 Saw
+SRX07,488,AP Saw
+SRX07,489,OSC Saw
+SRX07,490,OSC Reso Saw
+SRX07,491,KG700 Saw
+SRX07,492,KG800 Saw 1
+SRX07,493,KG800 Saw 2
+SRX07,494,KG MS Saw
+SRX07,495,CS Saw 1A
+SRX07,496,CS Saw 1C
+SRX07,497,CS Saw 2
+SRX07,498,JP-8 SquareA
+SRX07,499,JP-8 SquareC
+SRX07,500,JX-10 Square
+SRX07,501,SH-5 Square
+SRX07,502,SH-2 Square
+SRX07,503,MG Square A
+SRX07,504,MG Square C
+SRX07,505,OB Square A
+SRX07,506,OB Square C
+SRX07,507,P5 Square A
+SRX07,508,P5 Square C
+SRX07,509,2600 Square
+SRX07,510,OSC Square
+SRX07,511,KG800 Square
+SRX07,512,KG MS Square
+SRX07,513,CS Square
+SRX07,514,JP-8 Pulse 1
+SRX07,515,JP-8 Pulse 2
+SRX07,516,JP-8 Pulse 3
+SRX07,517,JP-8 Pulse 4
+SRX07,518,JP-8 Pulse 5
+SRX07,519,SH-1000 Puls
+SRX07,520,MG Pulse 1A
+SRX07,521,MG Pulse 1C
+SRX07,522,MG Pulse 2A
+SRX07,523,MG Pulse 2C
+SRX07,524,OB Pulse 1
+SRX07,525,OB Pulse 2
+SRX07,526,OB Pulse 3
+SRX07,527,2600 Pulse 1
+SRX07,528,2600 Pulse 2
+SRX07,529,EM Pulse
+SRX07,530,CS Pulse 1
+SRX07,531,CS Pulse 2
+SRX07,532,JU-2 Sub OSC
+SRX07,533,MG Ramp
+SRX07,534,MG Triangle
+SRX07,535,2600Triangle
+SRX07,536,2600 Sine
+SRX07,537,JP-8 PWM A
+SRX07,538,JP-8 PWM B
+SRX07,539,JP-8 PWM C
+SRX07,540,MG Dt.Saw A
+SRX07,541,MG Dt.Saw B
+SRX07,542,MG Dt.Saw C
+SRX07,543,P5 Dt.Saw A
+SRX07,544,P5 Dt.Saw B
+SRX07,545,P5 Dt.Saw C
+SRX07,546,MG Dt.Squ A
+SRX07,547,MG Dt.Squ B
+SRX07,548,MG Dt.Squ C
+SRX07,549,Juno Rave A
+SRX07,550,Juno Rave B
+SRX07,551,Juno Rave C
+SRX07,552,Blaster A
+SRX07,553,Blaster B
+SRX07,554,Blaster C
+SRX07,555,JP Hollo A
+SRX07,556,JP Hollo B
+SRX07,557,JP Hollo C
+SRX07,558,JP-8 Str A
+SRX07,559,JP-8 Str B
+SRX07,560,JP-8 Str C
+SRX07,561,OB Str 1A
+SRX07,562,OB Str 1B
+SRX07,563,OB Str 1C
+SRX07,564,OB Str 2A
+SRX07,565,OB Str 2B
+SRX07,566,OB Str 2C
+SRX07,567,AP Str Ens A
+SRX07,568,AP Str Ens B
+SRX07,569,AP Str Ens C
+SRX07,570,Hard 5ths A
+SRX07,571,Hard 5ths B
+SRX07,572,Hard 5ths C
+SRX07,573,OBXP Str A
+SRX07,574,OBXP Str B
+SRX07,575,OBXP Str C
+SRX07,576,OBXP Str Lp
+SRX07,577,MG Oct A
+SRX07,578,MG Oct B
+SRX07,579,MG Oct C
+SRX07,580,MG Dt.Oct A
+SRX07,581,MG Dt.Oct B
+SRX07,582,MG Dt.Oct C
+SRX07,583,OBXP Brass A
+SRX07,584,OBXP Brass B
+SRX07,585,OBXP Brass C
+SRX07,586,OBXP BrassLp
+SRX07,587,FM Brass
+SRX07,588,Waspy
+SRX07,589,Waspy Lp
+SRX07,590,OB Lead
+SRX07,591,OB Lead Lp
+SRX07,592,JP-6 SqLead
+SRX07,593,JP-6 SqLd Lp
+SRX07,594,Blown 1
+SRX07,595,Blown 2
+SRX07,596,PG Sweep 1A
+SRX07,597,PG Sweep 1C
+SRX07,598,PG Sweep 2A
+SRX07,599,PG Sweep 2C
+SRX07,600,D-50 HeavenA
+SRX07,601,D-50 HeavenB
+SRX07,602,D-50 HeavenC
+SRX07,603,JX-8P Vox
+SRX07,604,JX-8P Vox Lp
+SRX07,605,VP-330ChoirA
+SRX07,606,VP-330ChoirB
+SRX07,607,VP-330ChoirC
+SRX07,608,P5 Unisync
+SRX07,609,P5 UnisyncLp
+SRX07,610,P5 Dipthong
+SRX07,611,P5 DipthngLp
+SRX07,612,FM Lead
+SRX07,613,KG800 Lead
+SRX07,614,MG Lead
+SRX07,615,MG Lead Lp
+SRX07,616,JP-8 Lead
+SRX07,617,Digiwave 1
+SRX07,618,Digiwave 2
+SRX07,619,Digiwave 3
+SRX07,620,Frog wave
+SRX07,621,SRG FM
+SRX07,622,Shimmer wave
+SRX07,623,VS Organ A
+SRX07,624,VS Organ C
+SRX07,625,Juno Organ
+SRX07,626,Juno OrganLp
+SRX07,627,FM Punch
+SRX07,628,Mondigital
+SRX07,629,MondigitalLp
+SRX07,630,JP-8 Clavi A
+SRX07,631,JP-8 Clavi C
+SRX07,632,JP-8 ClaviLp
+SRX07,633,Juno Clavi
+SRX07,634,P5 X-mod
+SRX07,635,Steam Drum
+SRX07,636,Kalimba Atk
+SRX07,637,Additive
+SRX07,638,MG Blip
+SRX07,639,MG Blip Lp
+SRX07,640,MG Thump
+SRX07,641,MG Thump Lp
+SRX07,642,MG Attack
+SRX07,643,MG Attack Lp
+SRX07,644,VS Bell 1
+SRX07,645,VS Bell 2
+SRX07,646,JP-6 Bell
+SRX07,647,MKS-80 Xmod1
+SRX07,648,MKS-80 Xmod2
+SRX07,649,MKS-80 Xmod3
+SRX07,650,MKS-80 Xmod4
+SRX07,651,MKS-80 Xmod5
+SRX07,652,Record Noise
+SRX07,653,MG White Nz
+SRX07,654,MG Pink Nz
+SRX07,655,SH-5 Pink Nz
+SRX07,656,JP-8 X-mod 1
+SRX07,657,JP-8 X-mod 2
+SRX07,658,P5 Noise 1
+SRX07,659,P5 Noise 2
+SRX07,660,ZZZ loop
+SRX07,661,Atmosphere
+SRX07,662,FX1A-L(RSS)
+SRX07,663,FX1A-R(RSS)
+SRX07,664,FX1B-L(RSS)
+SRX07,665,FX1B-R(RSS)
+SRX07,666,FX1C-L(RSS)
+SRX07,667,FX1C-R(RSS)
+SRX07,668,FX2A-L(RSS)
+SRX07,669,FX2A-R(RSS)
+SRX07,670,FX2B-L(RSS)
+SRX07,671,FX2B-R(RSS)
+SRX07,672,FX2C-L(RSS)
+SRX07,673,FX2C-R(RSS)
+SRX07,674,FX3A-L(RSS)
+SRX07,675,FX3A-R(RSS)
+SRX07,676,FX3B-L(RSS)
+SRX07,677,FX3B-R(RSS)
+SRX07,678,FX3C-L(RSS)
+SRX07,679,FX3C-R(RSS)
+SRX07,680,DrumGrv MENU 1
+SRX07,681,BW Jz 6/8 52
+SRX07,682,BW Brush 66
+SRX07,683,AL Slam 66
+SRX07,684,AL Whack 76
+SRX07,685,AL Grunge 84
+SRX07,686,BW Swamp 90
+SRX07,687,BW Latin 102
+SRX07,688,BW Fusion112
+SRX07,689,AL Funk 120
+SRX07,690,AL Shuff.126
+SRX07,691,Kik&CymSET 1
+SRX07,692,Kik&CymSET 2
+SRX07,693,Kik&CymSET 3
+SRX07,694,Kik&CymSET 4
+SRX07,695,Kik&CymSET 5
+SRX07,696,Kik&CymSET 6
+SRX07,697,Kik&CymSET 7
+SRX07,698,Kik&CymSET 8
+SRX07,699,Kik&CymSET 9
+SRX07,700,Kik&CymSET10
+SRX07,701,Kik&CymSET11
+SRX07,702,Kik&CymSET12
+SRX07,703,Kik&CymSET13
+SRX07,704,SNR SET 1p
+SRX07,705,SNR SET 1f
+SRX07,706,SNR SET 2p
+SRX07,707,SNR SET 2f
+SRX07,708,SNR SET 3p
+SRX07,709,SNR SET 3f
+SRX07,710,SNR SET 4p
+SRX07,711,SNR SET 4f
+SRX07,712,SNR SET 5p
+SRX07,713,SNR SET 5f
+SRX07,714,SNR SET 6p
+SRX07,715,SNR SET 6f
+SRX07,716,SNR SET 7p
+SRX07,717,SNR SET 7f
+SRX07,718,SNR SET 8p
+SRX07,719,SNR SET 8f
+SRX07,720,SNR SET 9p
+SRX07,721,SNR SET 9f
+SRX07,722,SNR SET 10p
+SRX07,723,SNR SET 10f
+SRX07,724,SNR SET 11p
+SRX07,725,SNR SET 11f
+SRX07,726,HAT SET 1p
+SRX07,727,HAT SET 1f
+SRX07,728,HAT SET 1pdl
+SRX07,729,HAT SET 2p
+SRX07,730,HAT SET 2f
+SRX07,731,HAT SET 2pdl
+SRX07,732,HAT SET 3
+SRX07,733,TOM SET 1p
+SRX07,734,TOM SET 1f
+SRX07,735,TOM SET 2
+SRX07,736,TOM SET 3p
+SRX07,737,TOM SET 3f
+SRX07,738,KIK MENU
+SRX07,739,Meat K
+SRX07,740,Boomer K1
+SRX07,741,Boomer K2
+SRX07,742,Medium K
+SRX07,743,Deep Dry K
+SRX07,744,Real Dry K1
+SRX07,745,Real Dry K2
+SRX07,746,Real Dry K3
+SRX07,747,Stomp K
+SRX07,748,Comp K1
+SRX07,749,Comp K2
+SRX07,750,Comp K3
+SRX07,751,Lo-Fi K
+SRX07,752,SNR MENU 1
+SRX07,753,SNR MENU 2
+SRX07,754,SNR MENU 3
+SRX07,755,Ring sft Sn
+SRX07,756,Ring hrd Sn
+SRX07,757,Ring rol Sn
+SRX07,758,Ring flm Sn
+SRX07,759,SlamRm sftSn
+SRX07,760,SlamRm hrdSn
+SRX07,761,SlamRm rolSn
+SRX07,762,SlamRm flmSn
+SRX07,763,SlmDry sftSn
+SRX07,764,SlmDry hrdSn
+SRX07,765,Dry sft Sn
+SRX07,766,Dry hrd Sn
+SRX07,767,Dry rol Sn
+SRX07,768,Dry flm Sn
+SRX07,769,RockOn Sn1
+SRX07,770,RockOn Sn2
+SRX07,771,Verb sft Sn
+SRX07,772,Verb hrd Sn
+SRX07,773,Warm sft Sn
+SRX07,774,Warm hrd Sn
+SRX07,775,Warm flm Sn
+SRX07,776,DryFat sftSn
+SRX07,777,DryFat hrdSn
+SRX07,778,DryFat rolSn
+SRX07,779,DryFat flmSn
+SRX07,780,Funk Sn1
+SRX07,781,Funk Sn2
+SRX07,782,Picc. sft Sn
+SRX07,783,Picc. mid Sn
+SRX07,784,Picc. hrd Sn
+SRX07,785,Picc. rol Sn
+SRX07,786,Picc. flm Sn
+SRX07,787,Choke Sn
+SRX07,788,LiteVerb Sn
+SRX07,789,Live Stick
+SRX07,790,NaturalStick
+SRX07,791,Click Stick
+SRX07,792,HAT MENU
+SRX07,793,18 Hat pdl
+SRX07,794,18 Hat cls 1
+SRX07,795,18 Hat cls 2
+SRX07,796,18 Hat hlf 1
+SRX07,797,18 Hat hlf 2
+SRX07,798,18 Hat opn 1
+SRX07,799,18 Hat opn 2
+SRX07,800,16 Hat pdl
+SRX07,801,16 Hat cls 1
+SRX07,802,16 Hat cls 2
+SRX07,803,16 Hat hlf 1
+SRX07,804,16 Hat hlf 2
+SRX07,805,16 Hat opn 1
+SRX07,806,16 Hat opn 2
+SRX07,807,CR78 Hat cls
+SRX07,808,CR78 Hat opn
+SRX07,809,TOM MENU
+SRX07,810,16 MPL sftTm
+SRX07,811,16 MPL hrdTm
+SRX07,812,13 MPL sftTm
+SRX07,813,13 MPL hrdTm
+SRX07,814,12 MPL sftTm
+SRX07,815,12 MPL hrdTm
+SRX07,816,10 MPL sftTm
+SRX07,817,10 MPL hrdTm
+SRX07,818,Soft Low Tom
+SRX07,819,Soft Mid Tom
+SRX07,820,Soft Hi Tom
+SRX07,821,LoVerb sftTm
+SRX07,822,LoVerb hrdTm
+SRX07,823,HiVerb sftTm
+SRX07,824,HiVerb hrdTm
+SRX07,825,CYM MENU
+SRX07,826,Long Crash 1
+SRX07,827,Long Crash 2
+SRX07,828,Long Ride 1
+SRX07,829,Long Ride 2
+SRX07,830,LngRide Bell
+SRX07,831,Shaker MENU2
+SRX07,832,626 Shaker
+SRX07,833,Shaker 3
+SRX07,834,Shaker 4
+SRX07,835,Shaker 5
+SRX07,836,Sm.Club
+SRX07,837,Sm.Club fw
+SRX07,838,Sm.Club lp
+SRX07,839,REV Waspy
+SRX07,840,REV P5 X-mod
+SRX07,841,REV SteamDrm
+SRX07,842,REV Kalimba
+SRX07,843,REV Additive
+SRX07,844,REV Blip
+SRX07,845,REV Thump
+SRX07,846,REV Attack
+SRX07,847,REV Gt Scrap
+SRX07,848,REV Gt SldNz
+SRX07,849,REV Gt CutNz
+SRX07,850,REV Gt Slap
+SRX07,851,REV 626Shakr
+SRX07,852,REV Shaker 3
+SRX07,853,REV Shaker 4
+SRX07,854,REV Shaker 5
+SRX07,855,REV FX1L RSS
+SRX07,856,REV FX1R RSS
+SRX07,857,REV FX2L RSS
+SRX07,858,REV FX2R RSS
+SRX07,859,REV FX3L RSS
+SRX07,860,REV FX3R RSS
+SRX08,1,Phrase MENU1
+SRX08,2,Phrase MENU2
+SRX08,3,Phrase MENU3
+SRX08,4,61:Slow Grv
+SRX08,5,75:BoomRvBel
+SRX08,6,76:TrpHpKikn
+SRX08,7,78:NinjaBrek
+SRX08,8,80:Thump Grv
+SRX08,9,80:MetalHead
+SRX08,10,81:Ringn Kit
+SRX08,11,83:Big & Bad
+SRX08,12,83:HmBeatBx1
+SRX08,13,83:Poing Snr
+SRX08,14,85:Homie
+SRX08,15,85:Snr Wall
+SRX08,16,86:Street 16
+SRX08,17,86:Bubbles
+SRX08,18,88:TrenchTwn
+SRX08,19,88:Cut Hats
+SRX08,20,88:Yo!
+SRX08,21,88:Crackl'n
+SRX08,22,88:HmBeatBx2
+SRX08,23,89:BuzyFunky
+SRX08,24,89:Slamn'Grv
+SRX08,25,90:Swingn
+SRX08,26,90:NoizyBoys
+SRX08,27,90:Swingdirt
+SRX08,28,91:NotopHpHp
+SRX08,29,91:Cruis'n
+SRX08,30,91:Uptown
+SRX08,31,91:BigBeauty
+SRX08,32,92:Jazzman
+SRX08,33,92:Overring
+SRX08,34,92:Boom Town
+SRX08,35,92:Too Big
+SRX08,36,94:Ya Mon
+SRX08,37,95:Head Bobn
+SRX08,38,95:Pure Phat
+SRX08,39,96:PlainJane
+SRX08,40,96:Jane 2
+SRX08,41,98:Funkster1
+SRX08,42,98:Funkster2
+SRX08,43,104:BigBottm
+SRX08,44,104:Respect
+SRX08,45,104:Riddim
+SRX08,46,108:Gargle
+SRX08,47,Phrase MENU4
+SRX08,48,120:House 1
+SRX08,49,120:House 2
+SRX08,50,120:House 3
+SRX08,51,120:TeknoBNG
+SRX08,52,144:Tekno BD
+SRX08,53,144:TeknoHAT
+SRX08,54,160:Drum'nBs
+SRX08,55,184:Gabba
+SRX08,56,132:Detroit
+SRX08,57,132:Agogo
+SRX08,58,116:Elect'80
+SRX08,59,120:Electro1
+SRX08,60,138:Electro2
+SRX08,61,DrumLp MENU1
+SRX08,62,DrumLp MENU2
+SRX08,63,125:Basic 1
+SRX08,64,125:Basic 2
+SRX08,65,125:ClpMania
+SRX08,66,125:LowToEnd
+SRX08,67,125:LivZone1
+SRX08,68,125:LivZone2
+SRX08,69,125:LivZone3
+SRX08,70,125:LivZone4
+SRX08,71,125:LivZone5
+SRX08,72,125:LpFabric
+SRX08,73,125:PuristcL
+SRX08,74,125:PuristcR
+SRX08,75,125:FullHous
+SRX08,76,125:4thFloor
+SRX08,77,125:Front
+SRX08,78,125:Fatbrett
+SRX08,79,125:FatTrck1
+SRX08,80,125:FatTrck2
+SRX08,81,125:BsWorx 1
+SRX08,82,125:BsWorx 2
+SRX08,83,125:Mid Beat
+SRX08,84,125:Offbt HH
+SRX08,85,Perc.Lp MENU 1
+SRX08,86,125:Tamb Man
+SRX08,87,125:AccntShk
+SRX08,88,125:DoublShk
+SRX08,89,125:Ganza
+SRX08,90,125:Triangle
+SRX08,91,125:Conga L
+SRX08,92,125:Conga R
+SRX08,93,125:ToneCong
+SRX08,94,125:StpBongo
+SRX08,95,125:FullBrzl
+SRX08,96,Pf/Key MENU
+SRX08,97,116:HousePf1
+SRX08,98,116:HousePf2
+SRX08,99,116:HousePf3
+SRX08,100,116:HousePf4
+SRX08,101,116:Pf&Str 1
+SRX08,102,116:Pf&Str 2
+SRX08,103,116:Pf&Str 3
+SRX08,104,125:E-Groove
+SRX08,105,125:SlowWah1
+SRX08,106,125:SlowWah2
+SRX08,107,Dry Chord D#
+SRX08,108,Dry Chord C#
+SRX08,109,Dry Chord F
+SRX08,110,House Organ
+SRX08,111,SubmarineSin
+SRX08,112,ShortStrings
+SRX08,113,Gtr/Bs MENU
+SRX08,114,125:OpenStr1
+SRX08,115,125:OpenStr2
+SRX08,116,125:WahMute1
+SRX08,117,125:WahMute2
+SRX08,118,125:BendLick
+SRX08,119,125:Dry Funk
+SRX08,120,JUNO Bass 1
+SRX08,121,JUNO Bass Lp
+SRX08,122,Moogish
+SRX08,123,JUNO Bass 2
+SRX08,124,JUNO Bs 2 Lp
+SRX08,125,Big Saw Bass
+SRX08,126,Big SawBs 2
+SRX08,127,JUNO Sine Bs
+SRX08,128,Octa Bass
+SRX08,129,Rave Bass
+SRX08,130,FM Pluck Bs
+SRX08,131,FM Slide Bs
+SRX08,132,Solid Bass
+SRX08,133,JUNO-60 Bass
+SRX08,134,SH-5 Bass
+SRX08,135,Dirty Bass
+SRX08,136,Sub Bass
+SRX08,137,Jungle Bass
+SRX08,138,Bass Gliss
+SRX08,139,Bass Sustain
+SRX08,140,Bass Short
+SRX08,141,Bass Slide
+SRX08,142,Bass Down
+SRX08,143,Bass Slap
+SRX08,144,Hard Attack
+SRX08,145,Square Low
+SRX08,146,JUNO 60 Buzz
+SRX08,147,JUNO Pulse 5
+SRX08,148,Funky JUNO
+SRX08,149,Mellow JUNO
+SRX08,150,JUNO Strings
+SRX08,151,JUNO Str Lp
+SRX08,152,Lo-Fi RoomTp
+SRX08,153,JP8000 Saw 1
+SRX08,154,JP8000 Saw 2
+SRX08,155,JP-6 Saw
+SRX08,156,Techno Saw
+SRX08,157,TB Saw
+SRX08,158,TB Dst Saw
+SRX08,159,TB Solid Saw
+SRX08,160,TB Reso Saw
+SRX08,161,SH-1 Square
+SRX08,162,TB Square 1
+SRX08,163,TB Square 2
+SRX08,164,TB Square 3
+SRX08,165,Dist Square
+SRX08,166,TB Dst Sqr 1
+SRX08,167,TB Dst Sqr 2
+SRX08,168,TB Reso Sqr1
+SRX08,169,TB Reso Sqr2
+SRX08,170,TB Reso Sqr3
+SRX08,171,SH-1 Pulse
+SRX08,172,JP8000 PWM
+SRX08,173,JP8000 FBK
+SRX08,174,260 Sub OSC
+SRX08,175,Dist Synth
+SRX08,176,P5 Pipe
+SRX08,177,FM Garage
+SRX08,178,JUNO Pluck
+SRX08,179,Funky Synth
+SRX08,180,JUNO Bowing
+SRX08,181,JUNO Synth
+SRX08,182,JX Synth
+SRX08,183,Alpha Wave
+SRX08,184,Killer
+SRX08,185,Detuned Saw
+SRX08,186,Fat JP-6
+SRX08,187,Euro Dance
+SRX08,188,Noisy 101
+SRX08,189,Daft Wave
+SRX08,190,JP Siren
+SRX08,191,Cold Dress
+SRX08,192,Pizzy Techno
+SRX08,193,Organ Pizz
+SRX08,194,Garage Org
+SRX08,195,FM Club Org
+SRX08,196,Org Chord
+SRX08,197,Org EP
+SRX08,198,Lo-Fi Wurly
+SRX08,199,Pure EP
+SRX08,200,Ac Piano1 A
+SRX08,201,Ac Piano1 B
+SRX08,202,Ac Piano1 C
+SRX08,203,Dist TekGtr1
+SRX08,204,Dist TekGtr2
+SRX08,205,Dist Gtr Chd
+SRX08,206,GTR FX MENU
+SRX08,207,Gtr FX MENU
+SRX08,208,Wah Gtr Lp 1
+SRX08,209,Wah Gtr Lp 2
+SRX08,210,Wah Gtr A
+SRX08,211,Wah Gtr B
+SRX08,212,D.GtrUpwhine
+SRX08,213,Gtr Thumper
+SRX08,214,Hit MENU 1
+SRX08,215,Hit MENU 2
+SRX08,216,Brass Fall 2
+SRX08,217,Smear Hit 1
+SRX08,218,Smear Hit 2
+SRX08,219,LoFi MinorHt
+SRX08,220,BrassVox Hit
+SRX08,221,Brass Hit Lp
+SRX08,222,Mean Brs Hit
+SRX08,223,Sax Lick 1
+SRX08,224,Sax Lick 2
+SRX08,225,Sax Cry
+SRX08,226,Sax Blast
+SRX08,227,Sax Blast Lp
+SRX08,228,HipHop Alarm
+SRX08,229,Cuica Hit
+SRX08,230,Breath Hit
+SRX08,231,Bauw Hit
+SRX08,232,ClassicHseHt
+SRX08,233,JUNO Blip 1
+SRX08,234,JUNO Blip 2
+SRX08,235,Sci-Fi 2
+SRX08,236,Slice of Trp
+SRX08,237,Rattle Hit
+SRX08,238,P.Phatt Hit
+SRX08,239,BD Scratch
+SRX08,240,SD Scratch
+SRX08,241,Tape Stop 2
+SRX08,242,BasicScratch
+SRX08,243,Scratch Loop
+SRX08,244,Record Noiz
+SRX08,245,Hit MENU 3
+SRX08,246,Hit MENU 4
+SRX08,247,Beam HiQ
+SRX08,248,Analog Bird
+SRX08,249,ElectronFall
+SRX08,250,Retro UFO
+SRX08,251,Jungle Beep
+SRX08,252,PC-2 Machine
+SRX08,253,Dr.Beat
+SRX08,254,Mental Perc
+SRX08,255,May Day Perc
+SRX08,256,PC-2 Spacers
+SRX08,257,Techno Scene
+SRX08,258,Pure Psycho
+SRX08,259,TAO Hit
+SRX08,260,Thin Beef
+SRX08,261,Organ Hit 2
+SRX08,262,Hit MENU 5
+SRX08,263,Hit & Drum
+SRX08,264,Stop Hit
+SRX08,265,Horny-Hit
+SRX08,266,Mute Trumpet
+SRX08,267,Panic
+SRX08,268,INDUST. MENU
+SRX08,269,PCM Press
+SRX08,270,ElectricDunk
+SRX08,271,Thrill
+SRX08,272,Drill Hit
+SRX08,273,MachineShout
+SRX08,274,Air Gun
+SRX08,275,Emergency
+SRX08,276,Buzzer
+SRX08,277,Tonality
+SRX08,278,EFX Tom Lp
+SRX08,279,Hip Hop Ride
+SRX08,280,P5 Noise 3
+SRX08,281,Toy Gun 1
+SRX08,282,Toy Gun 2
+SRX08,283,GeigerCountr
+SRX08,284,GlassBreakLp
+SRX08,285,Voice MENU 1
+SRX08,286,Voice MENU 2
+SRX08,287,Voice MENU 3
+SRX08,288,Voice MENU 4
+SRX08,289,Voice MENU 5
+SRX08,290,"1,2,3,4"
+SRX08,291,Kick it!
+SRX08,292,Come on!
+SRX08,293,Funky!
+SRX08,294,Crazy!
+SRX08,295,DJ!
+SRX08,296,Go!
+SRX08,297,Stop!
+SRX08,298,Good Eve
+SRX08,299,Yeah!
+SRX08,300,Dirty Laugh
+SRX08,301,Female Laugh
+SRX08,302,Ow!
+SRX08,303,Pretty Aou!
+SRX08,304,Singing Ahh
+SRX08,305,Oh Yeah!
+SRX08,306,Hoo!
+SRX08,307,Say Yeah!
+SRX08,308,Scream!
+SRX08,309,Baby!
+SRX08,310,Get on Up
+SRX08,311,MC!
+SRX08,312,Give it Up
+SRX08,313,Canvas Laugh
+SRX08,314,Uuha
+SRX08,315,Whouw
+SRX08,316,Eh
+SRX08,317,Oh !
+SRX08,318,Ahhhhhh 1
+SRX08,319,Ahhhhhh 2
+SRX08,320,Breath
+SRX08,321,Get Off
+SRX08,322,Get On 1
+SRX08,323,Get Up
+SRX08,324,Get On 2
+SRX08,325,Dance
+SRX08,326,Do It !
+SRX08,327,Jam !
+SRX08,328,House Music
+SRX08,329,Come On
+SRX08,330,Oh No !
+SRX08,331,Oh Yes !
+SRX08,332,Alright
+SRX08,333,It's MyHouse
+SRX08,334,Higher
+SRX08,335,Everybody
+SRX08,336,Ouhouhooohou
+SRX08,337,Tic
+SRX08,338,Tac
+SRX08,339,Tigidi
+SRX08,340,Tac Tac
+SRX08,341,Auu
+SRX08,342,VOCODER MENU
+SRX08,343,Aah Formant
+SRX08,344,Eeh Formant
+SRX08,345,Iih Formant
+SRX08,346,Ooh Formant
+SRX08,347,Uuh Formant
+SRX08,348,Dist Ooh Vox
+SRX08,349,Talkbox
+SRX08,350,CricketChoir
+SRX08,351,Wild Ways
+SRX08,352,Psychedelics
+SRX08,353,Taj Mahal
+SRX08,354,Ghandi Drone
+SRX08,355,Enigmatic
+SRX08,356,Cleansing
+SRX08,357,Frost Byte
+SRX08,358,Iceland
+SRX08,359,Columns
+SRX08,360,Effervescent
+SRX08,361,Transolia
+SRX08,362,Voyage
+SRX08,363,Frontiers
+SRX08,364,Cruising
+SRX08,365,Tunnel Rain
+SRX08,366,Rumble Rain
+SRX08,367,Bombay
+SRX08,368,Black Den
+SRX08,369,Husky Chord
+SRX08,370,Phantasm
+SRX08,371,Fumes
+SRX08,372,Temptation
+SRX08,373,Creepy 1
+SRX08,374,Creepy 2
+SRX08,375,Elves
+SRX08,376,Fireflies
+SRX08,377,CrystalWaves
+SRX08,378,Electroshock
+SRX08,379,Snowflakes
+SRX08,380,Steel Spires
+SRX08,381,Rise Up!
+SRX08,382,Sea Whistle
+SRX08,383,Lava Flow
+SRX08,384,Sparkling
+SRX08,385,Fuse
+SRX08,386,Turntable
+SRX08,387,UK Station
+SRX08,388,ChinaStation
+SRX08,389,Crowding
+SRX08,390,Nasalnoise
+SRX08,391,Gnashing
+SRX08,392,Construction
+SRX08,393,Construct. 2
+SRX08,394,Turbine
+SRX08,395,Scraping
+SRX08,396,Vacuum Pump
+SRX08,397,Sawing
+SRX08,398,Air Pump
+SRX08,399,Soda Water
+SRX08,400,CompresStart
+SRX08,401,CompresStop
+SRX08,402,Jack Hammer
+SRX08,403,Propeller
+SRX08,404,Neon Hum
+SRX08,405,Buzz Hum
+SRX08,406,Tcashe Hum
+SRX08,407,Oil Can Bow
+SRX08,408,Crank Shaft
+SRX08,409,Snarls
+SRX08,410,Feed Me!
+SRX08,411,Fuzzy Love
+SRX08,412,Bad Dreams
+SRX08,413,Dark Buzzord
+SRX08,414,SqualorDrone
+SRX08,415,Air Raid!
+SRX08,416,180:CyberToy
+SRX08,417,150:PhoneFrq
+SRX08,418,160:Clockers
+SRX08,419,Phlange Hit
+SRX08,420,Ring Bass
+SRX08,421,Ring Bass Lp
+SRX08,422,Orc.Cluster
+SRX08,423,Harpin'Piano
+SRX08,424,RollingChime
+SRX08,425,Thin Bells
+SRX08,426,FX Bell 3
+SRX08,427,Rave Stopper
+SRX08,428,MachineNoise
+SRX08,429,Gate Keeper
+SRX08,430,FootStepping
+SRX08,431,Droppin'
+SRX08,432,P-Zing
+SRX08,433,Rubberized
+SRX08,434,Pipe
+SRX08,435,Boing
+SRX08,436,Metal Bang
+SRX08,437,MetallicShot
+SRX08,438,Doorsqweek
+SRX08,439,Tomnoise
+SRX08,440,Steam Blow
+SRX08,441,Let Air Go!
+SRX08,442,Screetchy 1
+SRX08,443,Screetchy 2
+SRX08,444,Tubuloid
+SRX08,445,Slicer
+SRX08,446,Fuzzclapz
+SRX08,447,Brakes!
+SRX08,448,Fire Snare
+SRX08,449,Back Snatch
+SRX08,450,Phone
+SRX08,451,Sh.Burst
+SRX08,452,Blasto Kick
+SRX08,453,O.D.Kick
+SRX08,454,Bowl Drop
+SRX08,455,Cavern Tube
+SRX08,456,Fireball
+SRX08,457,Firebomb
+SRX08,458,Firework
+SRX08,459,Hothead
+SRX08,460,Metalicous
+SRX08,461,Cluster Slam
+SRX08,462,Pit Hit
+SRX08,463,Big Stinger
+SRX08,464,Mondo Blast
+SRX08,465,Ignite!
+SRX08,466,Heat Seeker
+SRX08,467,Missile
+SRX08,468,Fly-By
+SRX08,469,Psycho Alert
+SRX08,470,Distressed
+SRX08,471,Afro Cheer
+SRX08,472,Kick MENU 1
+SRX08,473,Kick MENU 2
+SRX08,474,BeatBox Kick
+SRX08,475,BeatBox Hat
+SRX08,476,BeatBox Snr1
+SRX08,477,BeatBox Snr2
+SRX08,478,BeatBox Rim
+SRX08,479,BeatBox Kik2
+SRX08,480,BeatBox Perc
+SRX08,481,B.Box Shaker
+SRX08,482,Chiki!
+SRX08,483,Ahhhhhh
+SRX08,484,B.Box OpHat
+SRX08,485,Jungle Kick
+SRX08,486,Hip Kick
+SRX08,487,Ninja Kick
+SRX08,488,Break Kick
+SRX08,489,Funky Kick
+SRX08,490,Slamn'Kick 1
+SRX08,491,Too Big Kick
+SRX08,492,Boom Kick
+SRX08,493,FarNear Kick
+SRX08,494,Slamn'Kick 2
+SRX08,495,Hall Kick 1
+SRX08,496,Dance Kick 4
+SRX08,497,Thump Kick
+SRX08,498,PurePhatKick
+SRX08,499,Hall Kick 2
+SRX08,500,Plastic Kick
+SRX08,501,ElectricKick
+SRX08,502,TR808 KickLp
+SRX08,503,TR707 Kick 3
+SRX08,504,Lo-Fi Kick
+SRX08,505,Kick MENU 3
+SRX08,506,Kick MENU 4
+SRX08,507,TR909 Kick 1
+SRX08,508,TR909 Kick 2
+SRX08,509,Plastic BD 1
+SRX08,510,Plastic BD 2
+SRX08,511,TR808 Kick 1
+SRX08,512,TR808 Kick 2
+SRX08,513,TR808 Kick 3
+SRX08,514,TR606 Kick 1
+SRX08,515,TR606 Kick 2
+SRX08,516,TR707 Kick 1
+SRX08,517,TR707 Kick 2
+SRX08,518,Culture Kick
+SRX08,519,Optic Kick
+SRX08,520,Lo-Fi BD
+SRX08,521,Wet Kick
+SRX08,522,Video Kick
+SRX08,523,JungleKick 1
+SRX08,524,Street Kick
+SRX08,525,Turbo Kick
+SRX08,526,JungleKick 2
+SRX08,527,Tekno Kick
+SRX08,528,Sim Kick
+SRX08,529,Amsterdam BD
+SRX08,530,TR909 Dst BD
+SRX08,531,Roll Kick
+SRX08,532,Kick MENU 5
+SRX08,533,Kick MENU 6
+SRX08,534,Punchy K 1
+SRX08,535,Punchy K 2
+SRX08,536,Direct K
+SRX08,537,Tone K
+SRX08,538,Dynamic K
+SRX08,539,Clone K
+SRX08,540,Noizzy 909 K
+SRX08,541,Bottom 909 K
+SRX08,542,Sub & Noiz K
+SRX08,543,Open Cut K
+SRX08,544,Short Dry K
+SRX08,545,Medium K2
+SRX08,546,Hicut K
+SRX08,547,Full Range K
+SRX08,548,1ToTheFloorK
+SRX08,549,DrctRehrsalK
+SRX08,550,Fat Clap K
+SRX08,551,Bottom K
+SRX08,552,50Hz K
+SRX08,553,Full House K
+SRX08,554,Snare MENU 1
+SRX08,555,Snare MENU 2
+SRX08,556,Snare MENU 3
+SRX08,557,HpHpJazzySnr
+SRX08,558,DR Snare 1
+SRX08,559,DR Snare 2
+SRX08,560,RealJazz Snr
+SRX08,561,Ragga Snr 3
+SRX08,562,HipHop Snr 3
+SRX08,563,TightBoomSnr
+SRX08,564,Slamn' Snr
+SRX08,565,PurePhat Snr
+SRX08,566,R&B Snare
+SRX08,567,Hi Snare
+SRX08,568,DR Disco Snr
+SRX08,569,Cruis'n Snr
+SRX08,570,Overring Snr
+SRX08,571,Cut Hats Snr
+SRX08,572,Scrap Snr
+SRX08,573,Machine Snr
+SRX08,574,DanceHallSnr
+SRX08,575,Dance Snr 1
+SRX08,576,Big Snare
+SRX08,577,Flat Snare
+SRX08,578,HipHop Snr 4
+SRX08,579,DistortedSnr
+SRX08,580,Dance Snr 2
+SRX08,581,Sizzle Snr
+SRX08,582,Break Snr
+SRX08,583,Whack Snr 2
+SRX08,584,Real Snare
+SRX08,585,TR808 Snr 5
+SRX08,586,TR808 Snr 6
+SRX08,587,TR808 Snr 7
+SRX08,588,TR606 Snr 4
+SRX08,589,Electro Snr
+SRX08,590,Echo Snare
+SRX08,591,TooBig Snr
+SRX08,592,Snare MENU 4
+SRX08,593,Snare MENU 5
+SRX08,594,Snare MENU 6
+SRX08,595,Snare MENU 7
+SRX08,596,Snare MENU 8
+SRX08,597,TR909 Snr 1
+SRX08,598,TR909 Snr 2
+SRX08,599,TR909 Snr 3
+SRX08,600,TR909 Snr 4
+SRX08,601,TR909 Snr 5
+SRX08,602,TR909 Snr 6
+SRX08,603,TR909 Snr 7
+SRX08,604,TR808 Snr 1
+SRX08,605,TR808 Snr 2
+SRX08,606,TR808 Snr 3
+SRX08,607,TR808 Snr 4
+SRX08,608,TR606 Snr 1
+SRX08,609,TR606 Snr 2
+SRX08,610,TR606 Snr 3
+SRX08,611,TR707 Snr 1
+SRX08,612,TR707 Snr 2
+SRX08,613,CR78 Snare
+SRX08,614,Headz Snare
+SRX08,615,Deep Snare
+SRX08,616,Fat Snare
+SRX08,617,Antigua Snr
+SRX08,618,MC Snare
+SRX08,619,DJ Snare
+SRX08,620,Macho Snare
+SRX08,621,Clap Snare
+SRX08,622,Rage Snare
+SRX08,623,Indus Snare
+SRX08,624,TekRok Snare
+SRX08,625,Jungle Snr 1
+SRX08,626,Jungle Snr 2
+SRX08,627,Jungle Snr 3
+SRX08,628,Jungle Snr 4
+SRX08,629,SideStiker
+SRX08,630,Ragga Snr 2
+SRX08,631,Lo-Fi Snare
+SRX08,632,Jungle Snr 5
+SRX08,633,Urban Snare
+SRX08,634,Sim Snare
+SRX08,635,Roll Snare
+SRX08,636,Snare MENU 9
+SRX08,637,Snare MENU1
+SRX08,638,Dry Comp SN
+SRX08,639,ShrtDirectSN
+SRX08,640,Tone Comp SN
+SRX08,641,Wooden SN
+SRX08,642,High Rim SN
+SRX08,643,Mid Rim SN
+SRX08,644,Tone&SynthSN
+SRX08,645,Tiny SN
+SRX08,646,Little SN
+SRX08,647,Clap SN
+SRX08,648,Stick SN
+SRX08,649,Vintage SN
+SRX08,650,Cutted SN
+SRX08,651,Rim and SN
+SRX08,652,AllInOne SN
+SRX08,653,Syn-SN
+SRX08,654,Live SN
+SRX08,655,Back Rev SN
+SRX08,656,Heavy SN
+SRX08,657,Rim MENU
+SRX08,658,Bright Rim
+SRX08,659,Ragga Rim 1
+SRX08,660,TR808 Rim 2
+SRX08,661,Ragga Rim 2
+SRX08,662,Lo-Fi Rim
+SRX08,663,Sizzle Rim
+SRX08,664,Real Rim
+SRX08,665,Tom MENU 1
+SRX08,666,TR606 Tom 2
+SRX08,667,Electro Tom
+SRX08,668,Garbage Tom
+SRX08,669,Tom MENU 2
+SRX08,670,TR909 Tom
+SRX08,671,TR909 DstTom
+SRX08,672,TR808 Tom
+SRX08,673,TR606 Tom
+SRX08,674,TR606 CmpTom
+SRX08,675,TR707 Tom
+SRX08,676,TR707 CmpTom
+SRX08,677,Deep Tom
+SRX08,678,Kick Tom
+SRX08,679,Natural Tom
+SRX08,680,Can Tom
+SRX08,681,HH/Cym MENU
+SRX08,682,Overlord
+SRX08,683,Real Hat
+SRX08,684,Lil' Hat
+SRX08,685,Garbage Hat
+SRX08,686,Ninja Hat
+SRX08,687,Junk Hat
+SRX08,688,Ragga ClHat
+SRX08,689,Rock OpHat
+SRX08,690,HipHopMedHat
+SRX08,691,CR78 Hat
+SRX08,692,TR909 OpHat
+SRX08,693,TR909 Cymbal
+SRX08,694,TR808 Cymbal
+SRX08,695,Ragga Crash
+SRX08,696,Lo-Fi Ride
+SRX08,697,CHH MENU 1
+SRX08,698,CHH MENU 2
+SRX08,699,TR909 CHH 1
+SRX08,700,TR909 CHH 2
+SRX08,701,TR909 CHH 3
+SRX08,702,TR808 CHH 1
+SRX08,703,TR808 CHH 2
+SRX08,704,TR606 CHH
+SRX08,705,TR707 CHH
+SRX08,706,CR78 CHH
+SRX08,707,Pop CHH
+SRX08,708,Bristol CHH
+SRX08,709,PHH MENU
+SRX08,710,TR909 PHH 1
+SRX08,711,TR909 PHH 2
+SRX08,712,TR808 PHH
+SRX08,713,TR606 PHH
+SRX08,714,TR707 PHH
+SRX08,715,OHH MENU
+SRX08,716,TR909 OHH 1
+SRX08,717,TR909 OHH 2
+SRX08,718,TR909 OHH 3
+SRX08,719,TR909 DstOHH
+SRX08,720,TR808 OHH
+SRX08,721,TR606 DstOHH
+SRX08,722,TR707 OHH
+SRX08,723,CR78 OHH
+SRX08,724,R8 OHH
+SRX08,725,Cym OHH
+SRX08,726,HH MENU 1
+SRX08,727,HH MENU 2
+SRX08,728,Old Style HH
+SRX08,729,ShortOpen HH
+SRX08,730,Closed8bitHH
+SRX08,731,ShortNzMidHH
+SRX08,732,Mid Hat
+SRX08,733,Hi Freq HH
+SRX08,734,808 HH
+SRX08,735,OpenDitherHH
+SRX08,736,Open Soft HH
+SRX08,737,Noizzz HH
+SRX08,738,JazzClosedHH
+SRX08,739,Full Ambi HH
+SRX08,740,Open Hard HH
+SRX08,741,FastOpnSynHH
+SRX08,742,Hi Open HH
+SRX08,743,VinylOpen HH
+SRX08,744,Openopen HH
+SRX08,745,Vintage Hat
+SRX08,746,Let It Go HH
+SRX08,747,808 Open HH
+SRX08,748,Cymbal MENU1
+SRX08,749,TR606 Cym 1
+SRX08,750,TR606 Cym 2
+SRX08,751,TR606 DstCym
+SRX08,752,TR909 Ride
+SRX08,753,TR909DstRide
+SRX08,754,TR707 Ride
+SRX08,755,TR909 Crash
+SRX08,756,TR909DsCrash
+SRX08,757,Cymbal MENU2
+SRX08,758,Crash Zero
+SRX08,759,Crash 1 Long
+SRX08,760,Crash 1 Mute
+SRX08,761,Crash 2 Long
+SRX08,762,Crash 2 Mute
+SRX08,763,Hi Crash
+SRX08,764,Ride 3
+SRX08,765,Ride 3 Bell
+SRX08,766,Ride 4
+SRX08,767,Stick Cymbal
+SRX08,768,High Cymbal
+SRX08,769,Clap MENU 1
+SRX08,770,Funk Clap
+SRX08,771,HipHop Clap
+SRX08,772,Crackhed
+SRX08,773,MC Clap
+SRX08,774,TR909 Clap 2
+SRX08,775,Clap MENU 2
+SRX08,776,TR909 Clap
+SRX08,777,TS Clap
+SRX08,778,Clap Stop
+SRX08,779,TR707 Clap
+SRX08,780,HC2 Dry Clap
+SRX08,781,Scratch Clap
+SRX08,782,Comp Clap
+SRX08,783,Claptail
+SRX08,784,Clap MENU 3
+SRX08,785,Shot Clap
+SRX08,786,Room Clap
+SRX08,787,Real Clap 1
+SRX08,788,Real Clap 2
+SRX08,789,Poly Clap
+SRX08,790,TMB&SKR MENU
+SRX08,791,Tambourine 2
+SRX08,792,Rattle Tamb
+SRX08,793,TechnoShaker
+SRX08,794,Dance Shaker
+SRX08,795,COW&RIM MENU
+SRX08,796,TR808Cowbell
+SRX08,797,TR707Cowbell
+SRX08,798,CR78 Cowbell
+SRX08,799,TR727 Agogo
+SRX08,800,TR909 Rim
+SRX08,801,TR808 Rim
+SRX08,802,TR808 RimLng
+SRX08,803,TR808 Claves
+SRX08,804,Perc. MENU 1
+SRX08,805,TR808Claves2
+SRX08,806,TR808 Cowbel
+SRX08,807,Tamb.Short 2
+SRX08,808,Tamb. Long 2
+SRX08,809,CR78 Tamb 2
+SRX08,810,Jingle Bell
+SRX08,811,Belltree
+SRX08,812,Funky Tri
+SRX08,813,TR727Quijada
+SRX08,814,PERCUSS MENU
+SRX08,815,TR808 Conga1
+SRX08,816,TR808 Conga2
+SRX08,817,Surdo mute
+SRX08,818,Surdo open
+SRX08,819,Perc. MENU 2
+SRX08,820,Perc. MENU 3
+SRX08,821,Perc. MENU 4
+SRX08,822,Perc. MENU 5
+SRX08,823,Perc. MENU 6
+SRX08,824,ShortGuira 1
+SRX08,825,ShortGuira 2
+SRX08,826,Guira 1
+SRX08,827,Guira 2
+SRX08,828,Schelle
+SRX08,829,Tin Cowbell
+SRX08,830,ReverbCowbel
+SRX08,831,Real Bell Hi
+SRX08,832,AnalogCwblLo
+SRX08,833,AnalogCwblHi
+SRX08,834,SynthCowbell
+SRX08,835,Block
+SRX08,836,High Claves
+SRX08,837,Timbale 2 Hi
+SRX08,838,Timbale 2 Lo
+SRX08,839,LowRealConga
+SRX08,840,MidRealConga
+SRX08,841,Conga Slap 2
+SRX08,842,FstAtkCngMid
+SRX08,843,FstAtkCngHi
+SRX08,844,FstAtkCngLow
+SRX08,845,Da Conga Mid
+SRX08,846,Da Conga Hi
+SRX08,847,AnalgCongaHi
+SRX08,848,AnalgCongaLo
+SRX08,849,SynthCongaHi
+SRX08,850,SynthCongaLo
+SRX08,851,TalkingConga
+SRX08,852,TambourinHit
+SRX08,853,Tamb Hit&Shk
+SRX08,854,NoizzyTambrn
+SRX08,855,Light Tambrn
+SRX08,856,SuprHighTamb
+SRX08,857,HardTambourn
+SRX08,858,EffectTambrn
+SRX08,859,Small Shake
+SRX08,860,HighShakeUp
+SRX08,861,HighShakeDwn
+SRX08,862,Snake Shake
+SRX08,863,Shortie
+SRX08,864,Klick Shake
+SRX08,865,Open Shake
+SRX08,866,Egg Shake
+SRX08,867,Dirty Shake
+SRX08,868,Sand Shake
+SRX08,869,Hit Shake
+SRX08,870,Analog Shake
+SRX08,871,Noiz Perc.
+SRX08,872,Tick
+SRX08,873,Ping Pong
+SRX08,874,Tack+Tambrn
+SRX08,875,Shot Perc.
+SRX08,876,High Cut
+SRX08,877,Wood Plopp
+SRX08,878,Metal
+SRX08,879,Tuned 4 bit
+SRX08,880,Toy Perc.
+SRX08,881,FX Triangle
+SRX08,882,Flex
+SRX08,883,Metal Box
+SRX08,884,VibratingMtl
+SRX08,885,Plock Drum
+SRX08,886,Sub BD D#
+SRX08,887,30Hz Sub C
+SRX08,888,REV WildWays
+SRX08,889,REV FrostByt
+SRX08,890,REV Elves
+SRX08,891,REV CrystlWv
+SRX08,892,REV Rise Up!
+SRX08,893,REV Cnstrct2
+SRX08,894,REV Turbine
+SRX08,895,REV Sawing
+SRX08,896,REV Air Pump
+SRX08,897,REV SodaWatr
+SRX08,898,REV CompStrt
+SRX08,899,REV CompStop
+SRX08,900,REV OilCanBw
+SRX08,901,REV Feed Me!
+SRX08,902,REV FuzyLove
+SRX08,903,REV BadDream
+SRX08,904,REV DarkBuzz
+SRX08,905,REV SqualDrn
+SRX08,906,REV CyberToy
+SRX08,907,REV PhoneFrq
+SRX08,908,REV Clockers
+SRX08,909,REV PhlngHit
+SRX08,910,REV HrpPiano
+SRX08,911,REV RollChme
+SRX08,912,REV ThinBels
+SRX08,913,REV RaveStop
+SRX08,914,REV MachinNz
+SRX08,915,REV GateKeep
+SRX08,916,REV FootStep
+SRX08,917,REV Droppin'
+SRX08,918,REV P-Zing
+SRX08,919,REV Rubberiz
+SRX08,920,REV Pipe
+SRX08,921,REV Boing
+SRX08,922,REV Mtl Bang
+SRX08,923,REV MtlcShot
+SRX08,924,REV Doorsqwk
+SRX08,925,REV Tomnoise
+SRX08,926,REV SteamBlw
+SRX08,927,REV Scrtchy1
+SRX08,928,REV Fire Snr
+SRX08,929,REV BkSnatch
+SRX08,930,REV Phone
+SRX08,931,REV Sh.Burst
+SRX08,932,REV BlastKik
+SRX08,933,REV O.D.Kick
+SRX08,934,REV BowlDrop
+SRX08,935,REV CaveTube
+SRX08,936,REV Fireball
+SRX08,937,REV Firebomb
+SRX08,938,REV Firework
+SRX08,939,REV Hothead
+SRX08,940,REV Mtlicous
+SRX08,941,REV ClustSlm
+SRX08,942,REV Pit Hit
+SRX08,943,REV BigSting
+SRX08,944,REV MondBlst
+SRX08,945,REV Ignite!
+SRX08,946,REV HeatSeek
+SRX08,947,REV Missile
+SRX08,948,REV Fly-By
+SRX08,949,REV PsycAlrt
+SRX08,950,REV Distresd
+SRX09,1,World Tour
+SRX09,2,Korean Ens
+SRX09,3,Morocco Ens
+SRX09,4,African Ens
+SRX09,5,Asia Phrase
+SRX09,6,122:GamelnP1
+SRX09,7,78:GamelnP2
+SRX09,8,78:Korea Ph
+SRX09,9,118:ChinaPh1
+SRX09,10,132:ChinaPh2
+SRX09,11,118:TablaByP
+SRX09,12,92:DholakPh
+SRX09,13,120:Dhol Ph
+SRX09,14,96:Salsa
+SRX09,15,116:Mariachi
+SRX09,16,96:Cumbia
+SRX09,17,192:LatinPt1
+SRX09,18,180:LatinPt2
+SRX09,19,96:Cng6/8 1
+SRX09,20,96:Cng6/8 2
+SRX09,21,144:CgBolero
+SRX09,22,168:CgChacha
+SRX09,23,88:CgCumbia
+SRX09,24,160:CgMambo
+SRX09,25,104:CgMriach
+SRX09,26,138:CgMarinr
+SRX09,27,126:CgWonwn
+SRX09,28,132:TmblPtn1
+SRX09,29,132:TmblPtn2
+SRX09,30,100:TmblPtn3
+SRX09,31,120:TmblPtn4
+SRX09,32,104:Shakin'
+SRX09,33,80:PndrPtn1
+SRX09,34,108:PndrPtn2
+SRX09,35,138:PndrPtn3
+SRX09,36,132:AgogoPtn
+SRX09,37,132:BotlePtn
+SRX09,38,104:BomboPtn
+SRX09,39,126:SurdoPt1
+SRX09,40,108:SurdoPt2
+SRX09,41,138:CaixaPtn
+SRX09,42,132:TambrmPt
+SRX09,43,108:RepnqPt1
+SRX09,44,144:RepnqPt2
+SRX09,45,Samba MENU
+SRX09,46,BnjoPhs Menu
+SRX09,47,120:Bnjo G
+SRX09,48,120:Bnjo A
+SRX09,49,120:Bnjo B
+SRX09,50,120:Bnjo Cm
+SRX09,51,120:Bnjo Cm+
+SRX09,52,120:Bnjo G-C
+SRX09,53,120:BnjoG-C+
+SRX09,54,EG Phs Menu1
+SRX09,55,95:EGtr1 G
+SRX09,56,95:EGtr1 C
+SRX09,57,95:EGtr1 D
+SRX09,58,95:EGtr2 G
+SRX09,59,95:EGtr2 D
+SRX09,60,EG Phs Menu2
+SRX09,61,140:EGtr3 G+
+SRX09,62,140:EGtr3 G
+SRX09,63,140:EGtr3 C+
+SRX09,64,140:EGtr3 C
+SRX09,65,140:EGtr3 D+
+SRX09,66,140:EGtr3 D
+SRX09,67,PdlSteelMenu
+SRX09,68,120:PdSt1 C
+SRX09,69,120:PdSt1 D
+SRX09,70,120:PdSt1 G
+SRX09,71,140:PdSt2 D
+SRX09,72,140:PdSt2 D+
+SRX09,73,140:PdSt2 G
+SRX09,74,140:PdSt2 G+
+SRX09,75,E.Gtr Sus A
+SRX09,76,E.Gtr Sus B
+SRX09,77,E.Gtr Sus C
+SRX09,78,Strat Rear A
+SRX09,79,Strat Rear B
+SRX09,80,Strat Rear C
+SRX09,81,LP Clean A
+SRX09,82,LP Clean B
+SRX09,83,LP Clean C
+SRX09,84,Tele Front A
+SRX09,85,Tele Front B
+SRX09,86,Tele Front C
+SRX09,87,Tele Rear A
+SRX09,88,Tele Rear B
+SRX09,89,Tele Rear C
+SRX09,90,335Pick A
+SRX09,91,335Pick B
+SRX09,92,335Pick C
+SRX09,93,E.Gtr Mute A
+SRX09,94,E.Gtr Mute B
+SRX09,95,E.Gtr Mute C
+SRX09,96,335Mute A
+SRX09,97,335Mute B
+SRX09,98,335Mute C
+SRX09,99,PdlSteel 1 A
+SRX09,100,PdlSteel 1 B
+SRX09,101,PdlSteel 1 C
+SRX09,102,PdlSteel 2 A
+SRX09,103,PdlSteel 2 B
+SRX09,104,PdlSteel 2 C
+SRX09,105,PdlSteel 3 A
+SRX09,106,PdlSteel 3 B
+SRX09,107,PdlSteel 3 C
+SRX09,108,RequintoGtrA
+SRX09,109,RequintoGtrB
+SRX09,110,RequintoGtrC
+SRX09,111,Nylon Gtr 3A
+SRX09,112,Nylon Gtr 3B
+SRX09,113,Nylon Gtr 3C
+SRX09,114,AcGtr Pick A
+SRX09,115,AcGtr Pick B
+SRX09,116,AcGtr Pick C
+SRX09,117,AcGtr Fngr A
+SRX09,118,AcGtr Fngr B
+SRX09,119,AcGtr Fngr C
+SRX09,120,Ac.Guitar A
+SRX09,121,Ac.Guitar B
+SRX09,122,Ac.Guitar C
+SRX09,123,Reso.Gtr 2 A
+SRX09,124,Reso.Gtr 2 B
+SRX09,125,Reso.Gtr 2 C
+SRX09,126,Reso.Gtr 3pA
+SRX09,127,Reso.Gtr 3pB
+SRX09,128,Reso.Gtr 3pC
+SRX09,129,Reso.Gtr 3fA
+SRX09,130,Reso.Gtr 3fB
+SRX09,131,Reso.Gtr 3fC
+SRX09,132,MandolinDn A
+SRX09,133,MandolinDn B
+SRX09,134,MandolinDn C
+SRX09,135,MandolinUp A
+SRX09,136,MandolinUp B
+SRX09,137,MandolinUp C
+SRX09,138,MandlnTrem A
+SRX09,139,MandlnTrem B
+SRX09,140,MandlnTrem C
+SRX09,141,Banjo 2 A
+SRX09,142,Banjo 2 B
+SRX09,143,Banjo 2 C
+SRX09,144,Banjo 3 A
+SRX09,145,Banjo 3 B
+SRX09,146,Banjo 3 C
+SRX09,147,Bouzouki 2fA
+SRX09,148,Bouzouki 2fB
+SRX09,149,Bouzouki 2fC
+SRX09,150,Bandolim
+SRX09,151,Cavaquinho
+SRX09,152,Oud A
+SRX09,153,Oud B
+SRX09,154,Oud C
+SRX09,155,Sitar/Drone
+SRX09,156,Sitar A
+SRX09,157,Sitar B
+SRX09,158,Sitar C
+SRX09,159,Sitar 2 A
+SRX09,160,Sitar 2 B
+SRX09,161,Sitar 2 C
+SRX09,162,SitarDrone
+SRX09,163,Tambura A
+SRX09,164,Tambura B
+SRX09,165,Tambura C
+SRX09,166,TamburaDrone
+SRX09,167,Zither A
+SRX09,168,Zither B
+SRX09,169,Zither C
+SRX09,170,Santur 2 A
+SRX09,171,Santur 2 B
+SRX09,172,Santur 2 C
+SRX09,173,Santur Trm A
+SRX09,174,Santur Trm B
+SRX09,175,Santur Trm C
+SRX09,176,HmrDulcimer
+SRX09,177,Afro Zither
+SRX09,178,Yuehchin
+SRX09,179,Yangchin
+SRX09,180,Yang Qin 2 A
+SRX09,181,Yang Qin 2 B
+SRX09,182,Yang Qin 2 C
+SRX09,183,YangQinTrm A
+SRX09,184,YangQinTrm B
+SRX09,185,YangQinTrm C
+SRX09,186,Chung Ruan A
+SRX09,187,Chung Ruan B
+SRX09,188,Chung Ruan C
+SRX09,189,Gu Zheng A
+SRX09,190,Gu Zheng B
+SRX09,191,Gu Zheng C
+SRX09,192,Kanoun
+SRX09,193,Koto
+SRX09,194,Kayakeum
+SRX09,195,Sanshin A
+SRX09,196,Sanshin B
+SRX09,197,Sanshin C
+SRX09,198,Pi Pa A
+SRX09,199,Pi Pa B
+SRX09,200,Pi Pa C
+SRX09,201,Biwa MENU
+SRX09,202,Biwa 1
+SRX09,203,Biwa 2
+SRX09,204,Biwa 3
+SRX09,205,Shamisen 2
+SRX09,206,Shami Attack
+SRX09,207,BerimbauMENU
+SRX09,208,Berimbau Opn
+SRX09,209,Berimbau Up
+SRX09,210,Berimbau Dn
+SRX09,211,Berimbau Mut
+SRX09,212,Oct Harp
+SRX09,213,Afro Harp
+SRX09,214,JawHarp MENU
+SRX09,215,Jaw Harp Opn
+SRX09,216,Jaw Harp Wow
+SRX09,217,Gtr Strum 1
+SRX09,218,Gtr Strum 2
+SRX09,219,Nyln GtrNz 1
+SRX09,220,Nyln GtrNz 2
+SRX09,221,Guitarron Nz
+SRX09,222,EG Bend Menu
+SRX09,223,EG C Bend 1
+SRX09,224,EG C Bend 2
+SRX09,225,EG D Bend 1
+SRX09,226,EG D Bend 2
+SRX09,227,EG D Bend 3
+SRX09,228,EG E Bend 1
+SRX09,229,EG E Bend 2
+SRX09,230,EG E Bend 3
+SRX09,231,EG SlideMenu
+SRX09,232,EG Slide 1
+SRX09,233,EG Slide 2
+SRX09,234,EG Slide 3
+SRX09,235,EG Slide 4
+SRX09,236,EG Slide 5
+SRX09,237,EG Slide 6
+SRX09,238,EG Slide 7
+SRX09,239,EG Fx Menu
+SRX09,240,EG Rake 1
+SRX09,241,EG Rake 2
+SRX09,242,EG Mute
+SRX09,243,BzkiChd Menu
+SRX09,244,Bouzki Chd 1
+SRX09,245,Bouzki Chd 2
+SRX09,246,Bouzki Chd 3
+SRX09,247,Sitar Gliss
+SRX09,248,GuZhengArpUp
+SRX09,249,GuZhengArpDn
+SRX09,250,Baby Bass ff
+SRX09,251,6Str Bass A
+SRX09,252,6Str Bass B
+SRX09,253,6Str Bass C
+SRX09,254,FingerdBs 2A
+SRX09,255,FingerdBs 2B
+SRX09,256,FingerdBs 2C
+SRX09,257,Pick Bass 2
+SRX09,258,6StBs Mute A
+SRX09,259,6StBs Mute B
+SRX09,260,6StBs Mute C
+SRX09,261,Tub Bass
+SRX09,262,Guitarron
+SRX09,263,GuitarronOct
+SRX09,264,Baby Bass Nz
+SRX09,265,Violin 2 A
+SRX09,266,Violin 2 B
+SRX09,267,Violin 2 C
+SRX09,268,Fiddle 1 A
+SRX09,269,Fiddle 1 B
+SRX09,270,Fiddle 1 C
+SRX09,271,Fiddle 2 A
+SRX09,272,Fiddle 2 B
+SRX09,273,Fiddle 2 C
+SRX09,274,Fdl Pizz 1 A
+SRX09,275,Fdl Pizz 1 B
+SRX09,276,Fdl Pizz 1 C
+SRX09,277,Fdl Stac 1 A
+SRX09,278,Fdl Stac 1 B
+SRX09,279,Fdl Stac 1 C
+SRX09,280,Erhu
+SRX09,281,Er Hu 2 A
+SRX09,282,Er Hu 2 B
+SRX09,283,Er Hu 2 C
+SRX09,284,Esraj 1
+SRX09,285,Esraj 2
+SRX09,286,Kemanche
+SRX09,287,FiddleFxMenu
+SRX09,288,Fdl 5th 1
+SRX09,289,Fdl 5th 2
+SRX09,290,Fdl Riff 6
+SRX09,291,Fdl Riff 8
+SRX09,292,Er Hu Phrase
+SRX09,293,Trumpets f A
+SRX09,294,Trumpets f B
+SRX09,295,Trumpets f C
+SRX09,296,Tp Ambient A
+SRX09,297,Tp Ambient B
+SRX09,298,Tp Ambient C
+SRX09,299,SoloTp Vib1A
+SRX09,300,SoloTp Vib1B
+SRX09,301,SoloTp Vib1C
+SRX09,302,SoloTp Vib2A
+SRX09,303,SoloTp Vib2B
+SRX09,304,SoloTp Vib2C
+SRX09,305,Tp RomanticA
+SRX09,306,Tp RomanticB
+SRX09,307,Tp RomanticC
+SRX09,308,Tp Vib MariA
+SRX09,309,Tp Vib MariB
+SRX09,310,Tp Vib MariC
+SRX09,311,Tp Shake A
+SRX09,312,Tp Shake B
+SRX09,313,Tp Shake C
+SRX09,314,Tp Grrwah A
+SRX09,315,Tp Grrwah B
+SRX09,316,Tp Grrwah C
+SRX09,317,MuteTp 2 A
+SRX09,318,MuteTp 2 B
+SRX09,319,MuteTp 2 C
+SRX09,320,Tbns ff A
+SRX09,321,Tbns ff B
+SRX09,322,Tbns ff C
+SRX09,323,Fat Tbns A
+SRX09,324,Fat Tbns B
+SRX09,325,Fat Tbns C
+SRX09,326,Tbn Accent A
+SRX09,327,Tbn Accent B
+SRX09,328,Tbn Accent C
+SRX09,329,Trombone3mfA
+SRX09,330,Trombone3mfB
+SRX09,331,Trombone3mfC
+SRX09,332,Trombone3 fA
+SRX09,333,Trombone3 fB
+SRX09,334,Trombone3 fC
+SRX09,335,Tbn Alto A
+SRX09,336,Tbn Alto B
+SRX09,337,Tbn Alto C
+SRX09,338,Tuba f A
+SRX09,339,Tuba f B
+SRX09,340,Tuba f C
+SRX09,341,2Tp+Tbn A
+SRX09,342,2Tp+Tbn B
+SRX09,343,2Tp+Tbn C
+SRX09,344,2Tp+TbAltTnA
+SRX09,345,2Tp+TbAltTnB
+SRX09,346,2Tp+TbAltTnC
+SRX09,347,Sect Fall A
+SRX09,348,Sect Fall B
+SRX09,349,Sect Fall C
+SRX09,350,Sect Stact A
+SRX09,351,Sect Stact B
+SRX09,352,Sect Stact C
+SRX09,353,SectChd 13th
+SRX09,354,SectChd m9
+SRX09,355,SectChd Mj9
+SRX09,356,IndFlute L A
+SRX09,357,IndFlute L B
+SRX09,358,IndFlute L C
+SRX09,359,IndFlute H A
+SRX09,360,IndFlute H B
+SRX09,361,IndFlute H C
+SRX09,362,Bang Di A
+SRX09,363,Bang Di B
+SRX09,364,Bang Di C
+SRX09,365,BangDi Vib A
+SRX09,366,BangDi Vib B
+SRX09,367,BangDi Vib C
+SRX09,368,Qu Di A
+SRX09,369,Qu Di B
+SRX09,370,Qu Di C
+SRX09,371,Qu Di Vib A
+SRX09,372,Qu Di Vib B
+SRX09,373,Qu Di Vib C
+SRX09,374,Zampona 1
+SRX09,375,Zampo Attack
+SRX09,376,Zampo Trem A
+SRX09,377,Zampo Trem B
+SRX09,378,Zampo Trem C
+SRX09,379,Sicu Pipe
+SRX09,380,Quena
+SRX09,381,Ocarina
+SRX09,382,Kawala A
+SRX09,383,Kawala B
+SRX09,384,Kawala C
+SRX09,385,Shakuhachi 2
+SRX09,386,Shaku Attack
+SRX09,387,Shaku Ornam
+SRX09,388,Hunt Pipe
+SRX09,389,Hunt Noise
+SRX09,390,Bagpipes 1
+SRX09,391,Bagpipes 2
+SRX09,392,Bagpipes 3
+SRX09,393,Bagpipes 4
+SRX09,394,Hichiriki
+SRX09,395,Hichiriki Lp
+SRX09,396,Sheng A
+SRX09,397,Sheng B
+SRX09,398,Sheng C
+SRX09,399,Suona A
+SRX09,400,Suona B
+SRX09,401,Suona C
+SRX09,402,Shahnai
+SRX09,403,Mizmar
+SRX09,404,Mizmar Lp
+SRX09,405,Piri
+SRX09,406,Piri Lp
+SRX09,407,Conch Shell1
+SRX09,408,Conch Shell2
+SRX09,409,Didge MENU
+SRX09,410,Didgeridoo 1
+SRX09,411,Didgeridoo 2
+SRX09,412,Didgeridoo 3
+SRX09,413,Accrd ff OpA
+SRX09,414,Accrd ff OpB
+SRX09,415,Accrd ff OpC
+SRX09,416,Accrd Cls A
+SRX09,417,Accrd Cls B
+SRX09,418,Accrd Cls C
+SRX09,419,Musette 4 A
+SRX09,420,Musette 4 B
+SRX09,421,Musette 4 C
+SRX09,422,D.AccordionA
+SRX09,423,D.AccordionB
+SRX09,424,D.AccordionC
+SRX09,425,Harmonica2 A
+SRX09,426,Harmonica2 B
+SRX09,427,Harmonica2 C
+SRX09,428,Harmonica3 A
+SRX09,429,Harmonica3 B
+SRX09,430,Harmonica3 C
+SRX09,431,Harmonica4 A
+SRX09,432,Harmonica4 B
+SRX09,433,Harmonica4 C
+SRX09,434,Voice MENU 1
+SRX09,435,Yoh Tribe
+SRX09,436,How Tribe
+SRX09,437,Hey Brazil
+SRX09,438,Yyoo Dude
+SRX09,439,ZaghrutaLoop
+SRX09,440,ZaghrutaStop
+SRX09,441,Bull Scream
+SRX09,442,Voice MENU 2
+SRX09,443,Sabor!
+SRX09,444,Arriba!
+SRX09,445,Ole!
+SRX09,446,Uno!
+SRX09,447,Dos!
+SRX09,448,Tres!
+SRX09,449,Quatro!
+SRX09,450,Grito-Hahaha
+SRX09,451,Grito-Ahaha!
+SRX09,452,Grito-Haahai
+SRX09,453,Grito-Rrrrr!
+SRX09,454,Voice MENU 3
+SRX09,455,Tiquitito!
+SRX09,456,Grito-Oa Oa!
+SRX09,457,Grito-Eh Eh!
+SRX09,458,Ama ya ahi!
+SRX09,459,Fuego!
+SRX09,460,SambaBateria
+SRX09,461,AsiaGng MENU
+SRX09,462,Asian Gong 1
+SRX09,463,Asian Gong 2
+SRX09,464,Asian Gong 3
+SRX09,465,Asian Gong 4
+SRX09,466,Asian Gong 5
+SRX09,467,Asian Gong 6
+SRX09,468,Asian Gong 7
+SRX09,469,REV Gong 5
+SRX09,470,REV Gong 7
+SRX09,471,Gong MENU
+SRX09,472,Gamelan Gong
+SRX09,473,Kempur
+SRX09,474,Kajar
+SRX09,475,Kelontuk
+SRX09,476,Kelontuk Mt
+SRX09,477,Kelontuk Sid
+SRX09,478,Kemong
+SRX09,479,Ceng Ceng
+SRX09,480,Kopyak Op
+SRX09,481,Kopyak Mt
+SRX09,482,Kane
+SRX09,483,Kane Side
+SRX09,484,Korea MENU
+SRX09,485,Ching Open
+SRX09,486,Ching Mute
+SRX09,487,Kwaengwari p
+SRX09,488,Kwaengwari f
+SRX09,489,KwaengwariMt
+SRX09,490,Bonang
+SRX09,491,Spokes
+SRX09,492,Satellite Dr
+SRX09,493,Atarigane
+SRX09,494,China MENU
+SRX09,495,Xiao Bo
+SRX09,496,Nao Bo
+SRX09,497,Shou Luo 1
+SRX09,498,Shou Luo 2
+SRX09,499,HuYinLuoL Op
+SRX09,500,HuYinLuoL Mt
+SRX09,501,HuYinLuoH Op
+SRX09,502,HuYinLuoH Mt
+SRX09,503,Ban Gu 1
+SRX09,504,Ban Gu 2
+SRX09,505,Ban Gu 3
+SRX09,506,Gender
+SRX09,507,Saron
+SRX09,508,Jegogan A
+SRX09,509,Jegogan B
+SRX09,510,Jegogan C
+SRX09,511,Jublag A
+SRX09,512,Jublag B
+SRX09,513,Jublag C
+SRX09,514,Pemade A
+SRX09,515,Pemade B
+SRX09,516,Pemade C
+SRX09,517,Reyong A
+SRX09,518,Reyong B
+SRX09,519,Reyong C
+SRX09,520,Reyong Sid A
+SRX09,521,Reyong Sid B
+SRX09,522,Reyong Sid C
+SRX09,523,Steel Dr 2
+SRX09,524,Kalimba 1
+SRX09,525,Kalimba 2
+SRX09,526,Kalimba 3
+SRX09,527,Kalimba Glis
+SRX09,528,Kalim Gls Lp
+SRX09,529,Balaphone 1
+SRX09,530,Balaphone 2
+SRX09,531,AsiaCym MENU
+SRX09,532,Chenchen Ptn
+SRX09,533,Chenchen Opn
+SRX09,534,Chenchen Cls
+SRX09,535,BaliCym Opn
+SRX09,536,BaliCym Cls
+SRX09,537,Finger Cym
+SRX09,538,Ramacymbal
+SRX09,539,Sagat Open
+SRX09,540,Sagat Close
+SRX09,541,Sarna Bell
+SRX09,542,Wind Bell
+SRX09,543,Blossom Bell
+SRX09,544,Agogo MENU
+SRX09,545,Agogo 2 Lo
+SRX09,546,Agogo 2 Hi
+SRX09,547,Agogo 3 Lo
+SRX09,548,Agogo 3 Hi
+SRX09,549,AggoCwblMenu
+SRX09,550,BongoBell Op
+SRX09,551,BongoBell Mt
+SRX09,552,MamboBell Op
+SRX09,553,MamboBell Mt
+SRX09,554,Cowbell 1
+SRX09,555,Cowbell 2
+SRX09,556,Cowbell 3
+SRX09,557,VDrm Cowbell
+SRX09,558,Cowbell Op 1
+SRX09,559,Cowbell Mt 1
+SRX09,560,Cowbell Op 2
+SRX09,561,Cowbell Mt 2
+SRX09,562,TablaByMENU1
+SRX09,563,TablaBaya 1
+SRX09,564,TablaBaya 2
+SRX09,565,TablaBaya 3
+SRX09,566,TablaBaya 4
+SRX09,567,TablaBaya 5
+SRX09,568,TablaBaya 6
+SRX09,569,TablaBaya 7
+SRX09,570,TablaBaya 8
+SRX09,571,TablaByMENU2
+SRX09,572,TablaBayaSld
+SRX09,573,TablaBayaGin
+SRX09,574,TablaBaya Ge
+SRX09,575,TablaBaya Ka
+SRX09,576,TablaBaya Na
+SRX09,577,TablaBayaTin
+SRX09,578,TablaBayaTun
+SRX09,579,TablaBaya Te
+SRX09,580,TablaBaya Ti
+SRX09,581,Dholak MENU1
+SRX09,582,Dholak 1
+SRX09,583,Dholak 2
+SRX09,584,Dholak 3
+SRX09,585,Dholak 4
+SRX09,586,Dholak 5
+SRX09,587,Dholak 6
+SRX09,588,Dholak 7
+SRX09,589,Dholak 8
+SRX09,590,Dholak 9
+SRX09,591,Dholak MENU2
+SRX09,592,Dholak Ga
+SRX09,593,Dholak Ta
+SRX09,594,Dholak Tun
+SRX09,595,Dholak Na
+SRX09,596,Madal MENU
+SRX09,597,Madal Da
+SRX09,598,Madal Din
+SRX09,599,Madal Ta
+SRX09,600,Dhol MENU
+SRX09,601,Dhol 1
+SRX09,602,Dhol 2
+SRX09,603,Dhol 3
+SRX09,604,Dhol 4
+SRX09,605,Dhol 5
+SRX09,606,Udu Pot MENU
+SRX09,607,Udu Pot1 Lo
+SRX09,608,Udu Pot1 Hi
+SRX09,609,Udu Pot1 Slp
+SRX09,610,Udu Pot1 Acc
+SRX09,611,Udu Pot2 Lng
+SRX09,612,Udu Pot2 Sht
+SRX09,613,Udu Pot2 Mut
+SRX09,614,Kendang MENU
+SRX09,615,Wadon 1
+SRX09,616,Wadon 2
+SRX09,617,Wadon 3
+SRX09,618,Wadon 4
+SRX09,619,Wadon 5
+SRX09,620,Wadon 6
+SRX09,621,Wadon 7
+SRX09,622,Bebarongan 1
+SRX09,623,Bebarongan 2
+SRX09,624,Bebarongan 3
+SRX09,625,Pelegongan 1
+SRX09,626,Pelegongan 2
+SRX09,627,Pelegongan 3
+SRX09,628,TalkingDr Up
+SRX09,629,TalkingDr Dn
+SRX09,630,AfroDrm MENU
+SRX09,631,AfroDrum Op1
+SRX09,632,AfroDrum Op2
+SRX09,633,AfroDrum Flm
+SRX09,634,AfroDrum Rat
+SRX09,635,Tablah MENU
+SRX09,636,Tablah Bend
+SRX09,637,Tablah Dom
+SRX09,638,Tablah Tak
+SRX09,639,Tablah Rim
+SRX09,640,Tablah Roll
+SRX09,641,Doira Dun
+SRX09,642,Doira Tik
+SRX09,643,Doholla MENU
+SRX09,644,Doholla Dom
+SRX09,645,Doholla Sak
+SRX09,646,Doholla Tak
+SRX09,647,Doholla Roll
+SRX09,648,Doholla Stop
+SRX09,649,Rek MENU
+SRX09,650,Rek Dom
+SRX09,651,Rek Tek
+SRX09,652,Rek Open
+SRX09,653,Rek Trill
+SRX09,654,Bendir 1
+SRX09,655,Bendir 2
+SRX09,656,Dawul
+SRX09,657,JapanPrcMENU
+SRX09,658,Japan MENU
+SRX09,659,Ho
+SRX09,660,Yoh
+SRX09,661,iYooh
+SRX09,662,Taiko
+SRX09,663,Wadaiko
+SRX09,664,Wadaiko Rim
+SRX09,665,Sime Taiko
+SRX09,666,Shimedaiko 2
+SRX09,667,Buk
+SRX09,668,Buk Rim
+SRX09,669,Tsuzumi Lo
+SRX09,670,Tsuzumi Hi
+SRX09,671,Tsuzumi 2 p
+SRX09,672,Tsuzumi 2 mf
+SRX09,673,Tsuzumi 2 Hi
+SRX09,674,Mokugyo 1
+SRX09,675,Mokugyo 2
+SRX09,676,Ohkawa
+SRX09,677,Ohkawa 2
+SRX09,678,Hyoshigi
+SRX09,679,Hyoshigi 2
+SRX09,680,Clapstick
+SRX09,681,VDrm Woodblk
+SRX09,682,Boomerang
+SRX09,683,Changgo
+SRX09,684,Tang Gu Op
+SRX09,685,Tang Gu Mt
+SRX09,686,Shu Gu
+SRX09,687,Shu Gu Rim
+SRX09,688,Shu Ban 1
+SRX09,689,Shu Ban 2
+SRX09,690,Ban Gu 4
+SRX09,691,ChinaPrcMENU
+SRX09,692,Gu Roll
+SRX09,693,Gu Hi
+SRX09,694,Rot Drum
+SRX09,695,Log Drum 2
+SRX09,696,Slit Drum
+SRX09,697,Bongo MENU 1
+SRX09,698,Bongo 1 Lo
+SRX09,699,Bongo 1 Hi
+SRX09,700,Bongo 2 Lo
+SRX09,701,Bongo 2 Hi
+SRX09,702,Bongo MENU 2
+SRX09,703,Bongo LoOp f
+SRX09,704,Bongo Lo Hrd
+SRX09,705,Bongo Lo Sft
+SRX09,706,Bongo LoOpmf
+SRX09,707,Bongo LoSlap
+SRX09,708,Bongo Hi Hrd
+SRX09,709,Bongo HiOp f
+SRX09,710,BongoHiSlap1
+SRX09,711,BongoHiSlap2
+SRX09,712,Conga Menu
+SRX09,713,CongaLoOp f
+SRX09,714,CongaLoOp mf
+SRX09,715,Conga Lo Mt
+SRX09,716,Conga Slap
+SRX09,717,Conga Hi Op
+SRX09,718,Conga Hi Mt
+SRX09,719,Conga Thumb
+SRX09,720,Conga Link
+SRX09,721,Conga Roll
+SRX09,722,Timbale MENU
+SRX09,723,Timbale Lo
+SRX09,724,Timbale Hi
+SRX09,725,Timbale Side
+SRX09,726,TimbalesMenu
+SRX09,727,Timbles LoOp
+SRX09,728,Timbles LoMt
+SRX09,729,Timbles HiOp
+SRX09,730,Timbles HiMt
+SRX09,731,TimbalesHand
+SRX09,732,Timbales Rim
+SRX09,733,TmbSideStick
+SRX09,734,TimbalesFil1
+SRX09,735,TimbalesFil2
+SRX09,736,TimbalesFil3
+SRX09,737,TimbalesFil4
+SRX09,738,Surdo MENU 1
+SRX09,739,Surdo Open L
+SRX09,740,Surdo Open H
+SRX09,741,Surdo Mute
+SRX09,742,Surdo Rim
+SRX09,743,Surdo MENU 2
+SRX09,744,Surdo Hard
+SRX09,745,Surdo Open1
+SRX09,746,Surdo Open2
+SRX09,747,Surdo Mute2
+SRX09,748,Surdo Rim 2
+SRX09,749,Surdo Soft
+SRX09,750,Caixa MENU 1
+SRX09,751,Caixa Open1
+SRX09,752,Caixa Open2
+SRX09,753,Caixa Roll
+SRX09,754,Caixa Mute
+SRX09,755,Caixa MENU 2
+SRX09,756,Caixa Open3
+SRX09,757,Caixa Mute2
+SRX09,758,Caixa Roll2
+SRX09,759,Caixa Rim
+SRX09,760,Rpnq&RpqMenu
+SRX09,761,RepiniqueHrd
+SRX09,762,RepiniqueSft
+SRX09,763,Repinique1
+SRX09,764,Repinique2
+SRX09,765,Repique Open
+SRX09,766,Repique Rim
+SRX09,767,Repique Roll
+SRX09,768,Clv&CucaMenu
+SRX09,769,Clave!
+SRX09,770,Claves Lo 2
+SRX09,771,VDrm Claves
+SRX09,772,Cuica 2
+SRX09,773,Cuica 3
+SRX09,774,Cuica Lo 1
+SRX09,775,Cuica Lo 2
+SRX09,776,Cuica Hi 1
+SRX09,777,Cuica Hi 2
+SRX09,778,MrcsShkrMenu
+SRX09,779,Maracas 2
+SRX09,780,MaracasUpDwn
+SRX09,781,VDrm Maracas
+SRX09,782,Shaker MENU
+SRX09,783,Shaker Ptn
+SRX09,784,Shaker 1
+SRX09,785,Shaker 2
+SRX09,786,Shaker Long
+SRX09,787,Shaker Short
+SRX09,788,Angklung 2
+SRX09,789,Rainstick
+SRX09,790,Guiro Long
+SRX09,791,Guiro Short
+SRX09,792,Guiro Menu
+SRX09,793,Quide Long
+SRX09,794,Quide Short
+SRX09,795,Guiro Long2
+SRX09,796,Guiro Short2
+SRX09,797,RecoRecoLng
+SRX09,798,RecoRecoSht
+SRX09,799,MtlGuiroLng
+SRX09,800,MtlGuiroSht
+SRX09,801,CbsCxGnzMenu
+SRX09,802,Real Cabasa1
+SRX09,803,Real Cabasa2
+SRX09,804,Cabasa Roll
+SRX09,805,VDrmCabasaUp
+SRX09,806,VDrmCabasDwn
+SRX09,807,Caxixi
+SRX09,808,Ganza Soft
+SRX09,809,Ganza Hard
+SRX09,810,Chekere 1
+SRX09,811,Chekere 2
+SRX09,812,PandeiroMENU
+SRX09,813,PandeiroL Lo
+SRX09,814,PandeiroL Hi
+SRX09,815,PandeiroL Sp
+SRX09,816,PandeiroL Rm
+SRX09,817,PandeiroS Op
+SRX09,818,PandeiroS Sp
+SRX09,819,PandeiroS Rm
+SRX09,820,PandTambMenu
+SRX09,821,PandeiroOpen
+SRX09,822,PandeiroMute
+SRX09,823,PandeiroHit
+SRX09,824,PandeiroRim
+SRX09,825,PandeiroCrsh
+SRX09,826,PandeiroRoll
+SRX09,827,TamborimMENU
+SRX09,828,Tamborim Opn
+SRX09,829,Tamborim Mut
+SRX09,830,Tamborim Slp
+SRX09,831,TamborimOpen
+SRX09,832,TamborimRim
+SRX09,833,TamborimMute
+SRX09,834,TamborimRoll
+SRX09,835,Tambrin Hit
+SRX09,836,TambrinShake
+SRX09,837,R8 Tamb
+SRX09,838,Others Menu
+SRX09,839,ApitoHiShort
+SRX09,840,ApitoLoShort
+SRX09,841,SambaWhistle
+SRX09,842,Quijada
+SRX09,843,Chekere 3
+SRX09,844,CajonClpMenu
+SRX09,845,Cajon Lo
+SRX09,846,Cajon Hi
+SRX09,847,Cajon Rol Hi
+SRX09,848,Cajon Rol Lo
+SRX09,849,Afro Feet 1
+SRX09,850,Afro Feet 2
+SRX09,851,Afro Clap
+SRX09,852,Hand Clap 2
+SRX09,853,Claps Real
+SRX09,854,FingerSnaps4
+SRX09,855,BomboBbnMenu
+SRX09,856,SoftSet Menu
+SRX09,857,HardSet Menu
+SRX09,858,Fat BD
+SRX09,859,Room Kick 2
+SRX09,860,Maple Kick
+SRX09,861,Warm Kick
+SRX09,862,Maple Lo Snr
+SRX09,863,MapleSoft SN
+SRX09,864,NaturlHardSN
+SRX09,865,NaturlRimSht
+SRX09,866,Cross Stick2
+SRX09,867,StudioLo Tom
+SRX09,868,StudioMidTom
+SRX09,869,StudioHi Tom
+SRX09,870,Dixie HH Pdl
+SRX09,871,Dixie HH Cls
+SRX09,872,Dixie HH Hlf
+SRX09,873,Dixie HH Opn
+SRX10,1,PopBrs mfA L
+SRX10,2,PopBrs mfA R
+SRX10,3,PopBrs mfB L
+SRX10,4,PopBrs mfB R
+SRX10,5,PopBrs mfC L
+SRX10,6,PopBrs mfC R
+SRX10,7,PopBrs f A L
+SRX10,8,PopBrs f A R
+SRX10,9,PopBrs f B L
+SRX10,10,PopBrs f B R
+SRX10,11,PopBrs f C L
+SRX10,12,PopBrs f C R
+SRX10,13,PopStc mfA L
+SRX10,14,PopStc mfA R
+SRX10,15,PopStc mfB L
+SRX10,16,PopStc mfB R
+SRX10,17,PopStc mfC L
+SRX10,18,PopStc mfC R
+SRX10,19,PopStc f A L
+SRX10,20,PopStc f A R
+SRX10,21,PopStc f B L
+SRX10,22,PopStc f B R
+SRX10,23,PopStc f C L
+SRX10,24,PopStc f C R
+SRX10,25,PopBrsRipA L
+SRX10,26,PopBrsRipA R
+SRX10,27,PopBrsRipB L
+SRX10,28,PopBrsRipB R
+SRX10,29,PopBrsRipC L
+SRX10,30,PopBrsRipC R
+SRX10,31,PopFlSht A L
+SRX10,32,PopFlSht A R
+SRX10,33,PopFlSht B L
+SRX10,34,PopFlSht B R
+SRX10,35,PopFlSht C L
+SRX10,36,PopFlSht C R
+SRX10,37,PopFlLng A L
+SRX10,38,PopFlLng A R
+SRX10,39,PopFlLng B L
+SRX10,40,PopFlLng B R
+SRX10,41,PopFlLng C L
+SRX10,42,PopFlLng C R
+SRX10,43,Tps mf A L
+SRX10,44,Tps mf A R
+SRX10,45,Tps mf B L
+SRX10,46,Tps mf B R
+SRX10,47,Tps mf C L
+SRX10,48,Tps mf C R
+SRX10,49,Tps f A L
+SRX10,50,Tps f A R
+SRX10,51,Tps f B L
+SRX10,52,Tps f B R
+SRX10,53,Tps f C L
+SRX10,54,Tps f C R
+SRX10,55,Tps Stc mfAL
+SRX10,56,Tps Stc mfAR
+SRX10,57,Tps Stc mfBL
+SRX10,58,Tps Stc mfBR
+SRX10,59,Tps Stc mfCL
+SRX10,60,Tps Stc mfCR
+SRX10,61,Tps Stc f AL
+SRX10,62,Tps Stc f AR
+SRX10,63,Tps Stc f BL
+SRX10,64,Tps Stc f BR
+SRX10,65,Tps Stc f CL
+SRX10,66,Tps Stc f CR
+SRX10,67,Tps Mute A L
+SRX10,68,Tps Mute A R
+SRX10,69,Tps Mute B L
+SRX10,70,Tps Mute B R
+SRX10,71,Tps Mute C L
+SRX10,72,Tps Mute C R
+SRX10,73,Tps MtStc AL
+SRX10,74,Tps MtStc AR
+SRX10,75,Tps MtStc BL
+SRX10,76,Tps MtStc BR
+SRX10,77,Tps MtStc CL
+SRX10,78,Tps MtStc CR
+SRX10,79,Tps RipFl AL
+SRX10,80,Tps RipFl AR
+SRX10,81,Tps RipFl BL
+SRX10,82,Tps RipFl BR
+SRX10,83,Tps RipFl CL
+SRX10,84,Tps RipFl CR
+SRX10,85,Tps RipCp AL
+SRX10,86,Tps RipCp AR
+SRX10,87,Tps RipCp BL
+SRX10,88,Tps RipCp BR
+SRX10,89,Tps RipCp CL
+SRX10,90,Tps RipCp CR
+SRX10,91,Tps Fall A L
+SRX10,92,Tps Fall A R
+SRX10,93,Tps Fall B L
+SRX10,94,Tps Fall B R
+SRX10,95,Tps Fall C L
+SRX10,96,Tps Fall C R
+SRX10,97,Tps Shake AL
+SRX10,98,Tps Shake AR
+SRX10,99,Tps Shake BL
+SRX10,100,Tps Shake BR
+SRX10,101,Tps Shake CL
+SRX10,102,Tps Shake CR
+SRX10,103,Tps Doit A L
+SRX10,104,Tps Doit A R
+SRX10,105,Tps Doit B L
+SRX10,106,Tps Doit B R
+SRX10,107,Tps Doit C L
+SRX10,108,Tps Doit C R
+SRX10,109,C Tps mp A L
+SRX10,110,C Tps mp A R
+SRX10,111,C Tps mp B L
+SRX10,112,C Tps mp B R
+SRX10,113,C Tps mp C L
+SRX10,114,C Tps mp C R
+SRX10,115,C Tps mf A L
+SRX10,116,C Tps mf A R
+SRX10,117,C Tps mf B L
+SRX10,118,C Tps mf B R
+SRX10,119,C Tps mf C L
+SRX10,120,C Tps mf C R
+SRX10,121,C Tps f A L
+SRX10,122,C Tps f A R
+SRX10,123,C Tps f B L
+SRX10,124,C Tps f B R
+SRX10,125,C Tps f C L
+SRX10,126,C Tps f C R
+SRX10,127,CTpsStc mpAL
+SRX10,128,CTpsStc mpAR
+SRX10,129,CTpsStc mpBL
+SRX10,130,CTpsStc mpBR
+SRX10,131,CTpsStc mpCL
+SRX10,132,CTpsStc mpCR
+SRX10,133,CTpsStc mfAL
+SRX10,134,CTpsStc mfAR
+SRX10,135,CTpsStc mfBL
+SRX10,136,CTpsStc mfBR
+SRX10,137,CTpsStc mfCL
+SRX10,138,CTpsStc mfCR
+SRX10,139,CTpsStc f AL
+SRX10,140,CTpsStc f AR
+SRX10,141,CTpsStc f BL
+SRX10,142,CTpsStc f BR
+SRX10,143,CTpsStc f CL
+SRX10,144,CTpsStc f CR
+SRX10,145,CTps Trit AL
+SRX10,146,CTps Trit AR
+SRX10,147,CTps Trit BL
+SRX10,148,CTps Trit BR
+SRX10,149,CTps Trit CL
+SRX10,150,CTps Trit CR
+SRX10,151,Tbs mp A L
+SRX10,152,Tbs mp A R
+SRX10,153,Tbs mp B L
+SRX10,154,Tbs mp B R
+SRX10,155,Tbs mp C L
+SRX10,156,Tbs mp C R
+SRX10,157,Tbs mf A L
+SRX10,158,Tbs mf A R
+SRX10,159,Tbs mf B L
+SRX10,160,Tbs mf B R
+SRX10,161,Tbs mf C L
+SRX10,162,Tbs mf C R
+SRX10,163,Tbs f A L
+SRX10,164,Tbs f A R
+SRX10,165,Tbs f B L
+SRX10,166,Tbs f B R
+SRX10,167,Tbs f C L
+SRX10,168,Tbs f C R
+SRX10,169,Tbs Stc mfAL
+SRX10,170,Tbs Stc mfAR
+SRX10,171,Tbs Stc mfBL
+SRX10,172,Tbs Stc mfBR
+SRX10,173,Tbs Stc mfCL
+SRX10,174,Tbs Stc mfCR
+SRX10,175,Tbs Stc f AL
+SRX10,176,Tbs Stc f AR
+SRX10,177,Tbs Stc f BL
+SRX10,178,Tbs Stc f BR
+SRX10,179,Tbs Stc f CL
+SRX10,180,Tbs Stc f CR
+SRX10,181,Tbs Fall A L
+SRX10,182,Tbs Fall A R
+SRX10,183,Tbs Fall B L
+SRX10,184,Tbs Fall B R
+SRX10,185,Tbs Fall C L
+SRX10,186,Tbs Fall C R
+SRX10,187,Tbs Rip A L
+SRX10,188,Tbs Rip A R
+SRX10,189,Tbs Rip B L
+SRX10,190,Tbs Rip B R
+SRX10,191,Tbs Rip C L
+SRX10,192,Tbs Rip C R
+SRX10,193,Horns mp A L
+SRX10,194,Horns mp A R
+SRX10,195,Horns mp B L
+SRX10,196,Horns mp B R
+SRX10,197,Horns mp C L
+SRX10,198,Horns mp C R
+SRX10,199,Horns mf A L
+SRX10,200,Horns mf A R
+SRX10,201,Horns mf B L
+SRX10,202,Horns mf B R
+SRX10,203,Horns mf C L
+SRX10,204,Horns mf C R
+SRX10,205,Horns f A L
+SRX10,206,Horns f A R
+SRX10,207,Horns f B L
+SRX10,208,Horns f B R
+SRX10,209,Horns f C L
+SRX10,210,Horns f C R
+SRX10,211,HrnsStc mpAL
+SRX10,212,HrnsStc mpAR
+SRX10,213,HrnsStc mpBL
+SRX10,214,HrnsStc mpBR
+SRX10,215,HrnsStc mpCL
+SRX10,216,HrnsStc mpCR
+SRX10,217,HrnsStc mfAL
+SRX10,218,HrnsStc mfAR
+SRX10,219,HrnsStc mfBL
+SRX10,220,HrnsStc mfBR
+SRX10,221,HrnsStc mfCL
+SRX10,222,HrnsStc mfCR
+SRX10,223,HrnsStc f AL
+SRX10,224,HrnsStc f AR
+SRX10,225,HrnsStc f BL
+SRX10,226,HrnsStc f BR
+SRX10,227,HrnsStc f CL
+SRX10,228,HrnsStc f CR
+SRX10,229,Hrns Rip A L
+SRX10,230,Hrns Rip A R
+SRX10,231,Hrns Rip B L
+SRX10,232,Hrns Rip B R
+SRX10,233,Hrns Rip C L
+SRX10,234,Hrns Rip C R
+SRX10,235,Tuba mf A
+SRX10,236,Tuba mf B
+SRX10,237,Tuba mf C
+SRX10,238,Tuba f A
+SRX10,239,Tuba f B
+SRX10,240,Tuba f C
+SRX10,241,Tuba Stc mpA
+SRX10,242,Tuba Stc mpB
+SRX10,243,Tuba Stc mpC
+SRX10,244,Tuba Stc mfA
+SRX10,245,Tuba Stc mfB
+SRX10,246,Tuba Stc mfC
+SRX10,247,Tuba Stc f A
+SRX10,248,Tuba Stc f B
+SRX10,249,Tuba Stc f C
+SRX10,250,Brs LipNz1 L
+SRX10,251,Brs LipNz1 R
+SRX10,252,Brs LipNz2 L
+SRX10,253,Brs LipNz2 R
+SRX10,254,Brs LipNz3 L
+SRX10,255,Brs LipNz3 R
+SRX10,256,Tp LipNz 1 L
+SRX10,257,Tp LipNz 1 R
+SRX10,258,Tp LipNz 2 L
+SRX10,259,Tp LipNz 2 R
+SRX10,260,CTp Lip Nz L
+SRX10,261,CTp Lip Nz R
+SRX11,1,CmpPno ppA L
+SRX11,2,CmpPno ppA R
+SRX11,3,CmpPno ppB L
+SRX11,4,CmpPno ppB R
+SRX11,5,CmpPno ppB’L
+SRX11,6,CmpPno ppB’R
+SRX11,7,CmpPno ppC L
+SRX11,8,CmpPno ppC R
+SRX11,9,CmpPno ppC’L
+SRX11,10,CmpPno ppC’R
+SRX11,11,CmpPno mpA L
+SRX11,12,CmpPno mpA R
+SRX11,13,CmpPno mpB L
+SRX11,14,CmpPno mpB R
+SRX11,15,CmpPno mpB’L
+SRX11,16,CmpPno mpB’R
+SRX11,17,CmpPno mpC L
+SRX11,18,CmpPno mpC R
+SRX11,19,CmpPno mpC’L
+SRX11,20,CmpPno mpC’R
+SRX11,21,CmpPno f A L
+SRX11,22,CmpPno f A R
+SRX11,23,CmpPno f B L
+SRX11,24,CmpPno f B R
+SRX11,25,CmpPno f B’L
+SRX11,26,CmpPno f B’R
+SRX11,27,CmpPno f C L
+SRX11,28,CmpPno f C R
+SRX11,29,CmpPno f C’L
+SRX11,30,CmpPno f C’R
+SRX11,31,CmpPno ffA L
+SRX11,32,CmpPno ffA R
+SRX11,33,CmpPno ffB L
+SRX11,34,CmpPno ffB R
+SRX11,35,CmpPno ffB’L
+SRX11,36,CmpPno ffB’R
+SRX11,37,CmpPno ffC L
+SRX11,38,CmpPno ffC R
+SRX11,39,CmpPno ffC’L
+SRX11,40,CmpPno ffC’R
+SRX12,1,EPtype1 pp A
+SRX12,2,EPtype1 pp B
+SRX12,3,EPtype1 pp C
+SRX12,4,EPtype1 ppV1
+SRX12,5,EPtype1 ppV2
+SRX12,6,EPtype1 ppV3
+SRX12,7,EPtype1 ppV4
+SRX12,8,EPtype1 mp A
+SRX12,9,EPtype1 mp B
+SRX12,10,EPtype1 mp C
+SRX12,11,EPtype1 mpV1
+SRX12,12,EPtype1 mpV2
+SRX12,13,EPtype1 mpV3
+SRX12,14,EPtype1 mpV4
+SRX12,15,EPtype1 f A
+SRX12,16,EPtype1 f B
+SRX12,17,EPtype1 f C
+SRX12,18,EPtype1 f V1
+SRX12,19,EPtype1 f V2
+SRX12,20,EPtype1 f V3
+SRX12,21,EPtype1 f V4
+SRX12,22,EPtype1 ff A
+SRX12,23,EPtype1 ff B
+SRX12,24,EPtype1 ff C
+SRX12,25,EPtype1 ffV1
+SRX12,26,EPtype1 ffV2
+SRX12,27,EPtype1 ffV3
+SRX12,28,EPtype1 ffV4
+SRX12,29,EPtype2 pp A
+SRX12,30,EPtype2 pp B
+SRX12,31,EPtype2 pp C
+SRX12,32,EPtype2 ppV1
+SRX12,33,EPtype2 ppV2
+SRX12,34,EPtype2 ppV3
+SRX12,35,EPtype2 ppV4
+SRX12,36,EPtype2 mp A
+SRX12,37,EPtype2 mp B
+SRX12,38,EPtype2 mp C
+SRX12,39,EPtype2 mpV1
+SRX12,40,EPtype2 mpV2
+SRX12,41,EPtype2 mpV3
+SRX12,42,EPtype2 mpV4
+SRX12,43,EPtype2 f A
+SRX12,44,EPtype2 f B
+SRX12,45,EPtype2 f C
+SRX12,46,EPtype2 f V1
+SRX12,47,EPtype2 f V2
+SRX12,48,EPtype2 f V3
+SRX12,49,EPtype2 f V4
+SRX12,50,EPtype2 ff A
+SRX12,51,EPtype2 ff B
+SRX12,52,EPtype2 ff C
+SRX12,53,EPtype2 ffV1
+SRX12,54,EPtype2 ffV2
+SRX12,55,EPtype2 ffV3
+SRX12,56,EPtype2 ffV4
+SRX12,57,EPtype3 pp A
+SRX12,58,EPtype3 pp B
+SRX12,59,EPtype3 pp C
+SRX12,60,EPtype3 ppV1
+SRX12,61,EPtype3 ppV2
+SRX12,62,EPtype3 ppV3
+SRX12,63,EPtype3 ppV4
+SRX12,64,EPtype3 mp A
+SRX12,65,EPtype3 mp B
+SRX12,66,EPtype3 mp C
+SRX12,67,EPtype3 mpV1
+SRX12,68,EPtype3 mpV2
+SRX12,69,EPtype3 mpV3
+SRX12,70,EPtype3 mpV4
+SRX12,71,EPtype3 f A
+SRX12,72,EPtype3 f B
+SRX12,73,EPtype3 f C
+SRX12,74,EPtype3 f V1
+SRX12,75,EPtype3 f V2
+SRX12,76,EPtype3 f V3
+SRX12,77,EPtype3 f V4
+SRX12,78,EPtype3 ff A
+SRX12,79,EPtype3 ff B
+SRX12,80,EPtype3 ff C
+SRX12,81,EPtype3 ffV1
+SRX12,82,EPtype3 ffV2
+SRX12,83,EPtype3 ffV3
+SRX12,84,EPtype3 ffV4
+SRX12,85,Clav CA mp A
+SRX12,86,Clav CA mp B
+SRX12,87,Clav CA mp C
+SRX12,88,Clav CA f A
+SRX12,89,Clav CA f B
+SRX12,90,Clav CA f C
+SRX12,91,Clav CA ff A
+SRX12,92,Clav CA ff B
+SRX12,93,Clav CA ff C
+SRX12,94,Clav CB mp A
+SRX12,95,Clav CB mp B
+SRX12,96,Clav CB mp C
+SRX12,97,Clav CB f A
+SRX12,98,Clav CB f B
+SRX12,99,Clav CB f C
+SRX12,100,Clav CB ff A
+SRX12,101,Clav CB ff B
+SRX12,102,Clav CB ff C
+SRX12,103,Clav DA mp A
+SRX12,104,Clav DA mp B
+SRX12,105,Clav DA mp C
+SRX12,106,Clav DA f A
+SRX12,107,Clav DA f B
+SRX12,108,Clav DA f C
+SRX12,109,Clav DA ff A
+SRX12,110,Clav DA ff B
+SRX12,111,Clav DA ff C
+SRX12,112,Clav DB mp A
+SRX12,113,Clav DB mp B
+SRX12,114,Clav DB mp C
+SRX12,115,Clav DB f A
+SRX12,116,Clav DB f B
+SRX12,117,Clav DB f C
+SRX12,118,Clav DB ff A
+SRX12,119,Clav DB ff B
+SRX12,120,Clav DB ff C
+SRX12,121,ClvMtCA mp A
+SRX12,122,ClvMtCA mp B
+SRX12,123,ClvMtCA mp C
+SRX12,124,ClvMt CA f A
+SRX12,125,ClvMt CA f B
+SRX12,126,ClvMt CA f C
+SRX12,127,ClvMtCB mp A
+SRX12,128,ClvMtCB mp B
+SRX12,129,ClvMtCB mp C
+SRX12,130,ClvMt CB f A
+SRX12,131,ClvMt CB f B
+SRX12,132,ClvMt CB f C
+SRX12,133,ClvMtDA mp A
+SRX12,134,ClvMtDA mp B
+SRX12,135,ClvMtDA mp C
+SRX12,136,ClvMt DA f A
+SRX12,137,ClvMt DA f B
+SRX12,138,ClvMt DA f C
+SRX12,139,ClvMtDB mp A
+SRX12,140,ClvMtDB mp B
+SRX12,141,ClvMtDB mp C
+SRX12,142,ClvMt DB f A
+SRX12,143,ClvMt DB f B
+SRX12,144,ClvMt DB f C
+SRX12,145,ClvMtRsCA pA
+SRX12,146,ClvMtRsCA pB
+SRX12,147,ClvMtRsCA pC
+SRX12,148,ClvMtRsCA fA
+SRX12,149,ClvMtRsCA fB
+SRX12,150,ClvMtRsCA fC
+SRX12,151,ClvMtRsCB pA
+SRX12,152,ClvMtRsCB pB
+SRX12,153,ClvMtRsCB pC
+SRX12,154,ClvMtRsCB fA
+SRX12,155,ClvMtRsCB fB
+SRX12,156,ClvMtRsCB fC
+SRX12,157,ClvMtRsDA pA
+SRX12,158,ClvMtRsDA pB
+SRX12,159,ClvMtRsDA pC
+SRX12,160,ClvMtRsDA fA
+SRX12,161,ClvMtRsDA fB
+SRX12,162,ClvMtRsDA fC
+SRX12,163,ClvMtRsDB pA
+SRX12,164,ClvMtRsDB pB
+SRX12,165,ClvMtRsDB pC
+SRX12,166,ClvMtRsDB fA
+SRX12,167,ClvMtRsDB fB
+SRX12,168,ClvMtRsDB fC
+SN-S,1,JP-8 Saw
+SN-S,2,Syn Saw Wave
+SN-S,3,MG Saw 1
+SN-S,4,GR-300 Saw
+SN-S,5,P5 Saw
+SN-S,6,MG Saw 2
+SN-S,7,Calc.Saw
+SN-S,8,Calc.Saw inv
+SN-S,9,Digital Saw
+SN-S,10,JD Fat Saw
+SN-S,11,Unison Saw
+SN-S,12,DistSaw Wave
+SN-S,13,JP-8 Pls 05
+SN-S,14,Pulse Wave
+SN-S,15,Ramp Wave 1
+SN-S,16,Ramp Wave 2
+SN-S,17,Sine
+SN-S,18,PWM Wave 1
+SN-S,19,PWM Wave 2
+SN-S,20,PWM Wave 3
+SN-S,21,PWM Wave 4
+SN-S,22,Hollo Wave1
+SN-S,23,Hollo Wave2
+SN-S,24,Hollo Wave2+
+SN-S,25,SynStrings 1
+SN-S,26,SynStrings 2
+SN-S,27,SynStrings 3
+SN-S,28,SynStrings 4
+SN-S,29,SynStrings 5
+SN-S,30,SynStrings 5+
+SN-S,31,SynStrings 6
+SN-S,32,SynStrings 7
+SN-S,33,SynStrings 8
+SN-S,34,SynStrings 9
+SN-S,35,FM Brass
+SN-S,36,Lead Wave 1
+SN-S,37,Lead Wave 2
+SN-S,38,Lead Wave 3
+SN-S,39,Lead Wave 4
+SN-S,40,Lead Wave 5
+SN-S,41,SqrLeadWave
+SN-S,42,SqrLeadWave+
+SN-S,43,SBF Lead 1
+SN-S,44,SBF Lead 2
+SN-S,45,Sync Sweep
+SN-S,46,Saw Sync
+SN-S,47,Unison Sync
+SN-S,48,Unison Sync+
+SN-S,49,Sync Wave
+SN-S,50,X-Mod Wave 1
+SN-S,51,X-Mod Wave 2
+SN-S,52,X-Mod Wave 3
+SN-S,53,X-Mod Wave 4
+SN-S,54,X-Mod Wave 5
+SN-S,55,X-Mod Wave 6
+SN-S,56,X-Mod Wave 7
+SN-S,57,FeedbackWave
+SN-S,58,SubOSC Wave1
+SN-S,59,SubOSC Wave2
+SN-S,60,SubOSC Wave3
+SN-S,61,Saw+Sub Wave
+SN-S,62,DipthongWave
+SN-S,63,DipthongWv +
+SN-S,64,Heaven Wave
+SN-S,65,Fanta Synth
+SN-S,66,Syn Vox 1
+SN-S,67,Syn Vox 2
+SN-S,68,Org Vox
+SN-S,69,ZZZ Vox
+SN-S,70,Male Ooh
+SN-S,71,Doo
+SN-S,72,MMM Vox
+SN-S,73,Digital Vox
+SN-S,74,Spark Vox 1
+SN-S,75,Spark Vox 2
+SN-S,76,Aah Formant
+SN-S,77,Eeh Formant
+SN-S,78,Iih Formant
+SN-S,79,Ooh Formant
+SN-S,80,Uuh Formant
+SN-S,81,SBF Vox
+SN-S,82,SBF Digi Vox
+SN-S,83,VP-330 Choir
+SN-S,84,FM Syn Vox
+SN-S,85,Fine Wine
+SN-S,86,Digi Loop
+SN-S,87,Vib Wave
+SN-S,88,Bell Wave 1
+SN-S,89,Bell Wave 1+
+SN-S,90,Bell Wave 2
+SN-S,91,Bell Wave 3
+SN-S,92,Bell Wave 4
+SN-S,93,Digi Wave 1
+SN-S,94,Digi Wave 2
+SN-S,95,Digi Wave 3
+SN-S,96,DIGI Bell
+SN-S,97,DIGI Bell +
+SN-S,98,Digi Chime
+SN-S,99,Org Bell
+SN-S,100,FM Bell
+SN-S,101,Hooky
+SN-S,102,Klack Wave
+SN-S,103,Syn Sax
+SN-S,104,Can Wave 1
+SN-S,105,Can Wave 2
+SN-S,106,MIDI Clav
+SN-S,107,Huge MIDI
+SN-S,108,Huge MIDI +
+SN-S,109,Pulse Clav
+SN-S,110,Pulse Clav+
+SN-S,111,Cello Wave
+SN-S,112,Cutters
+SN-S,113,5th Wave
+SN-S,114,Nasty
+SN-S,115,Wave Table
+SN-S,116,Bagpipe Wave
+SN-S,117,Wally Wave
+SN-S,118,Brusky Wave
+SN-S,119,Wave Scan
+SN-S,120,Wire String
+SN-S,121,Synth Piano
+SN-S,122,EP Hard
+SN-S,123,Vint. EP mp
+SN-S,124,Vint. EP f
+SN-S,125,Vint. EP ff
+SN-S,126,Stage EP p
+SN-S,127,Stage EP f
+SN-S,128,SA EP 1
+SN-S,129,SA EP 2
+SN-S,130,Wurly mp
+SN-S,131,Wurly mf
+SN-S,132,FM EP 1
+SN-S,133,FM EP 2
+SN-S,134,FM EP 3
+SN-S,135,FM EP 4
+SN-S,136,FM EP 5
+SN-S,137,EP Distone
+SN-S,138,OrganWave 1
+SN-S,139,OrganWave 2
+SN-S,140,OrganWave 3
+SN-S,141,OrganWave 4
+SN-S,142,OrganWave 5
+SN-S,143,OrganWave 5+
+SN-S,144,OrganWave 6
+SN-S,145,PercOrgan 1
+SN-S,146,PercOrgan 1+
+SN-S,147,PercOrgan 2
+SN-S,148,PercOrgan 2+
+SN-S,149,OrganWave 7
+SN-S,150,OrganWave 8
+SN-S,151,Org Basic 1
+SN-S,152,Org Basic 2
+SN-S,153,3rd Perc Organ
+SN-S,154,Vint.Organ
+SN-S,155,Chorus Organ
+SN-S,156,Org Perc
+SN-S,157,Orc Perc 2nd
+SN-S,158,JLOrg1 Slw L
+SN-S,159,JLOrg1 Slw R
+SN-S,160,JLOrg1 Fst L
+SN-S,161,JLOrg1 Fst R
+SN-S,162,JLOrg2 Slw L
+SN-S,163,JLOrg2 Slw R
+SN-S,164,JLOrg2 Fst L
+SN-S,165,JLOrg2 Fst R
+SN-S,166,TheaterOrg1L
+SN-S,167,TheaterOrg1R
+SN-S,168,TheaterOrg2L
+SN-S,169,TheaterOrg2R
+SN-S,170,TheaterOrg3L
+SN-S,171,TheaterOrg3R
+SN-S,172,Positive '8
+SN-S,173,Pipe Organ
+SN-S,174,CathedralOrg
+SN-S,175,Clav Wave 1
+SN-S,176,Clav Wave 2
+SN-S,177,Clav Wave 3
+SN-S,178,Reg.Clav
+SN-S,179,Harpsi Wave1
+SN-S,180,Harpsi Wave2
+SN-S,181,Harpsi Wave3
+SN-S,182,Marimba Wave
+SN-S,183,Marimba Atk
+SN-S,184,Vibe Wave
+SN-S,185,Xylo Wave 1
+SN-S,186,Xylo Wave 2
+SN-S,187,FM Mallet
+SN-S,188,Turbular Bell
+SN-S,189,Celesta
+SN-S,190,Music Box 1
+SN-S,191,Music Box 2
+SN-S,192,Nylon Gtr
+SN-S,193,Brite Nylon
+SN-S,194,Ac. Gtr ff
+SN-S,195,Strat Sust
+SN-S,196,Strat Wave 1
+SN-S,197,Jazz Gtr
+SN-S,198,Strat Wave 2
+SN-S,199,FstPick70s
+SN-S,200,Funk Gtr
+SN-S,201,Muters
+SN-S,202,Mute Gtr 1
+SN-S,203,Mute Gtr 2
+SN-S,204,Mute Gtr 3
+SN-S,205,Harm Gtrs
+SN-S,206,Nasty Gtr
+SN-S,207,E.Gtr Loop
+SN-S,208,Overdrive 1
+SN-S,209,Overdrive 2
+SN-S,210,Dist Gtr 1
+SN-S,211,Dist Gr 2
+SN-S,212,Mute Dist
+SN-S,213,Fretless
+SN-S,214,SlapBs Wave1
+SN-S,215,SlapBs Wave2
+SN-S,216,Hollow Bass
+SN-S,217,Solid Bass
+SN-S,218,FM Super Bs
+SN-S,219,SynBs Wave
+SN-S,220,SynBs Wave +
+SN-S,221,Banjo Wave
+SN-S,222,Pluck Harp
+SN-S,223,Harp Harm
+SN-S,224,Harp Wave
+SN-S,225,E.Sitar
+SN-S,226,Sitar Wave
+SN-S,227,Sitar Drone
+SN-S,228,Yangqin
+SN-S,229,KalimbaWave1
+SN-S,230,KalimbaWave2
+SN-S,231,Gamelan 1
+SN-S,232,Gamelan 2
+SN-S,233,Gamelan 3
+SN-S,234,Steel Drum
+SN-S,235,Log Drum
+SN-S,236,Bottle Hit
+SN-S,237,Agogo
+SN-S,238,Agogo Bell
+SN-S,239,Crystal
+SN-S,240,Finger Bell
+SN-S,241,Church Bell
+SN-S,242,LargeChrF 1
+SN-S,243,LargeChrF 2
+SN-S,244,Female Aahs1
+SN-S,245,Female Oohs
+SN-S,246,Female Aahs2
+SN-S,247,Male Aahs
+SN-S,248,Gospel Hum 1
+SN-S,249,Gospel Hum 2
+SN-S,250,Pop Voice
+SN-S,251,Jazz Doo 1
+SN-S,252,Jazz Doo 2
+SN-S,253,Jazz Doo 1+
+SN-S,254,Jazz Doo 2+
+SN-S,255,Jazz Doot 1
+SN-S,256,Jazz Doot 2
+SN-S,257,Jazz Dat 1
+SN-S,258,Jazz Dat 2
+SN-S,259,Jazz Bap 1
+SN-S,260,Jazz Bap 2
+SN-S,261,Dow fall 1
+SN-S,262,Dow fall 2
+SN-S,263,Bass Thum
+SN-S,264,Strings 1
+SN-S,265,Strings 2
+SN-S,266,Strings 3
+SN-S,267,Strings 4
+SN-S,268,Strings 5 L
+SN-S,269,Strings 5 R
+SN-S,270,Marcato1 L
+SN-S,271,Marcato1 R
+SN-S,272,Marcato2
+SN-S,273,F.StrStac1
+SN-S,274,F.StrStac2 L
+SN-S,275,F.StrStac2 R
+SN-S,276,Pizz 1
+SN-S,277,Pizz 2
+SN-S,278,Pizzagogo
+SN-S,279,Flute Wave
+SN-S,280,Flute Push
+SN-S,281,PanPipe Wave
+SN-S,282,Bottle Blow
+SN-S,283,Rad Hose
+SN-S,284,Shaku Atk 1
+SN-S,285,Shaku Atk 2
+SN-S,286,OrchUnison L
+SN-S,287,OrchUnison R
+SN-S,288,Tp Section
+SN-S,289,Flugel Wave
+SN-S,290,Fr.Horn Wave
+SN-S,291,Harmonica
+SN-S,292,Harmonica +
+SN-S,293,Cowbell
+SN-S,294,Tabla
+SN-S,295,O'Skool Hit
+SN-S,296,Orch. Hit
+SN-S,297,Punch Hit
+SN-S,298,Philly Hit
+SN-S,299,ClassicHseHt
+SN-S,300,Tao Hit
+SN-S,301,Anklungs
+SN-S,302,Rattles
+SN-S,303,Xylo Seq. 1
+SN-S,304,Wind Chimes
+SN-S,305,Bubble
+SN-S,306,Xylo Seq. 2
+SN-S,307,Siren Wave
+SN-S,308,Scratch 1
+SN-S,309,Scratch 2
+SN-S,310,Scratch 3
+SN-S,311,Scratch 4
+SN-S,312,Scratch 5
+SN-S,313,Scratch 6
+SN-S,314,Scratch Push
+SN-S,315,Scratch Pull
+SN-S,316,Metal Vox 1
+SN-S,317,Metal Vox 1+
+SN-S,318,Metal Vox 2
+SN-S,319,Metal Vox 2+
+SN-S,320,Metal Vox 3
+SN-S,321,Metal Vox 3+
+SN-S,322,Scrape Gut
+SN-S,323,Strat Atk
+SN-S,324,EP Atk
+SN-S,325,Org Atk 1
+SN-S,326,Org Atk 2
+SN-S,327,Org Click
+SN-S,328,Harpsi Thmp1
+SN-S,329,Harpsi Thmp2
+SN-S,330,Shaku Noise
+SN-S,331,Klmba Atk
+SN-S,332,Shami Attack
+SN-S,333,Block
+SN-S,334,Wood Crak
+SN-S,335,AnalogAttack
+SN-S,336,Metal Attack
+SN-S,337,Pole Loop
+SN-S,338,Strike Pole
+SN-S,339,Switch
+SN-S,340,Tuba Slap
+SN-S,341,Plink
+SN-S,342,Plunk
+SN-S,343,Tin Wave
+SN-S,344,Vinyl Noise
+SN-S,345,Pitch Wind
+SN-S,346,Vox Noise 1
+SN-S,347,Vox Noise 2
+SN-S,348,SynVox Noise
+SN-S,349,Digi Breath
+SN-S,350,Agogo Noise
+SN-S,351,Wind Agogo
+SN-S,352,Polishing Nz
+SN-S,353,Dentist Nz
+SN-S,354,CrunchWind
+SN-S,355,ThroatWind
+SN-S,356,MetalWind
+SN-S,357,Atmosphere
+SN-S,358,DigiSpectrum
+SN-S,359,SBF Cym
+SN-S,360,SBF Bell
+SN-S,361,SBF Nz
+SN-S,362,White Noise
+SN-S,363,Pink Noise
+SN-S,364,Thickness Bs
+SN-S,365,Plastic Bass
+SN-S,366,Breakdown Bs
+SN-S,367,Dist TB
+SN-S,368,Pulse Bass
+SN-S,369,Hip Lead
+SN-S,370,VintageStack
+SN-S,371,Tekno Ld 1
+SN-S,372,Icy Keys
+SN-S,373,JP-8StringsL
+SN-S,374,JP-8StringsR
+SN-S,375,Revalation
+SN-S,376,Boreal Pad L
+SN-S,377,Boreal Pad R
+SN-S,378,Sea Waves L
+SN-S,379,Sea Waves R
+SN-S,380,Sweep Pad 1
+SN-S,381,Sweep Pad 2
+SN-S,382,Sweep Pad 3
+SN-S,383,Particles L
+SN-S,384,Particles R
+SN-S,385,3Delay Poly
+SN-S,386,Poly Fat 1
+SN-S,387,Poly Fat 2
+SN-S,388,Poly Fat 3
+SN-S,389,Alan's Pad L
+SN-S,390,Alan's Pad R
+SN-S,391,DlyReso Saw1
+SN-S,392,DlyReso Saw2
+SN-S,393,DlyReso Saw3
+SN-S,394,TranceSaws 1
+SN-S,395,TranceSaws 2
+SN-S,396,TranceSaws 3
+SN-S,397,Tekno Ld 2
+SN-S,398,NuWave
+SN-S,399,EQ Lead 1
+SN-S,400,EQ Lead 2
+SN-S,401,EQ Lead 3
+SN-S,402,80sBrsSect L
+SN-S,403,80sBrsSect R
+SN-S,404,LoveBrsLiveL
+SN-S,405,LoveBrsLiveR
+SN-S,406,ScoopSynBrsL
+SN-S,407,ScoopSynBrsR
+SN-S,408,Power JP L
+SN-S,409,Power JP R
+SN-S,410,ChasingBells
+SN-S,411,Bad Axe L
+SN-S,412,Bad Axe R
+SN-S,413,Cutting Lead
+SN-S,414,Poly Key
+SN-S,415,Buzz Cut
+SN-S,416,DsturbedSync
+SN-S,417,LFO Poly
+SN-S,418,HPF Pad L
+SN-S,419,HPF Pad R
+SN-S,420,Chubby Ld
+SN-S,421,FantaClaus
+SN-S,422,FantasyPad 1
+SN-S,423,FantasyPad 2
+SN-S,424,FantasyPad 3
+SN-S,425,Legend Pad
+SN-S,426,D-50 Stack
+SN-S,427,Digi Crystal
+SN-S,428,PipeChatter1
+SN-S,429,PipeChatter2
+SN-S,430,PipeChatter3
+SN-S,431,JP Hollow L
+SN-S,432,JP Hollow R
+SN-S,433,VoiceHeavenL
+SN-S,434,VoiceHeavenR
+SN-S,435,Atmospheric
+SN-S,436,Air Pad 1
+SN-S,437,Air Pad 2
+SN-S,438,Air Pad 3
+SN-S,439,ChrdOfCnadaL
+SN-S,440,ChrdOfCnadaR
+SN-S,441,Fireflies
+SN-S,442,NewJupiter 1
+SN-S,443,NewJupiter 2
+SN-S,444,NewJupiter 3
+SN-S,445,NewJupiter 4
+SN-S,446,NewJupiter 5
+SN-S,447,Pulsatron
+SN-S,448,JazzyBubbles
+SN-S,449,SynthFx 1
+SN-S,450,SynthFx 2

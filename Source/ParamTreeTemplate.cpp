@@ -131,23 +131,28 @@ ValueTree ParamTreeTemplateBuilder::pcmSynthToneTemplate() {
     { "Template", {{ "name", "PCM Synth Tone" }},
       {
         { "Group",
-          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "PCM Synth Tone Common" }}
+          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "PCM Synth Tone Common" }},
+          {pcmSynthToneCommonTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "PCM Synth Tone Common MFX" }}
+          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "PCM Synth Tone Common MFX" }},
+          {pcmSynthToneCommonMFXTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00001000 }, { "len", 6 }, { "desc", "PCM Synth Tone PMT (Partial Mix Table)" }}
+          {{ "addr", 0x00001000 }, { "len", 6 }, { "desc", "PCM Synth Tone PMT (Partial Mix Table)" }},
+          {pcmSynthTonePMTTemplate()}
         },
         { "GroupRange",
           {
             { "first_addr", 0x00002000 }, { "last_addr", 0x00002600 }, { "len", 6 },
             { "first_index", 1 }, { "last_index", 4 },
             { "desc", "PCM Synth Tone Partial" }, { "fmt", "PCM Synth Tone Partial (Partial %d)" },
-          }
+          },
+          {pcmSynthTonePartialTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00003000 }, { "len", 6 }, { "desc", "PCM Synth Tone Common 2" }}
+          {{ "addr", 0x00003000 }, { "len", 6 }, { "desc", "PCM Synth Tone Common 2" }},
+          {pcmSynthToneCommon2Template()}
         },
       }
     };
@@ -908,7 +913,7 @@ inline ValueTree ParamTreeTemplateBuilder::studioSetPartTemplate() {
         { "Parameter", {
           { "addr", 0x00000043 }, { "size", 1 }, { "desc", "Velocity Curve Type" },
           { "min", 0 }, { "max", 4 },
-          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+          { "type", "choice" }, { "choice_list", "VelocityCurveType" },
         }},
         { "Parameter", {
           { "addr", 0x00000044 }, { "size", 1 }, { "desc", "Motional Surround L-R" },
@@ -979,3 +984,1013 @@ inline ValueTree ParamTreeTemplateBuilder::studioSetPartEqTemplate() {
       }
     };
 }
+
+inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommonTemplate() {
+  return
+    { "Template", {{ "name", "PCM Synth Tone Common" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000B }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 12 },
+          { "desc", "PCM Synth Tone Name" }, { "fmt", "PCM Synth Tone Name %d" },
+          { "type", "ascii" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000E }, { "size", 1 }, {"desc", "PCM Synth Tone Level "},
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "PCM Synth Tone Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "PCM Synth Tone Priority" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "Priority" },
+        }},      
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "PCM Synth Tone Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "PCM Synth Tone Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Octave Shift" },
+          { "template", "OctaveShift" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "Stretch Tune Depth" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "StretchTuneDepth" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, {"desc", "Analog Feel"},
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "Mono/Poly" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "MonoPoly" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000017 }, { "size", 1 }, { "desc", "Legato Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000018 }, { "size", 1 }, { "desc", "Legato Retrigger" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "Portamento Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "Portamento Mode" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "PortamentoMode" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "Portamento Type" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "PortamentoType" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "Portamento Start" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "PortamentoStart" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001D }, { "size", 1 }, { "desc", "Portamento Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000022 }, { "size", 1 }, { "desc", "Cutoff Offset" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000023 }, { "size", 1 }, { "desc", "Resonance Offset" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000024 }, { "size", 1 }, { "desc", "Attack Time Offset" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000025 }, { "size", 1 }, { "desc", "Release Time Offset" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000026 }, { "size", 1 }, { "desc", "Velocity Sens Offset" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000028 }, { "size", 1 }, { "desc", "PMT Control Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                                                            
+        { "Parameter", {
+          { "addr", 0x00000029 }, { "size", 1 }, { "desc", "Pitch Bend Range Up" },
+          { "min", 0 }, { "max", 48 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002A }, { "size", 1 }, { "desc", "Pitch Bend Range Down" },
+          { "min", 0 }, { "max", 48 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002B }, { "size", 1 }, { "desc", "Matrix Control 1 Source" },
+          { "min", 0 }, { "max", 109 },
+          { "type", "choice" }, { "choice_list", "MatrixControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002C }, { "size", 1 }, { "desc", "Matrix Control 1 Destination 1" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002D }, { "size", 1 }, { "desc", "Matrix Control 1 Sens 1" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000002E }, { "size", 1 }, { "desc", "Matrix Control 1 Destination 2" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002F }, { "size", 1 }, { "desc", "Matrix Control 1 Sens 2" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000030 }, { "size", 1 }, { "desc", "Matrix Control 1 Destination 3" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000031 }, { "size", 1 }, { "desc", "Matrix Control 1 Sens 3" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000032 }, { "size", 1 }, { "desc", "Matrix Control 1 Destination 4" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000033 }, { "size", 1 }, { "desc", "Matrix Control 1 Sens 4" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000034 }, { "size", 1 }, { "desc", "Matrix Control 2 Source" },
+          { "min", 0 }, { "max", 109 },
+          { "type", "choice" }, { "choice_list", "MatrixControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000035 }, { "size", 1 }, { "desc", "Matrix Control 2 Destination 1" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000036 }, { "size", 1 }, { "desc", "Matrix Control 2 Sens 1" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000037 }, { "size", 1 }, { "desc", "Matrix Control 2 Destination 2" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000038 }, { "size", 1 }, { "desc", "Matrix Control 2 Sens 2" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000039 }, { "size", 1 }, { "desc", "Matrix Control 2 Destination 3" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003A }, { "size", 1 }, { "desc", "Matrix Control 2 Sens 3" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000003B }, { "size", 1 }, { "desc", "Matrix Control 2 Destination 4" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003C }, { "size", 1 }, { "desc", "Matrix Control 2 Sens 4" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000003D }, { "size", 1 }, { "desc", "Matrix Control 3 Source" },
+          { "min", 0 }, { "max", 109 },
+          { "type", "choice" }, { "choice_list", "MatrixControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003E }, { "size", 1 }, { "desc", "Matrix Control 3 Destination 1" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003F }, { "size", 1 }, { "desc", "Matrix Control 3 Sens 1" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000040 }, { "size", 1 }, { "desc", "Matrix Control 3 Destination 2" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000041 }, { "size", 1 }, { "desc", "Matrix Control 3 Sens 2" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000042 }, { "size", 1 }, { "desc", "Matrix Control 3 Destination 3" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000043 }, { "size", 1 }, { "desc", "Matrix Control 3 Sens 3" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000044 }, { "size", 1 }, { "desc", "Matrix Control 3 Destination 4" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000045 }, { "size", 1 }, { "desc", "Matrix Control 3 Sens 4" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000046 }, { "size", 1 }, { "desc", "Matrix Control 4 Source" },
+          { "min", 0 }, { "max", 109 },
+          { "type", "choice" }, { "choice_list", "MatrixControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000047 }, { "size", 1 }, { "desc", "Matrix Control 4 Destination 1" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000048 }, { "size", 1 }, { "desc", "Matrix Control 4 Sens 1" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000049 }, { "size", 1 }, { "desc", "Matrix Control 4 Destination 2" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004A }, { "size", 1 }, { "desc", "Matrix Control 4 Sens 2" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000004B }, { "size", 1 }, { "desc", "Matrix Control 4 Destination 3" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004C }, { "size", 1 }, { "desc", "Matrix Control 4 Sens 3" },
+          { "template", "SignedMidiByte" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000004D }, { "size", 1 }, { "desc", "Matrix Control 4 Destination 4" },
+          { "min", 0 }, { "max", 33 },
+          { "type", "choice" }, { "choice_list", "MatrixControlDestination" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004E }, { "size", 1 }, { "desc", "Matrix Control 4 Sens 4" },
+          { "template", "SignedMidiByte" },
+        }},                        
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommonMFXTemplate() {
+  return
+    { "Template", {{ "name", "PCM Synth Tone Common MFX" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000000 }, { "size", 1 }, { "desc", "MFX Type" },
+          { "min", 0 }, { "max", 67 },
+          { "type", "choice" }, { "choice_list", "MFXType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000002 }, { "size", 1 }, { "desc", "MFX Chorus Send Level" },
+          { "template", "MidiByte" },
+        }},              
+        { "Parameter", {
+          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "MFX Reverb Send Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000005 }, { "size", 1 }, { "desc", "MFX Control 1 Source" },
+          { "min", 0 }, { "max", 101 },
+          { "type", "choice" }, { "choice_list", "MFXControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000006 }, { "size", 1 }, { "desc", "MFX Control 1 Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000007 }, { "size", 1 }, { "desc", "MFX Control 2 Source" },
+          { "min", 0 }, { "max", 101 },
+          { "type", "choice" }, { "choice_list", "MFXControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000008 }, { "size", 1 }, { "desc", "MFX Control 2 Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000009 }, { "size", 1 }, { "desc", "MFX Control 3 Source" },
+          { "min", 0 }, { "max", 101 },
+          { "type", "choice" }, { "choice_list", "MFXControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000A }, { "size", 1 }, { "desc", "MFX Control 3 Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000B }, { "size", 1 }, { "desc", "MFX Control 4 Source" },
+          { "min", 0 }, { "max", 101 },
+          { "type", "choice" }, { "choice_list", "MFXControlSource" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "MFX Control 4 Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000000D }, { "last_addr", 0x00000010 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "MFX Control Assign" }, { "fmt", "MFX Control Assign %d" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "OffPartNumber" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000011 }, { "last_addr", 0x0000010D }, { "size", 4 },
+          { "first_index", 1 }, { "last_index", 32 },
+          { "desc", "MFX Parameter" }, { "fmt", "MFX Parameter %d" },
+          { "min", 12768 }, { "max", 52768 }, { "type", "int" },
+          { "display_min", -20000 }, { "display_max", 20000 },
+        }},
+
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePMTTemplate() {
+  return
+    { "Template", {{ "name", "PCM Synth Tone PMT (Partial Mix Table)" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000000 }, { "size", 1 }, { "desc", "Structure Type 1 & 2" },
+          { "min", 0 }, { "max", 9 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 10 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000001 }, { "size", 1 }, { "desc", "Booster 1 & 2" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "Booster" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000002 }, { "size", 1 }, { "desc", "Structure Type 3 & 4" },
+          { "min", 0 }, { "max", 9 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 10 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "Booster 3 & 4" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "Booster" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "PMT Velocity Control" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "VelocityControl" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000005 }, { "size", 1 }, { "desc", "PMT1 Partial Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000006 }, { "size", 1 }, { "desc", "PMT1 Keyboard Range Lower" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000007 }, { "size", 1 }, { "desc", "PMT1 Keyboard Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000008 }, { "size", 1 }, { "desc", "PMT1 Keyboard Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000009 }, { "size", 1 }, { "desc", "PMT1 Keyboard Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000A }, { "size", 1 }, { "desc", "PMT1 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000B }, { "size", 1 }, { "desc", "PMT1 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "PMT1 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000D }, { "size", 1 }, { "desc", "PMT1 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000E }, { "size", 1 }, { "desc", "PMT2 Partial Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "PMT2 Keyboard Range Lower" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "PMT2 Keyboard Range Upper" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "PMT2 Keyboard Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "PMT2 Keyboard Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "PMT2 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "PMT2 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "PMT2 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "PMT2 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000017 }, { "size", 1 }, { "desc", "PMT3 Partial Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000018 }, { "size", 1 }, { "desc", "PMT3 Keyboard Range Lower" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "PMT3 Keyboard Range Upper" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "PMT3 Keyboard Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "PMT3 Keyboard Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "PMT3 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001D }, { "size", 1 }, { "desc", "PMT3 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001E }, { "size", 1 }, { "desc", "PMT3 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001F }, { "size", 1 }, { "desc", "PMT3 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000020 }, { "size", 1 }, { "desc", "PMT4 Partial Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000021 }, { "size", 1 }, { "desc", "PMT4 Keyboard Range Lower" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000022 }, { "size", 1 }, { "desc", "PMT4 Keyboard Range Upper" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000023 }, { "size", 1 }, { "desc", "PMT4 Keyboard Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000024 }, { "size", 1 }, { "desc", "PMT4 Keyboard Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000025 }, { "size", 1 }, { "desc", "PMT4 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000026 }, { "size", 1 }, { "desc", "PMT4 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000027 }, { "size", 1 }, { "desc", "PMT4 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000028 }, { "size", 1 }, { "desc", "PMT4 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePartialTemplate() {
+  return
+    { "Template", {{ "name", "PCM Synth Tone Partial" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000000 }, { "size", 1 }, {"desc", "Partial Level "},
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000001 }, { "size", 1 }, { "desc", "Partial Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000002 }, { "size", 1 }, { "desc", "Partial Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "Partial Random Pitch Depth" },
+          { "min", 0 }, { "max", 30 },
+          { "type", "choice" }, { "choice_list", "RandomPitchDepth" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "Partial Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000005 }, { "size", 1 }, { "desc", "Partial Pan Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000006 }, { "size", 1 }, { "desc", "Partial Random Pan Depth" },
+          { "min", 0 }, { "max", 63 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000007 }, { "size", 1 }, { "desc", "Partial Alternate Pan Depth" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -63 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000008 }, { "size", 1 }, { "desc", "Partial Env Mode" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EnvMode" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000009 }, { "size", 1 }, { "desc", "Partial Delay Mode" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "DelayMode" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000A }, { "size", 2 }, { "desc", "Partial Delay Time" },
+          { "min", 0 }, { "max", 149 },
+          { "type", "choice" }, { "choice_list", "DelayTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, {"desc", "Partial Output Level "},
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, {"desc", "Partial Chorus Send Level "},
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, {"desc", "Partial Reverb Send Level "},
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Partial Receive Bender" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Partial Receive Expression" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "Partial Receive Hold-1" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "Partial Redamper Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000017 }, { "last_addr", 0x0000001A }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "Partial Control 1 Switch" }, { "fmt", "Partial Control 1 Switch %d" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000001B }, { "last_addr", 0x0000001E }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "Partial Control 2 Switch" }, { "fmt", "Partial Control 2 Switch %d" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000001F }, { "last_addr", 0x00000022 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "Partial Control 3 Switch" }, { "fmt", "Partial Control 3 Switch %d" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000023 }, { "last_addr", 0x00000026 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "Partial Control 4 Switch" }, { "fmt", "Partial Control 4 Switch %d" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000027 }, { "size", 1 }, { "desc", "Wave Group Type" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGroupType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000028 }, { "size", 4 }, { "desc", "Wave Group ID" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002C }, { "size", 4 }, { "desc", "Wave Number L (Mono)" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000030 }, { "size", 4 }, { "desc", "Wave Number R" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000034 }, { "size", 1 }, { "desc", "Wave Gain" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000035 }, { "size", 1 }, { "desc", "Wave FXM Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000036 }, { "size", 1 }, { "desc", "Wave FXM Color" },
+          { "min", 0 }, { "max", 3 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 4},
+        }},
+        { "Parameter", {
+          { "addr", 0x00000037 }, { "size", 1 }, { "desc", "Wave FXM Depth" },
+          { "min", 0 }, { "max", 16 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000038 }, { "size", 1 }, { "desc", "Wave Tempo Sync" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000039 }, { "size", 1 }, { "desc", "Wave Pitch Keyfollow" },
+          { "min", 44 }, { "max", 84 }, { "type", "int" },
+          { "display_min", -200 }, { "display_max", 200 },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003A }, { "size", 1 }, { "desc", "Pitch Env Depth" },
+          { "min", 52 }, { "max", 76 }, { "type", "int" },
+          { "display_min", -12 }, { "display_max", 12 },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003B }, { "size", 1 }, { "desc", "Pitch Env Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003C }, { "size", 1 }, { "desc", "Pitch Env Time 1 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003D }, { "size", 1 }, { "desc", "Pitch Env Time 4 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003E }, { "size", 1 }, { "desc", "Pitch Env Time Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000003F }, { "last_addr", 0x00000042 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "Pitch Env Time" }, { "fmt", "Pitch Env Time %d" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000043 }, { "last_addr", 0x00000047 }, { "size", 1 },
+          { "first_index", 0 }, { "last_index", 4 },
+          { "desc", "Pitch Env Level" }, { "fmt", "Pitch Env Level %d" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000048 }, { "size", 1 }, { "desc", "TVF Filter Type" },
+          { "min", 0 }, { "max", 6 },
+          { "type", "choice" }, { "choice_list", "FilterType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000049 }, { "size", 1 }, { "desc", "TVF Cutoff Frequency" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000004A }, { "size", 1 }, { "desc", "TVF Cutoff Keyfollow" },
+          { "min", 44 }, { "max", 84 }, { "type", "int" },
+          { "display_min", -200 }, { "display_max", 200 },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004B }, { "size", 1 }, { "desc", "TVF Cutoff Velocity Curve" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004C }, { "size", 1 }, { "desc", "TVF Cutoff Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004D }, { "size", 1 }, { "desc", "TVF Resonance" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000004E }, { "size", 1 }, { "desc", "TVF Resonance Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004F }, { "size", 1 }, { "desc", "TVF Env Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000050 }, { "size", 1 }, { "desc", "TVF Env Velocity Curve" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000051 }, { "size", 1 }, { "desc", "TVF Env Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000052 }, { "size", 1 }, { "desc", "TVF Env Time 1 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000053 }, { "size", 1 }, { "desc", "TVF Env Time 4 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000054 }, { "size", 1 }, { "desc", "TVF Env Time Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000055 }, { "last_addr", 0x00000058 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "TVF Env Time" }, { "fmt", "TVF Env Time %d" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000059 }, { "last_addr", 0x0000005D }, { "size", 1 },
+          { "first_index", 0 }, { "last_index", 4 },
+          { "desc", "TVF Env Level" }, { "fmt", "TVF Env Level %d" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000005E }, { "size", 4 }, { "desc", "Bias Level" },
+          { "min", 54 }, { "max", 74 }, { "type", "int" },
+          { "display_min", -100 }, { "display_max", 100. }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000005F }, { "size", 1 }, { "desc", "Bias Position" },
+          { "min", 0 }, { "max", 127 },
+          { "type", "choice" }, { "choice_list", "KeyboardRange" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000060 }, { "size", 1 }, { "desc", "Bias Direction" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "BiasDirection" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000061 }, { "size", 1 }, { "desc", "TVA Env Velocity Curve" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000062 }, { "size", 1 }, { "desc", "TVA Env Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000063 }, { "size", 1 }, { "desc", "TVA Env Time 1 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000064 }, { "size", 1 }, { "desc", "TVA Env Time 4 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000065 }, { "size", 1 }, { "desc", "TVA Env Time Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000066 }, { "last_addr", 0x00000069 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "TVA Env Time" }, { "fmt", "TVA Env Time %d" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000006A }, { "last_addr", 0x0000006C }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 3 },
+          { "desc", "TVA Env Level" }, { "fmt", "TVA Env Level %d" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006D }, { "size", 1 }, { "desc", "LFO1 Waveform" },
+          { "min", 0 }, { "max", 12 },
+          { "type", "choice" }, { "choice_list", "LFOWaveform" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006E }, { "size", 2 }, { "desc", "LFO1 Rate" },
+          { "min", 0 }, { "max", 149 },
+          { "type", "choice" }, { "choice_list", "DelayTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000070 }, { "size", 1 }, { "desc", "LFO1 Offset" },
+          { "min", 0 }, { "max", 4 }, { "type", "int" },
+          { "display_min", -100 }, { "display_max", 100 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000071 }, { "size", 1 }, { "desc", "LFO1 Rate Detune" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000072 }, { "size", 1 }, { "desc", "LFO1 Delay Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000073 }, { "size", 1 }, { "desc", "LFO1 Delay Time Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000074 }, { "size", 2 }, { "desc", "LFO1 Fade Mode" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "FadeMode" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000075 }, { "size", 1 }, { "desc", "LFO1 Fade Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000076 }, { "size", 1 }, { "desc", "LFO1 Key Trigger" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000077 }, { "size", 1 }, { "desc", "LFO1 Pitch Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000078 }, { "size", 1 }, { "desc", "LFO1 TVF Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000079 }, { "size", 1 }, { "desc", "LFO1 TVA Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007A }, { "size", 1 }, { "desc", "LFO1 Pan Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007B }, { "size", 1 }, { "desc", "LFO2 Waveform" },
+          { "min", 0 }, { "max", 12 },
+          { "type", "choice" }, { "choice_list", "LFOWaveform" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007C }, { "size", 2 }, { "desc", "LFO2 Rate" },
+          { "min", 0 }, { "max", 149 },
+          { "type", "choice" }, { "choice_list", "DelayTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007E }, { "size", 1 }, { "desc", "LFO2 Offset" },
+          { "min", 0 }, { "max", 4 }, { "type", "int" },
+          { "display_min", -100 }, { "display_max", 100 },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007F }, { "size", 1 }, { "desc", "LFO2 Rate Detune" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000100 }, { "size", 1 }, { "desc", "LFO2 Delay Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000101 }, { "size", 1 }, { "desc", "LFO2 Delay Time Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000102 }, { "size", 2 }, { "desc", "LFO2 Fade Mode" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "FadeMode" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000103 }, { "size", 1 }, { "desc", "LFO2 Fade Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000104 }, { "size", 1 }, { "desc", "LFO2 Key Trigger" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000105 }, { "size", 1 }, { "desc", "LFO2 Pitch Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000106 }, { "size", 1 }, { "desc", "LFO2 TVF Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000107 }, { "size", 1 }, { "desc", "LFO2 TVA Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000108 }, { "size", 1 }, { "desc", "LFO2 Pan Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000109 }, { "size", 1 }, { "desc", "LFO Step Type" },
+          { "min", 0 }, { "max", 1 }, { "type", "int" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000010A }, { "last_addr", 0x00000119 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 16 },
+          { "desc", "LFO Step" }, { "fmt", "LFO Step%d" },
+          { "min", 28 }, { "max", 100 }, { "type", "int" },
+          { "display_min", -36 }, { "display_max", 36 },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommon2Template() {
+  return
+    { "Template", {{ "name", "PCM Synth Tone Partial" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Tone Category" },
+          { "min", 0 }, { "max", 34 },  // 0-127 but only 35 categories
+          { "type", "choice" }, { "choice_list", "ToneCategory" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Phrase Octave Shift" },
+          { "min", 61 }, { "max", 67 }, { "type", "int" },
+          { "display_min", -3 }, { "display_max", 3 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000033 }, { "size", 1 }, { "desc", "TFX Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000038 }, { "size", 4 }, { "desc", "Phrase Number" },
+          { "min", 0 }, { "max", 65535 }, { "type", "int" },
+        }},
+      }
+    };
+}
+

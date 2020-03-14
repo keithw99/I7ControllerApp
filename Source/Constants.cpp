@@ -12,6 +12,7 @@
 
 #include "Constants.h"
 #include "Utils.h"
+#include "I7Waveforms.h"
 
 StringArray addArray(const StringArray& a, const StringArray& b) {
   StringArray c = a;
@@ -32,9 +33,19 @@ StringArray addArrays(const StringArray& first, Args... others) {
   return addArray(first, addArrays(others...));
 }
 
+/*
 StringArray makeRange(int min, int max) {
   StringArray r;
   for (int i = min; i <= max; ++i) {
+    r.add(String(i));
+  }
+  return r;
+}
+*/
+
+StringArray makeRange(int min, int max, int step = 1) {
+  StringArray r;
+  for (int i = min; i <= max; i += step) {
     r.add(String(i));
   }
   return r;
@@ -186,9 +197,186 @@ const StringArray scaleType = {
   "KIRNBERGE", "MEANTONE", "WERCKMEIS", "ARABIC"
 };
 
-const StringArray velocityCurve =
+const StringArray velocityCurveType =
   addArrays<StringArray>(StringArray{"OFF"}, makeRange(1, 4));
-  
+
+const StringArray priority = {
+  "LAST", "LOUDEST"
+};
+
+const StringArray monoPoly = {
+  "MONO", "POLY"
+};
+
+const StringArray stretchTuneDepth =
+  addArrays<StringArray>(StringArray{"OFF"}, makeRange(1, 3));
+
+const StringArray portamentoMode = {
+  "NORMAL", "LEGATO"
+};
+
+const StringArray portamentoType = {
+  "RATE", "TIME"
+};
+
+const StringArray portamentoStart = {
+  "PITCH", "NOTE"
+};
+
+const StringArray matrixControlSource = {
+  addArrays<StringArray>(
+    midiControlSource,
+    makeRange(1, 4, "CTRL%d"),
+    StringArray{
+      "VELOCITY", "KEYFOLLOW", "TEMPO", "LFO1", "LFO2",
+      "PIT_ENV", "TVF-ENV", "TVA-ENF"})
+};
+
+const StringArray matrixControlDestination = {
+  "OFF", "PITCH", "CUTOFF", "RESONANCE", "LEVEL", "PAN", "OUTPUT LEVEL",
+  "CHORUS SEND", "REVERB SEND", "LFO1 PITCH DEPTH", "LFO2 PITCH DEPTH",
+  "LFO1 TVF DEPTH", "LFO2 TVF DEPTH", "LFO1 TVA DEPTH", "LFO2 TVA DEPTH",
+  "LFO1 PAN DEPTH", "LFO2 PAN DEPTH", "LFO1 RATE", "LFO2 RATE",
+  "PITCH ENV ATTACK TIME", "PITCH ENV DECAY TIME", "PITCH ENV RELEASE TIME",
+  "TVF ENV ATTACK TIME", "TVF ENV DECAY TIME", "TVF ENV RELEASE TIME",
+  "TVA ENV ATTACK TIME", "TVA ENV DECAY TIME", "TVA ENV RELEASE TIME",
+  "PMT", "FXM DEPTH",
+  "---", "---", "---", "---",
+};
+
+const StringArray mfxFilter = {
+  "Equalizer", "Spectrum", "Low Boost", "Step Filter",
+  "Enhancer", "Auto Wah", "Humanizer", "SpeakerSimulator",
+};
+
+const StringArray mfxModulation = {
+  "Phaser 1", "Phaser 2", "Phaser 3", "Step Phaser", "Multi Stage Phaser",
+  "Infinite Phaser", "Ring Modulator", "Tremolo", "Auto Pan", "Slicer",
+  "Rotary 1", "Rotary 2", "Rotary 3",
+};
+
+const StringArray mfxChorus = {
+  "Chorus", "Flanger", "Step Flanger", "Hexa-Chorus", "Tremolo Chorus", "Space-D",
+};
+
+const StringArray mfxDynamics = {
+  "Overdrive", "Distortion", "Guitar Amp Simulator", "Compressor", "Limiter", "Gate",
+};
+
+const StringArray mfxDelay = {
+  "Delay", "Modulation Delay", "3Tap Pan Delay", "4Tap Pan Delay",
+  "MultiTap Delay", "Reverse Delay", "Time Ctrl Delay", 
+};
+
+const StringArray mfxLoFi = {
+  "LOFI Compress", "Bit Crasher",
+};
+
+const StringArray mfxPitch = {
+  "Pitch Shifter", "2Voice Pitch Shifter",
+};
+
+const StringArray mfxCombination = {
+  "Overdrive -> Chorus", "Overdrive -> Flanger", "Overdrive -> Delay",
+  "Distortion -> Chorus", "Distortion -> Flanger", "Distortion -> Delay",
+  "OD/DS -> TouchWah", "OD/DS -> AutoWah",
+  "GuitarAmpSim -> Chorus", "GuitarAmpSim -> Flanger",
+  "GuitarAmpSim -> Phaser", "GuitarAmpSim -> Delay"
+  "EP AmpSim -> Tremolo", "EP AmpSim -> Chorus", "EP AmpSim -> Flanger",
+  "EP AmpSim -> Phaser", "EP AmpSim -> Delay",
+  "Enhancer -> Chorus", "Enhancer -> Flanger", "Enhancer -> Delay",
+  "Chorus -> Delay", "Flanger -> Delay", "Chorus -> Flanger",
+};
+
+const StringArray mfxType =
+  addArrays<StringArray>(
+    StringArray{"Thru"},
+    mfxFilter, mfxModulation, mfxChorus, mfxDynamics,
+    mfxLoFi, mfxPitch, mfxCombination);
+
+const StringArray mfxControlSource =
+  addArrays<StringArray>(
+    midiControlSource, makeRange(1, 4, "SYS%d"));
+
+const StringArray booster = {
+  "0 dB", "+6 dB", "+12 dB", "+18 dB"
+};
+
+const StringArray velocityControl = {
+  "OFF", "ON", "RANDOM", "CYCLE"
+};
+
+const StringArray randomPitchDepth =
+  addArrays<StringArray>(
+    makeRange(0, 9),
+    makeRange(10, 90, 10),
+    makeRange(100, 1200, 100));
+
+const StringArray envMode = {
+  "NO-SUS", "SUSTAIN"
+};
+
+const StringArray delayMode = {
+  "NORMAL", "HOLD", "KEY-OFF-NORMAL", "KEY-OFF-DECAY"
+};
+
+const StringArray noteDuration = {
+  "64TH NOTE TRIPLET", "64TH NOTE",
+  "32ND NOTE TRIPLET", "32ND NOTE",
+  "SIXTEENTH NOTE TRIPLET", "DOTTED 32ND NOTE", "SIXTEENTH NOTE",
+  "EIGHTH NOTE TRIPLET", "DOTTED SIXTEENTH NOTE", "EIGHTH NOTE",
+  "QUARTER NOTE TRIPLET", "DOTTED EIGHTH NOTE", "QUARTER NOTE",
+  "HALF NOTE TRIPLET", "DOTTED QUARTER NOTE", "HALF NOTE",
+  "WHOLE NOTE TRIPLET", "DOTTED HALF NOTE", "WHOLE NOTE",
+  "DOUBLE WHOLE NOTE TRIPLET", "DOTTED WHOLE NOTE", "DOUBLE WHOLE NOTE"
+};
+
+const StringArray delayTime = addArrays<StringArray>(midiByte, noteDuration);
+
+const StringArray controlSwitch = {
+  "OFF", "ON", "REVERSE"
+};
+
+const StringArray waveGroupType = {
+  "INT", "SRX", "---", "---"
+};
+
+const StringArray waveGain = {
+  "-6 dB", "0 dB", "+6 dB", "+12 dB"
+};
+
+const StringArray filterType = {
+  "OFF", "LPF", "BPF", "HPF", "PKG", "LPF2", "LPF3"
+};
+
+const StringArray velocityCurve =
+  addArrays<StringArray>({"FIXED"}, makeRange(1, 7));
+
+const StringArray biasDirection = {
+  "LOWER", "UPPER", "LOWER&UPPER", "ALL"
+};
+
+const StringArray lfoWaveform = {
+  "SIN", "TRI", "SAW-UP", "SAW-DW", "SQR",
+  "RND", "BEND-UP", "BEND-DW", "TRP", "S&H",
+  "CHS", "VSIN", "STEP"
+};
+
+const StringArray fadeMode = {
+  "ON-IN", "ON-OUT", "OFF-IN", "OFF-OUT"
+};
+
+const StringArray toneCategory = {
+  "No assign", "Ac.Piano", "E.Piano", "Organ", "Other Keyboards",
+  "Accordion/Harmonica", "Bell/Mallet", "Ac.Guitar", "E.Guitar", "Dist.Guitar",
+  "Ac.Bass", "E.Bass", "Synth Bass", "Plucked/Stroke", "Strings",
+  "Brass", "Wind", "Flute", "Sax", "Recorder",
+  "Vox/Choir", "Synth Lead", "Synth Brass", "Synth Pad/Strings", "Synth Bellpad",
+  "Synth PolyKey", "FX", "Synth Seq/Pop", "Phrase", "Pulsating",
+  "Beat&Groove", "Hit", "Sound", "FX", "Percussion",
+  "Combination"
+};
+
 static ChoiceListMap buildChoiceMap() {
   return {
     {choice::SoundMode, std::make_shared<StringArray>(soundMode)},
@@ -220,7 +408,32 @@ static ChoiceListMap buildChoiceMap() {
     {choice::KeyboardRange, std::make_shared<StringArray>(keyboardRange)},
     {choice::OffMute, std::make_shared<StringArray>(offMute)},
     {choice::ScaleType, std::make_shared<StringArray>(scaleType)},
+    {choice::VelocityCurveType, std::make_shared<StringArray>(velocityCurveType)},
+    {choice::Priority, std::make_shared<StringArray>(priority)},
+    {choice::StretchTuneDepth, std::make_shared<StringArray>(stretchTuneDepth)},
+    {choice::MonoPoly, std::make_shared<StringArray>(monoPoly)},
+    {choice::PortamentoMode, std::make_shared<StringArray>(portamentoMode)},
+    {choice::PortamentoType, std::make_shared<StringArray>(portamentoType)},
+    {choice::PortamentoStart, std::make_shared<StringArray>(portamentoStart)},
+    {choice::MatrixControlSource, std::make_shared<StringArray>(matrixControlSource)},
+    {choice::MatrixControlDestination, std::make_shared<StringArray>(matrixControlDestination)},
+    {choice::MFXType, std::make_shared<StringArray>(mfxType)},
+    {choice::MFXControlSource, std::make_shared<StringArray>(mfxControlSource)},
+    {choice::Booster, std::make_shared<StringArray>(booster)},
+    {choice::VelocityControl, std::make_shared<StringArray>(velocityControl)},
+    {choice::RandomPitchDepth, std::make_shared<StringArray>(randomPitchDepth)},
+    {choice::EnvMode, std::make_shared<StringArray>(envMode)},
+    {choice::DelayMode, std::make_shared<StringArray>(delayMode)},
+    {choice::DelayTime, std::make_shared<StringArray>(delayTime)},
+    {choice::ControlSwitch, std::make_shared<StringArray>(controlSwitch)},
+    {choice::WaveGroupType, std::make_shared<StringArray>(waveGroupType)},
+    {choice::WaveGain, std::make_shared<StringArray>(waveGain)},
+    {choice::FilterType, std::make_shared<StringArray>(filterType)},
+    {choice::BiasDirection, std::make_shared<StringArray>(biasDirection)},
+    {choice::LFOWaveform, std::make_shared<StringArray>(lfoWaveform)},
+    {choice::FadeMode, std::make_shared<StringArray>(fadeMode)},
     {choice::VelocityCurve, std::make_shared<StringArray>(velocityCurve)},
+    {choice::ToneCategory, std::make_shared<StringArray>(toneCategory)},
   };
 }
 

@@ -13,6 +13,7 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 
 #include "ParamBase.h"
+//#include "ParamTemplate.h"
 #include "Constants.h"
 
 class LinearIntRange {
@@ -201,8 +202,13 @@ class ChoiceParamTranslator : public IntParamTranslator {
 };
 
 enum class ParamType {INT, FLOAT, CHOICE, ASCII, INVALID};
-
 ParamType GetParamType(String name);
+
+enum class ParamTemplateType {
+  MIDI_BYTE, SIGNED_MIDI_BYTE, PAN, COARSE_TUNE, FINE_TUNE, OCTAVE_SHIFT,
+  KEYFOLLOW, INVALID
+};
+ParamTemplateType GetParamTemplateType(String name);
 
 // Convenience class for initializing ParamInfo.
 struct ParamProperties {
@@ -216,8 +222,25 @@ struct ParamProperties {
   float display_float_min = float(min);  // float params only.
   float display_float_max = float(max);  // float params only.
   int decimal_places = 1;  // float params.only
-
   std::shared_ptr<StringArray> choices;  // choice params only.
+
+  static ParamProperties fromTemplate(const String& param_template);
+  static ParamProperties intParam(int size, int min, int max) {
+    return ParamProperties(ParamType::INT, size, min, max);
+  }
+  static ParamProperties intParam(int size, int min, int max,
+                                  int display_min, int display_max) {
+    ParamProperties props = intParam(size, min, max);
+    props.display_min = display_min;
+    props.display_max = display_max;
+    return props;
+  }
+  //static ParamProperties midiByte() { return intParam(1, 0, 127); }
+
+  inline ParamProperties() {}
+  inline ParamProperties(ParamType param_type, int size, int min, int max) :
+    param_type(param_type), size(size), min(min), max(max),
+    display_min(min), display_max(max) {}
 };
 
 class ParamInfo {
