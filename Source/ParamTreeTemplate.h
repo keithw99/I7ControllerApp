@@ -49,5 +49,8 @@ class ParamTreeTemplateBuilder {
   static ValueTree commonCompEqTemplate();
   static ValueTree pcmDrumKitPartialTemplate();
   static ValueTree pcmDrumKitCommon2Template();
+  static ValueTree superNATURALSynthToneCommonTemplate();
+  static ValueTree superNATURALSynthTonePartialTemplate();
+  static ValueTree superNATURALAcousticToneCommonTemplate();
 };
 

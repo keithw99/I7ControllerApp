@@ -418,6 +418,35 @@ const StringArray muteGroup =
 const StringArray compGroupAssign =
   addArrays<StringArray>({"PART"}, makeRange(1, 6, "COMP+EQ%d"));
 
+const StringArray ringSwitch = {
+  "OFF", "---", "ON"
+};
+
+const StringArray oscWaveform = {
+  "SAW", "SQR", "PW-SQR", "TRI", "SINE", "NOISE", "SUPER-SAW", "PCM"
+};
+
+const StringArray abc = {
+  "A", "B", "C"
+};
+
+const StringArray filterMode = {
+  "BYPASS", "LPF", "HPF", "BPF", "PKG", "LPF2", "LPF3", "LPF4"
+};
+
+const StringArray filterSlope = {
+  "-12 dB", "-24 dB"
+};
+
+const StringArray lfoShape = {
+  "TRI", "SIN", "SAW", "SQR", "S&H", "RND"
+};
+
+const StringArray lfoTempoSync = {
+  "16", "12", "8", "4", "2", "1", "3/4", "2/3", "1/2", "3/8",
+  "1/3", "1/4", "3/16", "1/6", "1/8", "3/32", "1/12", "1/16", "1/24", "1/32"
+};
+
 static ChoiceListMap buildChoiceMap() {
   return {
     {choice::SoundMode, std::make_shared<StringArray>(soundMode)},
@@ -483,6 +512,12 @@ static ChoiceListMap buildChoiceMap() {
     {choice::AssignType, std::make_shared<StringArray>(assignType)},
     {choice::MuteGroup, std::make_shared<StringArray>(muteGroup)},
     {choice::CompGroupAssign, std::make_shared<StringArray>(compGroupAssign)},
+    {choice::RingSwitch, std::make_shared<StringArray>(ringSwitch)},
+    {choice::ABC, std::make_shared<StringArray>(abc)},
+    {choice::FilterMode, std::make_shared<StringArray>(filterMode)},
+    {choice::FilterSlope, std::make_shared<StringArray>(filterSlope)},
+    {choice::LFOShape, std::make_shared<StringArray>(lfoShape)},
+    {choice::LFOTempoSync, std::make_shared<StringArray>(lfoTempoSync)},
   };
 }
 

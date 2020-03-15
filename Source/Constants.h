@@ -42,6 +42,7 @@ const String int_type { "int" };
 const String float_type { "float" };
 const String choice { "choice" };
 const String ascii { "ascii" };
+const String int_choice { "int_choice" };
 }
 
 namespace paramtemplate {
@@ -52,6 +53,7 @@ const String CoarseTune { "CoarseTune" };  // int 16-112 (-48-48), size 1
 const String FineTune { "FineTune" };  // int 14-114 (-50-50), size 1
 const String OctaveShift { "OctaveShift" };  // int 61-67 (-3-3), size 1
 const String KeyFollow { "KeyFollow" };  // int 54-74 (-100-100), size 1
+const String WaveNumber { "WaveNumber" };  // int_choice 0 - 16384 {0:OFF}, size 4
 
 }  // namespace paramtemplate
 
@@ -131,6 +133,13 @@ const String CompGain { "CompGain" };
 const String AssignType { "AssignType" };
 const String MuteGroup { "MuteGroup" };
 const String CompGroupAssign { "CompGroupAssign" };
+const String RingSwitch { "RingSwitch" };
+const String OscWaveform { "OscWaveform" };
+const String ABC { "ABC" };
+const String FilterMode { "FilterMode" };
+const String FilterSlope { "FilterSlope" };
+const String LFOShape { "LFOShape" };
+const String LFOTempoSync { "LFOTempoSync" };
 
 extern std::shared_ptr<StringArray> getChoicesFor(const String& choiceListName);
 }  // namespace choice

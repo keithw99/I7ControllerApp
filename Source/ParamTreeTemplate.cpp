@@ -195,17 +195,20 @@ ValueTree ParamTreeTemplateBuilder::superNATURALSynthToneTemplate() {
     { "Template", {{ "name", "SuperNATURAL Synth Tone" }},
       {
         { "Group",
-          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "SuperNATURAL Synth Tone Common" }}
+          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "SuperNATURAL Synth Tone Common" }},
+          {superNATURALSynthToneCommonTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Synth Tone MFX" }}
+          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Synth Tone MFX" }},
+          {commonMFXTemplate()}
         },
         { "GroupRange",
           {
             { "first_addr", 0x00002000 }, { "last_addr", 0x00002200 }, { "len", 6 },
             { "first_index", 1 }, { "last_index", 3 },
             { "desc", "SuperNATURAL Synth Tone Partial" }, { "fmt", "SuperNATURAL Synth Tone Partial (%d)" },
-          }
+          },
+          {superNATURALSynthTonePartialTemplate()}          
         },
       }
     };
@@ -216,10 +219,12 @@ ValueTree ParamTreeTemplateBuilder::superNATURALAcousticToneTemplate() {
     { "Template", {{ "name", "SuperNATURAL Acoustic Tone" }},
       {
         { "Group",
-          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "SuperNATURAL Acoustic Tone Common" }}
+          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "SuperNATURAL Acoustic Tone Common" }},
+          {superNATURALAcousticToneCommonTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Acoustic Tone MFX" }}
+          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Acoustic Tone MFX" }},
+          {commonMFXTemplate()}
         },
       }
     };
@@ -236,7 +241,7 @@ ValueTree ParamTreeTemplateBuilder::superNATURALDrumKitTemplate() {
           {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit MFX" }}
         },
         { "Group",
-          {{ "addr", 0x00000800 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit MFX" }}
+          {{ "addr", 0x00000800 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit Common Comp/EQ" }}
         },
         { "GroupRange",
           {
@@ -3010,7 +3015,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitPartialTemplate() {
 
 inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitCommon2Template() {
   return
-    { "Template", {{ "name", "Temporary Tone" }},
+    { "Template", {{ "name", "PCM Drum Kit Common 2" }},
       {
         { "Parameter", {
           { "addr", 0x00000010 }, { "size", 2 }, { "desc", "Phrase Number" },
@@ -3020,6 +3025,470 @@ inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitCommon2Template() {
           { "addr", 0x00000031 }, { "size", 1 }, { "desc", "TFX Switch" },
           { "min", 0 }, { "max", 1 },
           { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::superNATURALSynthToneCommonTemplate() {
+  return
+    { "Template", {{ "name", "SuperNATURAL Synth Tone Common" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000B }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 12 },
+          { "desc", "Tone Name" }, { "fmt", "Tone Name %d" },
+          { "type", "ascii" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "Tone Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Portamento Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Portamento Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "Mono Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "Octave Shift" },
+          { "min", 61 }, { "max", 67 }, { "type", "int" },
+          { "display_min", -3 }, { "display_max", 3 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "Pitch Bend Range Up" },
+          { "min", 0 }, { "max", 24 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000017 }, { "size", 1 }, { "desc", "Pitch Bend Range Down" },
+          { "min", 0 }, { "max", 24 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "Partial1 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "Partial1 Select" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "Partial2 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "Partial2 Select" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001D }, { "size", 1 }, { "desc", "Partial3 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001E }, { "size", 1 }, { "desc", "Partial3 Select" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x0000001F }, { "size", 1 }, { "desc", "RING Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "RingSwitch" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000020 }, { "size", 1 }, { "desc", "TFX Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000021 }, { "size", 1 }, { "desc", "Unison Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000031 }, { "size", 1 }, { "desc", "Portamento Mode" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "PortamentoMode" },
+        }},                        
+        { "Parameter", {
+          { "addr", 0x00000032 }, { "size", 1 }, { "desc", "Legato Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000034 }, { "size", 1 }, { "desc", "Analog Feel" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000035 }, { "size", 1 }, { "desc", "Wave Shape" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000036 }, { "size", 1 }, { "desc", "Tone Category" },
+          { "min", 0 }, { "max", 34 },  // 0-127 but only 35 categories
+          { "type", "choice" }, { "choice_list", "ToneCategory" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000037 }, { "size", 4 }, { "desc", "Phrase Number" },
+          { "min", 0 }, { "max", 65535 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003B }, { "size", 1 }, { "desc", "Phrase Octave Shift" },
+          { "min", 61 }, { "max", 67 }, { "type", "int" },
+          { "display_min", -3 }, { "display_max", 3 },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "Unison Size" },
+          { "min", 0 }, { "max", 3 }, { "type", "int" },
+          { "display_min", 2 }, { "display_max", 8 },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::superNATURALSynthTonePartialTemplate() {
+  return
+    { "Template", {{ "name", "SuperNATURAL Synth Tone Partial" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000000 }, { "size", 1 }, { "desc", "OSC Wave" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "OscWaveform" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000001 }, { "size", 1 }, { "desc", "OSC Wave Variation" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "ABC" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "OSC Pitch" },
+          { "min", 40 }, { "max", 88 }, { "type", "int" },
+          { "display_min", -24 }, { "display_max", 24 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "OSC Detune" },
+          { "min", 14 }, { "max", 114 }, { "type", "int" },
+          { "display_min", -50 }, { "display_max", 50 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000005 }, { "size", 1 }, { "desc", "OSC Pulse Width Mod Depth" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000006 }, { "size", 1 }, { "desc", "OSC Pulse Width" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000007 }, { "size", 1 }, { "desc", "OSC Pitch Env Attack Time" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000008 }, { "size", 1 }, { "desc", "OSC Pitch Env Decay" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000009 }, { "size", 1 }, { "desc", "OSC Pitch Env Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000A }, { "size", 1 }, { "desc", "FILTER Mode" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "FilterMode" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000000B }, { "size", 1 }, { "desc", "FILTER Slope" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "FilterSlope" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "FILTER Cutoff" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000D }, { "size", 1 }, { "desc", "FILTER Cutoff Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000E }, { "size", 1 }, { "desc", "FILTER Env Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "FILTER Resonance" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "FILTER Env Attack Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "FILTER Env Decay Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "FILTER Env Sustain level" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "FILTER Env Release Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "FILTER Env Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "AMP Level" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "AMP Level Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000017 }, { "size", 1 }, { "desc", "AMP Env Attack Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000018 }, { "size", 1 }, { "desc", "AMP Env Decay Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "AMP Env Sustain level" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "AMP Env Release Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "AMP Pan" },
+          { "template", "Pan" },
+        }},      
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "LFO Shape" },
+          { "min", 0 }, { "max", 5 },
+          { "type", "choice" }, { "choice_list", "LFOShape" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001D }, { "size", 1 }, { "desc", "LFO Rate" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000001E }, { "size", 1 }, { "desc", "LFO Tempo Sync Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001F }, { "size", 1 }, { "desc", "LFO Tempo Sync Note" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "LFOTempoSync" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000020 }, { "size", 1 }, { "desc", "LFO Fade Time" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000021 }, { "size", 1 }, { "desc", "LFO Key Trigger" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000022 }, { "size", 1 }, { "desc", "LFO Pitch Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000023 }, { "size", 1 }, { "desc", "LFO Filter Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000024 }, { "size", 1 }, { "desc", "LFO Amp Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000025 }, { "size", 1 }, { "desc", "LFO Pan Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000026 }, { "size", 1 }, { "desc", "Modulation LFO Shape" },
+          { "min", 0 }, { "max", 5 },
+          { "type", "choice" }, { "choice_list", "LFOShape" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000027 }, { "size", 1 }, { "desc", "Modulation LFO Rate" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000028 }, { "size", 1 }, { "desc", "Modulation LFO Tempo Sync Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000029 }, { "size", 1 }, { "desc", "Modulation LFO Tempo Sync Note" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "LFOTempoSync" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002A }, { "size", 1 }, { "desc", "OSC Pulse Width Shift" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000002C }, { "size", 1 }, { "desc", "Modulation LFO Pitch Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002D }, { "size", 1 }, { "desc", "Modulation LFO Filter Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002E }, { "size", 1 }, { "desc", "Modulation LFO Amp Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002F }, { "size", 1 }, { "desc", "Modulation LFO Pan Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000030 }, { "size", 1 }, { "desc", "Cutoff Aftertouch Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000031 }, { "size", 1 }, { "desc", "Level Aftertouch Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000034 }, { "size", 1 }, { "desc", "Wave Gain" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000035 }, { "size", 4 }, { "desc", "Wave Number" },
+          { "template", "WaveNumber"}
+        }},
+        { "Parameter", {
+          { "addr", 0x00000039 }, { "size", 1 }, { "desc", "HPF Cutoff" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000003A }, { "size", 1 }, { "desc", "Super Saw Detune" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000003B }, { "size", 1 }, { "desc", "Modulation LFO Rate Control" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003C }, { "size", 1 }, { "desc", "AMP Level Keyfollow" },
+          { "template", "KeyFollow" },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::superNATURALAcousticToneCommonTemplate() {
+  return
+    { "Template", {{ "name", "SuperNATURAL Acoustic Tone Common" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000B }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 12 },
+          { "desc", "Tone Name" }, { "fmt", "Tone Name %d" },
+          { "type", "ascii" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Tone Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "Mono/Poly" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "MonoPoly" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Portamento Time Offset" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Cutoff Offset" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "Resonance Offset" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "Attack Time Offset" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "Release Time Offset" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000017 }, { "size", 1 }, { "desc", "Vibrato Rate" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000018 }, { "size", 1 }, { "desc", "Vibrato Depth" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "Vibrato Delay" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -64 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "Octave Shift" },
+          { "template", "OctaveShift" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "Category" },
+          { "min", 0 }, { "max", 34 },  // 0-127 but only 35 categories
+          { "type", "choice" }, { "choice_list", "ToneCategory" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 2 }, { "desc", "Phrase Number" },
+          { "min", 0 }, { "max", 255 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001E }, { "size", 1 }, { "desc", "Phrase Octave Shift" },
+          { "template", "OctaveShift" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001F }, { "size", 1 }, { "desc", "TFX Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000020 }, { "size", 1 }, { "desc", "Inst Variation" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000021 }, { "size", 1 }, { "desc", "Inst Number" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000022 }, { "last_addr", 0x00000041 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 32 },
+          { "desc", "Modify Parameter" }, { "fmt", "Modify Parameter %d" },
+          { "template", "MidiByte" },
         }},
       }
     };
