@@ -136,7 +136,7 @@ ValueTree ParamTreeTemplateBuilder::pcmSynthToneTemplate() {
         },
         { "Group",
           {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "PCM Synth Tone Common MFX" }},
-          {pcmSynthToneCommonMFXTemplate()}
+          {commonMFXTemplate()}
         },
         { "Group",
           {{ "addr", 0x00001000 }, { "len", 6 }, { "desc", "PCM Synth Tone PMT (Partial Mix Table)" }},
@@ -163,23 +163,28 @@ ValueTree ParamTreeTemplateBuilder::pcmDrumKitTemplate() {
     { "Template", {{ "name", "PCM Drum Kit" }},
       {
         { "Group",
-          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "PCM Drum Kit Common" }}
+          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "PCM Drum Kit Common" }},
+          {pcmDrumKitCommonTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "PCM Drum Kit Common MFX" }}
+          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "PCM Drum Kit Common MFX" }},
+          {commonMFXTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00001000 }, { "len", 6 }, { "desc", "PCM Drum Kit Common Comp/EQ" }}
+          {{ "addr", 0x00001000 }, { "len", 6 }, { "desc", "PCM Drum Kit Common Comp/EQ" }},
+          {commonCompEqTemplate()}
         },
         { "GroupRange",
           {
             { "first_addr", 0x00001000 }, { "last_addr", 0x00003E00 }, { "len", 6 },
             { "first_index", 21 }, { "last_index", 108 },
             { "desc", "PCM Drum Kit Partial" }, { "fmt", "PCM Drum Kit Partial (Key # %d)" },
-          }
+          },
+          //{pcmDrumKitPartialTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00003000 }, { "len", 4 }, { "desc", "PCM Drum Kit Common 2" }}
+          {{ "addr", 0x00003000 }, { "len", 4 }, { "desc", "PCM Drum Kit Common 2" }},
+          //{pcmDrumKitCommon2Template()}
         },
       }
     };
@@ -582,7 +587,7 @@ inline ValueTree ParamTreeTemplateBuilder::studioSetMasterEqTemplate() {
           { "type", "choice" }, { "choice_list", "EqMidFreq" },
         }},
         { "Parameter", {
-          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "Ext Mid Gain" },
+          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "EQ Mid Gain" },
           { "min", 0 }, { "max", 30 }, { "type", "int" },
           { "display_min", -15 }, { "display_max", 15 },
         }},        
@@ -962,7 +967,7 @@ inline ValueTree ParamTreeTemplateBuilder::studioSetPartEqTemplate() {
           { "type", "choice" }, { "choice_list", "EqMidFreq" },
         }},
         { "Parameter", {
-          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "Ext Mid Gain" },
+          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "EQ Mid Gain" },
           { "min", 0 }, { "max", 30 }, { "type", "int" },
           { "display_min", -15 }, { "display_max", 15 },
         }},        
@@ -996,7 +1001,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommonTemplate() {
           { "type", "ascii" },
         }},
         { "Parameter", {
-          { "addr", 0x0000000E }, { "size", 1 }, {"desc", "PCM Synth Tone Level "},
+          { "addr", 0x0000000E }, { "size", 1 }, { "desc", "PCM Synth Tone Level" },
           { "template", "MidiByte" },
         }},
         { "Parameter", {
@@ -1026,7 +1031,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommonTemplate() {
           { "type", "choice" }, { "choice_list", "StretchTuneDepth" },
         }},
         { "Parameter", {
-          { "addr", 0x00000015 }, { "size", 1 }, {"desc", "Analog Feel"},
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "Analog Feel"},
           { "template", "MidiByte" },
         }},
         { "Parameter", {
@@ -1269,9 +1274,9 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommonTemplate() {
     };
 }
 
-inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommonMFXTemplate() {
+inline ValueTree ParamTreeTemplateBuilder::commonMFXTemplate() {
   return
-    { "Template", {{ "name", "PCM Synth Tone Common MFX" }},
+    { "Template", {{ "name", "Common MFX" }},
       {
         { "Parameter", {
           { "addr", 0x00000000 }, { "size", 1 }, { "desc", "MFX Type" },
@@ -1368,7 +1373,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePMTTemplate() {
         { "Parameter", {
           { "addr", 0x00000004 }, { "size", 1 }, { "desc", "PMT Velocity Control" },
           { "min", 0 }, { "max", 3 },
-          { "type", "choice" }, { "choice_list", "VelocityControl" },
+          { "type", "choice" }, { "choice_list", "PMTVelocityControl" },
         }},        
         { "Parameter", {
           { "addr", 0x00000005 }, { "size", 1 }, { "desc", "PMT1 Partial Switch" },
@@ -1535,7 +1540,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePartialTemplate() {
     { "Template", {{ "name", "PCM Synth Tone Partial" }},
       {
         { "Parameter", {
-          { "addr", 0x00000000 }, { "size", 1 }, {"desc", "Partial Level "},
+          { "addr", 0x00000000 }, { "size", 1 }, { "desc", "Partial Level"},
           { "template", "MidiByte" },
         }},
         { "Parameter", {
@@ -1584,15 +1589,15 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePartialTemplate() {
           { "type", "choice" }, { "choice_list", "DelayTime" },
         }},
         { "Parameter", {
-          { "addr", 0x0000000C }, { "size", 1 }, {"desc", "Partial Output Level "},
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "Partial Output Level" },
           { "template", "MidiByte" },
         }},
         { "Parameter", {
-          { "addr", 0x0000000F }, { "size", 1 }, {"desc", "Partial Chorus Send Level "},
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "Partial Chorus Send Level" },
           { "template", "MidiByte" },
         }},
         { "Parameter", {
-          { "addr", 0x00000010 }, { "size", 1 }, {"desc", "Partial Reverb Send Level "},
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Partial Reverb Send Level" },
           { "template", "MidiByte" },
         }},
         { "Parameter", {
@@ -1788,7 +1793,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePartialTemplate() {
           { "first_addr", 0x00000059 }, { "last_addr", 0x0000005D }, { "size", 1 },
           { "first_index", 0 }, { "last_index", 4 },
           { "desc", "TVF Env Level" }, { "fmt", "TVF Env Level %d" },
-          { "template", "SignedMidiByte" },
+          { "template", "MidiByte" },
         }},
         { "Parameter", {
           { "addr", 0x0000005E }, { "size", 4 }, { "desc", "Bias Level" },
@@ -1969,7 +1974,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthTonePartialTemplate() {
 
 inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommon2Template() {
   return
-    { "Template", {{ "name", "PCM Synth Tone Partial" }},
+    { "Template", {{ "name", "PCM Synth Tone Common 2" }},
       {
         { "Parameter", {
           { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Tone Category" },
@@ -1994,3 +1999,1028 @@ inline ValueTree ParamTreeTemplateBuilder::pcmSynthToneCommon2Template() {
     };
 }
 
+inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitCommonTemplate() {
+  return
+    { "Template", {{ "name", "PCM Drum Kit Common" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000B }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 12 },
+          { "desc", "Kit Name" }, { "fmt", "Kit Name %d" },
+          { "type", "ascii" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "Kit Level" },
+          { "template", "MidiByte" }
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::commonCompEqTemplate() {
+  return
+    { "Template", {{ "name", "Common Comp/EQ" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000000 }, { "size", 1 }, { "desc", "Comp1 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000001 }, { "size", 1 }, { "desc", "Comp1 Attack Time" },
+          { "min", 0 }, { "max", 31 },
+          { "type", "choice" }, { "choice_list", "AttackTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000002 }, { "size", 1 }, { "desc", "Comp1 Release Time" },
+          { "min", 0 }, { "max", 23 },
+          { "type", "choice" }, { "choice_list", "ReleaseTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000003 }, { "size", 1 }, { "desc", "Comp1 Threshold" },
+          { "template", "MidiByte" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "Comp1 Ratio" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "CompRatio" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000005 }, { "size", 1 }, { "desc", "Comp1 Output Gain" },
+          { "min", 0 }, { "max", 24 },
+          { "type", "choice" }, { "choice_list", "CompGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000006 }, { "size", 1 }, { "desc", "EQ1 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000007 }, { "size", 1 }, { "desc", "EQ1 Low Freq" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EqLowFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000008 }, { "size", 1 }, { "desc", "EQ1 Low Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000009 }, { "size", 1 }, { "desc", "EQ1 Mid Freq" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "EqMidFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000A }, { "size", 1 }, { "desc", "EQ1 Mid Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000000B }, { "size", 1 }, { "desc", "EQ1 Mid Q" },
+          { "min", 0 }, { "max", 4 },
+          { "type", "choice" }, { "choice_list", "EqQ" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "EQ1 High Freq" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "EqHighFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000D }, { "size", 1 }, { "desc", "EQ1 High Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000000E }, { "size", 1 }, { "desc", "Comp2 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "Comp2 Attack Time" },
+          { "min", 0 }, { "max", 31 },
+          { "type", "choice" }, { "choice_list", "AttackTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Comp2 Release Time" },
+          { "min", 0 }, { "max", 23 },
+          { "type", "choice" }, { "choice_list", "ReleaseTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "Comp2 Threshold" },
+          { "template", "MidiByte" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Comp2 Ratio" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "CompRatio" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Comp2 Output Gain" },
+          { "min", 0 }, { "max", 24 },
+          { "type", "choice" }, { "choice_list", "CompGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "EQ2 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "EQ2 Low Freq" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EqLowFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "EQ2 Low Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000017 }, { "size", 1 }, { "desc", "EQ2 Mid Freq" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "EqMidFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000018 }, { "size", 1 }, { "desc", "EQ2 Mid Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "EQ2 Mid Q" },
+          { "min", 0 }, { "max", 4 },
+          { "type", "choice" }, { "choice_list", "EqQ" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "EQ2 High Freq" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "EqHighFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "EQ2 High Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "Comp3 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001D }, { "size", 1 }, { "desc", "Comp3 Attack Time" },
+          { "min", 0 }, { "max", 31 },
+          { "type", "choice" }, { "choice_list", "AttackTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001E }, { "size", 1 }, { "desc", "Comp3 Release Time" },
+          { "min", 0 }, { "max", 23 },
+          { "type", "choice" }, { "choice_list", "ReleaseTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001F }, { "size", 1 }, { "desc", "Comp3 Threshold" },
+          { "template", "MidiByte" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000020 }, { "size", 1 }, { "desc", "Comp3 Ratio" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "CompRatio" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000021 }, { "size", 1 }, { "desc", "Comp3 Output Gain" },
+          { "min", 0 }, { "max", 24 },
+          { "type", "choice" }, { "choice_list", "CompGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000022 }, { "size", 1 }, { "desc", "EQ3 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000023 }, { "size", 1 }, { "desc", "EQ3 Low Freq" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EqLowFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000024 }, { "size", 1 }, { "desc", "EQ3 Low Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000025 }, { "size", 1 }, { "desc", "EQ3 Mid Freq" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "EqMidFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000026 }, { "size", 1 }, { "desc", "EQ3 Mid Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000027 }, { "size", 1 }, { "desc", "EQ3 Mid Q" },
+          { "min", 0 }, { "max", 4 },
+          { "type", "choice" }, { "choice_list", "EqQ" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000028 }, { "size", 1 }, { "desc", "EQ3 High Freq" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "EqHighFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000029 }, { "size", 1 }, { "desc", "EQ3 High Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000002A }, { "size", 1 }, { "desc", "Comp4 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002B }, { "size", 1 }, { "desc", "Comp4 Attack Time" },
+          { "min", 0 }, { "max", 31 },
+          { "type", "choice" }, { "choice_list", "AttackTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002C }, { "size", 1 }, { "desc", "Comp4 Release Time" },
+          { "min", 0 }, { "max", 23 },
+          { "type", "choice" }, { "choice_list", "ReleaseTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002D }, { "size", 1 }, { "desc", "Comp4 Threshold" },
+          { "template", "MidiByte" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002E }, { "size", 1 }, { "desc", "Comp4 Ratio" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "CompRatio" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002F }, { "size", 1 }, { "desc", "Comp4 Output Gain" },
+          { "min", 0 }, { "max", 24 },
+          { "type", "choice" }, { "choice_list", "CompGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000030 }, { "size", 1 }, { "desc", "EQ4 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000031 }, { "size", 1 }, { "desc", "EQ4 Low Freq" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EqLowFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000032 }, { "size", 1 }, { "desc", "EQ4 Low Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000033 }, { "size", 1 }, { "desc", "EQ4 Mid Freq" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "EqMidFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000034 }, { "size", 1 }, { "desc", "EQ4 Mid Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000035 }, { "size", 1 }, { "desc", "EQ4 Mid Q" },
+          { "min", 0 }, { "max", 4 },
+          { "type", "choice" }, { "choice_list", "EqQ" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000036 }, { "size", 1 }, { "desc", "EQ4 High Freq" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "EqHighFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000037 }, { "size", 1 }, { "desc", "EQ4 High Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000038 }, { "size", 1 }, { "desc", "Comp5 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000039 }, { "size", 1 }, { "desc", "Comp5 Attack Time" },
+          { "min", 0 }, { "max", 31 },
+          { "type", "choice" }, { "choice_list", "AttackTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003A }, { "size", 1 }, { "desc", "Comp5 Release Time" },
+          { "min", 0 }, { "max", 23 },
+          { "type", "choice" }, { "choice_list", "ReleaseTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003B }, { "size", 1 }, { "desc", "Comp5 Threshold" },
+          { "template", "MidiByte" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003C }, { "size", 1 }, { "desc", "Comp5 Ratio" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "CompRatio" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003D }, { "size", 1 }, { "desc", "Comp5 Output Gain" },
+          { "min", 0 }, { "max", 24 },
+          { "type", "choice" }, { "choice_list", "CompGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003E }, { "size", 1 }, { "desc", "EQ5 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003F }, { "size", 1 }, { "desc", "EQ5 Low Freq" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EqLowFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000040 }, { "size", 1 }, { "desc", "EQ5 Low Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000041 }, { "size", 1 }, { "desc", "EQ5 Mid Freq" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "EqMidFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000042 }, { "size", 1 }, { "desc", "EQ5 Mid Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000043 }, { "size", 1 }, { "desc", "EQ5 Mid Q" },
+          { "min", 0 }, { "max", 4 },
+          { "type", "choice" }, { "choice_list", "EqQ" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000044 }, { "size", 1 }, { "desc", "EQ5 High Freq" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "EqHighFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000045 }, { "size", 1 }, { "desc", "EQ5 High Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000046 }, { "size", 1 }, { "desc", "Comp6 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000047 }, { "size", 1 }, { "desc", "Comp6 Attack Time" },
+          { "min", 0 }, { "max", 31 },
+          { "type", "choice" }, { "choice_list", "AttackTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000048 }, { "size", 1 }, { "desc", "Comp6 Release Time" },
+          { "min", 0 }, { "max", 23 },
+          { "type", "choice" }, { "choice_list", "ReleaseTime" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000049 }, { "size", 1 }, { "desc", "Comp6 Threshold" },
+          { "template", "MidiByte" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004A }, { "size", 1 }, { "desc", "Comp6 Ratio" },
+          { "min", 0 }, { "max", 19 },
+          { "type", "choice" }, { "choice_list", "CompRatio" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004B }, { "size", 1 }, { "desc", "Comp6 Output Gain" },
+          { "min", 0 }, { "max", 24 },
+          { "type", "choice" }, { "choice_list", "CompGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004C }, { "size", 1 }, { "desc", "EQ6 Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004D }, { "size", 1 }, { "desc", "EQ6 Low Freq" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EqLowFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004E }, { "size", 1 }, { "desc", "EQ6 Low Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x0000004F }, { "size", 1 }, { "desc", "EQ6 Mid Freq" },
+          { "min", 0 }, { "max", 16 },
+          { "type", "choice" }, { "choice_list", "EqMidFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000050 }, { "size", 1 }, { "desc", "EQ6 Mid Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000051 }, { "size", 1 }, { "desc", "EQ6 Mid Q" },
+          { "min", 0 }, { "max", 4 },
+          { "type", "choice" }, { "choice_list", "EqQ" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000052 }, { "size", 1 }, { "desc", "EQ6 High Freq" },
+          { "min", 0 }, { "max", 2 },
+          { "type", "choice" }, { "choice_list", "EqHighFreq" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000053 }, { "size", 1 }, { "desc", "EQ6 High Gain" },
+          { "min", 0 }, { "max", 30 }, { "type", "int" },
+          { "display_min", -15 }, { "display_max", 15 },
+        }},        
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitPartialTemplate() {
+  return
+    { "Template", {{ "name", "PCM Drum Kit Partial" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000B }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 12 },
+          { "desc", "Partial Name" }, { "fmt", "Partial Name %d" },
+          { "type", "ascii" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "Assign Type" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "AssignType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000D }, { "size", 1 }, { "desc", "Mute Group" },
+          { "min", 0 }, { "max", 31 }, { "type", "int" },
+          { "type", "choice" }, { "choice_list", "MuteGroup" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000E }, { "size", 1 }, { "desc", "Partial Level" },
+          { "template", "MidiByte" },
+        }},
+         { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "Partial Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Partial Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "Partial Random Pitch Depth" },
+          { "min", 0 }, { "max", 30 },
+          { "type", "choice" }, { "choice_list", "RandomPitchDepth" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Partial Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "Partial Random Pan Depth" },
+          { "min", 0 }, { "max", 63 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000014 }, { "size", 1 }, { "desc", "Partial Alternate Pan Depth" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+          { "display_min", -63 }, { "display_max", 63 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000015 }, { "size", 1 }, { "desc", "Partial Env Mode" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "EnvMode" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000016 }, { "size", 1 }, { "desc", "Partial Output Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000019 }, { "size", 1 }, { "desc", "Partial Chorus Send Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001A }, { "size", 1 }, { "desc", "Partial Reverb Send Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001B }, { "size", 1 }, { "desc", "Partial Output Assign" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "CompGroupAssign" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001C }, { "size", 1 }, { "desc", "Partial Pitch Bend Range" },
+          { "min", 0 }, { "max", 48 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001D }, { "size", 1 }, { "desc", "Partial Receive Expression" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000001E }, { "size", 1 }, { "desc", "Partial Receive Hold-1" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000020 }, { "size", 1 }, { "desc", "WMT Velocity Control" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "VelocityControl" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000021 }, { "size", 1 }, { "desc", "WMT1 Wave Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+         { "Parameter", {
+          { "addr", 0x00000022 }, { "size", 1 }, { "desc", "WMT1 Wave Group Type" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGroupType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000023 }, { "size", 4 }, { "desc", "WMT1 Wave Group ID" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000027 }, { "size", 4 }, { "desc", "WMT1 Wave Number L (Mono)" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002B }, { "size", 4 }, { "desc", "WMT1 Wave Number R" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000002F }, { "size", 1 }, { "desc", "WMT1 Wave Gain" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000030 }, { "size", 1 }, { "desc", "WMT1 Wave FXM Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000031 }, { "size", 1 }, { "desc", "WMT1 Wave FXM Color" },
+          { "min", 0 }, { "max", 3 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 4},
+        }},
+        { "Parameter", {
+          { "addr", 0x00000032 }, { "size", 1 }, { "desc", "WMT1 Wave FXM Depth" },
+          { "min", 0 }, { "max", 16 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000033 }, { "size", 1 }, { "desc", "WMT1 Wave Tempo Sync" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000034 }, { "size", 1 }, { "desc", "WMT1 Wave Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000035 }, { "size", 1 }, { "desc", "WMT1 Wave Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000036 }, { "size", 1 }, { "desc", "WMT1 Wave Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000037 }, { "size", 1 }, { "desc", "WMT1 Wave Random Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000038 }, { "size", 1 }, { "desc", "WMT1 Wave Alternate Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000039 }, { "size", 1 }, { "desc", "WMT1 Wave Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003A }, { "size", 1 }, { "desc", "WMT1 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003B }, { "size", 1 }, { "desc", "WMT1 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003C }, { "size", 1 }, { "desc", "WMT1 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003D }, { "size", 1 }, { "desc", "WMT1 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000003E }, { "size", 1 }, { "desc", "WMT2 Wave Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+         { "Parameter", {
+          { "addr", 0x0000003F }, { "size", 1 }, { "desc", "WMT2 Wave Group Type" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGroupType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000040 }, { "size", 4 }, { "desc", "WMT2 Wave Group ID" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000044 }, { "size", 4 }, { "desc", "WMT2 Wave Number L (Mono)" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000048 }, { "size", 4 }, { "desc", "WMT2 Wave Number R" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004C }, { "size", 1 }, { "desc", "WMT2 Wave Gain" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004D }, { "size", 1 }, { "desc", "WMT2 Wave FXM Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004E }, { "size", 1 }, { "desc", "WMT2 Wave FXM Color" },
+          { "min", 0 }, { "max", 3 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 4},
+        }},
+        { "Parameter", {
+          { "addr", 0x0000004F }, { "size", 1 }, { "desc", "WMT2 Wave FXM Depth" },
+          { "min", 0 }, { "max", 16 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000050 }, { "size", 1 }, { "desc", "WMT2 Wave Tempo Sync" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000051 }, { "size", 1 }, { "desc", "WMT2 Wave Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000052 }, { "size", 1 }, { "desc", "WMT2 Wave Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000053 }, { "size", 1 }, { "desc", "WMT2 Wave Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000054 }, { "size", 1 }, { "desc", "WMT2 Wave Random Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000055 }, { "size", 1 }, { "desc", "WMT2 Wave Alternate Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000056 }, { "size", 1 }, { "desc", "WMT2 Wave Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000057 }, { "size", 1 }, { "desc", "WMT2 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000058 }, { "size", 1 }, { "desc", "WMT2 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000059 }, { "size", 1 }, { "desc", "WMT2 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000005A }, { "size", 1 }, { "desc", "WMT2 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000005B }, { "size", 1 }, { "desc", "WMT3 Wave Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+         { "Parameter", {
+          { "addr", 0x0000005C }, { "size", 1 }, { "desc", "WMT3 Wave Group Type" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGroupType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000005D }, { "size", 4 }, { "desc", "WMT3 Wave Group ID" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000061 }, { "size", 4 }, { "desc", "WMT3 Wave Number L (Mono)" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000065 }, { "size", 4 }, { "desc", "WMT3 Wave Number R" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000069 }, { "size", 1 }, { "desc", "WMT3 Wave Gain" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006A }, { "size", 1 }, { "desc", "WMT3 Wave FXM Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006B }, { "size", 1 }, { "desc", "WMT3 Wave FXM Color" },
+          { "min", 0 }, { "max", 3 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 4},
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006C }, { "size", 1 }, { "desc", "WMT3 Wave FXM Depth" },
+          { "min", 0 }, { "max", 16 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006D }, { "size", 1 }, { "desc", "WMT3 Wave Tempo Sync" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006E }, { "size", 1 }, { "desc", "WMT3 Wave Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000006F }, { "size", 1 }, { "desc", "WMT3 Wave Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000070 }, { "size", 1 }, { "desc", "WMT3 Wave Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000071 }, { "size", 1 }, { "desc", "WMT3 Wave Random Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000072 }, { "size", 1 }, { "desc", "WMT3 Wave Alternate Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000073 }, { "size", 1 }, { "desc", "WMT3 Wave Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000074 }, { "size", 1 }, { "desc", "WMT3 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000075 }, { "size", 1 }, { "desc", "WMT3 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000076 }, { "size", 1 }, { "desc", "WMT3 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000077 }, { "size", 1 }, { "desc", "WMT3 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000078 }, { "size", 1 }, { "desc", "WMT4 Wave Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+         { "Parameter", {
+          { "addr", 0x00000079 }, { "size", 1 }, { "desc", "WMT4 Wave Group Type" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGroupType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007A }, { "size", 4 }, { "desc", "WMT4 Wave Group ID" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000007E }, { "size", 4 }, { "desc", "WMT4 Wave Number L (Mono)" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000102 }, { "size", 4 }, { "desc", "WMT4 Wave Number R" },
+          { "min", 0 }, { "max", 13684 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000106 }, { "size", 1 }, { "desc", "WMT4 Wave Gain" },
+          { "min", 0 }, { "max", 3 },
+          { "type", "choice" }, { "choice_list", "WaveGain" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000107 }, { "size", 1 }, { "desc", "WMT4 Wave FXM Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000108 }, { "size", 1 }, { "desc", "WMT4 Wave FXM Color" },
+          { "min", 0 }, { "max", 3 }, { "type", "int" },
+          { "display_min", 1 }, { "display_max", 4},
+        }},
+        { "Parameter", {
+          { "addr", 0x00000109 }, { "size", 1 }, { "desc", "WMT4 Wave FXM Depth" },
+          { "min", 0 }, { "max", 16 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000010A }, { "size", 1 }, { "desc", "WMT4 Wave Tempo Sync" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000010B }, { "size", 1 }, { "desc", "WMT4 Wave Coarse Tune" },
+          { "template", "CoarseTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000010C }, { "size", 1 }, { "desc", "WMT4 Wave Fine Tune" },
+          { "template", "FineTune" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000010D }, { "size", 1 }, { "desc", "WMT4 Wave Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000010E }, { "size", 1 }, { "desc", "WMT4 Wave Random Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000010F }, { "size", 1 }, { "desc", "WMT4 Wave Alternate Pan Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "ControlSwitch" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000110 }, { "size", 1 }, { "desc", "WMT4 Wave Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000111 }, { "size", 1 }, { "desc", "WMT4 Velocity Range Lower" },
+          { "min", 1 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000112 }, { "size", 1 }, { "desc", "WMT4 Velocity Range Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000113 }, { "size", 1 }, { "desc", "WMT4 Velocity Fade Width Lower" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000114 }, { "size", 1 }, { "desc", "WMT4 Velocity Fade Width Upper" },
+          { "min", 0 }, { "max", 127 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000115 }, { "size", 1 }, { "desc", "Pitch Env Depth" },
+          { "min", 52 }, { "max", 76 }, { "type", "int" },
+          { "display_min", -12 }, { "display_max", 12 },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000116 }, { "size", 1 }, { "desc", "Pitch Env Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000117 }, { "size", 1 }, { "desc", "Pitch Env Time 1 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000118 }, { "size", 1 }, { "desc", "Pitch Env Time 4 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000119 }, { "last_addr", 0x0000011C }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "Pitch Env Time" }, { "fmt", "Pitch Env Time %d" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000011D }, { "last_addr", 0x00000121 }, { "size", 1 },
+          { "first_index", 0 }, { "last_index", 4 },
+          { "desc", "Pitch Env Level" }, { "fmt", "Pitch Env Level %d" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000122 }, { "size", 1 }, { "desc", "TVF Filter Type" },
+          { "min", 0 }, { "max", 6 },
+          { "type", "choice" }, { "choice_list", "FilterType" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000123 }, { "size", 1 }, { "desc", "TVF Cutoff Frequency" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000124 }, { "size", 1 }, { "desc", "TVF Cutoff Velocity Curve" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000125 }, { "size", 1 }, { "desc", "TVF Cutoff Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000126 }, { "size", 1 }, { "desc", "TVF Resonance" },
+          { "template", "MidiByte" },
+        }},        
+        { "Parameter", {
+          { "addr", 0x00000127 }, { "size", 1 }, { "desc", "TVF Resonance Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000128 }, { "size", 1 }, { "desc", "TVF Env Depth" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000129 }, { "size", 1 }, { "desc", "TVF Env Velocity Curve Type" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000012A }, { "size", 1 }, { "desc", "TVF Env Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000012B }, { "size", 1 }, { "desc", "TVF Env Time 1 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x0000012C }, { "size", 1 }, { "desc", "TVF Env Time 4 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000012D }, { "last_addr", 0x00000130 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "TVF Env Time" }, { "fmt", "TVF Env Time %d" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000131 }, { "last_addr", 0x00000135 }, { "size", 1 },
+          { "first_index", 0 }, { "last_index", 4 },
+          { "desc", "TVF Env Level" }, { "fmt", "TVF Env Level %d" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000136 }, { "size", 1 }, { "desc", "TVA Level Velocity Curve" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "VelocityCurve" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000137 }, { "size", 1 }, { "desc", "TVA Level Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000138 }, { "size", 1 }, { "desc", "TVA Env Time 1 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000139 }, { "size", 1 }, { "desc", "TVA Env Time 4 Velocity Sens" },
+          { "template", "SignedMidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x0000013E }, { "last_addr", 0x00000140 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 4 },
+          { "desc", "TVA Env Time" }, { "fmt", "TVA Env Time %d" },
+          { "template", "MidiByte" },
+        }},
+        { "ParameterRange", {
+          { "first_addr", 0x00000131 }, { "last_addr", 0x00000135 }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 3 },
+          { "desc", "TVA Env Level" }, { "fmt", "TVA Env Level %d" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000141 }, { "size", 1 }, { "desc", "One Shot mode" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitCommon2Template() {
+  return
+    { "Template", {{ "name", "Temporary Tone" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 2 }, { "desc", "Phrase Number" },
+          { "min", 0 }, { "max", 255 }, { "type", "int" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000031 }, { "size", 1 }, { "desc", "TFX Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" }
+        }},
+      }
+    };
+}

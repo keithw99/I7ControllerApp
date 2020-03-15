@@ -303,8 +303,11 @@ const StringArray booster = {
 };
 
 const StringArray velocityControl = {
-  "OFF", "ON", "RANDOM", "CYCLE"
+  "OFF", "ON", "RANDOM",
 };
+
+const StringArray pmtVelocityControl =
+  addArrays<StringArray>(velocityControl, { "CYCLE" });
 
 const StringArray randomPitchDepth =
   addArrays<StringArray>(
@@ -377,6 +380,44 @@ const StringArray toneCategory = {
   "Combination"
 };
 
+const StringArray attackTime = {
+  "0.05 ms", "0.06 ms", "0.07 ms", "0.08 ms", "0.09 ms",
+  "0.1 ms", "0.2 ms", "0.3 ms", "0.4 ms", "0.5 ms",
+  "0.6 ms", "0.7 ms", "0.8 ms", "0.9 ms", "1.0 ms",
+  "2.0 ms", "3.0 ms", "4.0 ms", "5.0 ms", "6.0 ms",
+  "7.0 ms", "8.0 ms", "9.0 ms", "10.0 ms", "15.0 ms",
+  "20.0 ms", "25.0 ms", "30.0 ms", "35.0 ms", "40.0 ms",
+  "45.0 ms", "50.0 ms"
+};
+
+const StringArray releaseTime = {
+  "0.05 ms", "0.07 ms", "0.1 ms", "0.5 ms", "1 ms",
+  "5 ms", "10 ms", "17 ms", "25 ms", "50 ms",
+  "75 ms", "100 ms", "200 ms", "300 ms", "400 ms",
+  "500 ms", "600 ms", "700 ms", "800 ms", "900 ms",
+  "1000 ms", "1200 ms", "1500 ms", "2000 ms"
+};
+
+const StringArray compRatio = {
+  "1:1", "2:1", "3:1", "4:1", "5:1",
+  "6:1", "7:1", "8:1", "9:1", "10:1",
+  "20:1", "30:1", "40:1", "50:1", "60:1",
+  "70:1", "80:1", "90:1", "100:1", "inf:1"
+};
+
+const StringArray assignType = {
+  "MULTI", "SINGLE"
+};
+
+const StringArray compGain =
+  makeRange(0, 24, "+ %d dB");
+
+const StringArray muteGroup =
+  addArrays<StringArray>({"OFF"}, makeRange(1, 31));
+
+const StringArray compGroupAssign =
+  addArrays<StringArray>({"PART"}, makeRange(1, 6, "COMP+EQ%d"));
+
 static ChoiceListMap buildChoiceMap() {
   return {
     {choice::SoundMode, std::make_shared<StringArray>(soundMode)},
@@ -421,6 +462,7 @@ static ChoiceListMap buildChoiceMap() {
     {choice::MFXControlSource, std::make_shared<StringArray>(mfxControlSource)},
     {choice::Booster, std::make_shared<StringArray>(booster)},
     {choice::VelocityControl, std::make_shared<StringArray>(velocityControl)},
+    {choice::PMTVelocityControl, std::make_shared<StringArray>(pmtVelocityControl)},
     {choice::RandomPitchDepth, std::make_shared<StringArray>(randomPitchDepth)},
     {choice::EnvMode, std::make_shared<StringArray>(envMode)},
     {choice::DelayMode, std::make_shared<StringArray>(delayMode)},
@@ -434,6 +476,13 @@ static ChoiceListMap buildChoiceMap() {
     {choice::FadeMode, std::make_shared<StringArray>(fadeMode)},
     {choice::VelocityCurve, std::make_shared<StringArray>(velocityCurve)},
     {choice::ToneCategory, std::make_shared<StringArray>(toneCategory)},
+    {choice::AttackTime, std::make_shared<StringArray>(attackTime)},
+    {choice::ReleaseTime, std::make_shared<StringArray>(releaseTime)},
+    {choice::CompRatio, std::make_shared<StringArray>(compRatio)},
+    {choice::CompGain, std::make_shared<StringArray>(compGain)},
+    {choice::AssignType, std::make_shared<StringArray>(assignType)},
+    {choice::MuteGroup, std::make_shared<StringArray>(muteGroup)},
+    {choice::CompGroupAssign, std::make_shared<StringArray>(compGroupAssign)},
   };
 }
 

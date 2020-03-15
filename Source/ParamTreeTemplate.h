@@ -41,9 +41,13 @@ class ParamTreeTemplateBuilder {
   static ValueTree studioSetPartTemplate();
   static ValueTree studioSetPartEqTemplate();
   static ValueTree pcmSynthToneCommonTemplate();
-  static ValueTree pcmSynthToneCommonMFXTemplate();
+  static ValueTree commonMFXTemplate();
   static ValueTree pcmSynthTonePMTTemplate();
   static ValueTree pcmSynthTonePartialTemplate();
   static ValueTree pcmSynthToneCommon2Template();
+  static ValueTree pcmDrumKitCommonTemplate();
+  static ValueTree commonCompEqTemplate();
+  static ValueTree pcmDrumKitPartialTemplate();
+  static ValueTree pcmDrumKitCommon2Template();
 };
 
