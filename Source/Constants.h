@@ -108,6 +108,7 @@ const String MatrixControlDestination { "MatrixControlDestination" };
 const String MFXType { "MFXType" };
 const String MFXControlSource { "MFXControlSource" };
 const String Booster { "Booster" };
+const String PMTVelocityControl { "PMTVelocityControl" };
 const String VelocityControl { "VelocityControl" };
 const String RandomPitchDepth { "RandomPitchDepth" };
 const String EnvMode { "EnvMode" };
@@ -123,6 +124,13 @@ const String BiasDirection { "BiasDirection" };
 const String LFOWaveform { "LFOWaveform" };
 const String FadeMode { "FadeMode" };
 const String ToneCategory { "ToneCategory" };
+const String AttackTime { "AttackTime" };
+const String ReleaseTime { "ReleaseTime" };
+const String CompRatio { "CompRatio" };
+const String CompGain { "CompGain" };
+const String AssignType { "AssignType" };
+const String MuteGroup { "MuteGroup" };
+const String CompGroupAssign { "CompGroupAssign" };
 
 extern std::shared_ptr<StringArray> getChoicesFor(const String& choiceListName);
 }  // namespace choice
