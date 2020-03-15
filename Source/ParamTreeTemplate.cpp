@@ -180,11 +180,11 @@ ValueTree ParamTreeTemplateBuilder::pcmDrumKitTemplate() {
             { "first_index", 21 }, { "last_index", 108 },
             { "desc", "PCM Drum Kit Partial" }, { "fmt", "PCM Drum Kit Partial (Key # %d)" },
           },
-          //{pcmDrumKitPartialTemplate()}
+          {pcmDrumKitPartialTemplate()}
         },
         { "Group",
           {{ "addr", 0x00003000 }, { "len", 4 }, { "desc", "PCM Drum Kit Common 2" }},
-          //{pcmDrumKitCommon2Template()}
+          {pcmDrumKitCommon2Template()}
         },
       }
     };
