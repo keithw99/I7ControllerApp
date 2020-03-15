@@ -201,12 +201,23 @@ class ChoiceParamTranslator : public IntParamTranslator {
   std::shared_ptr<StringArray> choices_ = nullptr;
 };
 
-enum class ParamType {INT, FLOAT, CHOICE, ASCII, INVALID};
+class IntChoiceParamTranslator : public IntParamTranslator {
+  public:
+   IntChoiceParamTranslator(std::shared_ptr<std::unordered_map<int, String>> int_choices) :
+     choices_(int_choices) {}
+
+   String getDisplayValue(const int normalized_value) override;
+
+  private:
+   std::shared_ptr<std::unordered_map<int, String>> choices_ = nullptr;
+};
+
+enum class ParamType {INT, FLOAT, CHOICE, ASCII, INT_CHOICE, INVALID};
 ParamType GetParamType(String name);
 
 enum class ParamTemplateType {
   MIDI_BYTE, SIGNED_MIDI_BYTE, PAN, COARSE_TUNE, FINE_TUNE, OCTAVE_SHIFT,
-  KEYFOLLOW, INVALID
+  KEYFOLLOW, WAVE_NUMBER, INVALID
 };
 ParamTemplateType GetParamTemplateType(String name);
 
@@ -223,6 +234,7 @@ struct ParamProperties {
   float display_float_max = float(max);  // float params only.
   int decimal_places = 1;  // float params.only
   std::shared_ptr<StringArray> choices;  // choice params only.
+  std::shared_ptr<std::unordered_map<int, String>> int_choices;  // int choice params only.
 
   static ParamProperties fromTemplate(const String& param_template);
   static ParamProperties intParam(int size, int min, int max) {
@@ -235,8 +247,13 @@ struct ParamProperties {
     props.display_max = display_max;
     return props;
   }
-  //static ParamProperties midiByte() { return intParam(1, 0, 127); }
-
+  static ParamProperties intChoiceParam(int size, int min, int max,
+                                        std::shared_ptr<std::unordered_map<int, String>> int_choices) {
+    ParamProperties props = ParamProperties(ParamType::INT_CHOICE, size, min, max);
+    props.int_choices = int_choices;
+    return props;
+  } 
+  
   inline ParamProperties() {}
   inline ParamProperties(ParamType param_type, int size, int min, int max) :
     param_type(param_type), size(size), min(min), max(max),
@@ -269,7 +286,8 @@ class ParamInfo {
   static void makeFloatParamInfo(const ParamProperties& props, ParamInfo* pinfo);
   static void makeChoiceParamInfo(const ParamProperties& props, ParamInfo* pinfo);
   static void makeAsciiParamInfo(const ParamProperties& props, ParamInfo* pinfo);
-
+  static void makeIntChoiceParamInfo(const ParamProperties& props, ParamInfo* pinfo);
+  
   ParamType type_;
   std::shared_ptr<RangedParamDecoder> decoder_ = nullptr;
   std::shared_ptr<ParamTranslator> translator_ = nullptr;

@@ -19,6 +19,7 @@ getParamTypeIndexMap() {
     {paramtype::float_type, ParamType::FLOAT},
     {paramtype::choice, ParamType::CHOICE},
     {paramtype::ascii, ParamType::ASCII},
+    {paramtype::int_choice, ParamType::INT_CHOICE},
   };
   return m;
 }
@@ -33,6 +34,7 @@ getParamTemplateMap() {
     {paramtemplate::FineTune, ParamTemplateType::FINE_TUNE},
     {paramtemplate::OctaveShift, ParamTemplateType::OCTAVE_SHIFT},
     {paramtemplate::KeyFollow, ParamTemplateType::KEYFOLLOW},
+    {paramtemplate::WaveNumber, ParamTemplateType::WAVE_NUMBER},
   };
   return m;
 }
@@ -133,6 +135,14 @@ String ChoiceParamTranslator::getDisplayValue(const int normalized_value) {
   return (*choices_)[getChoiceIndex(normalized_value)];
 }
 
+String IntChoiceParamTranslator::getDisplayValue(const int normalized_value) {
+  const auto found = choices_->find(normalized_value);
+  if (found != choices_->end()) {
+    return found->second;
+  }
+  return String(getDisplayInt(normalized_value));
+}
+
 String FloatParamTranslator::getDisplayValue(const int normalized_value) {
   return String(getDisplayFloat(normalized_value), decimal_places_);
 }
@@ -178,6 +188,16 @@ ParamProperties ParamProperties::fromTemplate(const String& param_template) {
       return intParam(1, 61, 67, -3, 3);
     case ParamTemplateType::KEYFOLLOW:
       return intParam(1, 54, 74, -100, 100);
+    case ParamTemplateType::WAVE_NUMBER:
+      {
+        std::unordered_map<int, String> m = {
+          {0, "OFF"},
+        };
+        return intChoiceParam(
+          4, 0, 16384,
+          std::make_shared<std::unordered_map<int, String>>(m)
+        );
+      }
     default:
       DBG("ERROR: invalid ParamTemplateType: " << int(pt_type));
       return ParamProperties();
@@ -210,6 +230,10 @@ void ParamInfo::makeAsciiParamInfo(const ParamProperties& props, ParamInfo* pinf
   pinfo->translator_ = std::make_shared<AsciiParamTranslator>();
 }
 
+void ParamInfo::makeIntChoiceParamInfo(const ParamProperties& props, ParamInfo* pinfo) {
+  pinfo->translator_ = std::make_shared<IntChoiceParamTranslator>(props.int_choices);
+}
+
 ParamInfo ParamInfo::makeParamInfo(const ParamProperties& props) {
   ParamInfo pinfo = makeBaseParamInfo(props);
   switch (pinfo.type_) {
@@ -224,6 +248,9 @@ ParamInfo ParamInfo::makeParamInfo(const ParamProperties& props) {
       break;
     case ParamType::ASCII:
       makeAsciiParamInfo(props, &pinfo);
+      break;
+    case ParamType::INT_CHOICE:
+      makeIntChoiceParamInfo(props, &pinfo);
       break;
     default:
       DBG("ERROR: Adding parameter type Not yet supported");
