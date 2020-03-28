@@ -52,5 +52,7 @@ class ParamTreeTemplateBuilder {
   static ValueTree superNATURALSynthToneCommonTemplate();
   static ValueTree superNATURALSynthTonePartialTemplate();
   static ValueTree superNATURALAcousticToneCommonTemplate();
+  static ValueTree superNATURALDrumKitCommonTemplate();
+  static ValueTree superNATURALDrumKitNoteTemplate();
 };
 

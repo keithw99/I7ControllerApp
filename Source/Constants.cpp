@@ -447,6 +447,10 @@ const StringArray lfoTempoSync = {
   "1/3", "1/4", "3/16", "1/6", "1/8", "3/32", "1/12", "1/16", "1/24", "1/32"
 };
 
+const StringArray drumVariation = {
+  "OFF", "FLAM1", "FLAM2", "FLAM3", "BUZZ1", "BUZZ2", "BUZZ3", "ROLL"
+};
+
 static ChoiceListMap buildChoiceMap() {
   return {
     {choice::SoundMode, std::make_shared<StringArray>(soundMode)},
@@ -513,11 +517,13 @@ static ChoiceListMap buildChoiceMap() {
     {choice::MuteGroup, std::make_shared<StringArray>(muteGroup)},
     {choice::CompGroupAssign, std::make_shared<StringArray>(compGroupAssign)},
     {choice::RingSwitch, std::make_shared<StringArray>(ringSwitch)},
+    {choice::OscWaveform, std::make_shared<StringArray>(oscWaveform)},
     {choice::ABC, std::make_shared<StringArray>(abc)},
     {choice::FilterMode, std::make_shared<StringArray>(filterMode)},
     {choice::FilterSlope, std::make_shared<StringArray>(filterSlope)},
     {choice::LFOShape, std::make_shared<StringArray>(lfoShape)},
     {choice::LFOTempoSync, std::make_shared<StringArray>(lfoTempoSync)},
+    {choice::DrumVariation, std::make_shared<StringArray>(drumVariation)},
   };
 }
 
