@@ -140,6 +140,7 @@ const String FilterMode { "FilterMode" };
 const String FilterSlope { "FilterSlope" };
 const String LFOShape { "LFOShape" };
 const String LFOTempoSync { "LFOTempoSync" };
+const String DrumVariation { "DrumVariation" };
 
 extern std::shared_ptr<StringArray> getChoicesFor(const String& choiceListName);
 }  // namespace choice

@@ -50,6 +50,34 @@ inline ValueTree ParamTreeTemplateBuilder::systemTemplate() {
     };
 }
 
+inline ValueTree ParamTreeTemplateBuilder::temporaryToneTemplate() {
+  return
+    { "Template", {{ "name", "Temporary Tone" }},
+      {
+        { "Group",
+          {{ "addr", 0x00000000 }, { "len", 4 }, { "desc", "Temporary PCM Synth Tone" }},
+          {pcmSynthToneTemplate()}
+        },
+        { "Group",
+          {{ "addr", 0x00010000 }, { "len", 4 }, { "desc", "Temporary SuperNATURAL Synth Tone" }},
+          {superNATURALSynthToneTemplate()}
+        },
+        { "Group",
+          {{ "addr", 0x00020000 }, { "len", 4 }, { "desc", "Temporary SuperNATURAL Acoustic Tone" }},
+          {superNATURALAcousticToneTemplate()}
+        },
+        { "Group",
+          {{ "addr", 0x00030000 }, { "len", 4 }, { "desc", "Temporary SuperNATURAL Drum Kit" }},
+          {superNATURALDrumKitNoteTemplate()}
+        },
+        { "Group",
+          {{ "addr", 0x00100000 }, { "len", 4 }, { "desc", "Temporary PCM Drum Kit" }},
+          {pcmDrumKitTemplate()}
+        },
+      }
+    };
+}
+
 inline ValueTree ParamTreeTemplateBuilder::studioSetTemplate() {
   return
     { "Template", {{ "name", "Studio Set" }},
@@ -97,30 +125,6 @@ inline ValueTree ParamTreeTemplateBuilder::studioSetTemplate() {
             { "desc", "Studio Set Part EQ" }, { "fmt", "Studio Set Part EQ (Part %d)" },
           },
           {studioSetPartEqTemplate()}
-        },
-      }
-    };
-}
-
-inline ValueTree ParamTreeTemplateBuilder::temporaryToneTemplate() {
-  return
-    { "Template", {{ "name", "Temporary Tone" }},
-      {
-        { "Group",
-          {{ "addr", 0x00000000 }, { "len", 4 }, { "desc", "Temporary PCM Synth Tone" }},
-          {pcmSynthToneTemplate()}
-        },
-        { "Group",
-          {{ "addr", 0x00000000 }, { "len", 4 }, { "desc", "Temporary SuperNATURAL Synth Tone" }}
-        },
-        { "Group",
-          {{ "addr", 0x00000000 }, { "len", 4 }, { "desc", "Temporary SuperNATURAL Acoustic Tone" }}
-        },
-        { "Group",
-          {{ "addr", 0x00000000 }, { "len", 4 }, { "desc", "Temporary SuperNATURAL Drum Kit" }}
-        },
-        { "Group",
-          {{ "addr", 0x00000000 }, { "len", 4 }, { "desc", "Temporary PCM Drum Kit" }}
         },
       }
     };
@@ -176,14 +180,14 @@ ValueTree ParamTreeTemplateBuilder::pcmDrumKitTemplate() {
         },
         { "GroupRange",
           {
-            { "first_addr", 0x00001000 }, { "last_addr", 0x00003E00 }, { "len", 6 },
+            { "first_addr", 0x00001000 }, { "last_addr", 0x00013E00 }, { "len", 6 },
             { "first_index", 21 }, { "last_index", 108 },
             { "desc", "PCM Drum Kit Partial" }, { "fmt", "PCM Drum Kit Partial (Key # %d)" },
           },
           {pcmDrumKitPartialTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00003000 }, { "len", 4 }, { "desc", "PCM Drum Kit Common 2" }},
+          {{ "addr", 0x00003000 }, { "len", 6 }, { "desc", "PCM Drum Kit Common 2" }},
           {pcmDrumKitCommon2Template()}
         },
       }
@@ -235,20 +239,24 @@ ValueTree ParamTreeTemplateBuilder::superNATURALDrumKitTemplate() {
     { "Template", {{ "name", "SuperNATURAL Drum Kit" }},
       {
         { "Group",
-          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit Common" }}
+          {{ "addr", 0x00000000 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit Common" }},
+          {superNATURALDrumKitCommonTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit MFX" }}
+          {{ "addr", 0x00000200 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit MFX" }},
+          {commonMFXTemplate()}
         },
         { "Group",
-          {{ "addr", 0x00000800 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit Common Comp/EQ" }}
+          {{ "addr", 0x00000800 }, { "len", 6 }, { "desc", "SuperNATURAL Drum Kit Common Comp/EQ" }},
+          {commonCompEqTemplate()}
         },
         { "GroupRange",
           {
             { "first_addr", 0x00001000 }, { "last_addr", 0x00004000 }, { "len", 6 },
             { "first_index", 27 }, { "last_index", 88 },
             { "desc", "SuperNATURAL Drum Kit Note" }, { "fmt", "SuperNATURAL Drum Kit Note (Key # %d)" },
-          }
+          },
+          {superNATURALDrumKitNoteTemplate()}
         },
       }
     };
@@ -2513,7 +2521,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitPartialTemplate() {
         }},
         { "Parameter", {
           { "addr", 0x0000001B }, { "size", 1 }, { "desc", "Partial Output Assign" },
-          { "min", 0 }, { "max", 1 },
+          { "min", 0 }, { "max", 6 },
           { "type", "choice" }, { "choice_list", "CompGroupAssign" },
         }},
         { "Parameter", {
@@ -2532,7 +2540,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitPartialTemplate() {
         }},
         { "Parameter", {
           { "addr", 0x00000020 }, { "size", 1 }, { "desc", "WMT Velocity Control" },
-          { "min", 0 }, { "max", 1 },
+          { "min", 0 }, { "max", 2 },
           { "type", "choice" }, { "choice_list", "VelocityControl" },
         }},
         { "Parameter", {
@@ -3489,6 +3497,102 @@ inline ValueTree ParamTreeTemplateBuilder::superNATURALAcousticToneCommonTemplat
           { "first_index", 1 }, { "last_index", 32 },
           { "desc", "Modify Parameter" }, { "fmt", "Modify Parameter %d" },
           { "template", "MidiByte" },
+        }},
+      }
+    };
+}
+
+ValueTree ParamTreeTemplateBuilder::superNATURALDrumKitCommonTemplate() {
+  return
+    { "Template", {{ "name", "SuperNATURAL Drum Kit Common" }},
+      {
+        { "TextParameter", {
+          { "first_addr", 0x00000000 }, { "last_addr", 0x0000000B }, { "size", 1 },
+          { "first_index", 1 }, { "last_index", 12 },
+          { "desc", "Kit Name" }, { "fmt", "Kit Name %d" },
+          { "type", "ascii" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Kit Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "Ambience Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Phrase Number" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000013 }, { "size", 1 }, { "desc", "TFX Switch" },
+          { "min", 0 }, { "max", 1 },
+          { "type", "choice" }, { "choice_list", "OffOn" },
+        }},
+      }
+    };
+}
+
+inline ValueTree ParamTreeTemplateBuilder::superNATURALDrumKitNoteTemplate() {
+  return
+    { "Template", {{ "name", "SuperNATURAL Acoustic Tone Common" }},
+      {
+        { "Parameter", {
+          { "addr", 0x00000000 }, { "size", 4 }, { "desc", "Inst Number" },
+          { "min", 0 }, { "max", 512 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000004 }, { "size", 1 }, { "desc", "Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000005 }, { "size", 1 }, { "desc", "Pan" },
+          { "template", "Pan" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000006 }, { "size", 1 }, { "desc", "Chorus Send Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000007 }, { "size", 1 }, { "desc", "Reverb Send Level" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000008 }, { "size", 4 }, { "desc", "Tune" },
+          { "min", 8 }, { "max", 248 }, { "type", "int" },
+          { "display_min", -1200 }, { "display_max", 1200 }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000C }, { "size", 1 }, { "desc", "Attack" },
+          { "min", 0 }, { "max", 100 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000D }, { "size", 1 }, { "desc", "Decay" },
+          { "min", 1 }, { "max", 64 }, { "type", "int" },
+          { "display_min", -63 }, { "display_max", 0 }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000E }, { "size", 1 }, { "desc", "Brilliance" },
+          { "min", 49 }, { "max", 76 }, { "type", "int" },
+          { "display_min", -115 }, { "display_max", 12 }
+        }},
+        { "Parameter", {
+          { "addr", 0x0000000F }, { "size", 1 }, { "desc", "Variation" },
+          { "min", 0 }, { "max", 7 },
+          { "type", "choice" }, { "choice_list", "DrumVariation" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000010 }, { "size", 1 }, { "desc", "Dynamic Range" },
+          { "min", 0 }, { "max", 63 }, { "type", "int" }
+        }},
+        { "Parameter", {
+          { "addr", 0x00000011 }, { "size", 1 }, { "desc", "Stereo Width" },
+          { "template", "MidiByte" },
+        }},
+        { "Parameter", {
+          { "addr", 0x00000012 }, { "size", 1 }, { "desc", "Output Assign" },
+          { "min", 0 }, { "max", 6 },
+          { "type", "choice" }, { "choice_list", "CompGroupAssign" },
         }},
       }
     };
