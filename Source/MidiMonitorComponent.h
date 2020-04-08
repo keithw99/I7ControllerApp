@@ -21,7 +21,8 @@
 
 //[Headers]     -- You can add your own extra header files here --
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "RolandSysexCommunicator.h"
+//#include "RolandSysexCommunicator.h"
+#include "I7SysexCommunicator.h"
 //[/Headers]
 
 

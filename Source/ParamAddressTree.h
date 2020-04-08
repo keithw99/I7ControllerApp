@@ -98,8 +98,10 @@ struct PNode {
 
   ~PNode() {
     for (PNode* child : children) {
-      delete child;
-      child = nullptr;
+      if (child != nullptr) {
+        delete child;
+        child = nullptr;
+      }
     }
   }
 
@@ -111,10 +113,11 @@ struct PNode {
 
 
 
-class PTree {
+class ParamAddrTree : private DeletedAtShutdown {
 
  public:
-  ~PTree();
+  JUCE_DECLARE_SINGLETON(ParamAddrTree, true)
+  ~ParamAddrTree();
   const NodeInfo Find(const ParamAddr& address);
 
   NodeInfo* FindPtr(const ParamAddr& address);

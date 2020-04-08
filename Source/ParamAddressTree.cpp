@@ -23,13 +23,19 @@ std::string string_format( const std::string& format, Args ... args )
 }
 */
 
-PTree::~PTree() {
+JUCE_IMPLEMENT_SINGLETON(ParamAddrTree)
+
+ParamAddrTree::~ParamAddrTree() {
   Reset();
+  clearSingletonInstance();
 }
 
-PNode* PTree::visitHigh(PNode* node, ParamAddr address, ParamPath* path) {
+PNode* ParamAddrTree::visitHigh(PNode* node, ParamAddr address, ParamPath* path) {
+  //std::cout << "Traversing " << address << std::endl;
   if (node == nullptr) {
-    DBG("Traversed a NULL node!");
+    //DBG("address: ");
+    std::cout << address << std::endl;
+    DBG("ERROR: Traversed a NULL node!");
     return nullptr;
   }
   NodeInfo* info = node->info.get();
@@ -47,7 +53,7 @@ PNode* PTree::visitHigh(PNode* node, ParamAddr address, ParamPath* path) {
   return visitLow(next, address, path);
 }
 
-PNode* PTree::visitLow(PNode* node, ParamAddr address, ParamPath* path) {  
+PNode* ParamAddrTree::visitLow(PNode* node, ParamAddr address, ParamPath* path) {  
   if (node == nullptr) {
     DBG("Traversed a NULL node!");
     return nullptr;
@@ -67,60 +73,60 @@ PNode* PTree::visitLow(PNode* node, ParamAddr address, ParamPath* path) {
   return visitHigh(next, address, path);
 }
 
-const NodeInfo PTree::Find(const ParamAddr& address) {
+const NodeInfo ParamAddrTree::Find(const ParamAddr& address) {
   ParamAddr copy = address;
   ParamPath unused_path;
   const NodeInfo* info = visitHigh(root_, copy, &unused_path)->info.get();
   return NodeInfo(*info);
 }
 
-NodeInfo* PTree::FindPtr(const ParamAddr& address) {
+NodeInfo* ParamAddrTree::FindPtr(const ParamAddr& address) {
   ParamAddr copy = address;
   ParamPath unused_path;
   return visitHigh(root_, copy, &unused_path)->info.get();
 }
 
-std::shared_ptr<ParamInfo> PTree::FindParamInfo(const ParamAddr& address) {
+std::shared_ptr<ParamInfo> ParamAddrTree::FindParamInfo(const ParamAddr& address) {
   return FindPtr(address)->getParamInfo();
 }
 
-ParamPath PTree::GetPath(const ParamAddr& address) {
+ParamPath ParamAddrTree::GetPath(const ParamAddr& address) {
   ParamAddr copy = address;
   ParamPath path;
   visitHigh(root_, copy, &path);
   return path;
 }
 
-NodeInfo* PTree::GetNodeAndPath(const ParamAddr& address, ParamPath* path) {
+NodeInfo* ParamAddrTree::GetNodeAndPath(const ParamAddr& address, ParamPath* path) {
   ParamAddr copy = address;
   return visitHigh(root_, copy, path)->info.get();
 }
 
-ParamPath PTree::GetPathFromBytes(uint8* addr, uint8 num_bytes) {
+ParamPath ParamAddrTree::GetPathFromBytes(uint8* addr, uint8 num_bytes) {
   return GetPath(ParamAddr(Pack8Bit(addr, num_bytes), num_bytes * 2));
 }
 
-NodeInfo* PTree::GetNodeAndPathFromBytes(uint8* addr, uint8 num_bytes, ParamPath* path)  {
+NodeInfo* ParamAddrTree::GetNodeAndPathFromBytes(uint8* addr, uint8 num_bytes, ParamPath* path)  {
   ParamAddr copy = ParamAddr(Pack8Bit(addr, num_bytes), num_bytes * 2);
   return visitHigh(root_, copy, path)->info.get();
 }
 
-void PTree::Insert(const ParamAddr& address, const NodeInfo& info) {
+void ParamAddrTree::Insert(const ParamAddr& address, const NodeInfo& info) {
   ParamAddr copy = address;
   root_ = insertHigh(root_, copy, info, nullptr);
 }
 
-void PTree::InsertParam(const ParamAddr& address, std::shared_ptr<ParamInfo> param_info) {
+void ParamAddrTree::InsertParam(const ParamAddr& address, std::shared_ptr<ParamInfo> param_info) {
   //NodeInfo* pnode = FindPtr(address);
   FindPtr(address)->setParamInfo(param_info);
   //NodeInfo* found = FindPtr(address);
 }
 
-void PTree::InsertGroupNode(const ParamAddr& address, const Identifier& description) {
+void ParamAddrTree::InsertGroupNode(const ParamAddr& address, const Identifier& description) {
   return Insert(address, GroupNode(description));
 }
 
-void PTree::insertIndexedNode(const ParamAddr& address, const NodeInfo& info, PNode* const base) {
+void ParamAddrTree::insertIndexedNode(const ParamAddr& address, const NodeInfo& info, PNode* const base) {
   ParamAddr copy = address;
   if (base == nullptr) {
     DBG("ERROR: Cannot insert indexed node on null base!");
@@ -130,7 +136,7 @@ void PTree::insertIndexedNode(const ParamAddr& address, const NodeInfo& info, PN
   //NodeInfo* found = FindPtr(address);
 }
 
-void PTree::InsertRange(const ParamAddrRange& range,
+void ParamAddrTree::InsertRange(const ParamAddrRange& range,
                   const NodeType node_type,
                   const Identifier& description,
                   const Identifier& format) {
@@ -152,7 +158,7 @@ void PTree::InsertRange(const ParamAddrRange& range,
   }
 }
 
-void PTree::InsertParamRange(const ParamAddrRange& range,
+void ParamAddrTree::InsertParamRange(const ParamAddrRange& range,
                              const Identifier& description,
                              const Identifier& format,
                              const ParamProperties& props) {
@@ -164,14 +170,14 @@ void PTree::InsertParamRange(const ParamAddrRange& range,
   InsertParam(base_addr, pinfo);
 }
 
-ParamAddr PTree::InsertOffset(const ParamAddr& base_addr, const ParamAddr& offset_addr,
+ParamAddr ParamAddrTree::InsertOffset(const ParamAddr& base_addr, const ParamAddr& offset_addr,
                   const NodeInfo& info) {
   ParamAddr offset_copy = base_addr + offset_addr;
   Insert(offset_copy, info);
   return offset_copy;
 }
 
-std::shared_ptr<ParamInfo> PTree::InsertParamOffset(const ParamAddr& base_addr,
+std::shared_ptr<ParamInfo> ParamAddrTree::InsertParamOffset(const ParamAddr& base_addr,
                                                     const ParamAddr& offset_addr,
                                                     const Identifier& description,
                                                     const ParamProperties& props) {
@@ -183,7 +189,7 @@ std::shared_ptr<ParamInfo> PTree::InsertParamOffset(const ParamAddr& base_addr,
   return pinfo;  
 }
 
-ParamAddr PTree::InsertRangeOffset(const ParamAddr& base_addr,
+ParamAddr ParamAddrTree::InsertRangeOffset(const ParamAddr& base_addr,
                                    const ParamAddrRange& offset_range,
                                    const NodeType node_type,
                                    const Identifier& description,
@@ -193,7 +199,7 @@ ParamAddr PTree::InsertRangeOffset(const ParamAddr& base_addr,
   return abs_range.GetBaseAddr();
 }
 
-ParamAddr PTree::InsertParamRangeOffset(const ParamAddr& base_addr,
+ParamAddr ParamAddrTree::InsertParamRangeOffset(const ParamAddr& base_addr,
                                         const ParamAddrRange& offset_range,
                                         const Identifier& description,
                                         const Identifier& format,
@@ -203,9 +209,9 @@ ParamAddr PTree::InsertParamRangeOffset(const ParamAddr& base_addr,
   return abs_range.GetBaseAddr();
 }
 
-bool PTree::HasData() { return root_ != nullptr; }
+bool ParamAddrTree::HasData() { return root_ != nullptr; }
 
-void PTree::Reset() { delete root_; root_ = nullptr; }
+void ParamAddrTree::Reset() { delete root_; root_ = nullptr; }
 
 Identifier NodeInfo::getDescriptionFormat() const { 
   if (format_.isNull() && isIndexed()) {
@@ -255,7 +261,7 @@ void NodeInfo::setParamInfo(std::shared_ptr<ParamInfo> param_info) {
   param_info_ = param_info;  // This should increase the reference count.
 }
 
-PNode* PTree::insertHigh(PNode* node, ParamAddr address,
+PNode* ParamAddrTree::insertHigh(PNode* node, ParamAddr address,
                          const NodeInfo& info, PNode* const base = nullptr) {
   if (node == nullptr) {
     PNode* newNode = new PNode;
@@ -273,7 +279,7 @@ PNode* PTree::insertHigh(PNode* node, ParamAddr address,
     }
   }
 
-PNode* PTree::insertLow(PNode* node, ParamAddr address,
+PNode* ParamAddrTree::insertLow(PNode* node, ParamAddr address,
                         const NodeInfo& info, PNode* const base = nullptr) {
   if (node == nullptr) {
     PNode* newNode = new PNode;
@@ -292,14 +298,14 @@ PNode* PTree::insertLow(PNode* node, ParamAddr address,
 }
 
 std::function<PNode*(PNode*, ParamAddr, const NodeInfo&)>
-PTree::insertFunc(const ParamAddr& address) {
+ParamAddrTree::insertFunc(const ParamAddr& address) {
   return [&, this](PNode* pn, ParamAddr pa, const NodeInfo& ni) {
     return address.len % 2 == 0 ? this->insertHigh(pn, pa, ni) : this->insertLow(pn, pa, ni);
   };
 }
 
 std::vector<ParamUpdate>
-PTree::GetParamUpdates(uint8* addr_bytes, uint8* data, int num_bytes) {
+ParamAddrTree::GetParamUpdates(uint8* addr_bytes, uint8* data, int num_bytes) {
   std::vector<ParamUpdate> updates;
   int param_size = 0;
   int bytes_to_read = num_bytes;

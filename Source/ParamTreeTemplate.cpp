@@ -11,6 +11,7 @@
 #include "ParamTreeTemplate.h"
 
 ValueTree ParamTreeTemplateBuilder::rootTemplate() {
+  DBG("inside rootTemplate");
   return
     { "Template", {{ "name", "INTEGRA-7" }},
       {
@@ -3001,7 +3002,7 @@ inline ValueTree ParamTreeTemplateBuilder::pcmDrumKitPartialTemplate() {
           { "template", "SignedMidiByte" },
         }},
         { "ParameterRange", {
-          { "first_addr", 0x0000013E }, { "last_addr", 0x00000140 }, { "size", 1 },
+          { "first_addr", 0x0000013A }, { "last_addr", 0x00000140 }, { "size", 1 },
           { "first_index", 1 }, { "last_index", 4 },
           { "desc", "TVA Env Time" }, { "fmt", "TVA Env Time %d" },
           { "template", "MidiByte" },
@@ -3154,7 +3155,7 @@ inline ValueTree ParamTreeTemplateBuilder::superNATURALSynthToneCommonTemplate()
         { "Parameter", {
           { "addr", 0x0000003B }, { "size", 1 }, { "desc", "Phrase Octave Shift" },
           { "min", 61 }, { "max", 67 }, { "type", "int" },
-          { "display_min", -3 }, { "display_max", 3 },
+          { "display_min", -3 }, { "display_max", 3 }
         }},
         { "Parameter", {
           { "addr", 0x0000001C }, { "size", 1 }, { "desc", "Unison Size" },
@@ -3468,7 +3469,7 @@ inline ValueTree ParamTreeTemplateBuilder::superNATURALAcousticToneCommonTemplat
         }},
         { "Parameter", {
           { "addr", 0x0000001B }, { "size", 1 }, { "desc", "Category" },
-          { "min", 0 }, { "max", 34 },  // 0-127 but only 35 categories
+          { "min", 0 }, { "max", 35 },  // 0-127 but only 35 categories
           { "type", "choice" }, { "choice_list", "ToneCategory" },
         }},
         { "Parameter", {

@@ -268,7 +268,9 @@ String ParamInfo::getDisplayValue(const int normalized_value) {
 }
 
 int ParamInfo::getNormalizedInt(const uint8* bytes) {
-  return translator_->getNormalizedInt(decoder_->getValue(bytes));
+  int val = translator_->getNormalizedInt(decoder_->getValue(bytes));
+  //DBG("val = " + val);
+  return val;
 }
 
 int ParamInfo::getNormalizedInt(const String& display_value) {

@@ -138,6 +138,9 @@ String MidiMonitorComponent::formatLogEntry (const MidiMessage& m) {
       name = "[" + String (m.getControllerNumber()) + "]";
     return "Controller " + name + ": " + String (m.getControllerValue());
   }
+  if (isIntegra7(m)) {
+    return Integra7SysexDebugString(m);
+  }
   if (isRolandSysex(m)) {
     return RolandSysexDebugString(m);
   }
