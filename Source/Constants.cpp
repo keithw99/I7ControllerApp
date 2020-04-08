@@ -73,7 +73,7 @@ const StringArray midiChannelPlusOff =
 const StringArray midiControlSource = 
   addArrays<StringArray>(
     StringArray{"OFF"},
-    makeRange(1, 31, "CC%02d"), makeRange(33, 95, "CC%02d"),
+    makeRange(1, 31, "CC%02d"), StringArray{""}, makeRange(33, 95, "CC%02d"),
     StringArray{"BEND", "AFT"}
   );
 
@@ -370,13 +370,13 @@ const StringArray fadeMode = {
 };
 
 const StringArray toneCategory = {
-  "No assign", "Ac.Piano", "E.Piano", "Organ", "Other Keyboards",
-  "Accordion/Harmonica", "Bell/Mallet", "Ac.Guitar", "E.Guitar", "Dist.Guitar",
+  "No assign", "Ac.Piano", "", "", "E.Piano", "", "Organ", "", "", "Other Keyboards",
+  "", "", "Accordion/Harmonica", "", "Bell/Mallet", "", "Ac.Guitar", "E.Guitar", "Dist.Guitar",
   "Ac.Bass", "E.Bass", "Synth Bass", "Plucked/Stroke", "Strings",
-  "Brass", "Wind", "Flute", "Sax", "Recorder",
-  "Vox/Choir", "Synth Lead", "Synth Brass", "Synth Pad/Strings", "Synth Bellpad",
+  "", "", "Brass", "", "Wind", "Flute", "Sax", "Recorder",
+  "Vox/Choir", "", "Synth Lead", "Synth Brass", "Synth Pad/Strings", "Synth Bellpad",
   "Synth PolyKey", "FX", "Synth Seq/Pop", "Phrase", "Pulsating",
-  "Beat&Groove", "Hit", "Sound", "FX", "Percussion",
+  "Beat&Groove", "Hit", "Sound FX", "Drums", "Percussion",
   "Combination"
 };
 

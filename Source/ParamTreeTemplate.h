@@ -15,6 +15,7 @@
 class ParamTreeTemplateBuilder {
  public:
   static ValueTree& getTemplate() {
+    DBG("inside getTemplate");
     static ValueTree root = rootTemplate();
     return root;
   }

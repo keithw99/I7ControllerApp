@@ -39,7 +39,7 @@ public:
         #endif
 
         if (runTests) {
-            PTreeTest pTreeTest; // Create a PTreeTest so it "exists".
+            ParamAddrTreeTest addrTreeTest; // Create a PTreeTest so it "exists".
             UnitTestRunner testRunner;
             testRunner.runAllTests();
         }

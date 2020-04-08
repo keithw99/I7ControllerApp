@@ -24,14 +24,14 @@ struct ParamAddr {
   ParamAddr(uint32 address, uint8 len) :
     address(address), len(len) {}
 
-  ParamAddr(uint8* bytes, uint8 len) : len(len) {
+  ParamAddr(const uint8* bytes, const uint8 len) : len(len) {
     for (int i = 0; i < len / 2; ++i) {
       int shift = 24 - i * 8;
       address |= static_cast<uint32>((bytes[i] & 0x7F)) << shift;
     }
   }
 
-  ParamAddr(uint8* bytes) : ParamAddr(bytes, 8) {}
+  ParamAddr(const uint8* bytes) : ParamAddr(bytes, 8) {}
   
   ParamAddr operator+(const ParamAddr& other) const {
     ParamAddr sum(*this);

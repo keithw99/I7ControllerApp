@@ -21,7 +21,10 @@ enum class TreeType {TEMPLATE, GROUP, GROUP_RANGE, PARAM, PARAM_RANGE, PARAM_TEX
 
 class AddressTreeBuilder {
  public:
-  static PTree getAddressTree();
+  static ParamAddrTree* getAddressTree();
+
+ private:
+  static ParamAddrTree* instance_;
 };
 
 class ParamTree {

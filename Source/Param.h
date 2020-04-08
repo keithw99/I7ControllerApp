@@ -258,6 +258,9 @@ struct ParamProperties {
   inline ParamProperties(ParamType param_type, int size, int min, int max) :
     param_type(param_type), size(size), min(min), max(max),
     display_min(min), display_max(max) {}
+  ~ParamProperties() {
+    //DBG("inside destructor");
+  }
 };
 
 class ParamInfo {

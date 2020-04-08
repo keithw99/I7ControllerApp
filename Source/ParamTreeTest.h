@@ -15,13 +15,13 @@
 #include "ParamTree.h"
 #include "Param.h"
 
-class PTreeTest : public UnitTest {
+class ParamAddrTreeTest : public UnitTest {
   public:
-  PTreeTest() : UnitTest("ParamTree testing") {}
+  ParamAddrTreeTest() : UnitTest("ParamTree testing") {}
 
   void runTest() override {
-    beginTest("PTree Construction");
-    PTree ptree;
+    beginTest("ParamAddrTree Construction");
+    ParamAddrTree ptree;
 
     beginTest("ParamAddr Construction");
     uint8 addr1[4] = {0x12, 0x34, 0x56, 0x78};
@@ -40,7 +40,7 @@ class PTreeTest : public UnitTest {
 
     beginTest("ParamTree Insert");
     ptree.Insert(setup_addr, setup_info);
-    expect(ptree.HasData(), "ptree root should not be null");
+    expect(ptree.HasData(), "ParamAddrTree root should not be null");
     expectEquals(int(setup_addr.address), int(0x01000000));
 
     beginTest("ParamTree Lookup");
@@ -123,30 +123,30 @@ class PTreeTest : public UnitTest {
     expect(sc2_info->hasParamInfo());
 
     beginTest("ParamTreeTemplateBuilder::BuildAddressTree");
-    PTree addrTree = AddressTreeBuilder::getAddressTree();
+    ParamAddrTree* addrTree = AddressTreeBuilder::getAddressTree();
     NodeInfo fnd_stp = ptree.Find(setup_addr);
     expectEquals(fnd_stp.getDescription().toString(), String("Setup"));
 
     beginTest("ParamAddressTree GetPath");
-    ParamPath path = addrTree.GetPath(setup_addr);
+    ParamPath path = addrTree->GetPath(setup_addr);
     expectEquals(path[0].node_id.toString(), String("Setup"));
     ParamAddr ssm2_addr(uint32(0x18001100), 6);
-    path = addrTree.GetPath(ssm2_addr);
+    path = addrTree->GetPath(ssm2_addr);
     expectEquals(path[0].node_id.toString(), String("Temporary Studio Set"));
     expectEquals(path[1].node_id.toString(), String("Studio Set MIDI"));
     expectEquals(path[1].index, 2);
-    path = addrTree.GetPath({uint32(0x01000000), 8});
+    path = addrTree->GetPath({uint32(0x01000000), 8});
     expectEquals(path[1].node_id.toString(), String("Sound Mode"));
 
-    path = addrTree.GetPath({uint32(0x01000004), 8});
+    path = addrTree->GetPath({uint32(0x01000004), 8});
     expectEquals(path[1].node_id.toString(), String("Studio Set BS MSB (CC# 0)"));
 
     beginTest("ParamAddressTree getting ParamInfo");
-    NodeInfo* sm_info = addrTree.FindPtr(ParamAddr(uint32(0x01000000), 8));
+    NodeInfo* sm_info = addrTree->FindPtr(ParamAddr(uint32(0x01000000), 8));
     expectEquals(sm_info->getDescription().toString(), String("Sound Mode"));
     expect(sm_info->hasParamInfo());
     expectEquals(int(sm_info->getParamInfo()->getType()), int(ParamType::CHOICE));
-    NodeInfo* mt_info = addrTree.FindPtr(ParamAddr(uint32(0x02000000), 8));
+    NodeInfo* mt_info = addrTree->FindPtr(ParamAddr(uint32(0x02000000), 8));
     expectEquals(mt_info->getDescription().toString(), String("Master Tune"));
     expect(mt_info->hasParamInfo());
     std::shared_ptr<ParamInfo> pinfo = mt_info->getParamInfo();
@@ -156,7 +156,7 @@ class PTreeTest : public UnitTest {
     expectEquals(pinfo->getDisplayValue(1024), String(0.0, 1));
     expectEquals(pinfo->getDisplayValue(2023), String(99.9, 1));
 
-    NodeInfo* mks_info = addrTree.FindPtr(ParamAddr(uint32(0x02000004), 8));
+    NodeInfo* mks_info = addrTree->FindPtr(ParamAddr(uint32(0x02000004), 8));
     expectEquals(mks_info->getDescription().toString(), String("Master Key Shift"));
     expect(mks_info->hasParamInfo());
     pinfo = mks_info->getParamInfo();
@@ -164,7 +164,7 @@ class PTreeTest : public UnitTest {
     expectEquals(pinfo->getDisplayValue(40), String(-24));
     expectEquals(pinfo->getNormalizedInt("23"), 87);
 
-    NodeInfo* sc_info = addrTree.FindPtr(ParamAddr(uint32(0x02000011), 8));
+    NodeInfo* sc_info = addrTree->FindPtr(ParamAddr(uint32(0x02000011), 8));
     expectEquals(sc_info->getDescription().toString(), String("Studio Set Control Channel"));
     expect(sc_info->hasParamInfo());
     pinfo = sc_info->getParamInfo();
@@ -198,28 +198,28 @@ class PTreeTest : public UnitTest {
     uint8 sm_addr_bytes[4] = {0x01, 0x00, 0x00, 0x00};
     uint8 sm_val_bytes[1] = {0x03};
     
-    std::vector<ParamUpdate> updates = addrTree.GetParamUpdates(sm_addr_bytes, sm_val_bytes, 1);
+    std::vector<ParamUpdate> updates = addrTree->GetParamUpdates(sm_addr_bytes, sm_val_bytes, 1);
     expectEquals(int(updates.size()), 1);
     expectEquals(int(updates[0].value), 3);
     expectEquals(updates[0].toString(), String("//Setup/Sound Mode -> GS"));
     
     uint8 ss_addr_bytes[4] = {0x01, 0x00, 0x00, 0x04};
     uint8 ss_val_bytes[3] = {0x01, 0x02, 0x03};
-    updates = addrTree.GetParamUpdates(ss_addr_bytes, ss_val_bytes, 3);
+    updates = addrTree->GetParamUpdates(ss_addr_bytes, ss_val_bytes, 3);
     expectEquals(int(updates.size()), 3);
     expectEquals(updates[1].toString(), String("//Setup/Studio Set BS LSB (CC# 32) -> 2"));
     expectEquals(updates[1].value, 2);
 
     uint8 sc_addr[4] = {0x02, 0x00, 0x00, 0x22};
-    uint8 sc_val[1] = {0x29}; // 0x29 = 41 -> "CC42"
-    updates = addrTree.GetParamUpdates(sc_addr, sc_val, 1);
+    uint8 sc_val[1] = {0x29}; // 0x29 = 41 -> "CC41"
+    updates = addrTree->GetParamUpdates(sc_addr, sc_val, 1);
     expectEquals(updates[0].toString(),
-                 String("//System/System Common/System Control Source[3] -> CC42"));
+                 String("//System/System Common/System Control Source[3] -> CC41"));
 
     beginTest("Reading TextParam updates");
     uint8 text[16] = {0x4D, 0x79, 0x20, 0x64, 0x6F, 0x67, 0x20, 0x68, 0x61, 0x73, 0x20, 0x66, 0x6C, 0x65, 0x61, 0x73};
     uint8 ssn_addr[4] = {0x18, 0x00, 0x00, 0x00};
-    updates = addrTree.GetParamUpdates(ssn_addr, text, 16);
+    updates = addrTree->GetParamUpdates(ssn_addr, text, 16);
     expectEquals(int(updates.size()), 16);
     expectEquals(updates[0].toString(), String("//Temporary Studio Set/Studio Set Common/Studio Set Name[1] -> M"));
   }

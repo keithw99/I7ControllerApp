@@ -24,8 +24,10 @@ class I7SysexCommunicator : public RolandSysexCommunicator {
   private:
     void initializeParamTree();
     
-    PTree addrTree_;
+    ParamAddrTree addrTree_;
     ValueTree paramTree_;
     ValueTree paramTemplate_;
 
 };
+
+String Integra7SysexDebugString(const MidiMessage& message);

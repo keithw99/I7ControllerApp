@@ -32,7 +32,8 @@ int getDeviceID(const uint8* sysex_data) {
   return sysex_data[1] + 1; // convert from 0-based to 1-based.
 }
 
-bool isIntegra7(const uint8* sysex_data) {
+bool isIntegra7(const MidiMessage& message) {
+  auto sysex_data = message.getSysExData();
   return sysex_data[2] == 0 && sysex_data[3] == 0 && sysex_data[4] == 0x64;
 }
 
@@ -41,7 +42,7 @@ String RolandSysexDebugString(const MidiMessage& message) {
   int len = message.getSysExDataSize();
   String msg = "Roland {";
   msg += "DeviceID: " + String(getDeviceID(data));
-  if (isIntegra7) {
+  if (isIntegra7(message)) {
     msg += ", Model: Integra-7";
   }
   if (isDT1(data)) {

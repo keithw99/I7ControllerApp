@@ -58,14 +58,14 @@ bool hasParamTemplate(ValueTree t) {
 }
 
 // Forward declarations.
-void parseTemplateNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
+void parseTemplateNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
 TreeType getType(ValueTree t);
-void parseTemplateChildren(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
-void parseGroupNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
-void parseGroupRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
-void parseParamNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
-void parseParamRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
-void parseTextParam(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr);
+void parseTemplateChildren(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
+void parseGroupNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
+void parseGroupRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
+void parseParamNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
+void parseParamRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
+void parseTextParam(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
 ParamAddr extractAddr(ValueTree t);
 ParamAddr extractParamAddr(ValueTree t);
 ParamAddrRange extractAddrRange(ValueTree t);
@@ -78,32 +78,50 @@ String extractNodeDescription(ValueTree t);
 bool hasParamTemplate(ValueTree t);
 ParamProperties makeParamPropertiesFromTemplate(const String& param_template);
 
-PTree AddressTreeBuilder::getAddressTree() {
-  PTree addr_tree;
+ParamAddrTree* AddressTreeBuilder::instance_;
+
+//ParamAddrTree AddressTreeBuilder::getAddressTree() {
+ParamAddrTree* AddressTreeBuilder::getAddressTree() {
+  //if (instance_ == NULL) {
+    //ParamAddrTree addr_tree;
+    //instance_ = new ParamAddrTree();
   ValueTree t = ParamTreeTemplateBuilder::getTemplate();
-  parseTemplateNode(t.getRoot(), addr_tree, ZeroAddr());
-  return addr_tree;
+  //parseTemplateNode(t.getRoot(), addr_tree, ZeroAddr());
+  instance_ = ParamAddrTree::getInstance();
+  parseTemplateNode(t.getRoot(), *instance_, ZeroAddr());
+  //}
+  //return addr_tree; 
+  return instance_;
+  //return instance_;
 }
 
-void parseTemplateNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseTemplateNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
+  //DBG("parsing...");
   TreeType tt = getType(t);
   switch (tt) {
   case TreeType::TEMPLATE:
+    //DBG("parsing template");
     parseTemplateChildren(t, addr_tree, base_addr);
     break;
   case TreeType::GROUP:
+    //DBG("parsing group");
     parseGroupNode(t, addr_tree, base_addr);
     break;
   case TreeType::GROUP_RANGE:
+    //DBG("parsing group range");
     parseGroupRange(t, addr_tree, base_addr);
     break;
   case TreeType::PARAM:
+    //DBG("parsing param");
     parseParamNode(t, addr_tree, base_addr);
+    //DBG("finished parseparamnode");
     break;
   case TreeType::PARAM_TEXT:
+    //DBG("parsing param text");
     parseTextParam(t, addr_tree, base_addr);
     // Fallthrough intentional.
   case TreeType::PARAM_RANGE:
+    //DBG("parsing param range");
     parseParamRange(t, addr_tree, base_addr);
     break;
   default:
@@ -134,13 +152,13 @@ String extractNodeDescription(ValueTree t) {
   return desc;
 }
 
-void parseGroupNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseGroupNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
   //ParamAddr paddr = base_addr + extractAddr(t);
-  ParamAddr paddr = extractAddr(t);
+    ParamAddr paddr = extractAddr(t);
   String desc = extractNodeDescription(t);
   NodeInfo grp_node(NodeType::PATH, desc);
   ParamAddr abs_addr = addr_tree.InsertOffset(base_addr, paddr, grp_node);
-
+  
   // Recurse into children.
   parseTemplateChildren(t, addr_tree, abs_addr);
 }
@@ -169,9 +187,11 @@ void extractIntParamProperties(ValueTree t, ParamProperties* props) {
 }
 
 void extractChoiceParamProperties(ValueTree t, ParamProperties* props) {
-  extractIntParamProperties(t, props);
+    extractIntParamProperties(t, props);
   String choice_list = getProperty(t, prop::param::choice_list);
+  //DBG("got choice_list");
   props->choices = choice::getChoicesFor(choice_list);
+  //DBG("got choices");
 }
 
 void extractFloatParamProperties(ValueTree t, ParamProperties* props) {
@@ -237,15 +257,20 @@ ParamProperties extractParamProperties(ValueTree t) {
   return props;
 }
 
-void parseParamNode(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseParamNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
+  //DBG("parsing param node");
   ParamAddr paddr = extractParamAddr(t);
   paddr.len = 8;
   String desc = extractNodeDescription(t);
+  //DBG("desc: " + desc);
   ParamProperties props = extractParamProperties(t);
+  //DBG("got props");
   addr_tree.InsertParamOffset(base_addr, paddr, desc, props);
+  //DBG("parsed param node");
+  //DBG("end of function");
 }
 
-void parseGroupRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseGroupRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
   String desc = extractNodeDescription(t);
   ParamAddrRange prange = extractAddrRange(t);
   String fmt = getProperty(t, prop::fmt);
@@ -256,8 +281,9 @@ void parseGroupRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) 
   parseTemplateChildren(t, addr_tree, range_base_addr);
 }
 
-void parseParamRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseParamRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
   String desc = extractNodeDescription(t);
+  //std::cout << "**************" << desc << "*************" << std::endl;
   ParamAddrRange prange = extractParamAddrRange(t);
   String fmt = getProperty(t, prop::fmt);
   ParamProperties props = extractParamProperties(t);
@@ -265,11 +291,11 @@ void parseParamRange(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) 
     base_addr, prange, desc, fmt, props);
 }
 
-void parseTextParam(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseTextParam(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
   return;
 }
 
-void parseTemplateChildren(ValueTree t, PTree& addr_tree, const ParamAddr& base_addr) {
+void parseTemplateChildren(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
   int numChildren = t.getNumChildren();
   for (int i = 0; i < numChildren; ++i) {
     parseTemplateNode(t.getChild(i), addr_tree, base_addr);

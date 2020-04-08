@@ -27,7 +27,7 @@ class RolandSysexCommunicator : public MidiInputCallback {
 bool isRolandSysex(const MidiMessage& message);
 bool isDT1(const uint8* sysex_data);
 int getDeviceID(const uint8* sysex_data);
-bool isIntegra7(const uint8* sysex_data);
+bool isIntegra7(const MidiMessage& message);
 String RolandSysexDebugString(const MidiMessage& message);
 
 //}  // namespace RolandSysexMessage
