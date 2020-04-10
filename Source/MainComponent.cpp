@@ -44,6 +44,8 @@ MainComponent::~MainComponent()
 
 void MainComponent::initializeSettings() {
   PropertiesFile::Options options;
+  options.osxLibrarySubFolder = "Application Support";
+    
   options.applicationName = ProjectInfo::projectName;
   options.filenameSuffix = ".settings";
   options.folderName = File::getSpecialLocation(
