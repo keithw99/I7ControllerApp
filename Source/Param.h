@@ -113,8 +113,8 @@ class RangedParamDecoder {
                      std::shared_ptr<LinearIntRange> range) :
       decoder_(decoder), base_range_(range) {}
 
-  std::shared_ptr<LinearIntRange> base_range_;
   std::shared_ptr<ParamValueDecoder> decoder_;
+  std::shared_ptr<LinearIntRange> base_range_;
 };
 
 class ParamTranslator {
@@ -158,7 +158,7 @@ class AsciiParamTranslator : public ParamTranslator {
   ~AsciiParamTranslator() {}
 
   String getDisplayValue(const int int_value) override;
-  int getNormalizedInt(const int display_value) { return display_value; }
+  int getNormalizedInt(const int display_value) override { return display_value; }
 };
 
 class FloatParamTranslator : public ParamTranslator {
@@ -228,10 +228,10 @@ struct ParamProperties {
   int min;
   int max;
   int step = 1;
-  int display_min = min;
-  int display_max = max;
-  float display_float_min = float(min);  // float params only.
-  float display_float_max = float(max);  // float params only.
+  int display_min; // = min;
+  int display_max; // = max;
+  float display_float_min; // = float(min);  // float params only.
+  float display_float_max; // = float(max);  // float params only.
   int decimal_places = 1;  // float params.only
   std::shared_ptr<StringArray> choices;  // choice params only.
   std::shared_ptr<std::unordered_map<int, String>> int_choices;  // int choice params only.

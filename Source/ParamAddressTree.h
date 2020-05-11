@@ -45,7 +45,7 @@ class NodeInfo {
     format_(format) {}
   NodeInfo(
     NodeInfo* base_info, const int index) :
-      base_(base_info), index_(index), node_type_(base_info->getNodeType()) {
+      node_type_(base_info->getNodeType()), index_(index), base_(base_info) {
   }
   // Copy? constructor.
   NodeInfo(const NodeInfo& src) {
@@ -80,8 +80,8 @@ class NodeInfo {
 
  private:
   NodeType node_type_;
-  int index_ = -1;
   Identifier description_ = Identifier::null;
+  int index_ = -1;
   Identifier format_ = Identifier::null;  // for indexed nodes only.
   NodeInfo* base_ = nullptr;  // for indexed nodes only.
   std::shared_ptr<ParamInfo> param_info_;

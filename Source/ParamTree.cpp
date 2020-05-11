@@ -287,8 +287,8 @@ void parseParamRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& bas
   ParamAddrRange prange = extractParamAddrRange(t);
   String fmt = getProperty(t, prop::fmt);
   ParamProperties props = extractParamProperties(t);
-  ParamAddr range_base_addr = addr_tree.InsertParamRangeOffset(
-    base_addr, prange, desc, fmt, props);
+  // ParamAddr range_base_addr =
+  addr_tree.InsertParamRangeOffset(base_addr, prange, desc, fmt, props);
 }
 
 void parseTextParam(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
