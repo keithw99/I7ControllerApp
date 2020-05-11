@@ -21,14 +21,14 @@ constexpr uint8 BITMASK[] =
 
 
 inline uint32 Get7BitAddress(uint32 padded_addr) {
-  return padded_addr & 0x7F |
+  return (padded_addr & 0x7F) |
          (padded_addr >> 8 & 0x7F) << 7 |
          (padded_addr >> 16 & 0x7F) << 14 |
          (padded_addr >> 24 & 0x7F) << 21;
 }
 
 inline uint32 Get8BitAddress(uint32 sb_addr) {
- return sb_addr & 0x7F |
+ return (sb_addr & 0x7F) |
          (sb_addr >> 7 & 0x7F) << 8 |
          (sb_addr >> 14 & 0x7F) << 16 |
          (sb_addr >> 21 & 0x7F) << 24;
@@ -37,7 +37,6 @@ inline uint32 Get8BitAddress(uint32 sb_addr) {
 inline uint32 Pack8Bit(const uint8* data, int size) {
   uint32 val = 0;
   for (int i = size; i > 0; --i) {
-    uint32 v = static_cast<uint32>((data[i-1]) & 0xFF);
     val |= static_cast<uint32>((data[i - 1]) & 0x7F) << (size - i) * 8;
   }
   return val;
@@ -46,7 +45,6 @@ inline uint32 Pack8Bit(const uint8* data, int size) {
 inline uint32 Pack7Bit(const uint8* data, int size) {
   uint32 val = 0;
   for (int i = size; i > 0; --i) {
-    uint32 v = static_cast<uint32>((data[i-1]) & 0xFF);
     val |= static_cast<uint32>((data[i - 1]) & 0x7F) << (size - i) * 7;
   }
   return val;
@@ -55,7 +53,6 @@ inline uint32 Pack7Bit(const uint8* data, int size) {
 inline uint32 Pack4Bit(const uint8* data, int size) {
   uint32 val = 0;
   for (int i = size; i > 0; --i) {
-    uint32 v = static_cast<uint32>((data[i-1]) & 0xFF);
     val |= static_cast<uint32>((data[i - 1]) & 0x7F) << (size - i) * 4;
   }
   return val;
@@ -68,6 +65,7 @@ inline uint32 PackWithBitmask(const uint8* data, int size, const uint8* bitlen) 
     val |= static_cast<uint32>(data[i] & BITMASK[bitlen[i]]) << bit_pos;
     bit_pos += bitlen[i];
   }
+  return val;
 }
 
 inline int Unpack8Bit(uint32 value, uint8* buf, int size) {

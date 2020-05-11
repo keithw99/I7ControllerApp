@@ -26,7 +26,7 @@ String Integra7SysexDebugString(const MidiMessage& message) {
   int len = message.getSysExDataSize();
   String msg = "Roland {";
   msg += "DeviceID: " + String(getDeviceID(data));
-  if (isIntegra7) {
+  if (isIntegra7(message)) {
     msg += ", Model: Integra-7";
   }
   if (isDT1(data)) {

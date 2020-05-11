@@ -187,7 +187,6 @@ class ParamAddrTreeTest : public UnitTest {
     uint8 four_bytes[4] = {0x02, 0x01, 0x07, 0x02};
     expectEquals(fb_decoder.getRawInt(four_bytes), 8562);
 
-    uint8 buf4[4] = {0, 0, 0, 0};
     fb_decoder.getRawData(8562, buf);
     expectEquals(int(buf[0]), 2);
     expectEquals(int(buf[1]), 1);
