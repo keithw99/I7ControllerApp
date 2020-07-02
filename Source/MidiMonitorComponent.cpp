@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 5.4.5
+  Created with Projucer version: 5.4.7
 
   ------------------------------------------------------------------------------
 
@@ -52,6 +52,12 @@ MidiMonitorComponent::MidiMonitorComponent ()
 
 
     //[Constructor] You can add your own custom stuff here..
+    if (!connect(9099))
+       AlertWindow::showMessageBoxAsync (AlertWindow::WarningIcon,
+                                          "Connection error",
+                                          "Could not connect to UDP port 9099.",
+                                          "OK");
+    addListener(this, "/i7/tone_type");
     //[/Constructor]
 }
 
@@ -162,6 +168,15 @@ void MidiMonitorComponent::logMessage (const String& m) {
   midiMessagesBox_->moveCaretToEnd();
   midiMessagesBox_->insertTextAtCaret (m + newLine);
 }
+
+void MidiMonitorComponent::oscMessageReceived(const OSCMessage& message) {
+  if (message.getAddressPattern().matches("/i7/tone_type")) {
+    AlertWindow::showMessageBoxAsync(AlertWindow::InfoIcon,
+                                        "OSC Received",
+                                     "Received ToneType: " + String(message[0].getInt32()),
+                                        "OK");
+  }
+}
 //[/MiscUserCode]
 
 
@@ -175,9 +190,10 @@ void MidiMonitorComponent::logMessage (const String& m) {
 BEGIN_JUCER_METADATA
 
 <JUCER_COMPONENT documentType="Component" className="MidiMonitorComponent" componentName=""
-                 parentClasses="public Component, public MidiInputCallback" constructorParams=""
-                 variableInitialisers="" snapPixels="8" snapActive="1" snapShown="1"
-                 overlayOpacity="0.330" fixedSize="0" initialWidth="600" initialHeight="400">
+                 parentClasses="public Component, public MidiInputCallback, private OSCReceiver, private OSCReceiver::ListenerWithOSCAddress&lt;OSCReceiver::MessageLoopCallback&gt;"
+                 constructorParams="" variableInitialisers="" snapPixels="8" snapActive="1"
+                 snapShown="1" overlayOpacity="0.330" fixedSize="0" initialWidth="600"
+                 initialHeight="400">
   <BACKGROUND backgroundColour="ff323e44"/>
   <TEXTEDITOR name="Midi Messages Box" id="ab7b227210411cca" memberName="midiMessagesBox_"
               virtualName="" explicitFocusOrder="0" pos="47 64 360 280" initialText=""

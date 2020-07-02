@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 5.4.5
+  Created with Projucer version: 5.4.7
 
   ------------------------------------------------------------------------------
 
@@ -21,6 +21,7 @@
 
 //[Headers]     -- You can add your own extra header files here --
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "juce_osc/juce_osc.h"
 //#include "RolandSysexCommunicator.h"
 #include "I7SysexCommunicator.h"
 //[/Headers]
@@ -36,12 +37,14 @@
                                                                     //[/Comments]
 */
 class MidiMonitorComponent  : public Component,
-                              public MidiInputCallback
+                              public MidiInputCallback,
+                              private OSCReceiver,
+                              private OSCReceiver::ListenerWithOSCAddress<OSCReceiver::MessageLoopCallback>
 {
 public:
     //==============================================================================
     MidiMonitorComponent ();
-    ~MidiMonitorComponent();
+    ~MidiMonitorComponent() override;
 
     //==============================================================================
     //[UserMethods]     -- You can add your own custom methods in this section.
@@ -55,11 +58,13 @@ public:
             if (owner != nullptr)
                 owner->addMessageToList (message, source);
         }
+
         Component::SafePointer<MidiMonitorComponent> owner;
         MidiMessage message;
         String source;
     };
 
+    void oscMessageReceived(const OSCMessage& message) override;
     //[/UserMethods]
 
     void paint (Graphics& g) override;

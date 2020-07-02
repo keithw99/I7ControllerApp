@@ -50,6 +50,7 @@
 #define JUCE_PROJUCER_VERSION 0x50407
 
 //==============================================================================
+#define JUCE_MODULE_AVAILABLE_i7                         1
 #define JUCE_MODULE_AVAILABLE_juce_audio_basics          1
 #define JUCE_MODULE_AVAILABLE_juce_audio_devices         1
 #define JUCE_MODULE_AVAILABLE_juce_audio_formats         1
@@ -62,6 +63,7 @@
 #define JUCE_MODULE_AVAILABLE_juce_gui_basics            1
 #define JUCE_MODULE_AVAILABLE_juce_gui_extra             1
 #define JUCE_MODULE_AVAILABLE_juce_opengl                1
+#define JUCE_MODULE_AVAILABLE_juce_osc                   1
 
 #define JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED 1
 

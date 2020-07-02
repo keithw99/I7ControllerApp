@@ -3,10 +3,21 @@
 <JUCERPROJECT id="ruLvLY" name="I7ControllerApp" projectType="guiapp" jucerVersion="5.4.7">
   <MAINGROUP id="WapNQr" name="I7ControllerApp">
     <GROUP id="{1BA53D68-5B75-F0C5-DCB0-B1BC9D7FC2B1}" name="Source">
+      <FILE id="TP0Hqe" name="Settings.cpp" compile="1" resource="0" file="Source/Settings.cpp"/>
+      <FILE id="eRwxjN" name="Settings.h" compile="0" resource="0" file="Source/Settings.h"/>
+      <FILE id="vlZEFy" name="PreferencesPanel.cpp" compile="1" resource="0"
+            file="Source/PreferencesPanel.cpp"/>
+      <FILE id="eM6MBB" name="PreferencesPanel.h" compile="0" resource="0"
+            file="Source/PreferencesPanel.h"/>
+      <FILE id="k3oplp" name="I7Controller.cpp" compile="1" resource="0"
+            file="Source/I7Controller.cpp"/>
+      <FILE id="QDUL8I" name="I7Controller.h" compile="0" resource="0" file="Source/I7Controller.h"/>
+      <FILE id="C019Jf" name="MidiConstants.cpp" compile="1" resource="0"
+            file="Source/MidiConstants.cpp"/>
+      <FILE id="sK2sE1" name="MidiConstants.h" compile="0" resource="0" file="Source/MidiConstants.h"/>
       <FILE id="w7GLGP" name="ParamTemplate.h" compile="0" resource="0" file="Source/ParamTemplate.h"/>
       <FILE id="dWk0lQ" name="Utils.cpp" compile="1" resource="0" file="Source/Utils.cpp"/>
       <FILE id="Y6jlBf" name="Utils.h" compile="0" resource="0" file="Source/Utils.h"/>
-      <FILE id="ERgqe6" name="Constants.cpp" compile="1" resource="0" file="Source/Constants.cpp"/>
       <FILE id="FeAerT" name="ParamBase.cpp" compile="1" resource="0" file="Source/ParamBase.cpp"/>
       <FILE id="b2H8qo" name="ParamBase.h" compile="0" resource="0" file="Source/ParamBase.h"/>
       <FILE id="YDvn6o" name="Param.cpp" compile="1" resource="0" file="Source/Param.cpp"/>
@@ -16,7 +27,6 @@
       <FILE id="vYRzH6" name="ParamAddress.h" compile="0" resource="0" file="Source/ParamAddress.h"/>
       <FILE id="y3xVqu" name="ParamAddressTree.cpp" compile="1" resource="0"
             file="Source/ParamAddressTree.cpp"/>
-      <FILE id="SJ2O3k" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
       <FILE id="HTMoL0" name="ParamTreeTemplate.cpp" compile="1" resource="0"
             file="Source/ParamTreeTemplate.cpp"/>
       <FILE id="qfjFmY" name="ParamTreeTemplate.h" compile="0" resource="0"
@@ -63,6 +73,8 @@
         <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_opengl" path="../../JUCE/modules"/>
+        <MODULEPATH id="i7" path="../juce_user_modules"/>
+        <MODULEPATH id="juce_osc" path="../JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <XCODE_MAC targetFolder="Builds/MacOSX">
@@ -83,10 +95,13 @@
         <MODULEPATH id="juce_audio_formats" path="../../juce"/>
         <MODULEPATH id="juce_audio_devices" path="../../juce"/>
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="i7" path="../juce_user_modules"/>
+        <MODULEPATH id="juce_osc" path="../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
   <MODULES>
+    <MODULE id="i7" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -99,6 +114,7 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
   <LIVE_SETTINGS>
     <LINUX/>

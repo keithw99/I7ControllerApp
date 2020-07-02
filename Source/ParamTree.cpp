@@ -8,9 +8,9 @@
   ==============================================================================
 */
 
-
+#include <JuceHeader.h>
 #include "ParamTree.h"
-#include "Constants.h"
+//#include "Constants.h"
 
 struct enumHash {
   template <typename T>
