@@ -12,13 +12,13 @@
 
 I7SysexCommunicator::I7SysexCommunicator() {
   initializeParamTree();
+ 
 }
 
 void I7SysexCommunicator::initializeParamTree() {
   //addrTree_ = AddressTreeBuilder::getAddressTree();
   // paramTemplate_ = ParamTreeTemplateBuilder::BuildTemplate();
 }
-
 
 String Integra7SysexDebugString(const MidiMessage& message) {
   ParamAddrTree* addrTree = AddressTreeBuilder::getAddressTree();

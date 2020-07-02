@@ -11,22 +11,22 @@
 #pragma once
 
 #include "../JuceLibraryCode/JuceHeader.h"
-
+#include "juce_osc/juce_osc.h"
 #include "RolandSysexCommunicator.h"
 
 #include "ParamTree.h"
 
-class I7SysexCommunicator : public RolandSysexCommunicator {
-  public:
-    I7SysexCommunicator();
-
+class I7SysexCommunicator : public RolandSysexCommunicator
+{
+public:
+  I7SysexCommunicator();
     
-  private:
-    void initializeParamTree();
+private:
+  void initializeParamTree();
     
-    ParamAddrTree addrTree_;
-    ValueTree paramTree_;
-    ValueTree paramTemplate_;
+  ParamAddrTree addrTree_;
+  ValueTree paramTree_;
+  ValueTree paramTemplate_;
 
 };
 

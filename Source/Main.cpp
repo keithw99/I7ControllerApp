@@ -10,7 +10,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "MainComponent.h"
-
+#include "I7Controller.h"
 #include "ParamTreeTest.h"
 //==============================================================================
 class I7ControllerAppApplication  : public JUCEApplication
@@ -26,23 +26,23 @@ public:
     //==============================================================================
     void initialise (const String& commandLine) override
     {
-        // This method is where you should put your application's initialisation code..
+      // This method is where you should put your application's initialisation code..
+      controller_.reset(new I7Controller());
+      mainWindow.reset (new MainWindow (getApplicationName(), controller_.get()));
 
-        mainWindow.reset (new MainWindow (getApplicationName()));
+      // Run tests if necessary.
+      bool runTests = false;
+      #ifdef JUCE_DEBUG
+      runTests = (!commandLine.contains("--disable-tests"));
+      #else
+      runTests = commandLine.contains("--enable-tests");
+      #endif
 
-        // Run tests if necessary.
-        bool runTests = false;
-        #ifdef JUCE_DEBUG
-        runTests = (!commandLine.contains("--disable-tests"));
-        #else
-        runTests = commandLine.contains("--enable-tests");
-        #endif
-
-        if (runTests) {
-            ParamAddrTreeTest addrTreeTest; // Create a PTreeTest so it "exists".
-            UnitTestRunner testRunner;
-            testRunner.runAllTests();
-        }
+      if (runTests) {
+          ParamAddrTreeTest addrTreeTest; // Create a PTreeTest so it "exists".
+          UnitTestRunner testRunner;
+          testRunner.runAllTests();
+      }
     }
 
     void shutdown() override
@@ -75,22 +75,22 @@ public:
     class MainWindow    : public DocumentWindow
     {
     public:
-        MainWindow (String name)  : DocumentWindow (name,
-                                                    Desktop::getInstance().getDefaultLookAndFeel()
-                                                                          .findColour (ResizableWindow::backgroundColourId),
-                                                    DocumentWindow::allButtons)
+        MainWindow (String name, I7Controller* controller) : DocumentWindow (name,
+                                                             Desktop::getInstance().getDefaultLookAndFeel()
+                                                                .findColour (ResizableWindow::backgroundColourId),
+                                                             DocumentWindow::allButtons)
         {
-            setUsingNativeTitleBar (true);
-            setContentOwned (new MainComponent(), true);
+          setUsingNativeTitleBar (true);
+          setContentOwned (new MainComponent(controller), true);
 
-           #if JUCE_IOS || JUCE_ANDROID
-            setFullScreen (true);
-           #else
-            setResizable (true, true);
-            centreWithSize (getWidth(), getHeight());
-           #endif
+          #if JUCE_IOS || JUCE_ANDROID
+           setFullScreen (true);
+          #else
+           setResizable (true, true);
+           centreWithSize (getWidth(), getHeight());
+          #endif
 
-            setVisible (true);
+          setVisible (true);
         }
 
         void closeButtonPressed() override
@@ -113,7 +113,8 @@ public:
     };
 
 private:
-    std::unique_ptr<MainWindow> mainWindow;
+  std::unique_ptr<MainWindow> mainWindow;
+  std::unique_ptr<I7Controller> controller_;
 };
 
 //==============================================================================

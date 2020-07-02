@@ -14,7 +14,8 @@
 
 #include "ParamBase.h"
 //#include "ParamTemplate.h"
-#include "Constants.h"
+//#include "Constants.h"
+#include <JuceHeader.h>
 
 class LinearIntRange {
  public:
