@@ -21,10 +21,10 @@ struct pairHash {
 
 enum class ToneTypeSelect {
   SnAcoustic = static_cast<int>(ToneType::SnAcoustic),
-  SnSynth = static_cast<int>(ToneType::SnAcoustic),
-  SnDrum = static_cast<int>(ToneType::SnAcoustic),
-  PcmSynth = static_cast<int>(ToneType::SnAcoustic),
-  PcmDrum = static_cast<int>(ToneType::SnAcoustic),
+  SnSynth = static_cast<int>(ToneType::SnSynth),
+  SnDrum = static_cast<int>(ToneType::SnDrum),
+  PcmSynth = static_cast<int>(ToneType::PcmSynth),
+  PcmDrum = static_cast<int>(ToneType::PcmDrum),
   StudioSet,
 };
 
