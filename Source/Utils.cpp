@@ -18,7 +18,6 @@ void syncValueTreeNotifyListeners (const ValueTree& source, ValueTree& destinati
   for (int i = 0; i < numProperties; ++i)
   {
     auto propertyName = source.getPropertyName (i);
-    auto propertyVal = source.getProperty(propertyName);
     
     if (destination.hasProperty (propertyName)) {
       destination.setProperty (propertyName, source.getProperty (propertyName), nullptr);
@@ -35,4 +34,3 @@ void syncValueTreeNotifyListeners (const ValueTree& source, ValueTree& destinati
       syncValueTreeNotifyListeners (child, childInDestination);
   }
 }
-

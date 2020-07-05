@@ -13,12 +13,13 @@
 #include <JuceHeader.h>
 
 #include "I7SysexCommunicator.h"
+#include "MidiConstants.h"
 #include "Settings.h"
 
 class I7Controller : private I7SysexCommunicator,
                      private OSCSender,
                      private OSCReceiver,
-                     private OSCReceiver::ListenerWithOSCAddress<OSCReceiver::MessageLoopCallback>,
+                     private OSCReceiver::Listener<OSCReceiver::MessageLoopCallback>,
                      private ValueTree::Listener
 {
   
@@ -37,15 +38,30 @@ public:
   // Overrides ValueTree::Listener.
   void valueTreePropertyChanged(ValueTree& t, const Identifier& property) override;
   
+  // MIDI control operations.
+  void setToneForPart(const int partNumber, const ToneId& toneId);
   
 private:
+  void initializeOsc();
+  void initializeMidi();
   void oscMessageReceived(const OSCMessage& message) override;
   void midiInputChanged(const String& identifier);
   void midiOutputChanged(const String& identifier);
+  void oscPortChanged(const int portNumber);
+  
+  // Events resulting from OSC or MIDI events.
+  void handleToneSelectMessage(const OSCMessage& message);
+  
+  MidiBuffer getMidiMessagesFor(const int partNumber, const ToneId& toneId, MidiBuffer& buffer);
+
   
   // Data members.
   AudioDeviceManager deviceManager_;
   Settings settings_;
+  Array<MidiInputCallback*> midiInputCallbacks_;
+  String lastMidiInputId_;
+  //std::unique_ptr<MidiOutput> midiOutput_;
+  int lastOscPortNumber_;
   
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (I7Controller)
 };

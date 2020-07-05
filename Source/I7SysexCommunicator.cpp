@@ -51,3 +51,9 @@ String Integra7SysexDebugString(const MidiMessage& message) {
  
   return msg;
 }
+
+int I7SysexCommunicator::getPartMidiChannel(const int partNumber)
+{
+  // TODO: look this up from the paramTree.
+  return partNumber;
+}

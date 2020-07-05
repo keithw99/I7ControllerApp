@@ -49,7 +49,7 @@ static BankSelectMap buildBankSelectMap() {
     {{ToneTypeSelect::SnAcoustic, Bank::ExSN3}, {89, 98}},
     {{ToneTypeSelect::SnAcoustic, Bank::ExSN4}, {89, 99}},
     {{ToneTypeSelect::SnAcoustic, Bank::ExSN5}, {89, 100}},
-    {{ToneTypeSelect::SnAcoustic, Bank::ExSN6}, {89, 101}},
+    {{ToneTypeSelect::SnDrum, Bank::ExSN6}, {88, 101}},
     {{ToneTypeSelect::PcmSynth, Bank::ExPCM}, {97, 0}},
     {{ToneTypeSelect::StudioSet, Bank::ExPCM}, {96, 0}},
   };
@@ -73,3 +73,4 @@ const ProgramChangeId BankSelect::getProgramChangeFor(const ToneId& toneId) {
   
   return {{bsBase.first, lsb}, pc};
 }
+

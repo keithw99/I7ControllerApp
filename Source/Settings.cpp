@@ -14,7 +14,6 @@ Settings::Settings()
 {
   initializeTree();
   initializeStorage();
-  //loadUserSettings();
   addListener(this, settings::Root);
 }
 
@@ -93,10 +92,15 @@ void Settings::loadUserSettings()
 {
   juce::File settingsFile(appProperties_.getUserSettings()->getValue("SettingsFile"));
   std::unique_ptr<XmlElement> xmlRoot = parseXML(settingsFile);
-  root_ = ValueTree::fromXml(*xmlRoot);
+  
+  auto newSettings = ValueTree::fromXml(*xmlRoot);
+  syncValueTreeNotifyListeners(newSettings, root_);
+  //root_ = ValueTree::fromXml(*xmlRoot);
   
   const int svrPort = root_.getChildWithName(settings::Osc).getProperty(settings::osc::ServerPort);
   DBG("svrPort = " + String(svrPort));
+  
+  
   /*
   PropertiesFile* userSettings = appProperties_.getUserSettings();
   const PropertiesFile::Options& opts = appProperties_.getStorageParameters();

@@ -12,6 +12,8 @@
 
 #include <JuceHeader.h>
 
+#include "Utils.h"
+
 namespace settings {
 // Root identifier.
 static const Identifier Root("Root");

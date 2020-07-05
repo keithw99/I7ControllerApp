@@ -102,6 +102,7 @@ void MidiMonitorComponent::resized()
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
 void MidiMonitorComponent::handleIncomingMidiMessage (MidiInput* source, const MidiMessage& message) {
+  DBG("Received MIDI message");
   postMessageToList (message, source->getName());
   //if (message.isSysEx())
   //std::cout << "MMC: got sysex" << std::endl;

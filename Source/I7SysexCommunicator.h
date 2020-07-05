@@ -20,7 +20,8 @@ class I7SysexCommunicator : public RolandSysexCommunicator
 {
 public:
   I7SysexCommunicator();
-    
+  int getPartMidiChannel(const int partNumber);
+  
 private:
   void initializeParamTree();
     
