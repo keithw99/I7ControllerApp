@@ -168,7 +168,7 @@ class ParamAddrTree : private DeletedAtShutdown {
   
   NodeInfo* GetNodeAndPathFromBytes(uint8* addr, uint8 num_bytes, ParamPath* path);
 
-  std::vector<ParamUpdate> GetParamUpdates(uint8* addr_bytes, uint8* data, int num_bytes);
+  std::vector<ParamUpdate> GetParamUpdates(const uint8* addr_bytes, const uint8* data, int num_bytes);
 
   bool HasData();
   void Reset();

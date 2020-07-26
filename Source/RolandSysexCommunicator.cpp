@@ -11,9 +11,31 @@
 #include "RolandSysexCommunicator.h"
 
 void RolandSysexCommunicator::handleIncomingMidiMessage(MidiInput* source, const MidiMessage& message) {
-   //if (message.isSysEx()) {
-   //  std::cout << "Got sysex!" << std::endl;
-   //}
+   if (message.isSysEx() && isIntegra7(message)) {
+     //const uint8* sysexData = message.getSysExData();
+     if (isDT1(message)) {
+       DT1 dt1;
+       parseDT1(message, &dt1);
+       handleDT1(dt1);
+     }
+   }
+}
+
+void RolandSysexCommunicator::parseDT1(const MidiMessage& message, DT1* dt1)
+{
+  const uint8* sysexData = message.getSysExData();
+  const int len = message.getSysExDataSize();
+  
+  for (int i = 0; i < 4; ++i) {
+    dt1->address[i] = sysexData[i + 6];
+  }
+  
+  dt1->length = len - 11;
+  uint8 data[dt1->length + 1];
+  for (int i = 0; i < len-11; ++i) {
+    data[i] = sysexData[i + 10];
+  }
+  dt1->data = data;
 }
 
 bool isRolandSysex(const MidiMessage& message) {
@@ -27,6 +49,11 @@ bool isRolandSysex(const MidiMessage& message) {
 bool isDT1(const uint8* sysex_data) {
   return sysex_data[5] == 0x12;
 }    
+
+bool isDT1(const MidiMessage& message)
+{
+  return isDT1(message.getSysExData());
+}
 
 int getDeviceID(const uint8* sysex_data) {
   return sysex_data[1] + 1; // convert from 0-based to 1-based.

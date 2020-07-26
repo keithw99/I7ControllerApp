@@ -46,6 +46,19 @@ void I7Controller::valueTreePropertyChanged(ValueTree& t, const Identifier& prop
       return;
     }
   }
+  
+  if (t.getType() == settings::osc::Destination) {
+    oscDestinationChanged();
+    return;
+  }
+}
+
+void I7Controller::valueTreeChildAdded(ValueTree& parentTree, ValueTree& child)
+{
+  if (parentTree.getType() == settings::osc::Destinations) {
+    oscDestinationAdded(child.getProperty(settings::osc::DestinationIpAddress),
+                        child.getProperty(settings::osc::DestinationPort));
+  }
 }
 
 void I7Controller::initializeOsc()
@@ -55,7 +68,8 @@ void I7Controller::initializeOsc()
   if (!OSCReceiver::connect(udpPort))
     DBG ("ERROR connecting to UDP port " + String(udpPort) );
   lastOscPortNumber_ = udpPort;
-
+  
+  resetOscDestinations();
 }
 
 void I7Controller::initializeMidi()
@@ -63,6 +77,9 @@ void I7Controller::initializeMidi()
   const String& midiOutputId = settings_.getSettingsFor(settings::Midi).getProperty(settings::midi::Output);
   if (midiOutputId != deviceManager_.getDefaultMidiOutputIdentifier())
     setMidiOutput(midiOutputId);
+  
+  // Add self as a MIDI input callback.
+  //addMidiInputCallback(this);
 }
 
 void I7Controller::setMidiInput(const String& identifier)
@@ -94,6 +111,24 @@ ValueTree I7Controller::getMidiSettings()
   return settings_.getSettingsFor(settings::Midi);
 }
 
+ValueTree I7Controller::getOscSettings()
+{
+  return settings_.getSettingsFor(settings::Osc);
+}
+
+void I7Controller::resetOscDestinations()
+{
+  ValueTree destinations = getOscSettings().getChildWithName(settings::osc::Destinations);
+  for (int i = 0; i < destinations.getNumChildren(); ++i) {
+    ValueTree d = destinations.getChild(i);
+    const String& ipAddr = d.getProperty(settings::osc::DestinationIpAddress);
+    const int port = d.getProperty(settings::osc::Destination);
+    if (!OSCSender::connect(ipAddr, port)) {
+      DBG ("ERROR: could not connect to " + ipAddr + ", port " + String(port));
+    }
+  }
+}
+
 void I7Controller::addMidiInputCallback(MidiInputCallback* callback)
 {
   const String& deviceId = getMidiSettings().getProperty(settings::midi::Input);
@@ -105,6 +140,18 @@ void I7Controller::oscMessageReceived(const OSCMessage& message) {
   const auto& pattern = message.getAddressPattern();
   if (pattern.matches(osc::address::ToneSelect)) {
     handleToneSelectMessage(message);
+  }
+}
+
+void I7Controller::sendOscMessage(const OSCMessage &message)
+{
+  ValueTree destinations = getOscSettings().getChildWithName(settings::osc::Destinations);
+  for (int i = 0; i < destinations.getNumChildren(); ++i) {
+    ValueTree d = destinations.getChild(i);
+    if (!OSCSender::sendToIPAddress(d.getProperty(settings::osc::DestinationIpAddress),
+                                    d.getProperty(settings::osc::DestinationPort),
+                                    message))
+      DBG ("ERROR: failed to send OSC Message: " + message.getAddressPattern().toString());
   }
 }
 
@@ -159,6 +206,18 @@ void I7Controller::oscPortChanged(const int portNumber)
   lastOscPortNumber_ = portNumber;
 }
 
+void I7Controller::oscDestinationChanged()
+{
+  resetOscDestinations();
+}
+
+void I7Controller::oscDestinationAdded(const String& ipAddress, const int port)
+{
+  if (!OSCSender::connect(ipAddress, port)) {
+    DBG ("ERROR connecting to destination " + ipAddress + ", port " + String(port));
+  }
+}
+
 MidiBuffer I7Controller::getMidiMessagesFor(const int partNumber, const ToneId& toneId, MidiBuffer& buffer)
 {
   int channel = getPartMidiChannel(partNumber);
@@ -184,4 +243,9 @@ void I7Controller::handleToneSelectMessage(const OSCMessage& message)
   };
   
   setToneForPart(message[0].getInt32(), toneId);
+}
+
+void I7Controller::handleToneSelectUpdate(const int partNumber, const ToneId& toneId)
+{
+  sendOscMessage(osc::message::toneSelect(partNumber, toneId));
 }

@@ -33,10 +33,12 @@ public:
   // Public member access.
   Settings* getSettings() { return &settings_; }
   ValueTree getMidiSettings();
+  ValueTree getOscSettings();
   AudioDeviceManager* getDeviceManager() { return &deviceManager_; }
   
   // Overrides ValueTree::Listener.
   void valueTreePropertyChanged(ValueTree& t, const Identifier& property) override;
+  void valueTreeChildAdded(ValueTree& parentTree, ValueTree& child) override;
   
   // MIDI control operations.
   void setToneForPart(const int partNumber, const ToneId& toneId);
@@ -44,13 +46,21 @@ public:
 private:
   void initializeOsc();
   void initializeMidi();
+  void resetOscDestinations();
+  
+  // Overrides OSCReceiver.
   void oscMessageReceived(const OSCMessage& message) override;
+  
+  void sendOscMessage(const OSCMessage& message);
   void midiInputChanged(const String& identifier);
   void midiOutputChanged(const String& identifier);
   void oscPortChanged(const int portNumber);
+  void oscDestinationChanged();
+  void oscDestinationAdded(const String& ipAddress, const int port);
   
   // Events resulting from OSC or MIDI events.
   void handleToneSelectMessage(const OSCMessage& message);
+  void handleToneSelectUpdate(const int partNumber, const ToneId& toneId) override;
   
   MidiBuffer getMidiMessagesFor(const int partNumber, const ToneId& toneId, MidiBuffer& buffer);
 

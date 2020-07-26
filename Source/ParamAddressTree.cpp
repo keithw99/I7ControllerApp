@@ -305,11 +305,11 @@ ParamAddrTree::insertFunc(const ParamAddr& address) {
 }
 
 std::vector<ParamUpdate>
-ParamAddrTree::GetParamUpdates(uint8* addr_bytes, uint8* data, int num_bytes) {
+ParamAddrTree::GetParamUpdates(const uint8* addr_bytes, const uint8* data, int num_bytes) {
   std::vector<ParamUpdate> updates;
   int param_size = 0;
   int bytes_to_read = num_bytes;
-  uint8* data_ptr = data;
+  const uint8* data_ptr = data;
   ParamAddr paddr = ParamAddr(addr_bytes);
   
   while (param_size <= bytes_to_read) {
