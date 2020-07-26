@@ -16,8 +16,55 @@ I7SysexCommunicator::I7SysexCommunicator() {
 }
 
 void I7SysexCommunicator::initializeParamTree() {
-  //addrTree_ = AddressTreeBuilder::getAddressTree();
+  addrTree_ = AddressTreeBuilder::getAddressTree();
   // paramTemplate_ = ParamTreeTemplateBuilder::BuildTemplate();
+}
+
+void I7SysexCommunicator::handleDT1(const DT1& dt1)
+{
+  std::vector<ParamUpdate> updates = addrTree_->GetParamUpdates(dt1.address, dt1.data, dt1.length);
+  
+  if (updates.size() >= 3 &&
+      updates[0].path.size() >= 2 &&
+      updates[0].path[0].node_id == TemporaryStudioSet &&
+      updates[0].path[1].node_id == StudioSetPart) {
+    handleStudioSetPart(updates);
+  }
+  for (auto update : updates) {
+    DBG (update.toString() + "\n");
+    DBG (update.getOscAddress().toString());
+  }
+}
+
+void I7SysexCommunicator::handleStudioSetPart(const std::vector<ParamUpdate>& updates)
+{
+  if (updates[0].path.size() == 3 &&
+      updates[0].path[2].node_id == ToneBankSelectMSB) {
+    int partNumber = updates[0].path[1].index;
+    handleToneSelect(updates, partNumber);
+  }
+}
+
+void I7SysexCommunicator::handleToneSelect(const std::vector<ParamUpdate>& updates, const int partNumber)
+{
+  int msb = 0, lsb = 0, pc = 0;
+  for (const ParamUpdate& update : updates) {
+    const Identifier& nodeId = update.path[2].node_id;
+    if (nodeId == ToneBankSelectMSB) {
+      msb = update.value;
+      continue;
+    }
+    if (nodeId == ToneBankSelectLSB) {
+      lsb = update.value;
+      continue;
+    }
+    if (nodeId == TonePC) {
+      pc = update.value;
+      continue;
+    }
+  }
+  ToneId tid = BankSelect::getToneIdFor({msb, lsb}, pc);
+  handleToneSelectUpdate(partNumber, tid);
 }
 
 String Integra7SysexDebugString(const MidiMessage& message) {

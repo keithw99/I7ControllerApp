@@ -30,14 +30,27 @@ enum class ToneTypeSelect {
 
 typedef std::pair<ToneTypeSelect, Bank> ToneGroupId;
 
-
 typedef std::pair</*MSB*/int, /*LSB*/int> BankSelectId;
-typedef std::pair<BankSelectId, /*PC*/int> ProgramChangeId;
-typedef std::unordered_map<ToneGroupId, BankSelectId, pairHash> BankSelectMap;
 
+struct BankSelectInfo {
+  BankSelectId base;      // base MSB and LSB.
+  int numLsb = 1;         // # of contiguous LSBs
+};
+
+struct ToneGroupInfo {
+  ToneGroupId base;
+  int offset = 0;
+};
+
+typedef std::pair<BankSelectId, /*PC*/int> ProgramChangeId;
+//typedef std::unordered_map<ToneGroupId, BankSelectId, pairHash> BankSelectMap;
+typedef std::unordered_map<ToneGroupId, BankSelectInfo, pairHash> BankSelectMap;
+typedef std::unordered_map<BankSelectId, ToneGroupInfo, pairHash> ToneGroupMap;
 
 struct BankSelect {
   static const BankSelectMap bankSelectMap;
+  static const ToneGroupMap toneGroupMap;
   static const BankSelectId getBankSelectBaseFor(const ToneGroupId& toneGroupId);
   static const ProgramChangeId getProgramChangeFor(const ToneId& toneId);
+  static const ToneId getToneIdFor(const BankSelectId& bankSelectId, const int pc);
 };

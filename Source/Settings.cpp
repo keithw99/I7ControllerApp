@@ -90,46 +90,15 @@ ValueTree traversePath(ValueTree t, StringArray* v)
 
 void Settings::loadUserSettings()
 {
+  // Load the settings.xml file referenced from the app settings file.
   juce::File settingsFile(appProperties_.getUserSettings()->getValue("SettingsFile"));
   std::unique_ptr<XmlElement> xmlRoot = parseXML(settingsFile);
   
+  // Deserialize XML into temporary ValueTree, copy it to root_, and then trigger updates
+  // for all listeners.
   auto newSettings = ValueTree::fromXml(*xmlRoot);
+  root_ = newSettings;
   syncValueTreeNotifyListeners(newSettings, root_);
-  //root_ = ValueTree::fromXml(*xmlRoot);
-  
-  const int svrPort = root_.getChildWithName(settings::Osc).getProperty(settings::osc::ServerPort);
-  DBG("svrPort = " + String(svrPort));
-  
-  
-  /*
-  PropertiesFile* userSettings = appProperties_.getUserSettings();
-  const PropertiesFile::Options& opts = appProperties_.getStorageParameters();
-  DBG("Default File: " + opts.getDefaultFile().getFullPathName());
-  DBG("folderName: " + opts.folderName);
-  DBG("osxLibrarySubFolder: " + opts.osxLibrarySubFolder);
-  
-  for (const String& k : userSettings->getAllProperties().getAllKeys()) {
-    auto nodeAndProperty = parsePath(k);
-    if (nodeAndProperty.first.isEmpty()) continue;
-    if (nodeAndProperty.second.isNull()) continue;
-    
-    // First path vector element should be empty string because of leading "/".
-    StringArray* v = &nodeAndProperty.first;
-    if (!v->begin()->isEmpty()) continue;
-    v->remove(0);
-    
-    // Find the ValueTree node containing the property.
-    ValueTree n = traversePath(root_, v);
-    if (!n.isValid()) continue;
-    
-    // Find the property belonging to the node.
-    const Identifier& propId = nodeAndProperty.second;
-    if (!n.hasProperty(propId)) continue;
-
-    // Set the property from the PropertiesFile.
-    n.setPropertyExcludingListener(this, propId, userSettings->getValue(k), nullptr);
-  }
-  */
 }
 
 
@@ -165,20 +134,6 @@ void Settings::removeListener(ValueTree::Listener* listener, const Identifier& t
   if (it == nodesWithListeners_.end()) return;
   it->second.removeListener(listener);
 }
-
-/*
-Array<const ValueTree> getSiblingsOfSameType(const ValueTree& t)
-{
-  Array<const ValueTree> siblings;
-  const ValueTree& parent = t.getParent();
-  for (ValueTree::Iterator it = parent.begin(); it != parent.end(); ++it) {
-    if ((*it).getType() == t.getType()) {
-      siblings.add(*it);
-    }
-  }
-  return siblings;
-}
-*/
 
 String getCanonicalPropertyName(ValueTree& t, const Identifier& property)
 {

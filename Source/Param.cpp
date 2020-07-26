@@ -302,6 +302,19 @@ String ParamUpdate::pathString() {
   return pstr;
 }
 
+OSCAddress ParamUpdate::getOscAddress()
+{
+  String oscStr = "/";
+  for (const ParamPathElement& pe : path) {
+    String nodeStr = pe.node_id.toString().removeCharacters("#*,/?[]{}").replaceCharacter(' ', '_');
+    if (pe.index > -1) {
+      nodeStr += "/" + String(pe.index);
+    }
+    oscStr += nodeStr + "/";
+  }
+  return OSCAddress(oscStr);
+}
+
 String ParamUpdate::toString() {
   return pathString() + " -> " + info->getDisplayValue(value);
 }

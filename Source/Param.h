@@ -311,4 +311,5 @@ struct ParamUpdate {
 
   String toString();
   String pathString();
+  OSCAddress getOscAddress();
 };
