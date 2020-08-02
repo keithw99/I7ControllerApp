@@ -11,18 +11,6 @@
 #include "ParamAddressTree.h"
 #include "Utils.h"
 
-/*
-template<typename ... Args>
-std::string string_format( const std::string& format, Args ... args )
-{
-    size_t size = snprintf( nullptr, 0, format.c_str(), args ... ) + 1; // Extra space for '\0'
-    if( size <= 0 ){ throw std::runtime_error( "Error during formatting." ); }
-    std::unique_ptr<char[]> buf( new char[ size ] ); 
-    snprintf( buf.get(), size, format.c_str(), args ... );
-    return std::string( buf.get(), buf.get() + size - 1 ); // We don't want the '\0' inside
-}
-*/
-
 JUCE_IMPLEMENT_SINGLETON(ParamAddrTree)
 
 ParamAddrTree::~ParamAddrTree() {
@@ -346,4 +334,51 @@ ParamAddrTree::GetParamUpdates(const uint8* addr_bytes, const uint8* data, int n
   }
   return updates;
 }
+
+/*
+uint32 ParamAddrTree::GetAddressFromPath(const ParamPath& path)
+{
+  ValueTree t = ParamTreeTemplateBuilder::getTemplate();
+  uint32 address = 0;
   
+  for (const ParamPathElement& pe : path) {
+    if (t.getChildWithName("Template").isValid()) {
+      t = t.getChildWithName("Template");
+    }
+    t = t.getChildWithProperty(prop::desc, pe.node_id.toString());
+    if (!t.isValid()) {
+      DBG ("ERROR: Could not find node '" + pe.node_id.toString() + "' in address tree");
+      return address;
+    }
+    
+    // Process non-indexed node.
+    if (pe.index < 0) {
+      if (!t.hasProperty(prop::addr)) {
+        DBG ("ERROR: expected prop 'addr' from tree node: " + t.getType().toString());
+        return address;
+      }
+      int intAddr = t.getProperty(prop::addr);
+      address |= static_cast<uint32>(intAddr);
+      continue;
+    }
+    
+    // Process indexed node.
+    if (!t.hasProperty(prop::first_addr) || !t.hasProperty(prop::last_addr)) {
+      DBG ("ERROR: expected prop 'first_addr' and 'last_addr' for indexed node: " + t.getType().toString());
+    }
+    
+    ParamAddrRange prange = ParamTree::extractAddrRange(t);
+    int firstAddr = t.getProperty(prop::first_addr);
+    int lastAddr = t.getProperty(prop::last_addr);
+    int firstIndex = t.getProperty(prop::first_index);
+    int lastIndex = t.getProperty(prop::last_index);
+    
+    int addrInc = (lastAddr - firstAddr) / (lastIndex - firstIndex + 1);
+    int intAddr = firstAddr + pe.index * addrInc;
+    address |= static_cast<uint32>(intAddr);
+  }
+  
+  return address;
+}
+*/
+

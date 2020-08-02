@@ -75,7 +75,7 @@ inline int Unpack8Bit(uint32 value, uint8* buf, int size) {
   return size;
 }
 
-inline int Unpack7Bit(uint32 value, uint8* buf, int size) {
+inline int Unpack7Bit(const uint32 value, uint8* buf, int size) {
   for (int i = size; i > 0; --i) {
     buf[i - 1] = static_cast<uint8>(value >> (size - i) * 7) & 0x7F;
   }

@@ -10,7 +10,8 @@
 
 #include "I7Controller.h"
 
-I7Controller::I7Controller() {
+I7Controller::I7Controller() : I7SysexCommunicator(17)
+{
   // Initialize settings.
   settings_.addListener(this, settings::Midi);
   settings_.addListener(this, settings::Osc);
@@ -31,9 +32,11 @@ I7Controller::~I7Controller()
 void I7Controller::valueTreePropertyChanged(ValueTree& t, const Identifier& property)
 {
   if (t.getType() == settings::Midi) {
-    if (property == settings::midi::Input)
+    if (property == settings::midi::Input) {
+      auto value = t.getProperty(property);
+      DBG("I7Controller: Midi Input = " + value.toString());
       midiInputChanged(t.getProperty(property));
-    
+    }
     else if (property == settings::midi::Output)
       midiOutputChanged(t.getProperty(property));
 
@@ -79,7 +82,7 @@ void I7Controller::initializeMidi()
     setMidiOutput(midiOutputId);
   
   // Add self as a MIDI input callback.
-  //addMidiInputCallback(this);
+  addMidiInputCallback(this);
 }
 
 void I7Controller::setMidiInput(const String& identifier)
@@ -103,8 +106,16 @@ void I7Controller::setMidiInput(const String& identifier)
 void I7Controller::setMidiOutput(const String& identifier)
 {
   deviceManager_.setDefaultMidiOutputDevice(identifier);
+  setSysexOutputDevice(deviceManager_.getDefaultMidiOutput());
   DBG ("Set MIDI Output to " + deviceManager_.getDefaultMidiOutputName());
 }
+
+/*
+MidiOutput* I7Controller::getSysexOutputDevice()
+{
+  return deviceManager_.getDefaultMidiOutput();
+}
+*/
 
 ValueTree I7Controller::getMidiSettings()
 {
@@ -140,6 +151,9 @@ void I7Controller::oscMessageReceived(const OSCMessage& message) {
   const auto& pattern = message.getAddressPattern();
   if (pattern.matches(osc::address::ToneSelect)) {
     handleToneSelectMessage(message);
+  }
+  if (pattern.matches(osc::address::FetchParts)) {
+    requestStudioSetParts();
   }
 }
 

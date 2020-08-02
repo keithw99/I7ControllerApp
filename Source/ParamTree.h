@@ -28,8 +28,10 @@ class AddressTreeBuilder {
 };
 
 class ParamTree {
-
-
-  private:
-   ValueTree root_;
+public:
+  static ParamAddrRange extractAddrRange(ValueTree t);
+  static uint32 GetAddressFromPath(const ParamPath& path);
+  
+private:
+  ValueTree root_;
 };

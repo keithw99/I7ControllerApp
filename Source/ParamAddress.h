@@ -110,5 +110,10 @@ struct ParamAddrRange {
     }
     return addrs;
   }
+  
+  ParamAddr GetNthAddr(int n) const {
+    uint32 sb_base_addr = Get7BitAddress(base_address);
+    return ParamAddr(Get8BitAddress(sb_base_addr + (step_offset * (n - start_index))), prefixlen);
+  }
 
 };

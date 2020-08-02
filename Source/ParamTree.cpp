@@ -68,7 +68,7 @@ void parseParamRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& bas
 void parseTextParam(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr);
 ParamAddr extractAddr(ValueTree t);
 ParamAddr extractParamAddr(ValueTree t);
-ParamAddrRange extractAddrRange(ValueTree t);
+//ParamAddrRange extractAddrRange(ValueTree t);
 ParamAddrRange extractParamAddrRange(ValueTree t);
 ParamAddrRange extractIntParamProperties(ValueTree t);
 ParamAddrRange extractFloatParamProperties(ValueTree t);
@@ -272,7 +272,7 @@ void parseParamNode(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base
 
 void parseGroupRange(ValueTree t, ParamAddrTree& addr_tree, const ParamAddr& base_addr) {
   String desc = extractNodeDescription(t);
-  ParamAddrRange prange = extractAddrRange(t);
+  ParamAddrRange prange = ParamTree::extractAddrRange(t);
   String fmt = getProperty(t, prop::fmt);
   ParamAddr range_base_addr = addr_tree.InsertRangeOffset(
     base_addr, prange, NodeType::INDEXED_PATH, desc, fmt);
@@ -323,7 +323,8 @@ ParamAddrRange extractAddrRangeWithLength(ValueTree t, int len) {
   return prange;
 }
 
-ParamAddrRange extractAddrRange(ValueTree t) {
+//ParamAddrRange extractAddrRange(ValueTree t) {
+ParamAddrRange ParamTree::extractAddrRange(ValueTree t) {
   int len = getProperty(t, prop::len);
   return extractAddrRangeWithLength(t, len);
 }
@@ -331,4 +332,53 @@ ParamAddrRange extractAddrRange(ValueTree t) {
 ParamAddrRange extractParamAddrRange(ValueTree t) {
   auto prange = extractAddrRangeWithLength(t, 8);
   return prange;
+}
+
+uint32 ParamTree::GetAddressFromPath(const ParamPath& path)
+{
+  ValueTree t = ParamTreeTemplateBuilder::getTemplate();
+  uint32 address = 0;
+  
+  for (const ParamPathElement& pe : path) {
+    if (t.getChildWithName("Template").isValid()) {
+      t = t.getChildWithName("Template");
+    }
+    t = t.getChildWithProperty(prop::desc, pe.node_id.toString());
+    if (!t.isValid()) {
+      DBG ("ERROR: Could not find node '" + pe.node_id.toString() + "' in address tree");
+      return address;
+    }
+    
+    // Process non-indexed node.
+    if (pe.index < 0) {
+      if (!t.hasProperty(prop::addr)) {
+        DBG ("ERROR: expected prop 'addr' from tree node: " + t.getType().toString());
+        return address;
+      }
+      int intAddr = t.getProperty(prop::addr);
+      address |= static_cast<uint32>(intAddr);
+      continue;
+    }
+    
+    // Process indexed node.
+    if (!t.hasProperty(prop::first_addr) || !t.hasProperty(prop::last_addr)) {
+      DBG ("ERROR: expected prop 'first_addr' and 'last_addr' for indexed node: " + t.getType().toString());
+    }
+    
+    ParamAddrRange prange = ParamTree::extractAddrRange(t);
+    address |= prange.GetNthAddr(pe.index).address;
+    
+    /*
+    int firstAddr = t.getProperty(prop::first_addr);
+    int lastAddr = t.getProperty(prop::last_addr);
+    int firstIndex = t.getProperty(prop::first_index);
+    int lastIndex = t.getProperty(prop::last_index);
+    
+    int addrInc = (lastAddr - firstAddr) / (lastIndex - firstIndex + 1);
+    int intAddr = firstAddr + pe.index * addrInc;
+    address |= static_cast<uint32>(intAddr);
+    */
+  }
+  
+  return address;
 }
