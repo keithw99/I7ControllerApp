@@ -10,9 +10,12 @@
 
 #include "I7SysexCommunicator.h"
 
-I7SysexCommunicator::I7SysexCommunicator() {
+uint8 i7ModelID[3] = {0x00, 0x00, 0x64};
+
+I7SysexCommunicator::I7SysexCommunicator(uint8 deviceID) : RolandSysexCommunicator(deviceID, i7ModelID)
+{
   initializeParamTree();
- 
+
 }
 
 void I7SysexCommunicator::initializeParamTree() {
@@ -20,9 +23,20 @@ void I7SysexCommunicator::initializeParamTree() {
   // paramTemplate_ = ParamTreeTemplateBuilder::BuildTemplate();
 }
 
-void I7SysexCommunicator::handleDT1(const DT1& dt1)
+void I7SysexCommunicator::requestStudioSetParts()
 {
-  std::vector<ParamUpdate> updates = addrTree_->GetParamUpdates(dt1.address, dt1.data, dt1.length);
+  ParamPath p = {
+    {"Temporary Studio Set"}, {"Studio Set Part", 1}, {"Tone Bank Select MSB (CC# 0)"}
+  };
+  //uint32 address = addrTree_->GetAddressFromPath(p);
+  uint32 address = ParamTree::GetAddressFromPath(p);
+  
+  sendRQ1(address, 3);
+}
+
+void I7SysexCommunicator::dt1Received(const uint8* address, const uint8* data, int size)
+{
+  std::vector<ParamUpdate> updates = addrTree_->GetParamUpdates(address, data, size);
   
   if (updates.size() >= 3 &&
       updates[0].path.size() >= 2 &&
@@ -72,7 +86,7 @@ String Integra7SysexDebugString(const MidiMessage& message) {
   const uint8* data = message.getSysExData();
   int len = message.getSysExDataSize();
   String msg = "Roland {";
-  msg += "DeviceID: " + String(getDeviceID(data));
+  msg += "DeviceID: " + String(deviceIDOf(data));
   if (isIntegra7(message)) {
     msg += ", Model: Integra-7";
   }

@@ -36,6 +36,9 @@ public:
   ValueTree getOscSettings();
   AudioDeviceManager* getDeviceManager() { return &deviceManager_; }
   
+  // Implements I7SysexCommunicator.
+  //MidiOutput* getSysexOutputDevice() override;
+  
   // Overrides ValueTree::Listener.
   void valueTreePropertyChanged(ValueTree& t, const Identifier& property) override;
   void valueTreeChildAdded(ValueTree& parentTree, ValueTree& child) override;

@@ -27,19 +27,23 @@ const Identifier TonePC { "Tone Program Number (PC)" };
 class I7SysexCommunicator : public RolandSysexCommunicator
 {
 public:
-  I7SysexCommunicator();
-  int getPartMidiChannel(const int partNumber);
+  I7SysexCommunicator(uint8 deviceID);
   
+  void requestStudioSetParts();
   void handleStudioSetPart(const std::vector<ParamUpdate>& updates);
   void handleToneSelect(const std::vector<ParamUpdate>& updates, const int partNumber);
   virtual void handleToneSelectUpdate(const int partNumber, const ToneId& toneId) {}
   
+  int getPartMidiChannel(const int partNumber);
+  
   // Overrides for RolandSysexCommunicator.
-  void handleDT1(const DT1& dt1) override;
+  void dt1Received(const uint8* address, const uint8* data, int size) override;
   
 private:
   void initializeParamTree();
     
+  // Private data members.
+  int rolandDeviceID_ = 17;
   ParamAddrTree* addrTree_;
   ValueTree paramTree_;
   ValueTree paramTemplate_;

@@ -22,6 +22,7 @@
 
 #include "Param.h"
 #include "ParamAddress.h"
+#include "ParamTreeTemplate.h"
 
 typedef uint8_t uint8;
 typedef uint32_t uint32;
@@ -170,6 +171,8 @@ class ParamAddrTree : private DeletedAtShutdown {
 
   std::vector<ParamUpdate> GetParamUpdates(const uint8* addr_bytes, const uint8* data, int num_bytes);
 
+  //uint32 GetAddressFromPath(const ParamPath& path);
+  
   bool HasData();
   void Reset();
 

@@ -97,7 +97,7 @@ void Settings::loadUserSettings()
   // Deserialize XML into temporary ValueTree, copy it to root_, and then trigger updates
   // for all listeners.
   auto newSettings = ValueTree::fromXml(*xmlRoot);
-  root_ = newSettings;
+  //root_ = newSettings;
   syncValueTreeNotifyListeners(newSettings, root_);
 }
 
@@ -154,6 +154,13 @@ void Settings::valueTreePropertyChanged(ValueTree& t, const Identifier& property
 
   auto value = t.getProperty(property);
   DBG("-> value = " + value.toString());
+
+  /*
+  auto it = nodesWithListeners_.find(t.getType().toString());
+  if (it != nodesWithListeners_.end()) {
+    it->second.sendPropertyChangeMessage(property);
+  }
+  */
   
   //auto siblings = getSiblingsOfSameType(t);
   
