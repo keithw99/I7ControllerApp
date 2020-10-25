@@ -87,7 +87,13 @@ ParamPath ParamAddrTree::GetPath(const ParamAddr& address) {
 
 NodeInfo* ParamAddrTree::GetNodeAndPath(const ParamAddr& address, ParamPath* path) {
   ParamAddr copy = address;
-  return visitHigh(root_, copy, path)->info.get();
+  PNode* node = visitHigh(root_, copy, path);
+  if (node != nullptr) {
+    return node->info.get();
+  }
+ // auto* info = visitHigh(root_, copy, path)->info;
+  DBG ("ERROR: Could not find ParamTree Node for address: " + String::toHexString(address.address));
+  return nullptr;
 }
 
 ParamPath ParamAddrTree::GetPathFromBytes(uint8* addr, uint8 num_bytes) {
@@ -303,6 +309,10 @@ ParamAddrTree::GetParamUpdates(const uint8* addr_bytes, const uint8* data, int n
   while (param_size <= bytes_to_read) {
     ParamPath path;
     NodeInfo* pn_info = GetNodeAndPath(paddr, &path);
+    if (pn_info == nullptr) {
+      DBG("ERROR: Failed to get node and path for address");
+      return updates;
+    }
     if (pn_info->getNodeType() != NodeType::PARAM &&
         pn_info->getNodeType() != NodeType::INDEXED_PARAM) {
       // TODO: Throw error.
