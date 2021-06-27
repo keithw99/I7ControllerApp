@@ -112,8 +112,9 @@ void RolandSysexCommunicator::handleIncomingMidiMessage(MidiInput* source, const
     return;
   }
   
-  if (!compareModelID(&sysex[2], &modelID_[2])) {
-    DBG ("ERROR: unexpected model ID in sysex message");
+  if (!compareModelID(&sysex[2], &modelID_[0])) {
+    DBG ("ERROR: unexpected model ID in sysex message; received "
+         + String(sysex[2]) + " " + String(sysex[3]) + " " + String(sysex[4]));
   }
   
   if (!isDT1(sysex)) {
