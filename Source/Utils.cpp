@@ -27,10 +27,12 @@ void syncValueTreeNotifyListeners (const ValueTree& source, ValueTree& destinati
 
   for (const auto& child : source)
   {
-    auto childType = child.getType();
-    //auto childInDestination = destination.getChildWithName (childType);
     auto childInDestination = destination.getChild(source.indexOf(child));
-    if (childInDestination.isValid())
+    if (childInDestination.isValid()) {
       syncValueTreeNotifyListeners (child, childInDestination);
+    } else {
+      childInDestination = child.createCopy();
+      destination.addChild(childInDestination, source.indexOf(child), nullptr);
+    }
   }
 }

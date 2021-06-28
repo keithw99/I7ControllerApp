@@ -97,7 +97,7 @@ void Settings::loadUserSettings()
   // Deserialize XML into temporary ValueTree, copy it to root_, and then trigger updates
   // for all listeners.
   auto newSettings = ValueTree::fromXml(*xmlRoot);
-  //root_ = newSettings;
+  ValueTree dests = newSettings.getChildWithName(settings::Osc).getChildWithName(settings::osc::Destinations);
   syncValueTreeNotifyListeners(newSettings, root_);
 }
 

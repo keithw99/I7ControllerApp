@@ -10,7 +10,10 @@
 
 #include "PreferencesPanel.h"
 
-
+const StringArray oscDestinationColumns = {
+  settings::osc::DestinationIpAddress.toString(),
+  settings::osc::DestinationPort.toString(),
+};
 
 I7PreferencesPanel::I7PreferencesPanel() : TabbedComponent(TabbedButtonBar::Orientation::TabsAtTop)
 {
@@ -261,6 +264,12 @@ void OscDestinationTable::paintRowBackground(Graphics& g, int rowNumber, int wid
 void OscDestinationTable::paintCell(Graphics& g, int rowNumber, int columnId, int width, int height, bool rowIsSelected)
 {
   g.setColour(rowIsSelected ? Colours::lightblue : table_->getLookAndFeel().findColour(ListBox::textColourId));
+  
+  ValueTree destElement = destinations_.getChild(rowNumber);
+  if (destElement.isValid()) {
+    StringRef text = destElement.getProperty(oscDestinationColumns[columnId]).toString();
+    g.drawText (text, 2, 0, width - 4, height, juce::Justification::centredLeft, true);
+  }
 }
 
 Component* OscDestinationTable::refreshComponentForCell(int rowNumber, int columnId, bool isRowSelected, Component* existingComponentToUpdate)
@@ -325,7 +334,6 @@ OscPreferences::OscPreferences(ValueTree& oscSettings, OscPreferencesPanel* view
   
   syncValueTreeNotifyListeners(oscSettings, oscSettings_);
   //destinationTable_->getTable()->updateContent();
-
 }
 
 void OscPreferences::labelTextChanged(Label* label)
