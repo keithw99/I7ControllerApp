@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="ruLvLY" name="I7ControllerApp" projectType="guiapp" jucerVersion="5.4.7">
+<JUCERPROJECT id="ruLvLY" name="I7ControllerApp" projectType="guiapp" jucerFormatVersion="1"
+              displaySplashScreen="1">
   <MAINGROUP id="WapNQr" name="I7ControllerApp">
     <GROUP id="{1BA53D68-5B75-F0C5-DCB0-B1BC9D7FC2B1}" name="Source">
       <FILE id="TP0Hqe" name="Settings.cpp" compile="1" resource="0" file="Source/Settings.cpp"/>
